@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--日切 JOB-->
+    <bean id="switch.job" class="com.scd.batch.trade.job.SwitchJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="switch.job"/>
+    </bean>
+
+    <!--准备 JOB-->
+    <bean id="prepare.job" class="com.scd.batch.trade.job.PrepareJob" init-method="init">
+        <constructor-arg index="0" value="${database.num}"/>
+        <constructor-arg index="1" value="${table.num}"/>
+        <constructor-arg index="2" value="${accg.database.num}"/>
+        <constructor-arg index="3" value="${accg.table.num}"/>
+
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="prepare.job"/>
+    </bean>
+
+    <!--贷款 load 数据 JOB-->
+    <bean id="loadLoan.job" class="com.scd.batch.trade.job.loan.LoanLoadDataJob">
+        <property name="name" value="loadLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.fee.path}"/>
+        <property name="targetNamePrefix" value="LOAN_INSTALLMENT"/>
+        <property name="batchSize" value="${loadLoan.batchSize}"/>
+    </bean>
+
+    <!--贷款计算 JOB-->
+    <bean id="calLoan.job" class="com.scd.batch.trade.job.loan.LoanCalculateJob">
+        <property name="name" value="calLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.fee.path}"/>
+        <property name="sourceNamePrefix" value="LOAN_INSTALLMENT"/>
+        <property name="targetNamePrefix" value="LOAN_INSTALLMENT_FEE"/>
+        <property name="batchSize" value="${calLoan.batchSize}"/>
+    </bean>
+
+    <!--贷款回写数据 JOB-->
+    <bean id="updateLoan.job" class="com.scd.batch.trade.job.loan.LoanUpdateJob">
+        <property name="name" value="updateLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.fee.path}"/>
+        <property name="sourceNamePrefix" value="LOAN_INSTALLMENT_FEE"/>
+        <property name="batchSize" value="${updateLoan.batchSize}"/>
+    </bean>
+
+    <!--贷款失败重试 JOB-->
+    <bean id="retryLoan.job" class="com.scd.batch.trade.job.loan.LoanRetryFailedJob">
+        <property name="name" value="retryLoan.job"/>
+        <property name="batchSize" value="${retryLoan.batchSize}"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="retryCount" value="${retryLoan.count}"/>
+    </bean>
+
+    <!-- 贷款催收JOB -->
+    <bean id="expediteLoan.job" class="com.scd.batch.trade.job.loan.LoanExpediteJob">
+        <property name="name" value="expediteLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.expedite.path}"/>
+        <property name="targetNamePrefix" value="LOAN_EXPEDITE"/>
+        <property name="batchSize" value="${loadExpedite.batchSize}"/>
+    </bean>
+
+    <!-- 贷款对账JOB -->
+    <bean id="reconciliationLoan.job" class="com.scd.batch.trade.job.loan.LoanReconciliationJob">
+        <property name="name" value="reconciliationLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.reconciliation.path}"/>
+        <property name="targetNamePrefix" value="LOAN_RECONCILIATION"/>
+        <property name="batchSize" value="${loadReconciliation.batchSize}"/>
+    </bean>
+
+    <!-- 出老核心贷款对账JOB -->
+    <bean id="oldReconciliationLoan.job" class="com.scd.batch.trade.job.loan.LoanOldReconciliationJob">
+        <property name="name" value="oldReconciliationLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.oldreconciliation.path}"/>
+        <property name="targetNamePrefix" value="LOAN_OLDRECONCILIATION"/>
+        <property name="batchSize" value="${loadOldReconciliation.batchSize}"/>
+    </bean>
+
+    <!-- 代扣JOB -->
+    <bean id="autoRepayLoan.job" class="com.scd.batch.trade.job.loan.LoanAutoRepayJob">
+        <property name="name" value="autoRepayLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.loan.autorepay.path}"/>
+        <property name="targetNamePrefix" value="LOAN_AUTO_REPAY"/>
+        <property name="batchSize" value="${autoRepayLoan.batchSize}"/>
+    </bean>
+
+    <!-- 代扣后处理JOB -->
+    <bean id="autoRepayPostLoan.job" class="com.scd.batch.trade.job.PostHandlingJob">
+        <property name="name" value="autoRepayPostLoan.job"/>
+        <property name="jobType" value="LOAN_AUTO_REPAY"/>
+        <property name="rootPath" value="${file.loan.autorepay.path}"/>
+    </bean>
+
+</beans>

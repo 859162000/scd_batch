@@ -1,0 +1,1210 @@
+[2016-10-09 10:57:03.301  WARN org.springframework.context.support.GenericApplicationContext:546 KEY:] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[2016-10-09 10:57:03.321 ERROR org.springframework.test.context.TestContextManager:231 KEY:] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@736d6a5c] to prepare test instance [com.scd.batch.trade.schedule.LoanCalculateJobTest@2371aaca]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 44 common frames omitted
+[2016-10-09 10:57:04.537  WARN org.springframework.context.support.GenericApplicationContext:546 KEY:] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[2016-10-09 10:57:04.548 ERROR org.springframework.test.context.TestContextManager:231 KEY:] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@736d6a5c] to prepare test instance [com.scd.batch.trade.schedule.LoanCalculateJobTest@3f363cf5]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 44 common frames omitted
+[2016-10-09 10:57:05.981  WARN org.springframework.context.support.GenericApplicationContext:546 KEY:] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[2016-10-09 10:57:05.984 ERROR org.springframework.test.context.TestContextManager:231 KEY:] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@736d6a5c] to prepare test instance [com.scd.batch.trade.schedule.LoanCalculateJobTest@1e044120]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prepare.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.common.job.batch.control.JobControlService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 44 common frames omitted
+[2016-10-09 11:00:15.115  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:74 KEY:2589616552660577456] start job: null
+[2016-10-09 11:00:15.165  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:95 KEY:2589616552660577456] cancel process executor:[LoanCalculateJob[name=<null>,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@6b5966e1[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=<null>,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:00:15.245  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:78 KEY:2589616552660577456] job: null finished, takes: 133
+[2016-10-09 11:00:15.254  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:74 KEY:-198413913496803989] start job: null
+[2016-10-09 11:00:15.255  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:95 KEY:-198413913496803989] cancel process executor:[LoanCalculateJob[name=<null>,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@493dfb8e[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=xxxx,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:00:15.256  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:78 KEY:-198413913496803989] job: null finished, takes: 1
+[2016-10-09 11:01:07.309  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:74 KEY:1748424827297658615] start job: null
+[2016-10-09 11:01:07.314  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:95 KEY:1748424827297658615] cancel process executor:[LoanCalculateJob[name=<null>,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@5ab14cb9[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=<null>,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:01:07.343  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:78 KEY:1748424827297658615] job: null finished, takes: 34
+[2016-10-09 11:02:01.283  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:01.453 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:01.459 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:02:01.598  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:-4176762626955278802] start job: loop
+[2016-10-09 11:02:01.602 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[0]
+[2016-10-09 11:02:01.603 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.606 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.609 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.610 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.611 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.611 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.612 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.623 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.624 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.625 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.626 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.629 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.629 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.630 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.630 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.631 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.632 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.632 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.633 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.638 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.639 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.640 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.640 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.640 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.641 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.641 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.641 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.641 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-4176762626955278802] execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.642 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-4176762626955278802] after execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.642 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-4176762626955278802] before execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.642  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:-4176762626955278802] cancel process executor:[LoopExecutor[name=loop,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11}]], because of before execute is false
+[2016-10-09 11:02:01.810  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:-4176762626955278802] job: loop finished, takes: 211
+[2016-10-09 11:02:01.934  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:-3536065595096611649] start job: loop
+[2016-10-09 11:02:01.935 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[0]
+[2016-10-09 11:02:01.935 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.936 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.936 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:01.936 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.936 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.937 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:01.937 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.937 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.937 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:01.937 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.938 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.939 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:01.939 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.939 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.939 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:01.939 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.940 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.940 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:01.940 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.940 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.941 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:01.942 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.943 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.943 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:01.943 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.944 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.944 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:01.944 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-3536065595096611649] execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.945 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-3536065595096611649] after execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.945 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-3536065595096611649] before execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:01.946  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:-3536065595096611649] cancel process executor:[LoopExecutor[name=loop,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11}]], because of before execute is false
+[2016-10-09 11:02:01.946  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:-3536065595096611649] job: loop finished, takes: 11
+[2016-10-09 11:02:01.947  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:-750780094968276729] start job: step.1
+[2016-10-09 11:02:01.947 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[0]
+[2016-10-09 11:02:01.947 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.947 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.948 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.948 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.948 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.948 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.948 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.949 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.950 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.950 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.950 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.951 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.951 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.952 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.953 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.953 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.953 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.953 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.954 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.954 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.954 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.955 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.955 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-750780094968276729] execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:01.956 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-750780094968276729] after execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:01.956 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-750780094968276729] before execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:01.956  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:-750780094968276729] cancel process executor:[LoopExecutor[name=step.1,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11, step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:01.956  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:-750780094968276729] job: step.1 finished, takes: 9
+[2016-10-09 11:02:01.957  INFO com.scd.batch.trade.mock.SubExecutor:74 KEY:-5628885718488709030] start job: stop.2
+[2016-10-09 11:02:01.957 DEBUG com.scd.batch.trade.mock.SubExecutor:25 KEY:-5628885718488709030] before execute:[stop.2]
+[2016-10-09 11:02:01.957 DEBUG com.scd.batch.trade.mock.SubExecutor:31 KEY:-5628885718488709030] execute:[stop.2]
+[2016-10-09 11:02:01.957 DEBUG com.scd.batch.trade.mock.SubExecutor:36 KEY:-5628885718488709030] after execute:[stop.2]
+[2016-10-09 11:02:01.957  INFO com.scd.batch.trade.mock.SubExecutor:78 KEY:-5628885718488709030] job: stop.2 finished, takes: 0
+[2016-10-09 11:02:01.958  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:4112942770624046674] start job: step.3
+[2016-10-09 11:02:01.958 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[0]
+[2016-10-09 11:02:01.958 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:01.958 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:01.959 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:01.959 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:01.959 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:01.959 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:01.959 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:01.960 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:01.960 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:01.960 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:01.960 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:01.960 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:01.961 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:01.964 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:01.964 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:01.965 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:01.965 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:01.965 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:01.965 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:01.966 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:01.966 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:01.966 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:01.966 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:01.966 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:01.967 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:01.967 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:01.967 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:01.967 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:4112942770624046674] execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:01.968 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:4112942770624046674] after execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:01.968 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:4112942770624046674] before execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:01.968  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:4112942770624046674] cancel process executor:[LoopExecutor[name=step.3,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11, step.3.loop=11, step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:01.968  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:4112942770624046674] job: step.3 finished, takes: 10
+[2016-10-09 11:02:01.985  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:8827671849551600757] start job: step.1
+[2016-10-09 11:02:01.986 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[0]
+[2016-10-09 11:02:01.986 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.986 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.987 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:01.987 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.987 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.988 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:01.988 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.989 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.990 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:01.990 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.990 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.990 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:01.991 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.991 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.991 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:01.993 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.994 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.994 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:01.994 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.994 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.995 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:01.995 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.995 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.995 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:01.995 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.996 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.999 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:01.999 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8827671849551600757] execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:01.999 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8827671849551600757] after execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:02.000 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8827671849551600757] before execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:02.000  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:8827671849551600757] cancel process executor:[LoopExecutor[name=step.1,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:02.000  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:8827671849551600757] job: step.1 finished, takes: 15
+[2016-10-09 11:02:02.001  INFO com.scd.batch.trade.mock.SubExecutor:74 KEY:-6479131107112390787] start job: stop.2
+[2016-10-09 11:02:02.001 DEBUG com.scd.batch.trade.mock.SubExecutor:25 KEY:-6479131107112390787] before execute:[stop.2]
+[2016-10-09 11:02:02.001 DEBUG com.scd.batch.trade.mock.SubExecutor:31 KEY:-6479131107112390787] execute:[stop.2]
+[2016-10-09 11:02:02.002 DEBUG com.scd.batch.trade.mock.SubExecutor:36 KEY:-6479131107112390787] after execute:[stop.2]
+[2016-10-09 11:02:02.002  INFO com.scd.batch.trade.mock.SubExecutor:78 KEY:-6479131107112390787] job: stop.2 finished, takes: 1
+[2016-10-09 11:02:02.002  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:-5007691897117606460] start job: step.3
+[2016-10-09 11:02:02.002 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[0]
+[2016-10-09 11:02:02.003 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.003 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.004 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.004 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.004 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.004 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.005 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.011 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.012 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.012 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.012 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.013 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.013 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.013 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.013 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.014 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.047 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.053 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.054 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.055 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.056 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.056 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.056 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.056 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.057 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.057 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.057 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.057 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-5007691897117606460] execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.058 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-5007691897117606460] after execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.058 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-5007691897117606460] before execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.058  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:-5007691897117606460] cancel process executor:[LoopExecutor[name=step.3,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={step.3.loop=11, step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:02.058  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:-5007691897117606460] job: step.3 finished, takes: 56
+[2016-10-09 11:02:02.059  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:824880828826151518] start job: loop
+[2016-10-09 11:02:02.059 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[0]
+[2016-10-09 11:02:02.060 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:02.060 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:02.060 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[1]
+[2016-10-09 11:02:02.061 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:02.063 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:02.068 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[2]
+[2016-10-09 11:02:02.068 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:02.069 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:02.069 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[3]
+[2016-10-09 11:02:02.069 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:02.069 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:02.069 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[4]
+[2016-10-09 11:02:02.070 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:02.070 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:02.070 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[5]
+[2016-10-09 11:02:02.070 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:02.087 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:02.088 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[6]
+[2016-10-09 11:02:02.088 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:02.088 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:02.089 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[7]
+[2016-10-09 11:02:02.089 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:02.089 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:02.089 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[8]
+[2016-10-09 11:02:02.089 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:02.090 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:02.100 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[9]
+[2016-10-09 11:02:02.100 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:824880828826151518] execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:02.101 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:824880828826151518] after execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:02.101 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:824880828826151518] before execute:[loop], the loop count is:[10]
+[2016-10-09 11:02:02.101  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:824880828826151518] cancel process executor:[LoopExecutor[name=loop,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11}]], because of before execute is false
+[2016-10-09 11:02:02.101  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:824880828826151518] job: loop finished, takes: 42
+[2016-10-09 11:02:02.102  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:8907592889714546839] start job: step.1
+[2016-10-09 11:02:02.102 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[0]
+[2016-10-09 11:02:02.102 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:02.102 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:02.103 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[1]
+[2016-10-09 11:02:02.106 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:02.106 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:02.107 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[2]
+[2016-10-09 11:02:02.107 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:02.107 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:02.107 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[3]
+[2016-10-09 11:02:02.108 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:02.113 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:02.114 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[4]
+[2016-10-09 11:02:02.114 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:02.114 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:02.114 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[5]
+[2016-10-09 11:02:02.115 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:02.115 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:02.115 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[6]
+[2016-10-09 11:02:02.115 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:02.116 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:02.116 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[7]
+[2016-10-09 11:02:02.116 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:02.116 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:02.116 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[8]
+[2016-10-09 11:02:02.117 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:02.117 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:02.117 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[9]
+[2016-10-09 11:02:02.118 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:8907592889714546839] execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:02.118 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:8907592889714546839] after execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:02.118 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:8907592889714546839] before execute:[step.1], the loop count is:[10]
+[2016-10-09 11:02:02.119  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:8907592889714546839] cancel process executor:[LoopExecutor[name=step.1,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11, step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:02.119  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:8907592889714546839] job: step.1 finished, takes: 17
+[2016-10-09 11:02:02.119  INFO com.scd.batch.trade.mock.SubExecutor:74 KEY:-2099958726417590281] start job: stop.2
+[2016-10-09 11:02:02.119 DEBUG com.scd.batch.trade.mock.SubExecutor:25 KEY:-2099958726417590281] before execute:[stop.2]
+[2016-10-09 11:02:02.120 DEBUG com.scd.batch.trade.mock.SubExecutor:31 KEY:-2099958726417590281] execute:[stop.2]
+[2016-10-09 11:02:02.120 DEBUG com.scd.batch.trade.mock.SubExecutor:36 KEY:-2099958726417590281] after execute:[stop.2]
+[2016-10-09 11:02:02.120  INFO com.scd.batch.trade.mock.SubExecutor:78 KEY:-2099958726417590281] job: stop.2 finished, takes: 0
+[2016-10-09 11:02:02.121  INFO com.scd.batch.trade.mock.LoopExecutor:74 KEY:-7259406174741102019] start job: step.3
+[2016-10-09 11:02:02.124 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[0]
+[2016-10-09 11:02:02.139 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.139 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.140 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[1]
+[2016-10-09 11:02:02.153 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.154 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.157 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[2]
+[2016-10-09 11:02:02.157 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.157 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.158 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[3]
+[2016-10-09 11:02:02.158 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.158 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.158 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[4]
+[2016-10-09 11:02:02.158 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.159 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.159 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[5]
+[2016-10-09 11:02:02.159 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.159 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.159 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[6]
+[2016-10-09 11:02:02.160 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.160 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.160 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[7]
+[2016-10-09 11:02:02.160 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.160 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.161 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[8]
+[2016-10-09 11:02:02.161 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.161 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.161 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[9]
+[2016-10-09 11:02:02.162 DEBUG com.scd.batch.trade.mock.LoopExecutor:49 KEY:-7259406174741102019] execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.162 DEBUG com.scd.batch.trade.mock.LoopExecutor:55 KEY:-7259406174741102019] after execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.162 DEBUG com.scd.batch.trade.mock.LoopExecutor:38 KEY:-7259406174741102019] before execute:[step.3], the loop count is:[10]
+[2016-10-09 11:02:02.162  INFO com.scd.batch.trade.mock.LoopExecutor:95 KEY:-7259406174741102019] cancel process executor:[LoopExecutor[name=step.3,cycleRunning=true]] with context:[ExecutorContext[status=success,attaches={loop.loop=11, step.3.loop=11, step.1.loop=11}]], because of before execute is false
+[2016-10-09 11:02:02.163  INFO com.scd.batch.trade.mock.LoopExecutor:78 KEY:-7259406174741102019] job: step.3 finished, takes: 42
+[2016-10-09 11:02:02.168  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -h
+[2016-10-09 11:02:02.336  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -a, -s, -h
+[2016-10-09 11:02:02.339  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -n, prepare, -t, fake_type
+[2016-10-09 11:02:02.386  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -n, fake_name
+[2016-10-09 11:02:03.026  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:74 KEY:4751343488188017906] start job: null
+[2016-10-09 11:02:03.048  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:95 KEY:4751343488188017906] cancel process executor:[LoanCalculateJob[name=<null>,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@629ae7e[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=xxxx,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:02:03.049  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:78 KEY:4751343488188017906] job: null finished, takes: 23
+[2016-10-09 11:02:03.054  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:74 KEY:12719426276361849] start job: null
+[2016-10-09 11:02:03.055  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:95 KEY:12719426276361849] cancel process executor:[LoanCalculateJob[name=<null>,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@5da7cee2[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=<null>,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:02:03.055  INFO com.scd.batch.trade.job.loan.LoanCalculateJob:78 KEY:12719426276361849] job: null finished, takes: 1
+[2016-10-09 11:02:03.561  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:03.600  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:03.634  INFO com.scd.batch.trade.job.loan.LoanLoadDataJob:74 KEY:9022356226684216484] start job: loanLoadDataJob
+[2016-10-09 11:02:03.635  INFO com.scd.batch.trade.job.loan.LoanLoadDataJob:95 KEY:9022356226684216484] cancel process executor:[LoanLoadDataJob[name=loanLoadDataJob,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-10-09, com.scd.batch.common.job.batch.control.JobControl=com.scd.batch.common.job.batch.control.JobControl@21fdfefc[phase=0,phaseStatus=0,retryTime=0,jobType=0,databaseId=0,tableId=0,uuid=<null>,accountDate=<null>,startTime=<null>,endTime=<null>,checkPoint=0,id=0,partitionId=0,version=0,created=<null>,modified=<null>]}]], because of before execute is false
+[2016-10-09 11:02:03.636  INFO com.scd.batch.trade.job.loan.LoanLoadDataJob:78 KEY:9022356226684216484] job: loanLoadDataJob finished, takes: 1
+[2016-10-09 11:02:03.665 ERROR org.springframework.test.context.TestContextManager:231 KEY:] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@29a69a35] to prepare test instance [com.scd.batch.trade.schedule.LoanReconciliationJobTest@67e28be3]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.scd.batch.trade.schedule.LoanReconciliationJobTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.trade.job.loan.LoanReconciliationJob] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.Suite.runChild(Suite.java:128) [junit-4.10.jar:na]
+	at org.junit.runners.Suite.runChild(Suite.java:24) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.scd.batch.trade.job.loan.LoanReconciliationJob] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:508) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 37 common frames omitted
+[2016-10-09 11:02:03.733  INFO com.scd.batch.trade.job.PrepareJob:90 KEY:] prepare job, accountDate: 2016-10-09
+[2016-10-09 11:02:03.742  INFO com.scd.batch.trade.job.SwitchJob:31 KEY:] old account date: 2016-10-09, new account date: 2016-10-09
+[2016-10-09 11:02:03.774 DEBUG com.scd.batch.trade.dao.FailRecordDAO.selectAllFailedId:132 KEY:] ooo Using Connection [conn8: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:03.775 DEBUG com.scd.batch.trade.dao.FailRecordDAO.selectAllFailedId:132 KEY:] ==>  Preparing: select ID from T_FAIL_RECORD where ACCOUNT_DATE = ? and `STATUS` in (1, 3) 
+[2016-10-09 11:02:03.807 DEBUG com.scd.batch.trade.dao.FailRecordDAO.selectAllFailedId:132 KEY:] ==> Parameters: 0002-11-30 00:00:00.0(Timestamp)
+[2016-10-09 11:02:03.824 DEBUG com.scd.batch.trade.dao.FailRecordDAO.selectAllFailedId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:04.140 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ooo Using Connection [conn9: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.141 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==>  Preparing: UPDATE T_JOB SET PHASE = ?, PHASE_STATUS = ?, END_TIME = now() WHERE UUID = ? 
+[2016-10-09 11:02:04.144 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==> Parameters: 2(Integer), 1(Integer), (String)
+[2016-10-09 11:02:04.146 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] <==    Updates: 0
+[2016-10-09 11:02:04.149 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ooo Using Connection [conn10: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.150 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==>  Preparing: UPDATE T_JOB SET PHASE = ?, PHASE_STATUS = ?, END_TIME = now() ,RETRY_TIME = RETRY_TIME + 1 WHERE UUID = ? 
+[2016-10-09 11:02:04.152 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==> Parameters: 2(Integer), 3(Integer), (String)
+[2016-10-09 11:02:04.152 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] <==    Updates: 0
+[2016-10-09 11:02:04.157 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ooo Using Connection [conn11: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.159 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==>  Preparing: UPDATE T_JOB SET PHASE = ?, PHASE_STATUS = ?, END_TIME = now() WHERE UUID = ? 
+[2016-10-09 11:02:04.160 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==> Parameters: 2(Integer), 2(Integer), (String)
+[2016-10-09 11:02:04.161 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] <==    Updates: 0
+[2016-10-09 11:02:04.164 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ooo Using Connection [conn12: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.165 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==>  Preparing: UPDATE T_JOB SET PHASE = ?, PHASE_STATUS = ?, END_TIME = now() WHERE UUID = ? 
+[2016-10-09 11:02:04.165 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] ==> Parameters: 2(Integer), 4(Integer), (String)
+[2016-10-09 11:02:04.168 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.updatePhaseStatusByUUID:132 KEY:] <==    Updates: 0
+[2016-10-09 11:02:04.272  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:04.305  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:04.345 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ooo Using Connection [conn14: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.346 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==>  Preparing: select distinct(loan.LOAN_ID) from fcore_part_0.T_INSTALLMENT_SCHEDULE_0_0 ins inner join fcore_part_0.T_LOAN_0_0 loan on ins.LOAN_ID = loan.LOAN_ID where ins.GRACE_DATE < ? and ins.STATUS in (1, 7) 
+[2016-10-09 11:02:04.349 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==> Parameters: 2016-10-09 00:00:00.0(Timestamp)
+[2016-10-09 11:02:04.353 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] <==      Total: 1
+[2016-10-09 11:02:04.358 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ooo Using Connection [conn15: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.358 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==>  Preparing: select distinct(loan.LOAN_ID) from fcore_part_0.T_INSTALLMENT_SCHEDULE_0_0 ins inner join fcore_part_0.T_LOAN_0_0 loan on ins.LOAN_ID = loan.LOAN_ID where ins.GRACE_DATE < ? and ins.STATUS in (1, 7) 
+[2016-10-09 11:02:04.360 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==> Parameters: 2016-06-18 00:00:00.0(Timestamp)
+[2016-10-09 11:02:04.361 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] <==      Total: 1
+[2016-10-09 11:02:04.374 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.selectInstallmentInfoByLoanId:132 KEY:] ooo Using Connection [conn16: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.375 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.selectInstallmentInfoByLoanId:132 KEY:] ==>  Preparing: select ins.ID, ins.CUSTOMER_ID, ins.ACCOUNT_ID, ins.LOAN_ID, ins.PRODUCT_ID, ins.PRODUCT_NO, ins.ACCOUNT_DATE, ins.LOAN_SCHEDULE_NO, ins.INSTALLMENT_MADE_NO, ins.DUE_DATE, ins.GRACE_DATE, ins.STATUS, ins.PRINCIPAL, ins.PRINCIPAL_REPAY, ins.INTEREST, ins.INTEREST_REPAY, ins.PENALTY, ins.PENALTY_REPAY, ins.OVERDUE, ins.OVERDUE_REPAY, ins.CHARGES, ins.CHARGES_REPAY, ins.VIOLATE, ins.VIOLATE_REPAY, ins.MANAGEMENT, ins.MANAGEMENT_REPAY, ins.SERVICE, ins.SERVICE_REPAY, loan.LOAN_AGE, loan.PENALTY as LOAN_PENALTY, loan.OVERDUE as LOAN_OVERDUE, loan.LOAN_STATUS, loan.FINANCING_SOURCE, loan.LOAN_CHANNEL, loan.SECURITY_STATUS, loan.PENALTY_MULTIPLIER, loan.OVERDUE_MULTIPLIER, loan.VERSION from fcore_part_0.T_INSTALLMENT_SCHEDULE_0_0 ins inner join fcore_part_0.T_LOAN_0_0 loan on ins.LOAN_ID = loan.LOAN_ID where loan.LOAN_ID in ( ? ) and ins.GRACE_DATE < ? and ins.STATUS in (1, 7) order by ins.LOAN_ID 
+[2016-10-09 11:02:04.378 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.selectInstallmentInfoByLoanId:132 KEY:] ==> Parameters: 1(Long), 2016-06-18 00:00:00.0(Timestamp)
+[2016-10-09 11:02:04.385 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.selectInstallmentInfoByLoanId:132 KEY:] <==      Total: 1
+[2016-10-09 11:02:04.440  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:04.512  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:04.537 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ooo Using Connection [conn18: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.539 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==>  Preparing: select distinct(loan.LOAN_ID) from fcore_part_0.T_INSTALLMENT_SCHEDULE_0_0 ins inner join fcore_part_0.T_LOAN_0_0 loan on ins.LOAN_ID = loan.LOAN_ID where ins.GRACE_DATE < ? and ins.STATUS in (1, 7) 
+[2016-10-09 11:02:04.540 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==> Parameters: 2016-10-09 00:00:00.0(Timestamp)
+[2016-10-09 11:02:04.541 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] <==      Total: 1
+[2016-10-09 11:02:04.543 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ooo Using Connection [conn19: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:04.543 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==>  Preparing: select distinct(loan.LOAN_ID) from fcore_part_0.T_INSTALLMENT_SCHEDULE_0_0 ins inner join fcore_part_0.T_LOAN_0_0 loan on ins.LOAN_ID = loan.LOAN_ID where ins.GRACE_DATE < ? and ins.STATUS in (1, 7) 
+[2016-10-09 11:02:04.544 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] ==> Parameters: 2016-06-18 00:00:00.0(Timestamp)
+[2016-10-09 11:02:04.545 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllOverdueLoanId:132 KEY:] <==      Total: 1
+[2016-10-09 11:02:04.620  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:04.669  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:06.762  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:06.780 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ooo Using Connection [conn22: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:06.782 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==>  Preparing: select LOAN_ID from fcore_part_0.T_LOAN_0_0 where LOAN_STATUS in (2, 3) 
+[2016-10-09 11:02:06.784 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==> Parameters: 
+[2016-10-09 11:02:06.786 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:06.883  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:06.892 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ooo Using Connection [conn24: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:06.893 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==>  Preparing: select LOAN_ID from fcore_part_0.T_LOAN_0_0 where LOAN_STATUS in (2, 3) 
+[2016-10-09 11:02:06.894 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==> Parameters: 
+[2016-10-09 11:02:06.895 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:07.003  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:07.013 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ooo Using Connection [conn26: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:07.014 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==>  Preparing: select LOAN_ID from fcore_part_0.T_LOAN_0_0 where LOAN_STATUS in (2, 3) 
+[2016-10-09 11:02:07.016 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==> Parameters: 
+[2016-10-09 11:02:07.018 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:07.697  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:07.704 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ooo Using Connection [conn28: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:07.705 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==>  Preparing: select LOAN_ID from fcore_part_0.T_LOAN_0_0 where LOAN_STATUS in (2, 3) 
+[2016-10-09 11:02:07.706 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==> Parameters: 
+[2016-10-09 11:02:07.708 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:07.817  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:07.832 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ooo Using Connection [conn30: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:07.861 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==>  Preparing: select LOAN_ID from fcore_part_0.T_LOAN_0_0 where LOAN_STATUS in (2, 3) 
+[2016-10-09 11:02:07.862 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] ==> Parameters: 
+[2016-10-09 11:02:07.864 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.getAllLoanId:132 KEY:] <==      Total: 0
+[2016-10-09 11:02:07.965  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:07.997  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:08.105  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:08.177  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:08.182  INFO com.scd.batch.trade.service.loan.LoanUpdateControlService:56 KEY:] loan update batch by batch, totalSize: 1, count: 1, batchUpdateSize: 500, i: 0, startIndex: 0, endIndex: 1
+[2016-10-09 11:02:08.308 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ooo Using Connection [conn33: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:08.309 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ==>  Preparing: update T_LOAN set OVERDUE = OVERDUE + ?, PENALTY = PENALTY + ?, LOAN_AGE = ?, VERSION = VERSION + 1 where LOAN_ID = ? and CUSTOMER_ID = ? and ACCOUNT_ID = ? and VERSION = ? 
+[2016-10-09 11:02:08.379 ERROR com.scd.batch.trade.service.loan.LoanUpdateControlService:65 KEY:] loan update batch by batch error: [{"loanId":1,"customerId":1,"accountId":2,"productId":0,"productNo":0,"mPenalty":0,"mOverdue":0,"loanAge":0,"loanStatus":0,"loanPenalty":0,"loanOverdue":0,"financialSource":0,"loanChannel":0,"securityStatus":0,"version":0,"installments":[],"age":0,"penaltyDelta":0,"overdueDelta":0}], e: org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Table "T_LOAN" not found; SQL statement:
+update T_LOAN
+        set OVERDUE = OVERDUE + ?,
+        PENALTY = PENALTY + ?,
+        LOAN_AGE = ?,
+        VERSION = VERSION + 1
+        where LOAN_ID = ?
+        and CUSTOMER_ID = ?
+        and ACCOUNT_ID = ?
+        and VERSION = ? [42102-170]
+### SQL: update T_LOAN         set OVERDUE = OVERDUE + ?,         PENALTY = PENALTY + ?,         LOAN_AGE = ?,         VERSION = VERSION + 1         where LOAN_ID = ?         and CUSTOMER_ID = ?         and ACCOUNT_ID = ?         and VERSION = ?
+### Cause: org.h2.jdbc.JdbcSQLException: Table "T_LOAN" not found; SQL statement:
+update T_LOAN
+        set OVERDUE = OVERDUE + ?,
+        PENALTY = PENALTY + ?,
+        LOAN_AGE = ?,
+        VERSION = VERSION + 1
+        where LOAN_ID = ?
+        and CUSTOMER_ID = ?
+        and ACCOUNT_ID = ?
+        and VERSION = ? [42102-170]
+; bad SQL grammar []; nested exception is org.h2.jdbc.JdbcSQLException: Table "T_LOAN" not found; SQL statement:
+update T_LOAN
+        set OVERDUE = OVERDUE + ?,
+        PENALTY = PENALTY + ?,
+        LOAN_AGE = ?,
+        VERSION = VERSION + 1
+        where LOAN_ID = ?
+        and CUSTOMER_ID = ?
+        and ACCOUNT_ID = ?
+        and VERSION = ? [42102-170]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:74)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:421)
+	at com.sun.proxy.$Proxy31.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:270)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:49)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:43)
+	at com.sun.proxy.$Proxy40.updateLoan(Unknown Source)
+	at com.scd.batch.trade.service.loan.LoanBatchUpdateImpl.lambda$updateLoan$1(LoanBatchUpdateImpl.java:53)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at com.scd.batch.trade.service.loan.LoanBatchUpdateImpl.updateLoan(LoanBatchUpdateImpl.java:53)
+	at com.scd.batch.trade.service.loan.LoanUpdateService.updateLoanInfo(LoanUpdateService.java:40)
+	at com.scd.batch.trade.service.loan.LoanUpdateService$$FastClassBySpringCGLIB$$cf1a3e7c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.scd.batch.trade.service.loan.LoanUpdateService$$EnhancerBySpringCGLIB$$c7abc7fb.updateLoanInfo(<generated>)
+	at com.scd.batch.trade.service.loan.LoanUpdateControlService.update(LoanUpdateControlService.java:62)
+	at com.scd.batch.trade.service.loan.LoanUpdateControlServiceTest.updateLoanTest(LoanUpdateControlServiceTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+Caused by: org.h2.jdbc.JdbcSQLException: Table "T_LOAN" not found; SQL statement:
+update T_LOAN
+        set OVERDUE = OVERDUE + ?,
+        PENALTY = PENALTY + ?,
+        LOAN_AGE = ?,
+        VERSION = VERSION + 1
+        where LOAN_ID = ?
+        and CUSTOMER_ID = ?
+        and ACCOUNT_ID = ?
+        and VERSION = ? [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774)
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752)
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712)
+	at org.h2.command.Parser.parseUpdate(Parser.java:661)
+	at org.h2.command.Parser.parsePrepared(Parser.java:426)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.parse(Parser.java:250)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:414)
+	at org.h2.engine.Session.prepareCommand(Session.java:363)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267)
+	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.ConnectionLogger.invoke(ConnectionLogger.java:50)
+	at com.sun.proxy.$Proxy45.prepareStatement(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:72)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:82)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:54)
+	at org.apache.ibatis.executor.BatchExecutor.doUpdate(BatchExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:100)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:408)
+	... 61 more
+
+[2016-10-09 11:02:08.391 DEBUG com.scd.batch.trade.dao.FailRecordDAO.insert:132 KEY:] ooo Using Connection [conn34: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:08.392 DEBUG com.scd.batch.trade.dao.FailRecordDAO.insert:132 KEY:] ==>  Preparing: INSERT T_FAIL_RECORD ( CUSTOMER_ID, ACCOUNT_ID, FAILURE_ID, ACCOUNT_DATE, STATUS, CREATED, MODIFIED ) VALUES ( ?, ?, ?, ?, ?, now(), now() ) 
+[2016-10-09 11:02:08.503 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ooo Using Connection [conn35: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:08.504 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ==>  Preparing: update T_LOAN set OVERDUE = OVERDUE + ?, PENALTY = PENALTY + ?, LOAN_AGE = ?, VERSION = VERSION + 1 where LOAN_ID = ? and CUSTOMER_ID = ? and ACCOUNT_ID = ? and VERSION = ? 
+[2016-10-09 11:02:08.705  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:08.740  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:02:08.754 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ooo Using Connection [conn37: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:02:08.755 DEBUG com.scd.batch.trade.dao.BatchLoanDAO.updateLoan:132 KEY:] ==>  Preparing: update T_LOAN set OVERDUE = OVERDUE + ?, PENALTY = PENALTY + ?, LOAN_AGE = ?, VERSION = VERSION + 1 where LOAN_ID = ? and CUSTOMER_ID = ? and ACCOUNT_ID = ? and VERSION = ? 
+[2016-10-09 11:04:38.924  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:04:39.027 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:04:39.031 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:18:43.682  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:18:43.794 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:18:43.799 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:25:34.466  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:25:34.561 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:25:34.566 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:32:24.872  WARN org.springframework.context.support.GenericApplicationContext:546 KEY:] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-170]
+[2016-10-09 11:32:24.891 ERROR org.springframework.test.context.TestContextManager:231 KEY:] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@295cf707] to prepare test instance [com.scd.batch.trade.dao.JobDaoTest@1130520d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-170]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) ~[spring-context-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-170]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:61) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:108) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:93) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574) ~[spring-beans-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 43 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-170]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:46) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 47 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.NullPointerException" [50000-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:158) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.convert(DbException.java:281) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.toSQLException(DbException.java:254) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.TraceObject.logAndConvert(TraceObject.java:368) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:270) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.store.LobStorage.init(LobStorage.java:100) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Database.open(Database.java:655) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Database.openDatabase(Database.java:221) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Database.<init>(Database.java:216) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Engine.openSession(Engine.java:56) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Engine.openSession(Engine.java:159) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:138) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Engine.createSession(Engine.java:121) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Engine.createSession(Engine.java:28) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:305) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:109) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:93) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.Driver.connect(Driver.java:72) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:181) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbcx.JdbcDataSource.getXAConnection(JdbcDataSource.java:315) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbcx.JdbcDataSource.getPooledConnection(JdbcDataSource.java:341) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbcx.JdbcConnectionPool.getConnectionNow(JdbcConnectionPool.java:226) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbcx.JdbcConnectionPool.getConnection(JdbcConnectionPool.java:199) ~[h2-1.3.170.jar:1.3.170]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	... 48 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.h2.command.Parser.getTokenType(Parser.java:3382) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.read(Parser.java:2863) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:277) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267) ~[h2-1.3.170.jar:1.3.170]
+	... 68 common frames omitted
+[2016-10-09 11:33:08.073  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:33:08.195 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:33:08.199 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:34:09.962  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:34:10.093 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:34:10.098 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:34:58.366  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:34:58.449 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:34:58.452 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:39:17.150  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:39:17.252 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ooo Using Connection [conn5: url=jdbc:h2:mem:fcore_part_0 user=SA]
+[2016-10-09 11:39:17.256 DEBUG com.scd.batch.common.job.batch.control.dao.JobDAO.getByUUID:132 KEY:] ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE UUID = ? 
+[2016-10-09 11:49:36.003  WARN org.springframework.test.context.TestContextManager:268 KEY:] Caught exception while allowing TestExecutionListener [com.github.springtestdbunit.DbUnitTestExecutionListener@1e63ec0b] to process 'before' execution of test method [public void com.scd.batch.trade.dao.JobDaoTest.testGetByUUID()] for test instance [com.scd.batch.trade.dao.JobDaoTest@3b956878]
+org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parseDelete(Parser.java:734) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parsePrepared(Parser.java:335) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:278) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152) ~[h2-1.3.170.jar:1.3.170]
+	at org.dbunit.database.statement.SimpleStatement.executeBatch(SimpleStatement.java:69) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.DeleteAllOperation.execute(DeleteAllOperation.java:126) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.CompositeOperation.execute(CompositeOperation.java:79) ~[dbunit-2.5.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.setupOrTeardown(DbUnitRunner.java:194) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.beforeTestMethod(DbUnitRunner.java:66) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitTestExecutionListener.beforeTestMethod(DbUnitTestExecutionListener.java:186) ~[spring-test-dbunit-1.2.1.jar:na]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:265) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+[2016-10-09 11:49:36.120  WARN org.dbunit.dataset.AbstractTableMetaData:166 KEY:] Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'H2' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+[2016-10-09 11:49:36.133  WARN org.springframework.test.context.TestContextManager:316 KEY:] Caught exception while allowing TestExecutionListener [com.github.springtestdbunit.DbUnitTestExecutionListener@1e63ec0b] to process 'after' execution for test: method [public void com.scd.batch.trade.dao.JobDaoTest.testGetByUUID()], instance [com.scd.batch.trade.dao.JobDaoTest@3b956878], exception [org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB [42102-170]]
+org.dbunit.DatabaseUnitException: Exception processing table name='T_JOB'
+	at org.dbunit.operation.AbstractBatchOperation.execute(AbstractBatchOperation.java:232) ~[dbunit-2.5.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.setupOrTeardown(DbUnitRunner.java:194) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.afterTestMethod(DbUnitRunner.java:83) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitTestExecutionListener.afterTestMethod(DbUnitTestExecutionListener.java:191) ~[spring-test-dbunit-1.2.1.jar:na]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:313) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB where id = ? [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parseDelete(Parser.java:734) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parsePrepared(Parser.java:335) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:278) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267) ~[h2-1.3.170.jar:1.3.170]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy$TransactionAwareInvocationHandler.invoke(TransactionAwareDataSourceProxy.java:240) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at com.sun.proxy.$Proxy37.prepareStatement(Unknown Source) ~[na:na]
+	at org.dbunit.database.statement.AbstractPreparedBatchStatement.<init>(AbstractPreparedBatchStatement.java:49) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.database.statement.SimplePreparedStatement.<init>(SimplePreparedStatement.java:53) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.database.statement.PreparedStatementFactory.createPreparedBatchStatement(PreparedStatementFactory.java:78) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.AbstractBatchOperation.execute(AbstractBatchOperation.java:175) ~[dbunit-2.5.1.jar:na]
+	... 27 common frames omitted
+[2016-10-09 11:54:29.922  WARN org.springframework.test.context.TestContextManager:268 KEY:] Caught exception while allowing TestExecutionListener [com.github.springtestdbunit.DbUnitTestExecutionListener@12bfd80d] to process 'before' execution of test method [public void com.scd.batch.trade.dao.JobDaoTest.testGetByUUID()] for test instance [com.scd.batch.trade.dao.JobDaoTest@41925502]
+org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parseDelete(Parser.java:734) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parsePrepared(Parser.java:335) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:278) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152) ~[h2-1.3.170.jar:1.3.170]
+	at org.dbunit.database.statement.SimpleStatement.executeBatch(SimpleStatement.java:69) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.DeleteAllOperation.execute(DeleteAllOperation.java:126) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.CompositeOperation.execute(CompositeOperation.java:79) ~[dbunit-2.5.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.setupOrTeardown(DbUnitRunner.java:194) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.beforeTestMethod(DbUnitRunner.java:66) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitTestExecutionListener.beforeTestMethod(DbUnitTestExecutionListener.java:186) ~[spring-test-dbunit-1.2.1.jar:na]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:265) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+[2016-10-09 11:54:30.015  WARN org.springframework.test.context.TestContextManager:316 KEY:] Caught exception while allowing TestExecutionListener [com.github.springtestdbunit.DbUnitTestExecutionListener@12bfd80d] to process 'after' execution for test: method [public void com.scd.batch.trade.dao.JobDaoTest.testGetByUUID()], instance [com.scd.batch.trade.dao.JobDaoTest@41925502], exception [org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB [42102-170]]
+org.dbunit.DatabaseUnitException: Exception processing table name='T_JOB'
+	at org.dbunit.operation.AbstractBatchOperation.execute(AbstractBatchOperation.java:232) ~[dbunit-2.5.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.setupOrTeardown(DbUnitRunner.java:194) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.afterTestMethod(DbUnitRunner.java:83) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitTestExecutionListener.afterTestMethod(DbUnitTestExecutionListener.java:191) ~[spring-test-dbunit-1.2.1.jar:na]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:313) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+Caused by: org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB where id = ? [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parseDelete(Parser.java:734) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parsePrepared(Parser.java:335) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:278) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:74) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267) ~[h2-1.3.170.jar:1.3.170]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy$TransactionAwareInvocationHandler.invoke(TransactionAwareDataSourceProxy.java:240) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at com.sun.proxy.$Proxy37.prepareStatement(Unknown Source) ~[na:na]
+	at org.dbunit.database.statement.AbstractPreparedBatchStatement.<init>(AbstractPreparedBatchStatement.java:49) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.database.statement.SimplePreparedStatement.<init>(SimplePreparedStatement.java:53) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.database.statement.PreparedStatementFactory.createPreparedBatchStatement(PreparedStatementFactory.java:78) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.AbstractBatchOperation.execute(AbstractBatchOperation.java:175) ~[dbunit-2.5.1.jar:na]
+	... 27 common frames omitted
+[2016-10-09 12:00:29.340  WARN org.springframework.test.context.TestContextManager:268 KEY:] Caught exception while allowing TestExecutionListener [com.github.springtestdbunit.DbUnitTestExecutionListener@1d8062d2] to process 'before' execution of test method [public void com.scd.batch.trade.dao.JobDaoTest.testGetByUUID()] for test instance [com.scd.batch.trade.dao.JobDaoTest@1e63ec0b]
+org.h2.jdbc.JdbcSQLException: Table "T_JOB" not found; SQL statement:
+delete from T_JOB [42102-170]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4774) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readTableOrView(Parser.java:4752) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.readSimpleTableFilter(Parser.java:712) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parseDelete(Parser.java:734) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parsePrepared(Parser.java:335) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:278) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.parse(Parser.java:250) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareLocal(Session.java:414) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.engine.Session.prepareCommand(Session.java:363) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164) ~[h2-1.3.170.jar:1.3.170]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152) ~[h2-1.3.170.jar:1.3.170]
+	at org.dbunit.database.statement.SimpleStatement.executeBatch(SimpleStatement.java:69) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.DeleteAllOperation.execute(DeleteAllOperation.java:126) ~[dbunit-2.5.1.jar:na]
+	at org.dbunit.operation.CompositeOperation.execute(CompositeOperation.java:79) ~[dbunit-2.5.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.setupOrTeardown(DbUnitRunner.java:194) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitRunner.beforeTestMethod(DbUnitRunner.java:66) ~[spring-test-dbunit-1.2.1.jar:na]
+	at com.github.springtestdbunit.DbUnitTestExecutionListener.beforeTestMethod(DbUnitTestExecutionListener.java:186) ~[spring-test-dbunit-1.2.1.jar:na]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:265) ~[spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193) [spring-test-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+[2016-10-09 15:00:18.909  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -a, -s, -h
+[2016-10-09 15:26:21.514  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -a, -s, -h
+[2016-10-09 16:29:53.106  INFO com.scd.batch.common.job.BatchLauncher:27 KEY:] BatchLauncher args: -a, -s, -h

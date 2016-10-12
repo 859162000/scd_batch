@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.trade.dao.SwitchDAO">
+
+    <update id="addWithOld">
+        <![CDATA[
+
+
+		UPDATE DAY_CUT_INFO
+		SET ACCOUNT_DATE = DATE_ADD(ACCOUNT_DATE, interval ${days} DAY)
+		WHERE ID = 1
+		  and ACCOUNT_DATE = #{oldAccountDate}
+		  and (UNIX_TIMESTAMP(now()) - UNIX_TIMESTAMP(MODIFIED)) >= #{minChangeInterval}
+
+
+        ]]>
+    </update>
+
+    <insert id="addHistory" parameterType="com.scd.batch.common.daycut.entity.DayCutInfo">
+        INSERT INTO DAY_CUT_INFO_HIST (ACCOUNT_DATE, DAY_CUT_CREATED, DAY_CUT_MODIFIED, CREATED)
+        values(#{dayCutInfo.accountDate}, #{dayCutInfo.dayCutCreated}, #{dayCutInfo.dayCutModified}, now())
+    </insert>
+</mapper>

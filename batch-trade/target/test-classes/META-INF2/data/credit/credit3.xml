@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+<T_WRITE_OFF_RECORD
+		MODIFIED = '2016-05-18 15:06:59'
+		CREATED  =  '2016-05-17 10:43:56'
+		ID  = "1"
+		CUSTOMER_ID = "1"
+		ACCOUNT_ID = "1"
+		ACCOUNT_TYPE = "1"
+		BILL_ID  = "1"
+		DESTINATION = "1"
+		DESTINATION_ID  = "1"
+		WRITE_OFF_DATE = '2016-05-18'
+		WRITE_OFF_MONEY = '100'
+		UNPAID = '1'
+        START_DATE = '2016-05-18'
+		
+		 />
+</dataset>

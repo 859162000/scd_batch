@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+<H_TRANSACTION_0_0
+        MODIFIED=  '2016-05-18 09:37:15'
+        CREATED= '2016-05-18 09:37:15'
+        ID= '10'
+        REQUEST_ID= '1'
+        SUB_REQUEST_ID=  '1'
+        TRANSACTION_ID=  '10'
+        RELATED_TRANSACTION_ID=  '1'
+        CUSTOMER_ID=  '1'
+        ACCOUNT_ID=  '1'
+        PRODUCT_ID=  '1'
+        CONTRACT_ID= '1'
+        PAYMENT_CHANNEL= '1'
+        FINANCING_SOURCE=  '1'
+        TRANSACTION_AMOUNT=  '1'
+        BUSINESS_TYPE=  '1'
+        TRANSACTION_DATE=  '2016-07-19'
+        TRANSACTION_CODE='1'
+        LOAN_ID=  '1'
+        CONSUME_ID=  '1'
+        BILL_ID=  '1'
+        DEBIT_ID ='1'
+    ></H_TRANSACTION_0_0>
+
+</dataset>

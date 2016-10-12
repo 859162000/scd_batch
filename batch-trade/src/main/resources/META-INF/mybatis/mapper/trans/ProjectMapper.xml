@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miaoqian.bid.dao.project.ProjectDao">
+
+
+    <resultMap id="BaseResultMap" type="com.miaoqian.bid.domain.project.Project">
+        <id column="id"  property="id"/>
+        <result column="project_name"  property="projectName"/>
+        <result column="project_code"  property="projectCode"/>
+        <result column="work_no"  property="workNo"/>
+        <result column="bid_type"  property="bidType"/>
+        <result column="bid_amount"  property="bidAmount"/>
+        <result column="year_rate"  property="yearRate"/>
+        <result column="min_invest_count"  property="minInvestCount"/>
+        <result column="unit_amount"  property="unitAmount"/>
+        <result column="min_invest_amount"  property="minInvestAmount"/>
+        <result column="max_invest_amount"  property="maxInvestAmount"/>
+        <result column="total_interest"  property="totalInterest"/>
+        <result column="bid_start_time"  property="bidStartTime"/>
+        <result column="bid_end_time"  property="bidEndTime"/>
+        <result column="repay_time"  property="repayTime"/>
+        <result column="last_repay_time"  property="lastRepayTime"/>
+        <result column="loan_period"  property="loanPeriod"/>
+        <result column="loan_period_unit"  property="loanPeriodUnit"/>
+        <result column="repay_type"  property="repayType"/>
+        <result column="guarantee_type"  property="guaranteeType"/>
+        <result column="bid_product_type"  property="bidProductType"/>
+        <result column="is_pad_funded"  property="isPadFunded"/>
+        <result column="risk_ctrl_type"  property="riskCtrlType"/>
+        <result column="borrower_id"  property="borrowerId"/>
+        <result column="thd_audit_status"  property="thdAuditStatus"/>
+        <result column="thd_audit_desc"  property="thdAuditDesc"/>
+        <result column="create_time"  property="createTime"/>
+        <result column="update_time"  property="updateTime"/>
+        <result column="data_status"  property="dataStatus"/>
+        <result column="status"  property="status"/>
+        <result column="invested_amount" property="investedAmount"/>
+        <result column="frozen_amount" property="frozenAmount" />
+        <result column="occupy_amount" property="occupyAmount" />
+        <result column="loan_use" property="loanUse"/>
+    </resultMap>
+
+    <select id="selectByProjectCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from bid_project
+        where project_code = #{projectCode} and data_status = 1 limit 1
+    </select>
+
+
+</mapper>

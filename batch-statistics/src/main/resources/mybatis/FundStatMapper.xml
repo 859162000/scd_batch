@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.statistics.dao.FundStatDao">
+
+    <sql id="fundStatColumns">
+        TRANS_DATE, RECHARG, WITHDRAW
+    </sql>
+
+    <resultMap id="fundStatMap" type="com.scd.batch.common.entity.FundStatEntity">
+        <id property="id" column="ID"/>
+        <result property="transDate" column="TRANS_DATE"/>
+        <result property="recharge" column="RECHARG"/>
+        <result property="withdraw" column="WITHDRAW"/>
+        <result property="partitionId" column="PARTITIONID"/>
+        <result property="version" column="VERSION"/>
+        <result property="created" column="CREATED"/>
+        <result property="modified" column="MODIFIED"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="fundStatMap">
+        select
+        <include refid="fundStatColumns"/>
+        from t_fundstat
+        <![CDATA[
+		order by TRANS_DATE desc
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+
+</mapper>

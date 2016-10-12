@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shardingConfig>
+    <!--库名 -->
+    <schema name="fcore_part">
+        <!-- 表名 -->
+        <table name="H_APPLY_HISTORY" rule="CUSTOMER_ID_RULE" />
+        <table name="H_BILL_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="H_INSTALLMENT_SCHEDULE_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="H_LOAN_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="H_TRANSACTION" rule="CUSTOMER_ID_RULE" />
+        <table name="T_BILL" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CONSUME" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CREDIT_INSTALLMENT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CUSTOMER_SIGN_CONTRACT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_DEBIT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_INSTALLMENT_SCHEDULE" rule="CUSTOMER_ID_RULE" />
+        <table name="T_LOAN" rule="CUSTOMER_ID_RULE" />
+        <table name="H_CREDIT_INSTALLMENT_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="H_CUSTOMER_ACCOUNT_AMOUNT_LIST" rule="CUSTOMER_ID_RULE" />
+        <table name="H_CUSTOMER_ACCOUNT_LIST" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CUSTOMER_ACCOUNT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CUSTOMER_INFO" rule="CUSTOMER_ID_RULE" />
+        <table name="H_CREDIT_LIMIT_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="T_ACCOUNT_CREDIT_LIMIT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CUSTOMER_CREDIT_LIMIT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_LOAN_CONTRACT_APPLICATION" rule="CUSTOMER_ID_RULE" />
+        <table name="T_PREAUTHORIZE_APPLICATION" rule="CUSTOMER_ID_RULE" />
+        <table name="T_PRODUCT_CREDIT_LIMIT" rule="CUSTOMER_ID_RULE" />
+        <table name="H_CONSUME_OPERATION" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CREDIT_ACCOUNT" rule="CUSTOMER_ID_RULE" />
+        <table name="T_CREDIT_ACCOUNT_FACTOR" rule="CUSTOMER_ID_RULE" />
+         <table name="T_WRITE_OFF_RECORD" rule="CUSTOMER_ID_RULE"></table>
+        <table name="H_LOAN_OPERATION_VALUE" rule="CUSTOMER_ID_RULE" />
+        <!-- 表名 -->
+        <table name="T_ACCG_ENTRY" rule="DAY_TIME_RULE_T_ACCG_ENTRY_LISTDATE" />
+        <table name="T_ACCG_REQ_LIST" rule="DAY_TIME_RULE_T_ACCG_REQ_LIST_ACCOUNTDATE" />
+        <!-- 单表开始 -->
+        <table name="T_JOB"   rule="SINGLE_T_JOB_RULE"/>
+        <table name="M_MONEY_META" rule="SINGLE_M_MONEY_META_RULE"/>
+        <table name="M_WRITE_OFF" rule="SINGLE_M_WRITE_OFF_RULE"/>
+        <table name="M_CREDIT_ACCOUNT_CONFIG" rule="SINGLE_M_CREDIT_ACCOUNT_CONFIG_RULE"></table>      
+        <table name="M_PRICING_METHOD" rule="SINGLE_M_PRICING_METHOD_RULE"></table>
+        <table name="T_FAIL_RECORD" rule="SINGLE_T_FAIL_RECORD_RULE"></table>
+        <!-- 单表结束 -->
+    </schema>
+
+    <!-- 分片规则 -->
+    <shardRule>
+        <tableRule name="CUSTOMER_ID_RULE">
+            <!-- 用于sharding的java对象属性名，注意全部转换为大写(partitionId -> PARTITIONID)。支持多个参数，以逗号分隔 -->
+            <columns>PARTITIONID</columns>
+
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+
+            <tbRuleList>
+                <tbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($tableIndex = 0)##
+                #set($tbSufix="_" + $dbIndex + "_" + $tableIndex)##
+                $!tbSufix]]></tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name='DAY_TIME_RULE_T_ACCG_ENTRY_LISTDATE'>
+            <columns>LISTDATE</columns>
+            <dbRuleList>
+                <dbRule>
+                    <![CDATA[
+	                #set($dbSufix="_0")
+	                $!dbSufix
+	                ]]>
+                </dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule>
+                    <![CDATA[
+					#set($datev=$dateUtil.formatShort($LISTDATE))##
+	                #set($tbSufix="_0_"+$datev)##
+	                $!tbSufix
+	                ]]>
+                </tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name='DAY_TIME_RULE_T_ACCG_REQ_LIST_ACCOUNTDATE'>
+            <columns>ACCOUNTDATE</columns>
+            <dbRuleList>
+                <dbRule>
+                    <![CDATA[
+	                #set($dbSufix="_0")
+	                $!dbSufix
+	                ]]>
+                </dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule>
+                    <![CDATA[
+					#set($datev=$dateUtil.formatShort($ACCOUNTDATE))##
+	                #set($tbSufix="_0_"+$datev)##
+	                $!tbSufix
+	                ]]>
+                </tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name="SINGLE_T_JOB_RULE">
+            <columns>UUID</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name="SINGLE_M_MONEY_META_RULE">
+            <columns>TRANTYPE</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name="SINGLE_M_WRITE_OFF_RULE">
+            <columns>WRITEOFFID</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name="SINGLE_T_WRITE_OFF_RECORED_RULE">
+            <columns>partitionId</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>      
+        <tableRule name="SINGLE_M_PRICING_METHOD_RULE">
+            <columns>repaymentMethodId</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>   
+        <tableRule name="SINGLE_M_CREDIT_ACCOUNT_CONFIG_RULE">
+            <columns>templateId</columns> 
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>
+        <tableRule name="SINGLE_T_FAIL_RECORD_RULE">
+            <columns>accountDate</columns>
+            <dbRuleList>
+                <dbRule><![CDATA[
+                #set($dbIndex = 0)##
+                #set($dbSufix = "_" + $dbIndex)##
+                $!dbSufix]]></dbRule>
+            </dbRuleList>
+            <tbRuleList>
+                <tbRule></tbRule>
+            </tbRuleList>
+        </tableRule>
+    </shardRule>
+</shardingConfig>

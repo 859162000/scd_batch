@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:optimistic-lock="http://www.scd.com/batch/common/schema/optimisticlock"
+       xmlns:exception-transform="http://www.scd.com/batch/common/schema/exception-transform"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.scd.com/batch/common/schema/optimisticlock
+        http://www.scd.com/batch/common/schema/optimisticlock.xsd
+		http://www.scd.com/batch/common/schema/exception-transform
+		http://www.scd.com/batch/common/schema/exception-transform.xsd">
+
+    <aop:aspectj-autoproxy/>
+
+    <optimistic-lock:annotation-driven order="100"/>
+    <exception-transform:annotation-driven order="200"/>
+
+    <context:property-placeholder
+            location="classpath*:META-INF/batch.dao.properties,
+            classpath*:META-INF/batch.config.properties"/>
+
+    <import resource="classpath*:META-INF/spring/batch.dao.xml"/>
+    <import resource="classpath*:META-INF/spring/batch.service.xml"/>
+    <import resource="classpath*:META-INF/spring/batch.jobs.xml"/>
+    <import resource="classpath*:META-INF/spring/batch.cache.xml"/>
+</beans>

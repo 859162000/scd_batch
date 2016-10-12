@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<T_CUSTOMER_SIGN_CONTRACT_0_0  MODIFIED  ='2016-05-12 16:00:26' 
+		CREATED  ='2016-05-12 16:00:26'  ID  ='368095'  CUSTOMER_ID  ='136261232' 
+		ACCOUNT_ID  ='17572191'  ACCOUNT_TYPE  ='1'  PRODUCT_ID  ='73426782' 
+		PRODUCT_NO  ='56119446'  CONTRACT_ID  ='13820739'  M_INTEREST  ='10000' 
+		M_CHARGES  ='0'  M_PENALTY  ='10000'  M_OVERDUE  ='10000'    M_VIOLATE = '10000'
+		CONTRACT_STATUS  ='1'  BILL_DAY_RULE  ='1'  BILL_DAY  ='2' 
+		REPAY_DAY_RULE  ='1'  REPAY_DAY  ='3,15,22,25'  GRACE_DAY  ='12'  
+		INTEREST_START_TYPE  ='2'   />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="1"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="1"
+                             FACTOR_NAME="利率"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="2"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="2"
+                             FACTOR_NAME="违约金率"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="3"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="3"
+                             FACTOR_NAME="账户管理费"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="4"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="4"
+                             FACTOR_NAME="账单日"
+                             FACTOR_VALUE="1"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="5"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="5"
+                             FACTOR_NAME="还款日"
+                             FACTOR_VALUE="1"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="6"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="6"
+                             FACTOR_NAME="宽限日"
+                             FACTOR_VALUE="3"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="7"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="7"
+                             FACTOR_NAME="冲销顺序ID"
+                             FACTOR_VALUE="4"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="8"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="8"
+                             FACTOR_NAME="当前消费比例(最小还款额)"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="9"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="9"
+                             FACTOR_NAME="逾期消费比例（最小还款额）"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="10"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="10"
+                             FACTOR_NAME="当期分期本金比例（最小还款额）"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="11"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="11"
+                             FACTOR_NAME="逾期分期本金比例（最小还款额）"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="12"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="12"
+                             FACTOR_NAME="当期分期手续费比例（最小还款额)"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="13"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="1000"
+                             FACTOR_NAME="逾期分期手续费比例（最小还款额）"
+                             FACTOR_VALUE="10"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="14"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="14"
+                             FACTOR_NAME="违约金比例（最小还款额）"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="15"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="15"
+                             FACTOR_NAME="逾期利息比例（最小还款额）"
+                             FACTOR_VALUE="15"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="16"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="16"
+                             FACTOR_NAME="信用额度模板控制ID"
+                             FACTOR_VALUE="1"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="17"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="17"
+                             FACTOR_NAME="账单分期规则"
+                             FACTOR_VALUE="1"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="18"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="18"
+                             FACTOR_NAME="账单最新分期金额"
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <M_CREDIT_ACCOUNT_CONFIG ID="19"
+                             TEMPLATE_ID="1"
+                             FACTOR_TYPE="19"
+                             FACTOR_NAME="消费最小分期金额  "
+                             FACTOR_VALUE="1000"
+                             MODIFIED ="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+
+    <T_CREDIT_ACCOUNT_0_0 ID="1"
+                      CUSTOMER_ID="1"
+                      ACCOUNT_ID="1"
+                      ACCOUNT_AGING="0"
+                      ACCOUNT_STATUS="1"
+                      STATUS_END_DATE="1970-1-1"
+                      DEBIT_STATUS="1"
+                      OVERFLOW="0"
+                      FINANCING_SOURCE="1"
+                      TEMPLATE_ID="1"
+                      MODIFIED="2016-04-18 00:00:00"
+                      CREATED="2016-04-18 00:00:00"
+    />
+
+
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="1"
+                               ACCOUNT_ID="1"
+                               CUSTOMER_ID="1"
+                               FACTOR_TYPE="20"
+                               FACTOR_NAME="利息定价因子"
+                               FACTOR_VALUE="1"
+                               MODIFIED="2016-04-18 00:00:00"
+                               CREATED="2016-04-18 00:00:00"
+    />
+
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="2"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="21"
+                             FACTOR_NAME="违约金率定价因子"
+                             FACTOR_VALUE="1"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="3"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="22"
+                             FACTOR_NAME="账单分期手续费率定价因子"
+                             FACTOR_VALUE="1"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="4"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="23"
+                             FACTOR_NAME="账户管理费定价因子"
+                             FACTOR_VALUE="1"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="5"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="4"
+                             FACTOR_NAME="账单日"
+                             FACTOR_VALUE="1"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />    
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="6"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="5"
+                             FACTOR_NAME="还款日"
+                             FACTOR_VALUE="15"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />  
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="7"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="6"
+                             FACTOR_NAME="宽限期"
+                             FACTOR_VALUE="3"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    /> 
+    <T_CREDIT_ACCOUNT_FACTOR_0_0 ID="8"
+                             ACCOUNT_ID="1"
+                             CUSTOMER_ID="1"
+                             FACTOR_TYPE="7"
+                             FACTOR_NAME="冲销顺序ID"
+                             FACTOR_VALUE="1"
+                             MODIFIED="2016-04-18 00:00:00"
+                             CREATED="2016-04-18 00:00:00"
+    />                 
+    
+	<M_WRITE_OFF
+	    MODIFIED = '2016-05-18 15:06:59'
+	    CREATED= '2016-05-18 15:06:59'
+	    ID = '1'
+	    WRITE_OFF_ID = '1'
+	    WRITE_OFF_ORDER = '4,2,1,0'
+	/>    
+</dataset>

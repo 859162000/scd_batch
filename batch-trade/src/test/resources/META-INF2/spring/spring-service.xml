@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.scd.batch.trade.service"/>
+    <context:component-scan base-package="com.scd.batch.common"/>
+
+    <bean id="dayCutService" class="com.scd.batch.common.daycut.service.impl.DayCutServiceImpl"/>
+
+    <bean class="com.scd.batch.common.logger.InitLogContainerBean">
+        <property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>
+        <property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>
+    </bean>
+
+
+    <bean id="switch.job" class="com.scd.batch.trade.job.SwitchJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="switch.job"/>
+    </bean>
+
+    <bean id="prepare.job" class="com.scd.batch.trade.job.PrepareJob" init-method="init">
+        <constructor-arg index="0" value="${database.num}"/>
+        <constructor-arg index="1" value="${table.num}"/>
+        <constructor-arg index="2" value="${accg.database.num}"/>
+        <constructor-arg index="3" value="${accg.table.num}"/>
+
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="prepare.job"/>
+    </bean>
+
+    <bean id="loadLoan.job" class="com.scd.batch.trade.job.loan.LoanLoadDataJob">
+        <property name="name" value="loadLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.root.path}"/>
+        <property name="targetNamePrefix" value="LOAN_INSTALLMENT"/>
+
+    </bean>
+
+    <bean id="calLoan.job" class="com.scd.batch.trade.job.loan.LoanCalculateJob">
+        <property name="name" value="calLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.root.path}"/>
+        <property name="sourceNamePrefix" value="LOAN_INSTALLMENT"/>
+        <property name="targetNamePrefix" value="LOAN_INSTALLMENT_FEE"/>
+    </bean>
+
+    <bean id="updateLoan.job" class="com.scd.batch.trade.job.loan.LoanUpdateJob">
+        <property name="name" value="updateLoan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.root.path}"/>
+        <property name="sourceNamePrefix" value="LOAN_INSTALLMENT_FEE"/>
+    </bean>
+
+    <bean id="loadExpedite.job" class="com.scd.batch.trade.job.loan.LoanExpediteJob">
+        <property name="name" value="loadExpedite.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="rootPath" value="${file.root.path}"/>
+        <property name="targetNamePrefix" value="LOAN_EXPEDITE"/>
+        <property name="batchSize" value="${loadLoan.batchSize}"/>
+    </bean>
+
+    <!-- 确保可在@Value中, 使用SeEL表达式获取资源属性 -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="properties" ref="configProperties"/>
+    </bean>
+    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath*:META-INF/*.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="loanExpediteService"
+          class="com.scd.batch.trade.service.loan.LoanExpediteService"
+          init-method="init"/>
+</beans>
