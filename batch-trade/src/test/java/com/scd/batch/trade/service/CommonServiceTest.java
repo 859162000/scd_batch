@@ -6,7 +6,6 @@ package com.scd.batch.trade.service;
 import com.scd.batch.common.job.batch.control.JobControl;
 import com.scd.batch.common.job.batch.control.JobControlService;
 import com.scd.batch.common.job.executor.ExecutorContext;
-import com.scd.batch.common.utils.DateUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.trade.model.loan.LoanInstallmentInfo;
 import com.scd.batch.trade.service.daycut.SwitchService;
@@ -63,22 +62,17 @@ public class CommonServiceTest {
     @Test
     public void loanCalculateTest() {
         Date dueDate = new Date();
-        Date graceDate = DateUtils.getNextDateOfTheDay(dueDate, 1);
 
         List<LoanInstallmentInfo> installments = new ArrayList<LoanInstallmentInfo>() {
             {
                 LoanInstallmentInfo installment = new LoanInstallmentInfo();
                 installment.setProductId(1L);
                 installment.setProductNo(1L);
-                installment.setGraceDate(graceDate);
                 installment.setDueDate(dueDate);
                 installment.setmOverdue(10000);
                 add(installment);
             }
         };
-
-        ShortDate accDate = ShortDate.valueOf(DateUtils.getNextDateOfTheDay(dueDate, 2));
-
 
     }
 }

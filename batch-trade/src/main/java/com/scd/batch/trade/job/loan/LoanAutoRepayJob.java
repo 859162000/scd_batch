@@ -10,7 +10,7 @@ import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.google.common.collect.Lists;
-import com.scd.batch.trade.common.CommonUtil;
+import com.scd.batch.common.utils.CommonUtil;
 import com.scd.batch.trade.model.loan.AutoRepayInfo;
 import com.scd.batch.trade.model.loan.InstallmentInfo;
 import com.scd.batch.trade.service.loan.LoanAutoRepayService;

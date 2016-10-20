@@ -1,6 +1,6 @@
 package com.scd.batch.statistics.dao;
 
-import com.scd.batch.common.entity.FixProductDueStatEntity;
+import com.scd.batch.common.entity.statistics.FixProductDueStatEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

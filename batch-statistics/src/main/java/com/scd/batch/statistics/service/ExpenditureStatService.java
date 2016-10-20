@@ -1,6 +1,6 @@
 package com.scd.batch.statistics.service;
 
-import com.scd.batch.common.entity.ExpenditureStatEntity;
+import com.scd.batch.common.entity.statistics.ExpenditureStatEntity;
 import com.scd.batch.statistics.dao.ExpenditureStatDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

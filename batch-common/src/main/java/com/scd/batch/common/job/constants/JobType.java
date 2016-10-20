@@ -93,7 +93,9 @@ public enum JobType implements EnumType<JobType, Integer> {
     PROVISION(11),
 
 
-    LOAN_ACCG_REQ(12);
+    LOAN_ACCG_REQ(12),
+
+    LOAN_PAYMENT_RECONCILIATION(101);
 
     public final int type;
 

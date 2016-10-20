@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 
 import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.ShortDate;
-import com.scd.batch.trade.common.CommonUtil;
+import com.scd.batch.common.utils.CommonUtil;
 import com.scd.batch.trade.common.LoanUtil;
 import com.scd.batch.trade.model.loan.LoanInfo;
 import com.scd.batch.trade.service.FailureRecordService;

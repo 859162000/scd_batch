@@ -1,7 +1,6 @@
 package com.scd.batch.statistics.dao;
 
-import com.scd.batch.common.entity.AssetsStatEntity;
-import com.scd.batch.common.entity.BorrowerRepayPlanStatEntity;
+import com.scd.batch.common.entity.statistics.BorrowerRepayPlanStatEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

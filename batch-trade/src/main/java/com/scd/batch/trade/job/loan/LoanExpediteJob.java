@@ -14,7 +14,7 @@ import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.google.common.collect.Lists;
-import com.scd.batch.trade.common.CommonUtil;
+import com.scd.batch.common.utils.CommonUtil;
 import com.scd.batch.trade.model.loan.ExpediteInfo;
 import com.scd.batch.trade.service.loan.LoanExpediteService;
 import org.apache.commons.collections.CollectionUtils;

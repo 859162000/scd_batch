@@ -17,6 +17,7 @@
         <module>batch-trade</module>
         <module>batch-interest</module>
         <module>batch-statistics</module>
+        <module>batch-reconciliation</module>
     </modules>
 
     <!-- Properties -->

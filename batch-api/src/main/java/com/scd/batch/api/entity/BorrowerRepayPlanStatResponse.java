@@ -1,7 +1,6 @@
 package com.scd.batch.api.entity;
 
-import com.scd.batch.common.entity.BorrowerRepayPlanStatEntity;
-import com.scd.batch.common.entity.FundStatEntity;
+import com.scd.batch.common.entity.statistics.BorrowerRepayPlanStatEntity;
 
 import java.util.List;
 

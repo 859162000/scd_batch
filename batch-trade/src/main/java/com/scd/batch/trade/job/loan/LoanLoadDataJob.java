@@ -13,7 +13,7 @@ import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
-import com.scd.batch.trade.common.CommonUtil;
+import com.scd.batch.common.utils.CommonUtil;
 import com.scd.batch.trade.common.LoanUtil;
 import com.scd.batch.trade.model.loan.LoanInfo;
 import com.scd.batch.trade.model.loan.LoanInstallmentInfo;

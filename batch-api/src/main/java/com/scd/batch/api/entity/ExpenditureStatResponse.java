@@ -1,6 +1,6 @@
 package com.scd.batch.api.entity;
 
-import com.scd.batch.common.entity.ExpenditureStatEntity;
+import com.scd.batch.common.entity.statistics.ExpenditureStatEntity;
 
 import java.util.List;
 

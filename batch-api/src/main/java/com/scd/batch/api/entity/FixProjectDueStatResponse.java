@@ -1,6 +1,6 @@
 package com.scd.batch.api.entity;
 
-import com.scd.batch.common.entity.FundStatEntity;
+import com.scd.batch.common.entity.statistics.FundStatEntity;
 
 import java.util.List;
 

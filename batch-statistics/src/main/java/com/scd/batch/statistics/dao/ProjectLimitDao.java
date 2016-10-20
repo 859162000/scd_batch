@@ -1,6 +1,6 @@
 package com.scd.batch.statistics.dao;
 
-import com.scd.batch.common.entity.ProjectLimitEntity;
+import com.scd.batch.common.entity.statistics.ProjectLimitEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

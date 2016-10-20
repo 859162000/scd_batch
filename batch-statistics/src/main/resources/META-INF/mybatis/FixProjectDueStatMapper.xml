@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.statistics.dao.FixProjectDueStatDao">
+
+    <sql id="fixProductDueStatColumns">
+        ID,
+        DUE_DATE,
+        FIX_PLAN_PRINCIPAL,
+        FIX_PLAN_INTEREST,
+        FIX_PROJECT_PRINCIPAL,
+        FIX_PROJECT_INTEREST,
+        SUM_AMT,
+        VERSION,
+        CREATED,
+        MODIFIED,
+    </sql>
+
+    <resultMap id="fixProductDueStatMap" type="com.scd.batch.common.entity.statistics.FixProductDueStatEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="DUE_DATE" property="dueDate" jdbcType="DATE"/>
+        <result column="FIX_PLAN_PRINCIPAL" property="fixPlanPrincipal" jdbcType="DOUBLE"/>
+        <result column="FIX_PLAN_INTEREST" property="fixPlanInterest" jdbcType="DOUBLE"/>
+        <result column="FIX_PROJECT_PRINCIPAL" property="fixProjectPrincipal" jdbcType="DOUBLE"/>
+        <result column="FIX_PROJECT_INTEREST" property="fixProjectInterest" jdbcType="DOUBLE"/>
+        <result column="SUM_AMT" property="sumAmt" jdbcType="DOUBLE"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="fixProductDueStatMap">
+        select
+        <include refid="fixProductDueStatColumns"/>
+        from t_fixproductduestat
+        <![CDATA[
+		order by DUE_DATE DESC
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+
+</mapper>

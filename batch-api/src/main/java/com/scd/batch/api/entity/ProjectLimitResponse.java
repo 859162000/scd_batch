@@ -1,6 +1,6 @@
 package com.scd.batch.api.entity;
 
-import com.scd.batch.common.entity.ProjectLimitEntity;
+import com.scd.batch.common.entity.statistics.ProjectLimitEntity;
 
 import java.util.List;
 

@@ -15,7 +15,7 @@ import com.scd.batch.common.utils.Pagination;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.google.common.base.Preconditions;
-import com.scd.batch.trade.common.CommonUtil;
+import com.scd.batch.common.utils.CommonUtil;
 import com.scd.batch.trade.model.loan.OldVOA;
 import org.apache.commons.lang.StringUtils;
 
