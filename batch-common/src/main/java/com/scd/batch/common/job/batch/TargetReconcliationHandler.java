@@ -1,5 +1,9 @@
 package com.scd.batch.common.job.batch;
 
+import com.scd.batch.common.entity.reconciliation.TransferErrorBase;
+
+import java.util.concurrent.ConcurrentHashMap;
+
 @FunctionalInterface
 public interface TargetReconcliationHandler {
 
@@ -26,7 +30,7 @@ public interface TargetReconcliationHandler {
      *
      * @return
      */
-    void handle(TransferRepo transferRepo);
+    void handle(ConcurrentHashMap<String, TransferErrorBase> transferRepo);
 
     /**
      * After all the batch lines are handled

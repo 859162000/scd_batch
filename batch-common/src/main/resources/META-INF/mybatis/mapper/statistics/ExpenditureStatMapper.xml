@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.statistics.ExpenditureStatDao">
+
+    <sql id="expenditureStatColumns">
+        DATE,
+        TYPE,
+        AMOUNT,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <resultMap id="expenditureStatMap" type="com.scd.batch.common.entity.statistics.ExpenditureStatEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="DATE" property="transDate" jdbcType="DATE"/>
+        <result column="TYPE" property="type" jdbcType="INTEGER"/>
+        <result column="AMOUNT" property="amount" jdbcType="DOUBLE"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="expenditureStatMap">
+        select
+        ID,
+        <include refid="expenditureStatColumns"/>
+        from s_expenditurestat
+        <![CDATA[
+		order by DATE DESC
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from s_expenditurestat
+        where DATE = #{transDate} and TYPE = #{type}
+    </select>
+
+    <insert id="insert">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+        insert into s_expenditurestat(
+        <include refid="expenditureStatColumns"/>
+        )
+        values(
+        #{entity.transDate},
+        #{entity.type},
+        #{entity.amount},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="update2DB">
+        update s_expenditurestat
+        set
+        TYPE = #{entity.type},
+        AMOUNT = #{entity.amount},
+        VERSION = VERSION + 1,
+        MODIFIED = CURRENT_TIMESTAMP
+        where DATE = #{entity.transDate}
+    </update>
+
+</mapper>

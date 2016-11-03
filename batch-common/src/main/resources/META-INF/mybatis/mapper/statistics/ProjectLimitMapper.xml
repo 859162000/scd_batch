@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.statistics.ProjectLimitDao">
+
+
+    <resultMap id="projectLimitMap" type="com.scd.batch.common.entity.statistics.ProjectLimitEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="PROJECT_CODE" property="projectCode" jdbcType="VARCHAR"/>
+        <result column="PROJECT_NAME" property="projectName" jdbcType="VARCHAR"/>
+        <result column="TOTAL" property="total" jdbcType="DOUBLE"/>
+        <result column="BID" property="bid" jdbcType="DOUBLE"/>
+        <result column="UNBID" property="unbid" jdbcType="DOUBLE"/>
+        <result column="WITHDRAW" property="withdraw" jdbcType="DOUBLE"/>
+        <result column="PAID_PRINCIPAL" property="paidPrincipal" jdbcType="DOUBLE"/>
+        <result column="UNPAID_PRINCIPAL" property="unpaidPrincipal" jdbcType="DOUBLE"/>
+        <result column="PAID_INTEREST" property="paidInterest" jdbcType="DOUBLE"/>
+        <result column="UNPAID_INTEREST" property="unpaidInterest" jdbcType="DOUBLE"/>
+        <result column="VERSION" jdbcType="INTEGER" property="version"/>
+        <result column="CREATED" jdbcType="TIMESTAMP" property="created"/>
+        <result column="MODIFIED" jdbcType="TIMESTAMP" property="modified"/>
+    </resultMap>
+
+    <sql id="projectLimitColumns">
+        PROJECT_CODE,
+        PROJECT_NAME,
+        TOTAL,
+        BID,
+        UNBID,
+        WITHDRAW,
+        PAID_PRINCIPAL,
+        UNPAID_PRINCIPAL,
+        PAID_INTEREST,
+        UNPAID_INTEREST
+    </sql>
+
+    <select id="getList" resultMap="projectLimitMap">
+        select
+        <include refid="projectLimitColumns"/>
+        from s_projectlimit
+        <![CDATA[
+		order by PROJECT_CODE
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from s_projectlimit
+        where PROJECT_CODE = #{projectCode}
+    </select>
+
+    <select id="getLimitByProjectCode" resultType="com.scd.batch.common.entity.statistics.ProjectLimitEntity">
+        select
+        id,
+        <include refid="projectLimitColumns"/>,
+        VERSION,
+        CREATED,
+        MODIFIED
+        from s_projectlimit
+        where PROJECT_CODE = #{projectCode}
+    </select>
+
+    <update id="update2DB">
+        update s_projectlimit
+        set
+        TOTAL = #{entity.total},
+        BID = #{entity.bid},
+        UNBID = #{entity.unbid},
+        WITHDRAW = #{entity.withdraw},
+        PAID_PRINCIPAL = #{entity.paidPrincipal},
+        UNPAID_PRINCIPAL = #{entity.unpaidPrincipal},
+        PAID_INTEREST = #{entity.paidInterest},
+        UNPAID_INTEREST = #{entity.unpaidInterest},
+        MODIFIED = CURRENT_TIMESTAMP,
+        VERSION = VERSION + 1
+        where PROJECT_CODE = #{entity.projectCode}
+    </update>
+
+    <insert id="insert">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+        insert into s_projectlimit
+        (
+        id,
+        <include refid="projectLimitColumns"/>,
+        VERSION,
+        CREATED,
+        MODIFIED
+        )
+        values(
+        #{entity.id},
+        #{entity.projectCode},
+        #{entity.projectName},
+        #{entity.total},
+        #{entity.bid},
+        #{entity.unbid},
+        #{entity.withdraw},
+        #{entity.paidPrincipal},
+        #{entity.unpaidPrincipal},
+        #{entity.paidInterest},
+        #{entity.unpaidInterest},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+</mapper>

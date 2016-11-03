@@ -11,7 +11,7 @@ public enum TransferErrorType implements EnumType<TransferErrorType, Integer> {
     SCD(1, "SCD"),
 
     // 对方单边，SCD无，第三方有
-    THIRDPARTY(2, "THIRDPARTY"),
+    HUIFU(2, "HUIFU"),
 
     // 双方都有，信息不匹配
     BOTH(3, "BOTH");

@@ -5,13 +5,12 @@ import com.scd.batch.api.entity.ProjectLimitRequest;
 import com.scd.batch.api.entity.ProjectLimitResponse;
 import com.scd.batch.statistics.service.ProjectLimitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by liyankai on 2016/10/9.
- */
+@Service
 public class ProjectLimitManager implements ProjectLimitAPI {
 
     @Autowired

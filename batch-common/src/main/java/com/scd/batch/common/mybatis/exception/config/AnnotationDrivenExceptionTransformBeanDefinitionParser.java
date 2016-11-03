@@ -28,11 +28,6 @@ import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
-/**
- * AnnotationDrivenExceptionTransformBeanDefinitionParser
- *
- * @author yutianbao
- */
 class AnnotationDrivenExceptionTransformBeanDefinitionParser implements BeanDefinitionParser {
 
     @Override

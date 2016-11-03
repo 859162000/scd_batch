@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.statistics.AssetsStatDao">
+
+    <sql id="assetsStatColumns">
+        DATE,
+        CURRENT,
+        FIX_PLAN,
+        FIX_PROJECT,
+        BALANCE,
+        FROZEN,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <resultMap id="assetsStatMap" type="com.scd.batch.common.entity.statistics.AssetsStatEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="DATE" property="transDate" jdbcType="DATE"/>
+        <result column="CURRENT" property="current" jdbcType="DOUBLE"/>
+        <result column="FIX_PLAN" property="fixPlan" jdbcType="DOUBLE"/>
+        <result column="FIX_PROJECT" property="fixProject" jdbcType="DOUBLE"/>
+        <result column="BALANCE" property="balance" jdbcType="DOUBLE"/>
+        <result column="FROZEN" property="frozen" jdbcType="DOUBLE"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="assetsStatMap">
+        select
+        ID,
+        <include refid="assetsStatColumns"/>
+        from s_assetsstat
+        <![CDATA[
+		order by DATE DESC
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from s_assetsstat
+        where DATE = #{transDate}
+    </select>
+
+    <insert id="insert">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+        insert into s_assetsstat(
+        <include refid="assetsStatColumns"/>
+        )
+        values(
+        #{entity.transDate},
+        #{entity.current},
+        #{entity.fixPlan},
+        #{entity.fixProject},
+        #{entity.balance},
+        #{entity.frozen},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="update2DB">
+        update s_assetsstat
+        set
+        CURRENT = CURRENT + #{entity.current},
+        FIX_PLAN = FIX_PLAN + #{entity.fixPlan},
+        FIX_PROJECT = FIX_PROJECT + #{entity.fixProject},
+        BALANCE = BALANCE + #{entity.balance},
+        FROZEN = FROZEN + #{entity.frozen},
+        VERSION = VERSION + 1,
+        MODIFIED = CURRENT_TIMESTAMP
+        where DATE = #{entity.transDate}
+    </update>
+
+</mapper>

@@ -1,7 +1,8 @@
 package com.scd.batch.common.entity.reconciliation;
 
-import constant.AccountLevelEnum;
-import constant.AccountType;
+
+import com.scd.batch.common.constant.reconciliation.AccountLevelEnum;
+import com.scd.batch.common.constant.reconciliation.AccountType;
 
 /**
  * Created by liwei on 2016-10-14.

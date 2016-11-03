@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.trade.RepaymentCbDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.RepaymentCb">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="fro_seq_no" property="froSeqNo" jdbcType="VARCHAR"/>
+        <result column="prod_id" property="prodId" jdbcType="VARCHAR"/>
+        <result column="prod_type" property="prodType" jdbcType="VARCHAR"/>
+        <result column="prod_name" property="prodName" jdbcType="VARCHAR"/>
+        <result column="order_id" property="orderId" jdbcType="VARCHAR"/>
+        <result column="order_date" property="orderDate" jdbcType="VARCHAR"/>
+        <result column="out_type" property="outType" jdbcType="VARCHAR"/>
+        <result column="out_uid" property="outUid" jdbcType="VARCHAR"/>
+        <result column="in_uid" property="inUid" jdbcType="VARCHAR"/>
+        <result column="in_type" property="inType" jdbcType="VARCHAR"/>
+        <result column="trans_amt" property="transAmt" jdbcType="DECIMAL"/>
+        <result column="principal_amt" property="principalAmt" jdbcType="DECIMAL"/>
+        <result column="interest_amt" property="interestAmt" jdbcType="DECIMAL"/>
+        <result column="sup_interest_amt" property="supInterestAmt" jdbcType="DECIMAL"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id,
+        fro_seq_no,
+        prod_id,
+        prod_type,
+        prod_name,
+        order_id,
+        order_date,
+        out_type,
+        out_uid,
+        in_uid,
+        in_type,
+        trans_amt,
+        principal_amt,
+        interest_amt,
+        sup_interest_amt,
+        status,
+        create_time,
+        update_time
+    </sql>
+
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select id
+        from repayment_cb
+        order by id
+    </select>
+
+    <select id="getListByPage" resultMap="BaseResultMap">
+        select
+        ID,
+        <include refid="Base_Column_List"/>
+        from repayment_cb
+        where ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+
+</mapper>

@@ -13,13 +13,6 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Date;
 
-/**
- * Represents an implementation of {@link TypeHandler}.<br>
- * If a date column is not null in the schema, we used the epoch '1970-01-01' as the default value in db, but we will
- * use a null value in the java world.
- * 
- * @author yutianbao
- */
 @MappedTypes(Date.class)
 @MappedJdbcTypes(value = JdbcType.DATE, includeNullJdbcType = true)
 public class EpochDateTypeHandler extends TypeReference<Date> implements TypeHandler<Date> {

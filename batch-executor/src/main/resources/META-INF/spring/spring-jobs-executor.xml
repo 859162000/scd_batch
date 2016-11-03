@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- 日切任务 -->
+    <bean id="switch.job" class="com.scd.batch.executor.job.SwitchJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="switch.job"/>
+    </bean>
+
+    <!-- 生成任务控制信息 -->
+    <bean id="prepare.job" class="com.scd.batch.executor.job.PrepareJob" init-method="init">
+        <constructor-arg index="0" value="${database.num}"/>
+        <constructor-arg index="1" value="${table.num}"/>
+        <constructor-arg index="2" value="${statistics.database.num}"/>
+        <constructor-arg index="3" value="${statistics.table.num}"/>
+
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="prepare.job"/>
+    </bean>
+
+    <!-- TODO 异常重试任务 -->
+
+    <!-- TODO 报警任务 -->
+</beans>

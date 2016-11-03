@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.scd.batch.executor"/>
+
+    <bean id="dayCutService" class="com.scd.batch.common.daycut.service.impl.DayCutServiceImpl"/>
+    <bean id="switchService" class="com.scd.batch.executor.service.daycut.SwitchServiceImpl"/>
+
+    <bean class="com.scd.batch.common.logger.InitLogContainerBean">
+        <property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>
+        <property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>
+    </bean>
+
+
+    <!-- 确保可在@Value中, 使用SeEL表达式获取资源属性 -->
+    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+        <!--<property name="properties" ref="configProperties"/>-->
+    <!--</bean>-->
+    <!--<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath*:META-INF/*.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+</beans>

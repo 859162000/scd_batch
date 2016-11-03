@@ -1,2 +1,3 @@
 http\://www.scd.com/batch/common/schema/optimisticlock.xsd=META-INF/spring-optimistic-lock.xsd
 http\://www.scd.com/batch/common/schema/exception-transform.xsd=META-INF/spring-exception-transform.xsd
+http\://www.scd.com/batch/common/schema/multidb.xsd=META-INF/spring-multidb.xsd

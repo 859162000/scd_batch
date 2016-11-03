@@ -4,24 +4,32 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 public class Pagination {
 
-    /** Constants for default page */
+    /**
+     * Constants for default page
+     */
     public static final int DEFAULT_PAGE_SIZE = 1000;
     public static final int DEFAULT_PAGE_NUMBER = 1;
 
-    /** The total count of the pages */
+    /**
+     * The total count of the pages
+     */
     private int count = 0;
 
-    /** Page size */
+    /**
+     * Page size
+     */
     private int pageSize = DEFAULT_PAGE_SIZE;
 
-    /** Current page number, index from 1 */
+    /**
+     * Current page number, index from 1
+     */
     private int curPage = DEFAULT_PAGE_NUMBER;
 
     /**
      * Getters & Setters
      */
     public int getPageCount() {
-        return count % pageSize == 0 ? 0 : (count / pageSize) + 1;
+        return (count / pageSize) + count % pageSize == 0 ? 0 : 1;
     }
 
     public int getPageSize() {

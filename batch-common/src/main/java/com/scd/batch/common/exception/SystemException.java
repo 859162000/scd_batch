@@ -5,8 +5,6 @@ import com.scd.batch.common.logger.LogMessageContainers;
 
 /**
  * System runtime exception for logging purpose
- *
- * @author chenguoqing
  */
 public class SystemException extends RuntimeException {
 

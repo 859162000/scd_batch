@@ -1,10 +1,5 @@
 package com.scd.batch.common.exception;
 
-/**
- * OptimisticLockingException
- *
- * @author yutianbao
- */
 public class OptimisticLockingException extends SystemException {
     private static final long serialVersionUID = -8879525250880790138L;
 

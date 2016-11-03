@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.trade.RechargeLDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.RechargeL">
+
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
+        <result column="user_cust_id" property="userCustId" jdbcType="VARCHAR"/>
+        <result column="amt" property="amt" jdbcType="DECIMAL"/>
+        <result column="arrive_amt" property="arriveAmt" jdbcType="DECIMAL"/>
+        <result column="recharge_type" property="rechargeType" jdbcType="VARCHAR"/>
+        <result column="order_id" property="orderId" jdbcType="VARCHAR"/>
+        <result column="order_date" property="orderDate" jdbcType="VARCHAR"/>
+        <result column="gate_business_id" property="gateBusinessId" jdbcType="VARCHAR"/>
+        <result column="open_bank_id" property="openBankId" jdbcType="VARCHAR"/>
+        <result column="dc_flag" property="dcFlag" jdbcType="CHAR"/>
+        <result column="return_url" property="returnUrl" jdbcType="VARCHAR"/>
+        <result column="open_acct_id" property="openAcctId" jdbcType="VARCHAR"/>
+        <result column="id_card" property="idCard" jdbcType="VARCHAR"/>
+        <result column="page_type" property="pageType" jdbcType="CHAR"/>
+        <result column="fee_amt" property="feeAmt" jdbcType="DECIMAL"/>
+        <result column="fee_cust_id" property="feeCustId" jdbcType="VARCHAR"/>
+        <result column="fee_acct_id" property="feeAcctId" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="finish_time" property="finishTime" jdbcType="TIMESTAMP"/>
+        <result column="rework_yn" property="reworkYn" jdbcType="CHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="recharge_man_yn" property="rechargeManYn" jdbcType="CHAR"/>
+        <result column="recharge_man_reason" property="rechargeManReason" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        seq_no,
+        uid,
+        user_cust_id,
+        amt,
+        arrive_amt,
+        recharge_type,
+        order_id,
+        order_date,
+        gate_business_id,
+        open_bank_id,
+        dc_flag,
+        return_url,
+        open_acct_id,
+        id_card,
+        page_type,
+        fee_amt,
+        fee_cust_id,
+        fee_acct_id,
+        create_time,
+        update_time,
+        start_time,
+        finish_time,
+        rework_yn,
+        status,
+        recharge_man_yn,
+        recharge_man_reason
+    </sql>
+
+    <select id="selectRechargeSumByDate" resultType="java.lang.Double">
+        SELECT
+        COALESCE(SUM(amt), 0) AS amount
+        FROM recharge_l
+        WHERE status IN
+        <foreach collection="statusList" item="status" open="(" close=")" separator=",">
+            #{status}
+        </foreach>
+        <![CDATA[
+              AND start_time >= #{startDate}
+              AND start_time <= #{endDate}
+        ]]>
+    </select>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select id
+        from recharge_l
+        order by id
+    </select>
+
+    <select id="getListByPage" resultMap="BaseResultMap">
+        select
+        ID,
+        <include refid="Base_Column_List"/>
+        from recharge_l
+        where ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+
+</mapper>

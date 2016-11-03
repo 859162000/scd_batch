@@ -45,6 +45,31 @@ public class BorrowerRepayPlanStatEntity extends Entity {
     // 实际还款汇总
     private double repaySum;
 
+    public BorrowerRepayPlanStatEntity() {
+
+    }
+
+    public BorrowerRepayPlanStatEntity(Date dueDate, long borrowerId, String borrowerName,
+                                       String projectCode, String projectName,
+                                       int repayType, double duePrincipal,
+                                       double dueInterest, double dueSum,
+                                       double repayPrincipal, double repayInterest, double repaySum) {
+
+        super();
+        this.dueDate = dueDate;
+        this.borrowerId = borrowerId;
+        this.borrowerName = borrowerName;
+        this.projectCode = projectCode;
+        this.projectName = projectName;
+        this.repayType = repayType;
+        this.duePrincipal = duePrincipal;
+        this.dueInterest = dueInterest;
+        this.dueSum = dueSum;
+        this.repayPrincipal = repayPrincipal;
+        this.repayInterest = repayInterest;
+        this.repaySum = repaySum;
+    }
+
     public Date getDueDate() {
         return dueDate;
     }

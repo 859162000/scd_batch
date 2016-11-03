@@ -7,11 +7,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * Created on 17:22 06/10/2016.
- *
- * @author <a href="mailto:songguo@baidu.com">songguo</a>
- */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

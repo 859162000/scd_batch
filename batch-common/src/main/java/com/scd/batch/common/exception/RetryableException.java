@@ -3,7 +3,6 @@ package com.scd.batch.common.exception;
 /**
  * RetryableException
  * 
- * @author yutianbao
  */
 public class RetryableException extends RuntimeException {
 

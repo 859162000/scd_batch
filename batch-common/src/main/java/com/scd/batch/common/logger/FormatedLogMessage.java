@@ -4,9 +4,6 @@ import java.text.MessageFormat;
 
 /**
  * Format the log arguments to message argument and last throwable
- * 
- * @author chenguoqing
- * 
  */
 public class FormatedLogMessage {
 

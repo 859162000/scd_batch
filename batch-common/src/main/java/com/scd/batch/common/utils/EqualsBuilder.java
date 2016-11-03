@@ -77,10 +77,10 @@ public class EqualsBuilder extends org.apache.commons.lang.builder.EqualsBuilder
                 }
             }
         } catch (final IllegalArgumentException e) {
-            // In this case, we tried to test a subclass vs. a superclass and
+            // In this case, we tried to h2 a subclass vs. a superclass and
             // the subclass has ivars or the ivars are transient and
             // we are testing transients.
-            // If a subclass has ivars that we are trying to test them, we get an
+            // If a subclass has ivars that we are trying to h2 them, we get an
             // exception and we know that the objects are not equal.
             return false;
         }

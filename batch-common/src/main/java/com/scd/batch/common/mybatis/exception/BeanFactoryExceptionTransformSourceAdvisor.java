@@ -5,11 +5,6 @@ import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractBeanFactoryPointcutAdvisor;
 import org.springframework.util.Assert;
 
-/**
- * Subclass extends from {@link AbstractBeanFactoryPointcutAdvisor}
- * 
- * @author yutianbao
- */
 public class BeanFactoryExceptionTransformSourceAdvisor extends AbstractBeanFactoryPointcutAdvisor {
     private static final long serialVersionUID = -5137550734811005932L;
 

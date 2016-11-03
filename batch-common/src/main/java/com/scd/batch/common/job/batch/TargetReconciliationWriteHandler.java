@@ -1,16 +1,17 @@
 package com.scd.batch.common.job.batch;
 
 import com.google.common.base.Stopwatch;
+import com.scd.batch.common.entity.reconciliation.TransferErrorBase;
 import com.scd.batch.common.job.util.FileBufferWriter;
 import com.scd.batch.common.job.util.MD5;
+import com.scd.batch.common.utils.JsonUtils;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class TargetReconciliationWriteHandler implements TargetReconcliationHandler {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
@@ -66,15 +67,15 @@ public class TargetReconciliationWriteHandler implements TargetReconcliationHand
         FileUtils.deleteQuietly(new File(targetDir, targetFileName + ".md5"));
     }
 
-    public void handle(TransferRepo transferRepo) {
+    public void handle(ConcurrentHashMap<String, TransferErrorBase> transferRepo) {
         try {
             Stopwatch sw = Stopwatch.createStarted();
 
-            int size = transferRepo.repo.size();
+            int size = transferRepo.size();
 
-            transferRepo.repo.forEach((k, v) -> {
+            transferRepo.forEach((k, v) -> {
                 try {
-                    fileWriter.writeLine(v.get(0));
+                    fileWriter.writeLine(JsonUtils.toJson(v));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

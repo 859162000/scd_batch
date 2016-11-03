@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- 放款 start -->
+
+
+    <!-- 放款流水抓取任务 -->
+    <bean id="loanCrawler.job" class="com.scd.batch.reconciliation.job.LoanCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="deleteFlag" value="true"/>
+        <property name="name" value="loanCrawler.job"/>
+        <property name="rootPath" value="${file.reconciliation.loanLoader.path}"/>
+        <property name="sourceNamePrefix" value="loanCrawler"/>
+        <property name="targetNamePrefix" value="loanCrawler"/>
+    </bean>
+
+    <!-- 放款加载任务 -->
+    <bean id="loanLoader.job" class="com.scd.batch.reconciliation.job.LoanLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="loanLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.loanLoader.path}"/>
+        <property name="sourceNamePrefix" value="loanLoader"/>
+        <property name="targetNamePrefix" value="loanLoader"/>
+    </bean>
+
+    <!-- 提现流水加载任务 -->
+    <bean id="loanEntityLoader.job" class="com.scd.batch.reconciliation.job.LoanEntityLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="loanEntityLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.loanLoader.path}"/>
+        <property name="sourceNamePrefix" value="loanEntityLoader"/>
+        <property name="targetNamePrefix" value="loanEntityLoader"/>
+    </bean>
+
+    <!-- 放款对账 -->
+    <bean id="loanCalculator.job" class="com.scd.batch.reconciliation.job.LoanCalculatorJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="loanCalculator.job"/>
+        <property name="rootPath" value="${file.reconciliation.loanLoader.path}"/>
+        <property name="sourceSCDNamePrefix" value="scdLoanLoader"/>
+        <property name="sourceHuiFuNamePrefix" value="loanLoader"/>
+        <property name="targetNamePrefix" value="loan_RESULT"/>
+    </bean>
+
+    <!-- 放款 end -->
+
+
+    <!-- 还款 start -->
+
+
+    <!-- 还款流水抓取任务 -->
+    <bean id="paymentCrawler.job" class="com.scd.batch.reconciliation.job.PaymentCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="deleteFlag" value="true"/>
+        <property name="name" value="paymentCrawler.job"/>
+        <property name="rootPath" value="${file.reconciliation.paymentLoader.path}"/>
+        <property name="sourceNamePrefix" value="paymentCrawler"/>
+        <property name="targetNamePrefix" value="paymentCrawler"/>
+    </bean>
+
+    <!-- 还款加载任务 -->
+    <bean id="paymentLoader.job" class="com.scd.batch.reconciliation.job.PaymentLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="paymentLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.paymentLoader.path}"/>
+        <property name="sourceNamePrefix" value="paymentLoader"/>
+        <property name="targetNamePrefix" value="paymentLoader"/>
+    </bean>
+
+    <!-- 还款加载任务 -->
+    <bean id="creditRepayRealLoader.job" class="com.scd.batch.reconciliation.job.CreditRepayRealLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="creditRepayRealLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.paymentLoader.path}"/>
+        <property name="sourceNamePrefix" value="creditRepayRealLoader"/>
+        <property name="targetNamePrefix" value="creditRepayRealLoader"/>
+    </bean>
+
+    <!-- 还款对账 -->
+    <bean id="paymentCalculator.job" class="com.scd.batch.reconciliation.job.PaymentCalculatorJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="paymentCalculator.job"/>
+        <property name="rootPath" value="${file.reconciliation.paymentLoader.path}"/>
+        <property name="sourceSCDNamePrefix" value="repaymentCBLoaderJob"/>
+        <property name="sourceHuiFuNamePrefix" value="paymentLoader"/>
+        <property name="targetNamePrefix" value="payment_RESULT"/>
+    </bean>
+    <!-- 还款 end -->
+
+    <!-- 取现  start  -->
+
+    <!-- 提现流水抓取任务 -->
+    <bean id="cashCrawler.job" class="com.scd.batch.reconciliation.job.CashCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="deleteFlag" value="true"/>
+        <property name="name" value="cashCrawler.job"/>
+        <property name="rootPath" value="${file.reconciliation.cashLoader.path}"/>
+        <property name="sourceNamePrefix" value="cashLoader"/>
+        <property name="targetNamePrefix" value="cashLoader"/>
+    </bean>
+
+    <!-- 提现流水加载任务 -->
+    <bean id="cashLoader.job" class="com.scd.batch.reconciliation.job.CashLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="cashLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.cashLoader.path}"/>
+        <property name="sourceNamePrefix" value="cashLoader"/>
+        <property name="targetNamePrefix" value="cashLoader"/>
+    </bean>
+
+    <!-- 提现流水加载任务 -->
+    <bean id="withDrawlLoader.job" class="com.scd.batch.reconciliation.job.WithdrawLLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="withDrawlLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.cashLoader.path}"/>
+        <property name="sourceNamePrefix" value="withDrawlLoader"/>
+        <property name="targetNamePrefix" value="withDrawlLoader"/>
+    </bean>
+
+    <!-- 提现流水对账任务 -->
+    <bean id="cashCalculator.job" class="com.scd.batch.reconciliation.job.CashCalculatorJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="cashCalculator.job"/>
+        <property name="rootPath" value="${file.reconciliation.cashLoader.path}"/>
+        <property name="sourceSCDNamePrefix" value="withDrawlLoader"/>
+        <property name="sourceHuiFuNamePrefix" value="cashLoader"/>
+        <property name="targetNamePrefix" value="cash_RESULT"/>
+    </bean>
+
+
+    <!-- 取现  end  -->
+
+
+    <!-- 充值  start  -->
+
+    <!-- 充值流水抓取任务 -->
+    <bean id="saveCrawler.job" class="com.scd.batch.reconciliation.job.SaveCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="deleteFlag" value="true"/>
+        <property name="name" value="saveCrawler.job"/>
+        <property name="rootPath" value="${file.reconciliation.saveLoader.path}"/>
+        <property name="sourceNamePrefix" value="saveCrawler"/>
+        <property name="targetNamePrefix" value="saveCrawler"/>
+    </bean>
+
+    <!-- 充值流水加载任务 -->
+    <bean id="saveLoader.job" class="com.scd.batch.reconciliation.job.SaveLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="saveLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.saveLoader.path}"/>
+        <property name="sourceNamePrefix" value="saveLoader"/>
+        <property name="targetNamePrefix" value="saveLoader"/>
+    </bean>
+
+    <!-- SCD充值流水加载任务 -->
+    <bean id="rechargeLoader.job" class="com.scd.batch.reconciliation.job.RechargeLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="rechargeLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.saveLoader.path}"/>
+        <property name="sourceNamePrefix" value="rechargeLoader"/>
+        <property name="targetNamePrefix" value="rechargeLoader"/>
+    </bean>
+
+    <!-- 充值流水对账任务 -->
+    <bean id="saveCalculator.job" class="com.scd.batch.reconciliation.job.SaveCalculatorJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="saveCalculator.job"/>
+        <property name="rootPath" value="${file.reconciliation.saveLoader.path}"/>
+        <property name="sourceSCDNamePrefix" value="rechargeLoader"/>
+        <property name="sourceHuiFuNamePrefix" value="saveLoader"/>
+        <property name="targetNamePrefix" value="save_RESULT"/>
+    </bean>
+
+    <!-- 充值  end  -->
+
+
+    <!-- 商户扣款流水抓取任务 -->
+    <bean id="trfCrawler.job" class="com.scd.batch.reconciliation.job.TrfCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="trfCrawler.job"/>
+    </bean>
+
+    <!-- 商户扣款流水加载任务 -->
+    <bean id="trfLoader.job" class="com.scd.batch.reconciliation.job.TrfLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="trfLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.trfLoader.path}"/>
+        <property name="sourceNamePrefix" value="trfLoader"/>
+        <property name="targetNamePrefix" value="trfLoader"/>
+    </bean>
+
+
+    <!-- 商户扣款流水加载任务 -->
+    <bean id="scdTrfLoader.job" class="com.scd.batch.reconciliation.job.ScdTrfLoaderJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="scdTrfLoader.job"/>
+        <property name="rootPath" value="${file.reconciliation.trfLoader.path}"/>
+        <property name="sourceNamePrefix" value="scdTrfLoader"/>
+        <property name="targetNamePrefix" value="scdTrfLoader"/>
+    </bean>
+
+    <!-- 商户扣款流水对账任务 -->
+    <bean id="trfCalculator.job" class="com.scd.batch.reconciliation.job.TrfCalculatorJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="trfCalculator.job"/>
+        <property name="rootPath" value="${file.reconciliation.trfLoader.path}"/>
+        <property name="sourceSCDNamePrefix" value="scdTrfLoader"/>
+        <property name="sourceHuiFuNamePrefix" value="trfLoader"/>
+        <property name="targetNamePrefix" value="trf_RESULT"/>
+    </bean>
+
+    <!-- TODO 余额对账任务 -->
+
+</beans>

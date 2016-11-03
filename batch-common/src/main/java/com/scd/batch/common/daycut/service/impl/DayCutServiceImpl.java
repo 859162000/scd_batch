@@ -20,7 +20,7 @@ public class DayCutServiceImpl implements DayCutService {
     @Transactional
     public Date load() {
         try {
-            return dayCutDao.load().getAccountDate();
+            return dayCutDao.loadDate().getAccountDate();
             
         } catch (Exception e) {
             LOGGER.error("Load current accounting date exception.", e);

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <T_FAIL_RECORD ID="1" CUSTOMER_ID="1" ACCOUNT_ID="1" FAILURE_ID="1"
+                   FAILURE_TYPE="1"
+                   JOB_TYPE="1"
+                   STATUS="1"
+                   CONTENT="CONTENT"
+                   ACCOUNT_DATE="2016-04-18 00:00:00"
+                   MODIFIED="2016-04-18 00:00:00"
+                   CREATED="2016-04-18 00:00:00"/>
+
+</dataset>

@@ -9,10 +9,6 @@ import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author yutianbao
- */
 public class ExceptionTransformInterceptor implements MethodInterceptor, Serializable {
     private static final long serialVersionUID = 945503830988072674L;
 

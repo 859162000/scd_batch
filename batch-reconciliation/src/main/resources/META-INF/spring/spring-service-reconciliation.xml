@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.scd.batch.reconciliation"/>
+
+    <bean id="dayCutService" class="com.scd.batch.common.daycut.service.impl.DayCutServiceImpl"/>
+
+    <bean class="com.scd.batch.common.logger.InitLogContainerBean">
+        <property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>
+        <property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>
+    </bean>
+
+</beans>

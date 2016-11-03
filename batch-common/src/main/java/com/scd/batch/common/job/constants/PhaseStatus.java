@@ -5,8 +5,6 @@ import com.scd.batch.common.utils.EnumType;
 
 /**
  * 跑批控制表中处理阶段状态
- *
- * @author Created by hanxiao01 on 16/4/1.
  */
 public enum PhaseStatus implements EnumType<PhaseStatus, Integer> {
     INIT        (1),

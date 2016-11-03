@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.reconciliation.LoanPaymentTransferDao">
+
+    <sql id="LoanPayment_Columns">
+        TRANS_DATE,
+        DELETE_FLAG,
+        TRANSFER_TYPE,
+        ORD_ID,
+        ORD_DATE,
+        MER_CUST_ID,
+        INVEST_CUST_ID,
+        BORR_CUST_ID,
+        TRANS_AMT,
+        PNR_DATE,
+        PNR_SEQ_ID,
+        TRANS_STAT,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <resultMap id="LoanPayment_Map" type="com.scd.batch.common.entity.reconciliation.LoanPaymentTransferEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="TRANS_DATE" property="transDate" jdbcType="DATE"/>
+        <result column="DELETE_FLAG" property="deleteFlag" jdbcType="SMALLINT"/>
+        <result column="TRANSFER_TYPE" property="transferType" jdbcType="SMALLINT"/>
+        <result column="ORD_ID" property="ordId" jdbcType="VARCHAR"/>
+        <result column="ORD_DATE" property="ordDate" jdbcType="DATE"/>
+        <result column="MER_CUST_ID" property="merCustId" jdbcType="VARCHAR"/>
+        <result column="INVEST_CUST_ID" property="investCustId" jdbcType="VARCHAR"/>
+        <result column="BORR_CUST_ID" property="borrCustId" jdbcType="VARCHAR"/>
+        <result column="TRANS_AMT" property="transAmt" jdbcType="DOUBLE"/>
+        <result column="PNR_DATE" property="pnrDate" jdbcType="DATE"/>
+        <result column="PNR_SEQID" property="pnrSeqId" jdbcType="VARCHAR"/>
+        <result column="TRANS_STAT" property="transStat" jdbcType="VARCHAR"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select ID
+        from r_loanpayment_transfer
+        where DELETE_FLAG = 0
+        order by ID
+    </select>
+
+    <select id="getListByPage" resultMap="LoanPayment_Map">
+        select
+        ID,
+        <include refid="LoanPayment_Columns"/>
+        from r_loanpayment_transfer
+        where DELETE_FLAG = 0
+        and ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+    <insert id="batchInsert">
+        insert into r_loanpayment_transfer
+        (
+        <include refid="LoanPayment_Columns"/>
+        )
+        values
+        <foreach collection="entityList" item="entity" index="index" separator=",">
+            (
+            #{entity.transDate},
+            #{entity.deleteFlag},
+            #{entity.transferType},
+            #{entity.ordId},
+            #{entity.ordDate},
+            #{entity.merCustId},
+            #{entity.investCustId},
+            #{entity.borrCustId},
+            #{entity.transAmt},
+            #{entity.pnrDate},
+            #{entity.pnrSeqId},
+            #{entity.transStat},
+            0,
+            CURRENT_TIMESTAMP,
+            CURRENT_TIMESTAMP
+            )
+        </foreach>
+    </insert>
+
+    <update id="deleteLoanPaymentTransfer">
+        update r_loanpayment_transfer
+        set DELETE_FLAG = 1
+        where TRANS_DATE = #{transDate}
+    </update>
+
+</mapper>

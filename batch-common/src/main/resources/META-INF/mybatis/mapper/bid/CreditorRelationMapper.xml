@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.bid.CreditorRelationDao">
+
+    <resultMap id="BaseResultProductAssetsMap" type="com.scd.batch.common.entity.statistics.bid.ProductAssetsEntity">
+        <result column="product_type" property="productType"/>
+        <result column="remain_amount" property="remainAmount"/>
+        <result column="trade_amount" property="tradeAmount"/>
+        <result column="receipted_amount" property="receiptedAmount"/>
+        <result column="transferred_amount" property="transferredAmount"/>
+        <result column="receipted_interest" property="receiptedInterest"/>
+        <result column="total_interest" property="totalInterest"/>
+    </resultMap>
+
+    <sql id="Base_Column_ProductAssets_List">
+        product.product_type as product_type,
+        COALESCE(sum(relation.remain_amount), 0) as remain_amount,
+        COALESCE(sum(relation.trade_amount), 0) as trade_amount,
+        COALESCE(sum(relation.receipted_amount), 0) as receipted_amount,
+        COALESCE(sum(relation.transferred_amount), 0) as transferred_amount,
+        COALESCE(sum(relation.receipted_interest), 0) as receipted_interest,
+        COALESCE(sum(relation.total_interest), 0) as total_interest
+    </sql>
+
+    <resultMap id="BaseResultCreditorRelationMap"
+               type="com.scd.batch.common.entity.interest.UserCreditroRelationEntity">
+        <result column="id" property="id"/>
+        <result column="buyer_uid" property="buyerUid"/>
+        <result column="project_code" property="projectCode"/>
+        <result column="product_code" property="productCode"/>
+        <result column="remain_amount" property="remainPrincipal"/>
+        <result column="interest_rate" property="interestRate"/>
+        <result column="interest_date" property="interestDate"/>
+        <result column="expire_date" property="expireDate"/>
+        <result column="product_type" property="productType"/>
+    </resultMap>
+
+    <sql id="Base_Column_CreditorRelation_List">
+        relation.id as id,
+        relation.buyer_uid as buyer_uid,
+        relation.project_code as project_code,
+        relation.product_code as product_code,
+        relation.remain_amount as remain_amount,
+        relation.interest_rate as interest_rate,
+        relation.interest_date as interest_date,
+        relation.expire_date as expire_date,
+        product.product_type as productType
+    </sql>
+
+    <!-- FixPlan -->
+    <resultMap id="BaseResult_FixPlan_Map" type="com.scd.batch.common.entity.statistics.bid.FixPlanDuePlanEntity">
+        <result column="trans_date" property="transDate"/>
+        <result column="fix_plan_principal" property="fixPlanPrincipal"/>
+        <result column="fix_plan_interest" property="fixPlanInterest"/>
+    </resultMap>
+
+    <sql id="Base_Column_FixPlan_List">
+        product.expire_date as trans_date,
+        COALESCE(sum(relation.trade_amount - relation.receipted_amount - relation.transferred_amount), 0) as
+        fix_plan_principal,
+        COALESCE(sum(relation.total_interest - relation.receipted_interest), 0) as fix_plan_interest
+    </sql>
+
+    <select id="selectFixPlanDueStatList" resultMap="BaseResult_FixPlan_Map">
+        select
+        <include refid="Base_Column_FixPlan_List"/>
+        from bid_creditor_relation relation
+        left join bid_product product
+        on relation.product_code = product.product_code
+        where relation.data_status = 1
+        and product.product_type = 2
+    </select>
+
+    <!-- FixProject -->
+    <resultMap id="BaseResult_FixProject_Map" type="com.scd.batch.common.entity.statistics.bid.FixProductDuePlanEntity">
+        <result column="trans_date" property="transDate"/>
+        <result column="fix_project_principal" property="fixProjectPrincipal"/>
+        <result column="fix_project_interest" property="fixProjectInterest"/>
+    </resultMap>
+
+    <sql id="Base_Column_FixProject_List">
+        product.expire_date as trans_date,
+        COALESCE(sum(relation.trade_amount - relation.receipted_amount - relation.transferred_amount), 0) as
+        fix_project_principal,
+        COALESCE(sum(relation.total_interest - relation.receipted_interest), 0) as fix_project_interest
+    </sql>
+
+    <select id="selectFixProjectDueStatList" resultMap="BaseResult_FixProject_Map">
+        select
+        <include refid="Base_Column_FixProject_List"/>
+        from bid_creditor_relation relation
+        left join bid_product product
+        on relation.product_code = product.product_code
+        where relation.data_status = 1
+        and product.product_type = 3
+    </select>
+
+    <!-- ProductAssets -->
+    <select id="getProductAssetsList" resultMap="BaseResultProductAssetsMap">
+        select
+        <include refid="Base_Column_ProductAssets_List"/>
+        from bid_creditor_relation relation
+        left join bid_product product on relation.product_code =
+        product.product_code
+        where relation.data_status = 1
+        and relation.id in
+        <foreach collection="batchId" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        group by product.product_type
+    </select>
+
+    <select id="getAllIdList" resultType="java.lang.Long">
+        select id
+        from bid_creditor_relation
+        where data_status = 1
+    </select>
+
+    <!-- CreditorRelation 金额大于0，表示未结束，日期判断放在程序中 -->
+    <select id="getUserCreditorRelationList" resultMap="BaseResultCreditorRelationMap">
+        select
+        <include refid="Base_Column_CreditorRelation_List"/>
+        from bid_creditor_relation relation
+        left join bid_product product on relation.product_code =
+        product.product_code
+        where relation.data_status = 1
+        and relation.remain_amount > 0
+        and relation.id in
+        <foreach collection="batchId" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+</mapper>

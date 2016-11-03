@@ -1,6 +1,9 @@
+
 package com.scd.batch.common.entity.statistics;
 
 import com.scd.batch.common.entity.Entity;
+
+import java.util.Date;
 
 /**
  * 项目额度报表
@@ -36,6 +39,27 @@ public class ProjectLimitEntity extends Entity {
 
     // 未还利息
     private double unpaidInterest;
+
+    public ProjectLimitEntity() {
+        super();
+    }
+
+    public ProjectLimitEntity(String projectCode, String projectName, double total, double bid,
+                              double unbid, double withdraw, double paidPrincipal, double unpaidPrincipal,
+                              double paidInterest, double unpaidInterest) {
+        super();
+        this.projectCode = projectCode;
+        this.projectName = projectName;
+        this.total = total;
+        this.bid = bid;
+        this.unbid = unbid;
+        this.withdraw = withdraw;
+        this.paidPrincipal = paidPrincipal;
+        this.unpaidPrincipal = unpaidPrincipal;
+        this.paidInterest = paidInterest;
+        this.unpaidInterest = unpaidInterest;
+    }
+
 
     public String getProjectCode() {
         return projectCode;

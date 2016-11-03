@@ -1,8 +1,6 @@
 package com.scd.batch.common.exception;
 
 
-import com.scd.batch.common.logger.LogMessageContainers;
-
 /**
  * {@link ErrorCodeException} represents the error message bound with error code.
  */
@@ -36,7 +34,8 @@ public class ErrorCodeException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return LogMessageContainers.getFormatedMessage(LogMessageContainers.MESSAGE_KEY_ERROR, errorCode + "", args);
+//        return LogMessageContainers.getFormatedMessage(LogMessageContainers.MESSAGE_KEY_ERROR, errorCode + "", args);
+        return errorCode + "," + args[0];
     }
 
     public int getErrorCode() {

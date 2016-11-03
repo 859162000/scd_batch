@@ -11,7 +11,14 @@ public enum TransferType implements EnumType<TransferType, Integer> {
     LOANS(1, "LOANS"),
 
     // 还款交易
-    REPAYMENT(2, "REPAYMENT");
+    REPAYMENT(2, "REPAYMENT"),
+
+    // 取现交易
+    CASH(3,"CASH"),
+
+    RECHARGE(4, "RECHARGE"),
+
+    WITHDRAW(5, "WITHDRAW");
 
     public int type;
 

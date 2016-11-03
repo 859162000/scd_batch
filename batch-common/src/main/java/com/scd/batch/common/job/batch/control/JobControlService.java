@@ -3,7 +3,7 @@ package com.scd.batch.common.job.batch.control;
 import com.scd.batch.common.daycut.service.DayCutService;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
-import com.scd.batch.common.job.batch.control.dao.JobDAO;
+import com.scd.batch.common.job.batch.control.dao.JobDao;
 import com.scd.batch.common.job.constants.JobType;
 import com.scd.batch.common.job.constants.PhaseStatus;
 import com.scd.batch.common.job.constants.PhaseType;
@@ -22,7 +22,7 @@ public class JobControlService {
     private final int maxRetry = 3;
 
     @Resource
-    private JobDAO jobDAO;
+    private JobDao jobDao;
     @Resource
     private DayCutService dayCutService;
 
@@ -32,11 +32,11 @@ public class JobControlService {
      * @return insert counts successfully
      */
     public int insert(JobControl jobControl) {
-        return jobDAO.insertOne(jobControl);
+        return jobDao.insertOne(jobControl);
     }
 
     public int insertList(List<JobControl> controlList) {
-        return CollectionUtils.isNotEmpty(controlList) ? jobDAO.insert(controlList) : 0;
+        return CollectionUtils.isNotEmpty(controlList) ? jobDao.insert(controlList) : 0;
     }
 
     /**
@@ -57,14 +57,14 @@ public class JobControlService {
         String uuid = Generators.randomBasedGenerator().generate().toString();
         JobControl control;
 
-        while ((control = jobDAO.selectOneAvailableJob(condition)) != null) {
+        while ((control = jobDao.selectOneAvailableJob(condition)) != null) {
             condition.setId(control.getId());
-            int record = jobDAO.updateOneAvailableJob(condition, uuid);
+            int record = jobDao.updateOneAvailableJob(condition, uuid);
             // 说明在查询后已经被其他进程或线程更新掉, 需要继续查询
             if (record == 0) {
                 continue;
             }
-            return jobDAO.getByUUID(uuid);
+            return jobDao.getByUUID(uuid);
         }
         return null;
     }
@@ -76,7 +76,7 @@ public class JobControlService {
      * @return update counts
      */
     public int updatePhaseStatus(String uuid, PhaseType phaseType, PhaseStatus phaseStatus) {
-        return jobDAO.updatePhaseStatusByUUID(uuid, phaseType.type, phaseStatus.type);
+        return jobDao.updatePhaseStatusByUUID(uuid, phaseType.type, phaseStatus.type);
     }
 
     @Transactional
@@ -106,7 +106,7 @@ public class JobControlService {
 
     @Transactional
     public List<JobControl> getAllJobs(ShortDate accountDate, JobType jobType) {
-        return jobDAO.selectJobs(accountDate.toDate(), jobType.type);
+        return jobDao.selectJobs(accountDate.toDate(), jobType.type);
     }
 
 }

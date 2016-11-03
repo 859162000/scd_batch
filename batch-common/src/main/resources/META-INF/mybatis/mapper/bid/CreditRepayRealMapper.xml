@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.bid.CreditRepayRealDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.bid.CreditRepayReal">
+        <id column="id" property="id"/>
+        <result column="repay_flow_no" property="repayFlowNo"/>
+        <result column="product_code" property="productCode"/>
+        <result column="project_code" property="projectCode"/>
+        <result column="project_plan_id" property="projectPlanId"/>
+
+        <result column="repay_plan_id" property="repayPlanId"/>
+        <result column="batch_no" property="batchNo"/>
+        <result column="repay_no" property="repayNo"/>
+        <result column="borrower_id" property="borrowerId"/>
+        <result column="invest_uid" property="investUid"/>
+        <result column="loan_flow_no" property="loanFlowNo"/>
+        <result column="order_flow_no" property="orderFlowNo"/>
+        <result column="order_seq_no" property="orderSeqNo"/>
+        <result column="create_time" property="createTime"/>
+        <result column="success_time" property="successTime"/>
+        <result column="data_status" property="dataStatus"/>
+        <result column="status" property="status"/>
+        <result column="repay_type" property="repayType"/>
+        <result column="repay_time_type" property="repayTimeType"/>
+        <result column="repay_date" property="repayDate"/>
+        <result column="repay_amount" property="repayAmount"/>
+        <result column="receipt_amount" property="receiptAmount"/>
+        <result column="repay_interest" property="repayInterest"/>
+        <result column="receipt_interest" property="receiptInterest"/>
+        <result column="repay_amount_type" property="repayAmountType"/>
+        <result column="repay_uid" property="repayUid"/>
+        <result column="repay_user_type" property="repayUserType"/>
+        <result column="interested_date" property="interestedDate"/>
+        <result column="credit_amount" property="creditAmount"/>
+        <result column="trade_time" property="tradeTime"/>
+        <result column="frozen_flow_no" property="frozenFlowNo"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        project_plan_id,
+        repay_plan_id,
+        batch_no,
+        repay_no,
+        repay_flow_no,
+        order_seq_no,
+        order_flow_no,
+        loan_flow_no,
+        project_code,
+        product_code,
+        invest_uid,
+        borrower_id,
+        repay_date,
+        repay_amount,
+        repay_interest,
+        receipt_amount,
+        receipt_interest,
+        status,
+        data_status,
+        create_time,
+        success_time,
+        repay_type,
+        repay_time_type,
+        receipt_interest_rate,
+        repay_interest_rate,
+        repay_uid,
+        repay_amount_type,
+        repay_user_type,
+        result_message,
+        interested_date,
+        loan_date,
+        credit_amount,
+        trade_time,
+        frozen_flow_no
+    </sql>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select id
+        from bid_credit_repay_real
+        order by id
+    </select>
+
+    <select id="getListByPage" resultMap="BaseResultMap">
+        select
+        ID,
+        <include refid="Base_Column_List"/>
+        from bid_credit_repay_real
+        where ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+
+</mapper>

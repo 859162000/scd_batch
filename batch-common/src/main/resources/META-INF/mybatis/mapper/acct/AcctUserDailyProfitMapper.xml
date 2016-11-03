@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.acct.AcctUserDailyProfitDao">
+
+    <sql id="Base_Column_List">
+        uid,
+        date,
+        profit,
+        current_profit,
+        create_time,
+        update_time,
+        version
+    </sql>
+
+    <insert id="insert">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+        insert into user_daily_profit
+        (
+        <include refid="Base_Column_List"/>
+        )
+        values
+        (
+        #{entity.uid},
+        #{entity.date},
+        #{entity.profit},
+        #{entity.currentProfit},
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP,
+        0
+        )
+    </insert>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from user_daily_profit
+        where uid = #{uid}
+        and date = #{date}
+    </select>
+
+    <update id="updateIncrement2DB">
+        update user_daily_profit
+        set
+        profit = profit + #{entity.profit},
+        current_profit = current_profit + #{entity.currentProfit},
+        version = version + 1,
+        update_time = CURRENT_TIMESTAMP
+        where uid = #{entity.uid}
+        and date = #{entity.date}
+    </update>
+
+</mapper>

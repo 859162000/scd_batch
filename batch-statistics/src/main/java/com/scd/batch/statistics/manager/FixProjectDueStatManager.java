@@ -19,11 +19,9 @@ public class FixProjectDueStatManager implements FixProjectDueStatAPI {
 
     @Override
     public FixProjectDueStatResponse query(@NotNull(message = "Null fixProjectDueStatRequest!") @Valid
-                                               FixProjectDueStatRequest
+                                                   FixProjectDueStatRequest
                                                    fixProjectDueStatRequest) {
 
-        return new FixProjectDueStatResponse(fundStatService.getStatList(fixProjectDueStatRequest.pno *
-                fixProjectDueStatRequest.psize - 1,
-                fixProjectDueStatRequest.psize));
+        return null;
     }
 }

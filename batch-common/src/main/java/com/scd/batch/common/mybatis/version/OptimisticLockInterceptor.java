@@ -11,13 +11,6 @@ import org.springframework.util.Assert;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 
-/**
- * Implementation for {@link MethodInterceptor}. We check Actual: the affect rows of DB write operations, and Expect
- * from the annotation {@link OptimisticLock#expect()}. If check failed an {@link OptimisticLockingException} will be
- * thrown up.
- * 
- * @author yutianbao
- */
 public class OptimisticLockInterceptor implements MethodInterceptor, Serializable {
     private static final long serialVersionUID = 945503830988072674L;
     private static final Logger LOGGER = LoggerFactory.getLogger(OptimisticLockInterceptor.class);

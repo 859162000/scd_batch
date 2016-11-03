@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.promotion.CouponsUseRecordsDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.ExpenditureStatEntity">
+        <result column="transDate" property="transDate" jdbcType="DATE"/>
+        <result column="type" property="type" jdbcType="TINYINT"/>
+        <result column="amount" property="amount" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        coupon.type as type,
+        record.use_value as amount,
+        substring(record.use_time, 1, 10) as transDate
+    </sql>
+
+    <select id="selectStatList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from promotion_coupons_use_records record
+        left join promotion_coupons coupon
+        on record.coupons_id = coupon.id
+        where record.freeze_status = 0
+        and record.use_time >= #{useTimeStart}
+        <![CDATA[
+        and record.use_time <= #{useTimeEnd}
+        ]]>
+        group by coupon.type
+    </select>
+</mapper>

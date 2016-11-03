@@ -39,13 +39,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/batch-api/pom.xml" />
+        <option value="$PROJECT_DIR$/batch-executor/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/job/pom.xml" />
-        <option value="$PROJECT_DIR$/../scd_reconciliation/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">

@@ -7,7 +7,6 @@ package com.scd.batch.common.constant;
  * <li>BAT: 批跑模块
  * </ul>
  * </p>
- *
  */
 public class CommonErrorCode {
 
@@ -16,6 +15,10 @@ public class CommonErrorCode {
 
     // SUCCESS
     public static final int COM_SUCCESS = 0;
+
+    public static final int REC_CRAWLER_FAIL = 2001;
+
+    public static final int REC_INVALID_SOURCETYPE = 2002;
 
     public static String getCommonErrorCodeStr(int commonErrorCode) {
 

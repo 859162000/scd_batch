@@ -5,8 +5,6 @@ import com.scd.batch.common.logger.LogMessageContainers;
 
 /**
  * IllegalParamException
- *
- * @author yutianbao
  */
 public class IllegalParamException extends SystemException {
 

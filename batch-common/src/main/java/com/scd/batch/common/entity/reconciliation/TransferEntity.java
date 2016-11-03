@@ -1,7 +1,9 @@
 package com.scd.batch.common.entity.reconciliation;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.base.Joiner;
-import constant.TransferType;
+import com.scd.batch.common.constant.reconciliation.TransferType;
+import com.scd.batch.common.entity.Entity;
 
 import java.util.Date;
 
@@ -10,10 +12,16 @@ import java.util.Date;
  * <p>
  * 商户扣款
  */
-public class TransferEntity {
+public class TransferEntity extends Entity implements TransferValue {
 
-    // 交易查询类型
-    private TransferType transferType;
+    // 业务日期
+    private Date transDate;
+
+    // 删除标记 0未删除，1删除
+    private int deleteFlag;
+
+    // 交易类型
+    private int transferType;
 
     // 订单号
     private String ordId;
@@ -39,32 +47,18 @@ public class TransferEntity {
     // 汇付交易流水
     private String pnrSeqId;
 
-    public TransferEntity(TransferType transferType, String ordId, Date ordDate,
-                          String merCustId, String investCustId, String borrCustId,
-                          double transAmt, Date pnrDate, String pnrSeqId) {
-
-        this.transferType = transferType;
-        this.ordId = ordId;
-        this.ordDate = ordDate;
-        this.merCustId = merCustId;
-        this.investCustId = investCustId;
-        this.borrCustId = borrCustId;
-        this.transAmt = transAmt;
-        this.pnrDate = pnrDate;
-        this.pnrSeqId = pnrSeqId;
-    }
-
+    @JsonIgnore
     public String getValue() {
-        String[] params = new String[]{getBorrCustId(), getBorrCustId(), getMerCustId(), String.valueOf(getTransAmt()),
-                getPnrSeqId()};
+        String[] params = new String[]{getMerCustId(), String.valueOf(getTransAmt()),
+                getOrdId()};
         return Joiner.on(",").join(params);
     }
 
-    public TransferType getTransferType() {
+    public int getTransferType() {
         return transferType;
     }
 
-    public void setTransferType(TransferType transferType) {
+    public void setTransferType(int transferType) {
         this.transferType = transferType;
     }
 
@@ -130,5 +124,21 @@ public class TransferEntity {
 
     public void setPnrDate(Date pnrDate) {
         this.pnrDate = pnrDate;
+    }
+
+    public Date getTransDate() {
+        return transDate;
+    }
+
+    public void setTransDate(Date transDate) {
+        this.transDate = transDate;
+    }
+
+    public int getDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(int deleteFlag) {
+        this.deleteFlag = deleteFlag;
     }
 }

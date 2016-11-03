@@ -8,11 +8,6 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Log message container for parse log configuration files
- *
- * @author chenguoqing
- */
 public class LogMessageContainer {
 
     /**
@@ -47,7 +42,7 @@ public class LogMessageContainer {
 
         for (String location : configLocations) {
 
-            // load resources by location
+            // loadDate resources by location
             Resource[] resources = resolver.getResources(location);
 
             // parse all resources

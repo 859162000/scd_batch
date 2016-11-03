@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.trade.WithdrawLDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.WithdrawL">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
+        <result column="user_cust_id" property="userCustId" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="page_type" property="pageType" jdbcType="CHAR"/>
+        <result column="response_code" property="responseCode" jdbcType="VARCHAR"/>
+        <result column="response_desc" property="responseDesc" jdbcType="VARCHAR"/>
+        <result column="trans_amt" property="transAmt" jdbcType="DECIMAL"/>
+        <result column="withdraw_type" property="withdrawType" jdbcType="VARCHAR"/>
+        <result column="arrive_amt" property="arriveAmt" jdbcType="DECIMAL"/>
+        <result column="order_id" property="orderId" jdbcType="VARCHAR"/>
+        <result column="open_acct_id" property="openAcctId" jdbcType="VARCHAR"/>
+        <result column="open_bank_id" property="openBankId" jdbcType="VARCHAR"/>
+        <result column="fee_amt" property="feeAmt" jdbcType="DECIMAL"/>
+        <result column="fee_cust_id" property="feeCustId" jdbcType="VARCHAR"/>
+        <result column="fee_acct_id" property="feeAcctId" jdbcType="VARCHAR"/>
+        <result column="service_fee" property="serviceFee" jdbcType="DECIMAL"/>
+        <result column="service_fee_acct_id" property="serviceFeeAcctId" jdbcType="VARCHAR"/>
+        <result column="return_url" property="returnUrl" jdbcType="VARCHAR"/>
+        <result column="bg_return_url" property="bgReturnUrl" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        seq_no,
+        uid,
+        user_cust_id,
+        remark,
+        page_type,
+        response_code,
+        response_desc,
+        trans_amt,
+        withdraw_type,
+        arrive_amt,
+        order_id,
+        open_acct_id,
+        open_bank_id,
+        fee_amt,
+        fee_cust_id,
+        fee_acct_id,
+        service_fee,
+        service_fee_acct_id,
+        return_url,
+        bg_return_url,
+        create_time,
+        update_time,
+        status
+    </sql>
+
+    <select id="selectWithdrawSumByDate" resultType="java.lang.Double">
+        SELECT
+        COALESCE(sum(trans_amt), 0) AS amount
+        FROM withdraw_l
+        WHERE status IN
+        <foreach collection="statusList" item="status" open="(" close=")" separator=",">
+            #{status}
+        </foreach>
+        <![CDATA[
+            AND create_time >= #{startDate, jdbcType=TIMESTAMP}
+            AND create_time <= #{endDate, jdbcType=TIMESTAMP}
+		]]>
+    </select>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select id
+        from withdraw_l
+        order by id
+    </select>
+
+    <select id="getListByPage" resultMap="BaseResultMap">
+        select
+        ID,
+        <include refid="Base_Column_List"/>
+        from withdraw_l
+        where ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+
+</mapper>

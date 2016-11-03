@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--项目额度  JOB-->
+    <bean id="projectLimit.job" class="com.scd.batch.statistics.job.ProjectLimitCalculateJob">
+        <property name="name" value="projectLimit.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--借款人还款计划  JOB-->
+    <bean id="borrowerRepayPlan.job" class="com.scd.batch.statistics.job.BorrowerRepayPlanStatCalculateJob">
+        <property name="name" value="borrowerRepayPlan.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--充值提现统计  JOB-->
+    <bean id="fundStat.job" class="com.scd.batch.statistics.job.FundStatCalculateJob">
+        <property name="name" value="fundStat.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--定期计划  JOB-->
+    <bean id="fixPlanDue.job" class="com.scd.batch.statistics.job.FixPlanDueStatCalculateJob">
+        <property name="name" value="fixPlanDue.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--定期项目  JOB-->
+    <bean id="fixProjectDue.job" class="com.scd.batch.statistics.job.FixProjectDueStatCalculateJob">
+        <property name="name" value="fixProjectDue.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--平台支出  JOB-->
+    <bean id="expentidure.job" class="com.scd.batch.statistics.job.ExpenditureCalculateJob">
+        <property name="name" value="expentidure.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--项目资产统计  JOB-->
+    <bean id="assetsProject.job" class="com.scd.batch.statistics.job.AssetsStatProjectCalculateJob">
+        <property name="name" value="assetsProject.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!--余额资产统计  JOB-->
+    <bean id="assetsBalance.job" class="com.scd.batch.statistics.job.AssetsStatBalanceCalculateJob">
+        <property name="name" value="assetsBalance.job"/>
+        <property name="cycleRunning" value="true"/>
+        <property name="batchSize" value="${statistics.bid.batchSize}"/>
+    </bean>
+
+    <!-- TODO 回写后台数据库 -->
+
+    <!-- TODO 回写用户数据库-->
+</beans>

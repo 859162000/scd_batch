@@ -9,11 +9,6 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * The OptimisticLockSource maintains the class & method which {@link OptimisticLock} annotationed
- *
- * @author yutianbao
- */
 public class OptimisticLockSource implements Serializable {
     private static final long serialVersionUID = 7321806917817782997L;
 

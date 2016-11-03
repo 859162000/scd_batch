@@ -18,6 +18,10 @@ public class FundStatEntity extends Entity {
     // 提现金额
     private double withdraw;
 
+    public FundStatEntity() {
+
+    }
+
     public FundStatEntity(Date transDate, double recharge, double withdraw) {
         super();
         this.transDate = transDate;

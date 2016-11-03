@@ -21,8 +21,7 @@ public class AssetsStatManager implements AssetStatAPI {
     public AssetStatResponse query(@NotNull(message = "Null assetStatRequest!") @Valid AssetStatRequest
                                            assetStatRequest) {
 
-        return new AssetStatResponse(assetsStatService.getStatList(assetStatRequest.pno * assetStatRequest.psize
-                        - 1,
-                assetStatRequest.psize));
+        // TODO
+        return null;
     }
 }

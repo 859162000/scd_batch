@@ -21,7 +21,9 @@ import java.util.List;
 
 public abstract class DataFlowBatchJob extends AbstractExecutor {
 
-    /** Constanst context attach key */
+    /**
+     * Constanst context attach key
+     */
     protected static final String ATTACH_KEY_ROOT_FILE_DIR = "ROOT_FILE_DIR";
     protected static final String ATTACH_KEY_SOURCE_FILE_NAME = "SOURCE_FILE_NAME";
     protected static final String ATTACH_KEY_TARGET_FILE_NAME = "TARGET_FILE_NAME";
@@ -41,14 +43,14 @@ public abstract class DataFlowBatchJob extends AbstractExecutor {
     private SourceDataProvider sourceDataProvider;
     private DataFlowCalculator dataFlowCalculator;
     private TargetDataHandler targetDataHandler;
-    
+
     @Resource
     protected JobControlService jobControlService;
 
     @Override
     public boolean beforeExecute(ExecutorContext context) {
         // super.beforeExecute(context) always return true
-        if (! super.beforeExecute(context)) {
+        if (!super.beforeExecute(context)) {
             return false;
         }
 
@@ -87,6 +89,7 @@ public abstract class DataFlowBatchJob extends AbstractExecutor {
             targetDataHandler.postHandler();
 
         } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
@@ -123,49 +126,49 @@ public abstract class DataFlowBatchJob extends AbstractExecutor {
 
     /**
      * Get {@link JobType}
-     * 
+     *
      * @return
      */
     protected abstract JobType getJobType();
 
     /**
      * Get current {@link PhaseType}
-     * 
+     *
      * @return
      */
     protected abstract PhaseType getCurrentPhase();
 
     /**
      * Get next {@link PhaseType}
-     * 
+     *
      * @return
      */
     protected abstract PhaseType getNextPhase();
 
     /**
      * Get {@link SourceDataProvider}
-     * 
+     *
      * @return
      */
     protected abstract SourceDataProvider getSourceDataProvider();
 
     /**
      * Get {@link TargetDataHandler}
-     * 
+     *
      * @return
      */
     protected abstract TargetDataHandler getTargetDataHandler();
 
     /**
      * Get {@link DataFlowCalculator}
-     * 
+     *
      * @return
      */
     protected abstract DataFlowCalculator getDataFlowCalculator();
 
     /**
      * Get a handler instance of {@link TargetFileWriteHandler}
-     * 
+     *
      * @return
      */
     protected TargetDataHandler getTargetFileHandler() {
@@ -177,7 +180,7 @@ public abstract class DataFlowBatchJob extends AbstractExecutor {
 
     /**
      * Get a provider instance of {@link SourceFileProvider}
-     * 
+     *
      * @return
      */
     protected SourceDataProvider getSourceFileProvider() {
@@ -189,7 +192,7 @@ public abstract class DataFlowBatchJob extends AbstractExecutor {
 
     /**
      * Get an no operation calculator
-     * 
+     *
      * @return
      */
     protected DataFlowCalculator getNoOpCalculator() {

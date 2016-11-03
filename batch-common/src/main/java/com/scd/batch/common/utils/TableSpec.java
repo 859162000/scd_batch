@@ -11,6 +11,10 @@ public class TableSpec {
         this.tableId = tableId;
     }
 
+    public static TableSpec getDefault() {
+        return new TableSpec("0", "0");
+    }
+
     public String getDbId() {
         return dbId;
     }

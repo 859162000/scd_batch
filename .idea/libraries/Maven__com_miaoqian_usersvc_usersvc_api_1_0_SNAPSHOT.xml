@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.miaoqian.usersvc:usersvc-api:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://F:/.m2/repository/com/miaoqian/usersvc/usersvc-api/1.0-SNAPSHOT/usersvc-api-1.0-20161102.094808-43.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://F:/.m2/repository/com/miaoqian/usersvc/usersvc-api/1.0-SNAPSHOT/usersvc-api-1.0-20161102.094808-43-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://F:/.m2/repository/com/miaoqian/usersvc/usersvc-api/1.0-SNAPSHOT/usersvc-api-1.0-20161102.094808-43-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.bid.BorrowerRelationDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.bid.ProjectBorrowerEntity">
+        <result column="project_code" property="projectCode"/>
+        <result column="borrower_id" property="borrowerId"/>
+        <result column="borrower_name" property="borrowerName"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        relation.project_code as project_code,
+        relation.borrower_id as borrower_id,
+        borrower.name as borrower_name
+    </sql>
+
+    <select id="getRelationByProjectIdList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from bid_borrower_relation relation
+        left join bid_borrower borrower
+        on relation.borrower_id = borrower.borrower_id
+        where relation.data_status = 1
+        and relation.project_code in
+        <foreach collection="batchProjectCode" item="projectCode" open="(" close=")" separator=",">
+            #{projectCode}
+        </foreach>
+    </select>
+
+</mapper>

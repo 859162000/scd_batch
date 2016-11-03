@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scd.batch.common.dao.financial.PlatformAssetReportDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.financial.PlatformAssetReport">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="report_date" jdbcType="DATE" property="report_date"/>
+        <result column="current_asset_total" jdbcType="DECIMAL" property="currentAssetTotal"/>
+        <result column="fix_plan_asset_total" jdbcType="DECIMAL" property="fixPlanAssetTotal"/>
+        <result column="fix_project_asset_total" jdbcType="DECIMAL" property="fixProjectAssetTotal"/>
+        <result column="usable_balance_total" jdbcType="DECIMAL" property="usableBalanceTotal"/>
+        <result column="freeze_balance_total" jdbcType="DECIMAL" property="freezeBalanceTotal"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        report_date,
+        current_asset_total,
+        fix_plan_asset_total,
+        fix_project_asset_total,
+        usable_balance_total,
+        freeze_balance_total,
+        create_time,
+        update_time
+    </sql>
+
+
+    <insert id="insert">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into platform_asset_report
+        (
+        <include refid="Base_Column_List"/>
+        )
+        values(
+        #{entity.id},
+        #{entity.report_date},
+        #{entity.currentAssetTotal},
+        #{entity.fixPlanAssetTotal},
+        #{entity.fixProjectAssetTotal},
+        #{entity.usableBalanceTotal},
+        #{entity.freezeBalanceTotal},
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select
+        count(1)
+        from platform_asset_report
+        where report_date = #{transDate}
+    </select>
+
+    <update id="updateIncrement">
+        update platform_asset_report
+        set
+        current_asset_total = current_asset_total + #{entity.currentAssetTotal},
+        fix_plan_asset_total = fix_plan_asset_total + #{entity.fixPlanAssetTotal},
+        fix_project_asset_total = fix_project_asset_total + #{entity.fixProjectAssetTotal},
+        usable_balance_total = usable_balance_total + #{entity.usableBalanceTotal},
+        freeze_balance_total = freeze_balance_total + #{entity.freezeBalanceTotal},
+        update_time = CURRENT_TIMESTAMP
+        where report_date = #{entity.report_date}
+    </update>
+
+</mapper>

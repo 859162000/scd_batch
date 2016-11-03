@@ -24,18 +24,30 @@ public abstract class AbstractExecutor implements Executor {
     protected static final String ATTACH_KEY_TEMP_PARAM = "TEMP_PARAM";
 
     private static final String TRACE_KEY = "_TRACE_KEY";
-    
-    /** Executor name */
+
+    /**
+     * Executor name
+     */
     protected String name;
-    /** Whether cycle execute  */
+
+    /**
+     * Whether cycle execute
+     */
     protected boolean cycleRunning;
 
-    /** Execute blocking semaphore */ 
+    /**
+     * Execute blocking semaphore
+     */
     protected transient Semaphore blocking = new Semaphore(0);
-    /** Blocking timeout unit ms  */
+
+    /**
+     * Blocking timeout unit ms
+     */
     protected long timeout = Long.MAX_VALUE;
-    
-    /** Executor context */
+
+    /**
+     * Executor context
+     */
     private ExecutorContext context;
 
     /**
@@ -101,15 +113,15 @@ public abstract class AbstractExecutor implements Executor {
                 execute(context);
                 afterExecute(context);
                 context.setStatus(ExecutorContext.Status.success);
-                
+
             } catch (Throwable throwable) {
                 context.setStatus(ExecutorContext.Status.error);
                 handleException(context, throwable);
-                
+
                 // Exception occurs, break the process
                 break;
             }
-            
+
         } while (isCycleRunning());
     }
 
@@ -151,12 +163,12 @@ public abstract class AbstractExecutor implements Executor {
             throw e;
         }
     }
-    
+
     @Override
     public ExecutorContext getExecutorContext() {
         return this.context;
     }
-    
+
     /**
      * Getters & Setters
      */

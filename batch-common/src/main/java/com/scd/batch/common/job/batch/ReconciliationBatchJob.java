@@ -1,6 +1,7 @@
 package com.scd.batch.common.job.batch;
 
 import com.google.common.base.Preconditions;
+import com.scd.batch.common.entity.reconciliation.TransferErrorBase;
 import com.scd.batch.common.job.batch.control.JobControl;
 import com.scd.batch.common.job.batch.control.JobControlService;
 import com.scd.batch.common.job.constants.JobType;
@@ -10,6 +11,8 @@ import com.scd.batch.common.job.constants.SourceType;
 import com.scd.batch.common.job.executor.AbstractExecutor;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.job.util.BatchFileUtils;
+import com.scd.batch.common.utils.CommonUtil;
+import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.Pagination;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
@@ -17,7 +20,9 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import javax.annotation.Resource;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -31,24 +36,27 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
      * Constanst context attach key
      */
     protected static final String ATTACH_KEY_ROOT_FILE_DIR = "ROOT_FILE_DIR";
-    protected static final String ATTACH_KEY_SOURCE_FILE_NAME = "SOURCE_FILE_NAME";
+    protected static final String ATTACH_KEY_SOURCE_SCD_FILE_NAME = "SOURCE_SCD_FILE_NAME";
+    protected static final String ATTACH_KEY_SOURCE_HUIFU_FILE_NAME = "SOURCE_HUIFU_FILE_NAME";
     protected static final String ATTACH_KEY_TARGET_FILE_NAME = "TARGET_FILE_NAME";
 
+    private String rootPath;
+    private String sourceSCDNamePrefix;
+    private String sourceHuiFuNamePrefix;
+    private String targetNamePrefix;
     /**
      * Spring properties of data flow<br>
      * file root path, source name, target name, batch size
      */
-    private String rootPath;
-    private String sourceNamePrefix;
-    private String targetNamePrefix;
     private int batchSize = Pagination.DEFAULT_PAGE_SIZE;
 
     /**
      * Data flow: Source provider & Target hadler
      */
-    private SourceDataProvider sourceDataProvider;
+    private SourceDataProvider scdSourcesDataProvider;
+    private SourceDataProvider huiFuSourcesDataProvider;
     private ReconliationCalculator reconliationCalculator;
-    private TargetReconcliationHandler targetReconcliationHandler;
+    private TargetDataHandler targetReconcliationHandler;
 
     @Resource
     protected JobControlService jobControlService;
@@ -77,23 +85,35 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
     public void execute(ExecutorContext context) {
         try {
             // 1. data input from source provider
-            List<String> sourceLines = sourceDataProvider.batchRead();
+            List<String> huiFuSourceLines = huiFuSourcesDataProvider.batchRead();
+            List<String> scdSourceLines = scdSourcesDataProvider.batchRead();
 
-            TransferRepo transferRepo = context.getAttach(TransferRepo.class);
-            SourceType sourceType = context.getAttach(SourceType.class);
+            ConcurrentHashMap<String, TransferErrorBase> transferRepo = new ConcurrentHashMap<>();
 
-            while (CollectionUtils.isNotEmpty(sourceLines)) {
-
-                // 2. data calculate
-                reconliationCalculator.calculate(sourceType, sourceLines, transferRepo);
+            while (CollectionUtils.isNotEmpty(scdSourceLines) || CollectionUtils.isNotEmpty(huiFuSourceLines)) {
 
                 // 3. forward source read cursor
                 forwardSourceCursor(context);
-                sourceLines = sourceDataProvider.batchRead();
+                // 2. data calculate
+                if (CollectionUtils.isNotEmpty(huiFuSourceLines)) {
+                    reconliationCalculator.calculate(SourceType.HUIFU, huiFuSourceLines, transferRepo);
+                    huiFuSourceLines = huiFuSourcesDataProvider.batchRead();
+                }
+
+                if (CollectionUtils.isNotEmpty(scdSourceLines)) {
+                    reconliationCalculator.calculate(SourceType.SCD, scdSourceLines, transferRepo);
+                    scdSourceLines = scdSourcesDataProvider.batchRead();
+                }
+
             }
 
+            List<String> result = new ArrayList<>();
+            transferRepo.forEach((k, v) -> {
+                result.add(k + "|" + JsonUtils.toJson(v));
+            });
+
             // 4. post handler after all, such as make MD5 file
-            targetReconcliationHandler.handle(transferRepo);
+            targetReconcliationHandler.handle(result);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -135,9 +155,11 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
      *
      * @return
      */
-    protected SourceDataProvider getSourceFileProvider() {
+    protected SourceDataProvider getSourceFileProvider(SourceType sourceType) {
         File sourceDir = getExecutorContext().getAttach(ATTACH_KEY_ROOT_FILE_DIR);
-        String sourceFileName = getExecutorContext().getAttach(ATTACH_KEY_SOURCE_FILE_NAME);
+
+        String sourceFileName = getExecutorContext().getAttach
+                (sourceType == sourceType.SCD ? ATTACH_KEY_SOURCE_SCD_FILE_NAME : ATTACH_KEY_SOURCE_HUIFU_FILE_NAME);
 
         return new SourceFileProvider(sourceDir, sourceFileName, batchSize);
     }
@@ -160,9 +182,14 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
         File parentDir = new File(BatchFileUtils.getDirPath(rootPath, context));
         context.addAttach(ATTACH_KEY_ROOT_FILE_DIR, parentDir);
 
-        if (StringUtils.isNotBlank(sourceNamePrefix)) {
-            String sourceFileName = BatchFileUtils.getFileName(sourceNamePrefix, control);
-            context.addAttach(ATTACH_KEY_SOURCE_FILE_NAME, sourceFileName);
+        if (StringUtils.isNotBlank(sourceSCDNamePrefix)) {
+            String sourceFileName = BatchFileUtils.getFileName(sourceSCDNamePrefix, control);
+            context.addAttach(ATTACH_KEY_SOURCE_SCD_FILE_NAME, sourceFileName);
+        }
+
+        if (StringUtils.isNotBlank(sourceHuiFuNamePrefix)) {
+            String sourceFileName = BatchFileUtils.getFileName(sourceHuiFuNamePrefix, control);
+            context.addAttach(ATTACH_KEY_SOURCE_HUIFU_FILE_NAME, sourceFileName);
         }
 
         if (StringUtils.isNotBlank(targetNamePrefix)) {
@@ -177,14 +204,33 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
     private void initDataFlow() {
         // init source provider & calculate & target handler
         reconliationCalculator = getReconliationCalculator();
-        sourceDataProvider = getSourceDataProvider();
+        scdSourcesDataProvider = getScdSourcesDataProvider();
+        huiFuSourcesDataProvider = getHuiFuSourcesDataProvider();
         targetReconcliationHandler = getTargetReconciliationHandler();
 
-        sourceDataProvider.init();
+        scdSourcesDataProvider.init();
+        huiFuSourcesDataProvider.init();
         targetReconcliationHandler.init();
 
         // Remove existed target data
         targetReconcliationHandler.clear();
+    }
+
+    /**
+     * Clear data flow of SourceDataProvider & TargetDataHandler
+     */
+    private void clearDataFlow() {
+        targetReconcliationHandler.close();
+        scdSourcesDataProvider.close();
+        huiFuSourcesDataProvider.close();
+    }
+
+    /**
+     * Move to next pagination
+     */
+    private void forwardSourceCursor(ExecutorContext context) {
+        Pagination pagination = context.getAttach(Pagination.class);
+        pagination.setCurPage(pagination.getCurPage() + 1);
     }
 
     /**
@@ -213,7 +259,10 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
      *
      * @return
      */
-    protected abstract SourceDataProvider getSourceDataProvider();
+    protected abstract SourceDataProvider getScdSourcesDataProvider();
+
+    protected abstract SourceDataProvider getHuiFuSourcesDataProvider();
+
 
     /**
      * Get an no operation calculator
@@ -227,22 +276,13 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
      *
      * @return
      */
-    protected abstract TargetReconcliationHandler getTargetReconciliationHandler();
+    protected abstract TargetDataHandler getTargetReconciliationHandler();
 
-    /**
-     * Clear data flow of SourceDataProvider & TargetDataHandler
-     */
-    private void clearDataFlow() {
-        targetReconcliationHandler.close();
-        sourceDataProvider.close();
-    }
+    protected TargetDataHandler getTargetFileHandler() {
+        File targetDir = getExecutorContext().getAttach(ATTACH_KEY_ROOT_FILE_DIR);
+        String targetFileName = getExecutorContext().getAttach(ATTACH_KEY_TARGET_FILE_NAME);
 
-    /**
-     * Move to next pagination
-     */
-    private void forwardSourceCursor(ExecutorContext context) {
-        Pagination pagination = context.getAttach(Pagination.class);
-        pagination.setCurPage(pagination.getCurPage() + 1);
+        return new TargetFileWriteHandler(targetDir, targetFileName);
     }
 
     /**
@@ -257,9 +297,14 @@ public abstract class ReconciliationBatchJob extends AbstractExecutor {
         this.batchSize = batchSize > 0 ? batchSize : Pagination.DEFAULT_PAGE_SIZE;
     }
 
-    public void setSourceNamePrefix(String sourceNamePrefix) {
-        Preconditions.checkArgument(StringUtils.isNotBlank(sourceNamePrefix), "missed sourceNamePrefix");
-        this.sourceNamePrefix = StringUtils.trim(sourceNamePrefix);
+    public void setSourceSCDNamePrefix(String sourceSCDNamePrefix) {
+        Preconditions.checkArgument(StringUtils.isNotBlank(sourceSCDNamePrefix), "missed sourceSCDNamePrefix");
+        this.sourceSCDNamePrefix = sourceSCDNamePrefix;
+    }
+
+    public void setSourceHuiFuNamePrefix(String sourceHuiFuNamePrefix) {
+        Preconditions.checkArgument(StringUtils.isNotBlank(sourceHuiFuNamePrefix), "missed sourceHuiFuNamePrefix");
+        this.sourceHuiFuNamePrefix = sourceHuiFuNamePrefix;
     }
 
     public void setTargetNamePrefix(String targetNamePrefix) {

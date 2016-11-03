@@ -1,10 +1,13 @@
 package com.scd.batch.common.entity.trade;
 
+import com.scd.batch.common.entity.reconciliation.TransferValue;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class WithdrawL implements Serializable {
+public class WithdrawL implements Serializable, TransferValue {
+
     private Integer id;
 
     private String seqNo;
@@ -243,5 +246,11 @@ public class WithdrawL implements Serializable {
 
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
+    }
+
+    @Override
+    public String getValue() {
+        // TODO
+        return userCustId + "|" + transAmt + "|" + feeAcctId;
     }
 }

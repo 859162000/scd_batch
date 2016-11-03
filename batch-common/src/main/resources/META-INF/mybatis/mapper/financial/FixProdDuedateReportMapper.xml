@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scd.batch.common.dao.financial.FixProdDueDateReportDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.financial.FixProdDuedateReport">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="due_date" jdbcType="DATE" property="dueDate"/>
+        <result column="fix_plan_prn" jdbcType="DECIMAL" property="fixPlanPrn"/>
+        <result column="fix_plan_interest" jdbcType="DECIMAL" property="fixPlanInterest"/>
+        <result column="fix_project_prn" jdbcType="DECIMAL" property="fixProjectPrn"/>
+        <result column="fix_project_interest" jdbcType="DECIMAL" property="fixProjectInterest"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        due_date,
+        fix_plan_prn,
+        fix_plan_interest,
+        fix_project_prn,
+        fix_project_interest,
+        create_time,
+        update_time
+    </sql>
+
+
+    <insert id="insert">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into fix_prod_duedate_report
+        (
+        <include refid="Base_Column_List"/>
+        )
+        values(
+        #{entity.id},
+        #{entity.dueDate},
+        #{entity.fixPlanPrn},
+        #{entity.fixPlanInterest},
+        #{entity.fixProjectPrn},
+        #{entity.fixProjectInterest},
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select
+        count(1)
+        from fix_prod_duedate_report
+        where due_date = #{transDate}
+    </select>
+
+    <update id="updateIncrement">
+        update fix_prod_duedate_report
+        set
+        fix_plan_prn = fix_plan_prn + #{entity.fixPlanPrn},
+        fix_plan_interest = fix_plan_interest + #{entity.fixPlanInterest},
+        fix_project_prn = fix_project_prn + #{entity.fixProjectPrn},
+        fix_project_interest = fix_project_interest + #{entity.fixProjectInterest},
+        update_time = CURRENT_TIMESTAMP
+        where due_date = #{entity.dueDate}
+    </update>
+
+
+</mapper>

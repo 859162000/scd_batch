@@ -1,7 +1,5 @@
 package com.scd.batch.common.entity.reconciliation;
 
-import constant.CashTransStat;
-import constant.FeeObjType;
 
 /**
  * 取现流水
@@ -10,9 +8,10 @@ public class CashTransferEntity extends TransferEntity {
 
 
     // 汇付取现交易状态
-    private CashTransStat transStat;
+    private String transStat;
 
-    private FeeObjType feeObjType;
+    // 手续费收取方
+    private int feeObjType;
 
     // 手续费金额
     private double feeAmt;
@@ -48,19 +47,19 @@ public class CashTransferEntity extends TransferEntity {
         ServFeeAcctId = servFeeAcctId;
     }
 
-    public FeeObjType getFeeObjType() {
-        return feeObjType;
-    }
-
-    public void setFeeObjType(FeeObjType feeObjType) {
-        this.feeObjType = feeObjType;
-    }
-
-    public CashTransStat getTransStat() {
+    public String getTransStat() {
         return transStat;
     }
 
-    public void setTransStat(CashTransStat transStat) {
+    public void setTransStat(String transStat) {
         this.transStat = transStat;
+    }
+
+    public int getFeeObjType() {
+        return feeObjType;
+    }
+
+    public void setFeeObjType(int feeObjType) {
+        this.feeObjType = feeObjType;
     }
 }

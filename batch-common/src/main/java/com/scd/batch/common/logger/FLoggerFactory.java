@@ -8,14 +8,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/**
- * Log4jLoggerFactory is an implementation of {@link ILoggerFactory} returning the appropriate named
- * {@link Log4jLoggerAdapter} instance.
- * 
- * @author chenguoqing
- * 
- *         Copyright: the code from slf4j-log4j12
- */
 public class FLoggerFactory {
 
     // key: name (String), value: a Log4jLoggerAdapter;

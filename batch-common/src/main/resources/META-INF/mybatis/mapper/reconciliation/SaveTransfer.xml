@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.reconciliation.SaveTransferDao">
+
+    <sql id="Save_Columns">
+        TRANS_DATE,
+        DELETE_FLAG,
+        TRANSFER_TYPE,
+        ORD_ID,
+        ORD_DATE,
+        MER_CUST_ID,
+        INVEST_CUST_ID,
+        BORR_CUST_ID,
+        TRANS_AMT,
+        PNR_DATE,
+        PNR_SEQ_ID,
+        TRANS_STAT,
+        GATE_BUSI_ID,
+        OPEN_BANK_ID,
+        OPEN_ACCT_ID,
+        FEE_AMT,
+        FEE_CUST_ID,
+        FEE_ACCT_ID,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <resultMap id="Save_Map" type="com.scd.batch.common.entity.reconciliation.SaveTransferEntity">
+        <id column="ID" property="id" jdbcType="BIGINT"/>
+        <result column="TRANS_DATE" property="transDate" jdbcType="DATE"/>
+        <result column="DELETE_FLAG" property="deleteFlag" jdbcType="SMALLINT"/>
+        <result column="TRANSFER_TYPE" property="transferType" jdbcType="SMALLINT"/>
+        <result column="ORD_ID" property="ordId" jdbcType="VARCHAR"/>
+        <result column="ORD_DATE" property="ordDate" jdbcType="DATE"/>
+        <result column="MER_CUST_ID" property="merCustId" jdbcType="VARCHAR"/>
+        <result column="INVEST_CUST_ID" property="investCustId" jdbcType="VARCHAR"/>
+        <result column="BORR_CUST_ID" property="borrCustId" jdbcType="VARCHAR"/>
+        <result column="TRANS_AMT" property="transAmt" jdbcType="DOUBLE"/>
+        <result column="PNR_DATE" property="pnrDate" jdbcType="DATE"/>
+        <result column="PNR_SEQ_ID" property="pnrSeqId" jdbcType="VARCHAR"/>
+        <result column="TRANS_STAT" property="transStat" jdbcType="SMALLINT"/>
+        <result column="GATE_BUSI_ID" property="gateBusiId" jdbcType="VARCHAR"/>
+        <result column="OPEN_BANK_ID" property="openBankId" jdbcType="VARCHAR"/>
+        <result column="OPEN_ACCT_ID" property="openAcctId" jdbcType="VARCHAR"/>
+        <result column="FEE_AMT" property="feeAmt" jdbcType="DOUBLE"/>
+        <result column="FEE_CUST_ID" property="feeCustId" jdbcType="VARCHAR"/>
+        <result column="FEE_ACCT_ID" property="feeAcctId" jdbcType="VARCHAR"/>
+        <result column="VERSION" property="version" jdbcType="SMALLINT"/>
+        <result column="CREATED" property="created" jdbcType="DATE"/>
+        <result column="MODIFIED" property="modified" jdbcType="DATE"/>
+    </resultMap>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select ID
+        from r_save_transfer
+        where DELETE_FLAG = 0
+        order by ID
+    </select>
+
+    <select id="getListByPage" resultMap="Save_Map">
+        select
+        ID,
+        <include refid="Save_Columns"/>
+        from r_save_transfer
+        where DELETE_FLAG = 0
+        and ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+    <insert id="batchInsert">
+        insert into r_save_transfer
+        (
+        <include refid="Save_Columns"/>
+        )
+        values
+        <foreach collection="entityList" item="entity" index="index" separator=",">
+            (
+            #{entity.transDate},
+            #{entity.deleteFlag},
+            #{entity.transferType},
+            #{entity.ordId},
+            #{entity.ordDate},
+            #{entity.merCustId},
+            #{entity.investCustId},
+            #{entity.borrCustId},
+            #{entity.transAmt},
+            #{entity.pnrDate},
+            #{entity.pnrSeqId},
+            #{entity.transStat},
+
+            #{entity.gateBusiId},
+            #{entity.openBankId},
+            #{entity.openAcctId},
+            #{entity.feeAmt},
+            #{entity.feeCustId},
+            #{entity.feeAcctId},
+            0,
+            CURRENT_TIMESTAMP,
+            CURRENT_TIMESTAMP
+            )
+        </foreach>
+    </insert>
+
+    <update id="deleteSaveTransfer">
+        update r_save_transfer
+        set DELETE_FLAG = 1
+        where TRANS_DATE = #{transDate}
+    </update>
+
+
+</mapper>

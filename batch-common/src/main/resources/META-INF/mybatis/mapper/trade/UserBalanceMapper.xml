@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.trade.UserBalanceDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.trade.BalanceAssetsEntity">
+        <result column="usable_sa" property="usableSa" jdbcType="DECIMAL"/>
+        <result column="withdraw_freeze_sa" property="withdrawFreezeSa" jdbcType="DECIMAL"/>
+        <result column="invest_freeze_sa" property="investFreezeSa" jdbcType="DECIMAL"/>
+        <result column="repay_freeze_sa" property="repayFreezeSa" jdbcType="DECIMAL"/>
+        <result column="capital_freeze_sa" property="capitalFreezeSa" jdbcType="DECIMAL"/>
+
+        <result column="current_capital" property="currentCapital" jdbcType="DECIMAL"/>
+        <result column="current_interest" property="currentInterest" jdbcType="DECIMAL"/>
+        <result column="fixend_capital" property="fixendCapital" jdbcType="DECIMAL"/>
+        <result column="fixend_interest" property="fixendInterest" jdbcType="DECIMAL"/>
+        <result column="fixperiod_capital" property="fixperiodCapital" jdbcType="DECIMAL"/>
+        <result column="fixperiod_interest" property="fixperiodInterest" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        COALESCE(sum(usable_sa), 0) as usable_sa,
+        COALESCE(sum(withdraw_freeze_sa), 0) as withdraw_freeze_sa,
+        COALESCE(sum(invest_freeze_sa), 0) as invest_freeze_sa,
+        COALESCE(sum(repay_freeze_sa), 0) as repay_freeze_sa,
+        COALESCE(sum(capital_freeze_sa), 0) as capital_freeze_sa,
+        COALESCE(sum(current_capital), 0) as current_capital,
+        COALESCE(sum(current_interest), 0) as current_interest,
+        COALESCE(sum(fixend_capital), 0) as fixend_capital,
+        COALESCE(sum(fixend_interest), 0) as fixend_interest,
+        COALESCE(sum(fixperiod_capital), 0) as fixperiod_capital,
+        COALESCE(sum(fixperiod_interest), 0) as fixperiod_interest,
+        COALESCE(sum(fixperiod_total_capital), 0) as fixperiod_total_capital,
+        COALESCE(sum(fixperiod_total_interest), 0) as fixperiod_total_interest
+    </sql>
+
+    <select id="selectBalanceAssets" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from user_balance
+    </select>
+</mapper>

@@ -1,12 +1,6 @@
 package com.scd.batch.common.logger;
 
-import org.apache.log4j.Level;
 
-/**
- * The structure for log message
- * 
- * @author chenguoqing
- */
 public class LogMessage {
     /**
      * Message id
@@ -31,14 +25,6 @@ public class LogMessage {
 
     public String getLevel() {
         return level;
-    }
-
-    public Level getLog4jLevel() {
-        return Level.toLevel(level);
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
     }
 
     public String getText() {

@@ -12,7 +12,7 @@ import java.util.Date;
 public class AssetsStatEntity extends Entity {
 
     // 日期
-    private Date date;
+    private Date transDate;
 
     // 流动性产品
     private double current;
@@ -32,13 +32,28 @@ public class AssetsStatEntity extends Entity {
     // 合计
     private double sum;
 
-
-    public Date getDate() {
-        return date;
+    public AssetsStatEntity() {
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public AssetsStatEntity(Date transDate, double current, double fixPlan, double fixProject,
+                            double balance, double frozen, double sum) {
+        super();
+        this.transDate = transDate;
+        this.current = current;
+        this.fixPlan = fixPlan;
+        this.fixProject = fixProject;
+        this.balance = balance;
+        this.frozen = frozen;
+        this.sum = sum;
+    }
+
+
+    public Date getTransDate() {
+        return transDate;
+    }
+
+    public void setTransDate(Date transDate) {
+        this.transDate = transDate;
     }
 
     public double getCurrent() {

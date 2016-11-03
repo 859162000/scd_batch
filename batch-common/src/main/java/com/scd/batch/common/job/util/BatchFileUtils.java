@@ -7,11 +7,6 @@ import com.google.common.base.Joiner;
 
 import java.io.File;
 
-/**
- * Created on 10:18 04/01/2016.
- *
- * @author <a href="mailto:songguo@baidu.com">songguo</a>
- */
 public class BatchFileUtils {
 
     public static String getDirPath(String root, ExecutorContext context) {

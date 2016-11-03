@@ -121,16 +121,40 @@
         <processorPath useClasspath="true" />
         <module name="batch-reconciliation" />
       </profile>
+      <profile default="false" name="Annotation profile for batch-accounting" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-accounting" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-executor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-executor" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-schedule" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-schedule" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="accounting" target="1.8" />
       <module name="accouting" target="1.8" />
       <module name="batch" target="1.8" />
+      <module name="batch-accounting" target="1.8" />
       <module name="batch-accouting" target="1.8" />
       <module name="batch-api" target="1.8" />
       <module name="batch-common" target="1.8" />
+      <module name="batch-executor" target="1.8" />
       <module name="batch-interest" target="1.8" />
       <module name="batch-reconciliation" target="1.8" />
+      <module name="batch-schedule" target="1.8" />
       <module name="batch-statistics" target="1.8" />
       <module name="batch-trade" target="1.8" />
       <module name="batching" target="1.8" />

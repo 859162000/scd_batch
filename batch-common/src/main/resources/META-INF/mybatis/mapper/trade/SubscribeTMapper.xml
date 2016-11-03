@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.trade.SubscribeTDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.SubscribeT">
+
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
+        <result column="freeze_seq_no" property="freezeSeqNo" jdbcType="VARCHAR"/>
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
+        <result column="user_cust_id" property="userCustId" jdbcType="VARCHAR"/>
+        <result column="product_type" property="productType" jdbcType="VARCHAR"/>
+        <result column="product_bit_type" property="productBitType" jdbcType="VARCHAR"/>
+        <result column="product_code" property="productCode" jdbcType="VARCHAR"/>
+        <result column="product_name" property="productName" jdbcType="VARCHAR"/>
+        <result column="product_rate" property="productRate" jdbcType="DECIMAL"/>
+        <result column="product_channel" property="productChannel" jdbcType="VARCHAR"/>
+        <result column="product_period" property="productPeriod" jdbcType="INTEGER"/>
+        <result column="product_expire_time" property="productExpireTime" jdbcType="TIMESTAMP"/>
+        <result column="product_start_time" property="productStartTime" jdbcType="TIMESTAMP"/>
+        <result column="product_finish_time" property="productFinishTime" jdbcType="TIMESTAMP"/>
+        <result column="small_count" property="smallCount" jdbcType="DECIMAL"/>
+        <result column="big_count" property="bigCount" jdbcType="DECIMAL"/>
+        <result column="unit_count" property="unitCount" jdbcType="DECIMAL"/>
+        <result column="interest_type" property="interestType" jdbcType="VARCHAR"/>
+        <result column="repay_type" property="repayType" jdbcType="VARCHAR"/>
+        <result column="ticket_id" property="ticketId" jdbcType="BIGINT"/>
+        <result column="ticket_distri_id" property="ticketDistriId" jdbcType="BIGINT"/>
+        <result column="ticket_type" property="ticketType" jdbcType="VARCHAR"/>
+        <result column="ticket_method" property="ticketMethod" jdbcType="VARCHAR"/>
+        <result column="ticket_count" property="ticketCount" jdbcType="DECIMAL"/>
+        <result column="amount" property="amount" jdbcType="DECIMAL"/>
+        <result column="actual_amount" property="actualAmount" jdbcType="DECIMAL"/>
+        <result column="ticket_reduce_amount" property="ticketReduceAmount" jdbcType="DECIMAL"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, seq_no,
+        freeze_seq_no,
+        uid,
+        user_cust_id,
+        mobile,
+        product_type,
+        product_bit_type,
+        product_code,
+        product_name,
+        product_rate,
+        product_channel,
+        product_period,
+        product_expire_time,
+        product_start_time,
+        product_finish_time,
+        small_count,
+        big_count,
+        unit_count,
+        interest_type,
+        repay_type,
+        ticket_id,
+        ticket_distri_id,
+        ticket_type,
+        ticket_method,
+        ticket_count,
+        amount,
+        actual_amount,
+        ticket_reduce_amount,
+        status,
+        create_time,
+        update_time
+    </sql>
+
+    <select id="getAllTransferIds" resultType="java.lang.Integer">
+        select id
+        from subscribe_t
+        order by id
+    </select>
+
+    <select id="getListByPage" resultMap="BaseResultMap">
+        select
+        ID,
+        <include refid="Base_Column_List"/>
+        from subscribe_t
+        where ID in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ID
+    </select>
+
+</mapper>

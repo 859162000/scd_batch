@@ -1,2 +1,3 @@
 http\://www.scd.com/batch/common/schema/optimisticlock=com.scd.batch.common.mybatis.version.config.OptimisticLockNamespaceHandler
 http\://www.scd.com/batch/common/schema/exception-transform=com.scd.batch.common.mybatis.exception.config.ExceptionTransformNamespaceHandler
+http\://www.scd.com/batch/common/schema/multidb=com.scd.batch.common.mybatis.multidb.config.MultiDBNamespaceHandler

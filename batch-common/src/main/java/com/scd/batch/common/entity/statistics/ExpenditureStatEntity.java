@@ -10,7 +10,7 @@ import java.util.Date;
 public class ExpenditureStatEntity extends Entity {
 
     // 日期
-    private Date date;
+    private Date transDate;
 
     /**
      * 支出类型，支出明细，主要是当日各种促销券的实际使用金额，
@@ -21,12 +21,21 @@ public class ExpenditureStatEntity extends Entity {
     // 金额
     private double amount;
 
-    public Date getDate() {
-        return date;
+    public ExpenditureStatEntity() {
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public ExpenditureStatEntity(Date transDate, int type, double amount) {
+        this.transDate = transDate;
+        this.type = type;
+        this.amount = amount;
+    }
+
+    public Date getTransDate() {
+        return transDate;
+    }
+
+    public void setTransDate(Date transDate) {
+        this.transDate = transDate;
     }
 
     public int getType() {
@@ -44,4 +53,6 @@ public class ExpenditureStatEntity extends Entity {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+
+
 }

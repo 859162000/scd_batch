@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.scd.batch.common.job.batch.control.dao.JobDao">
+
+    <resultMap id="baseJobMap" type="com.scd.batch.common.job.batch.control.JobControl">
+        <id property="id" column="ID"/>
+        <result property="phase" column="PHASE"/>
+        <result property="phaseStatus" column="PHASE_STATUS"/>
+        <result property="jobType" column="JOB_TYPE"/>
+        <result property="retryTime" column="RETRY_TIME"/>
+        <result property="databaseId" column="DATABASE_ID"/>
+        <result property="tableId" column="TABLE_ID"/>
+        <result property="uuid" column="UUID"/>
+        <result property="accountDate" column="ACCOUNT_DATE"/>
+        <result property="startTime" column="START_TIME"/>
+        <result property="endTime" column="ENT_TIME"/>
+        <result property="created" column="CREATED"/>
+        <result property="modified" column="MODIFIED"/>
+    </resultMap>
+
+    <sql id="insertColumns">
+        PHASE,
+        PHASE_STATUS,
+        JOB_TYPE,
+        RETRY_TIME,
+        DATABASE_ID,
+        TABLE_ID,
+        UUID,
+        ACCOUNT_DATE,
+        CHECK_POINT,
+        START_TIME,
+        END_TIME,
+        CREATED,
+        MODIFIED
+    </sql>
+    <sql id="columns">
+        ID,
+        <include refid="insertColumns"/>
+    </sql>
+
+    <insert id="insertOne" parameterType="com.scd.batch.common.job.batch.control.JobControl">
+        INSERT INTO T_JOB
+        (
+        <include refid="insertColumns"/>
+        )
+        VALUES (
+        #{phase},
+        #{phaseStatus},
+        #{jobType},
+        #{retryTime},
+        #{databaseId},
+        #{tableId},
+        #{uuid},
+        #{accountDate},
+        #{checkPoint},
+        '2000-01-01 00:00:00',
+        '2000-01-01 00:00:00',
+        now(),
+        now()
+        )
+    </insert>
+
+    <insert id="insert" parameterType="list">
+        INSERT INTO T_JOB
+        (<include refid="insertColumns"/>
+        )
+        VALUES
+        <foreach collection="controlList" item="control" separator=",">
+            (
+            #{control.phase},
+            #{control.phaseStatus},
+            #{control.jobType},
+            #{control.retryTime},
+            #{control.databaseId},
+            #{control.tableId},
+            #{control.uuid},
+            #{control.accountDate},
+            #{control.checkPoint},
+            '2000-01-01 00:00:00',
+            '2000-01-01 00:00:00',
+            now(),
+            now()
+            )
+        </foreach>
+    </insert>
+
+    <select id="selectOneAvailableJob" resultMap="baseJobMap">
+        SELECT
+        <include refid="columns"/>
+        FROM T_JOB
+        WHERE ACCOUNT_DATE = #{condition.accountDate}
+        AND PHASE_STATUS IN (1, 3)
+        AND JOB_TYPE = #{condition.jobType}
+        AND PHASE = #{condition.phase}
+        AND <![CDATA[ RETRY_TIME < #{condition.maxRetry} ]]>
+        LIMIT 1
+    </select>
+
+    <update id="updateOneAvailableJob">
+        UPDATE T_JOB
+        SET
+        UUID = #{uuid},
+        PHASE_STATUS = 2,
+        START_TIME = now()
+        WHERE ID = #{condition.id}
+        AND ACCOUNT_DATE = #{condition.accountDate}
+        AND PHASE_STATUS IN (1, 3)
+        AND JOB_TYPE = #{condition.jobType}
+        AND PHASE = #{condition.phase}
+        AND <![CDATA[ RETRY_TIME < #{condition.maxRetry}
+
+        ]]>
+    </update>
+
+    <select id="getByUUID" resultMap="baseJobMap">
+        SELECT
+        <include refid="columns"/>
+        FROM T_JOB
+        WHERE UUID = #{uuid}
+    </select>
+
+    <update id="updatePhaseStatusByUUID">
+        UPDATE T_JOB
+        SET
+        PHASE = #{phase},
+        PHASE_STATUS = #{phaseStatus},
+        END_TIME = now()
+        <if test="phaseStatus == 3">
+            ,RETRY_TIME = RETRY_TIME + 1
+        </if>
+        WHERE UUID = #{uuid}
+    </update>
+
+    <select id="selectJobs" resultMap="baseJobMap">
+        SELECT
+        <include refid="columns"/>
+        from T_JOB
+        WHERE ACCOUNT_DATE = #{accountDate}
+        and JOB_TYPE = #{jobType}
+    </select>
+
+</mapper>

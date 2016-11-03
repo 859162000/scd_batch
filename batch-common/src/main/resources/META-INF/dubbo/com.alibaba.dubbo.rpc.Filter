@@ -1,0 +1,1 @@
+providerRequestFilter=com.miaoqian.framework.dubbo.filter.ProviderRequestFilter

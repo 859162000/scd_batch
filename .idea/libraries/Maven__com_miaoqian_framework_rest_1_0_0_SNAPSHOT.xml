@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.miaoqian.framework:rest:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/rest/1.0.0-SNAPSHOT/rest-1.0.0-20161101.092752-76.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/rest/1.0.0-SNAPSHOT/rest-1.0.0-20161101.092752-76-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/rest/1.0.0-SNAPSHOT/rest-1.0.0-20161101.092752-76-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

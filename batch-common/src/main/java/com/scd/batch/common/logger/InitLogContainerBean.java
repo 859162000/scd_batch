@@ -2,11 +2,6 @@ package com.scd.batch.common.logger;
 
 import org.springframework.beans.factory.InitializingBean;
 
-/**
- * 读取日志码和错误码配置信息
- *
- * @author zhukun on 16/4/26
- */
 public class InitLogContainerBean implements InitializingBean {
     private String logLocation;
     private String errorLocation;

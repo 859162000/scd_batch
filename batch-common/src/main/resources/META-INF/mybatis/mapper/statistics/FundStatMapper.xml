@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.statistics.FundStatDao">
+
+    <sql id="fundStatColumns">
+        TRANS_DATE,
+        RECHARGE,
+        WITHDRAW
+    </sql>
+
+    <resultMap id="fundStatMap" type="com.scd.batch.common.entity.statistics.FundStatEntity">
+        <id property="id" column="ID"/>
+        <result property="transDate" column="TRANS_DATE"/>
+        <result property="recharge" column="RECHARGE"/>
+        <result property="withdraw" column="WITHDRAW"/>
+        <result property="version" column="VERSION"/>
+        <result property="created" column="CREATED"/>
+        <result property="modified" column="MODIFIED"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="fundStatMap">
+        select
+        <include refid="fundStatColumns"/>
+        from s_fundstat
+        <![CDATA[
+		order by TRANS_DATE desc
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select
+        count(1)
+        from s_fundstat
+        where TRANS_DATE = #{transDate}
+    </select>
+
+    <insert id="insert">
+        insert into s_fundstat(
+        ID,
+        <include refid="fundStatColumns"/>,
+        VERSION,
+        CREATED,
+        MODIFIED
+        )
+        values(
+        #{entity.id},
+        #{entity.transDate},
+        #{entity.recharge},
+        #{entity.withdraw},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="updateIncrement">
+        update s_fundstat
+        set
+        RECHARGE = RECHARGE + #{entity.recharge},
+        WITHDRAW = WITHDRAW + #{entity.withdraw},
+        VERSION = VERSION + 1,
+        MODIFIED = CURRENT_TIMESTAMP
+        where TRANS_DATE = #{entity.transDate}
+    </update>
+
+</mapper>

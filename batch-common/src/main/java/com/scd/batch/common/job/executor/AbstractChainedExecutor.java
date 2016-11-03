@@ -5,8 +5,6 @@ import java.util.List;
 
 /**
  * 链式 executor
- *
- * @author Created by pippo on 16/4/27.
  */
 public abstract class AbstractChainedExecutor extends AbstractExecutor {
 

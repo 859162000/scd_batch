@@ -11,110 +11,85 @@ public class JobCommand extends AbstractCommand {
      * Sub commands
      */
     enum Job {
-        /**
-         * Switch date
-         */
+
         SWITCH("switch"),
-        
-        /**
-         * Prepare job
-         */
+
         PREPARE("prepare"),
-        
-        /**
-         * Load loan to txt
-         */
-        LOAD_LOAN("loadLoan"),
-        /**
-         * Calculate loan and installment plans
-         */
-        CAL_LOAN("calLoan"),
-        /**
-         * Update the data to loan
-         */
-        UPDATE_LOAN("updateLoan"),
 
         /**
-         * retry loan failed records
+         * 灵活调度批跑
          */
-        RETRY_LOAN("retryLoan"),
+        RedeemScheduleJob("redeemSchedule"),
+
+        UpdateBankCardQuotaScheduleJob("updateBankCardQuotaSchedule"),
 
         /**
-         * load loan expedite to txt
+         * 统计相关
          */
-        EXPEDITE_LOAN("expediteLoan"),
+        PROJECT_LIMIT("projectLimit"),
+
+        BORROWER_REPAY_PLAN("borrowerRepayPlan"),
+
+        FUND_STAT("fundStat"),
+
+        FIX_PLAN_DUE("fixPlanDue"),
+
+        FIX_PROJECT_DUE("fixProjectDue"),
+
+        EXPENTIDURE("expentidure"),
+
+        ASSETS_PROJECT("assetsProject"),
+
+        ASSETS_BALANCE("assetsBalance"),
 
         /**
-         * load loan voa to txt
+         * 计息
          */
-        RECONCILIATION_LOAN("reconciliationLoan"),
+        UserProfitCalculateJob("userProfitCalculate"),
 
         /**
-         * load loan old voa to txt
+         * 对账
          */
-        OLDRECONCILIATION_LOAN("oldReconciliationLoan"),
+        // loan
+        Loan_Crawler("loanCrawler"),
 
-        /**
-         * auto repay
-         */
-        AUTO_REPAY_LOAN("autoRepayLoan"),
-        AUTO_REPAY_POST_LOAN("autoRepayPostLoan"),
+        Loan_Loader("loanLoader"),
 
-        /**
-         * Load credit to txt
-         */
-        LOAD_CREDIT("loadCredit"),
-        /**
-         * Calculate credit and installment plans
-         */
-        CAL_CREDIT("calCredit"),
-        /**
-         * Update the data to credit
-         */
-        UPDATE_CREDIT("updateCredit"),
+        LoanEntity_Loader("loanEntityLoader"),
 
-        /**
-         * retry credit failed records
-         */
-        RETRY_CREDIT("retryCredit"),
+        Loan_Calculator("loanCalculator"),
 
-        /**
-         * load credit old voa to txt
-         */
-        RECONCILIATION_CREDIT("reconciliationCredit"),
+        // payment
+        Payment_Crawler("paymentCrawler"),
 
-        /**
-         * load credit expedite to txt
-         */
-        EXPEDITE_CREDIT("expediteCredit"),
+        Payment_Loader("paymentLoader"),
 
-        /**
-         * ACCG-Request handle jobs
-         */
-        LOAD_ACCG_REQ("loadAccgReqs"),
-        HANDLE_ACCG_REQ("handleAccgReqs"),
-        HANDLE_FAILURE_ACCG_REQ("handleFailureAccgReqs"),
-        
-        /**
-         * ACCG-Provision jobs
-         */
-        LOAD_PROVISION("loadProvision"),
-        CAL_PROVISION("calProvision"),
-        UPDATE_PROVISION("updateProvision"),
-        
-        /**
-         * ACCG-Transaction jobs
-         */
-        LOAD_TRANS_ACCG_REQ("loadTransAccgReq"),
-        CAL_TRANS_ACCG_REQ("calTransAccgReq"),
-        UPDATE_TRANS_ACCG_REQ("updateTransAccgReq"),
-        
-        /**
-         * ACCG-Batch penalty jobs
-         */
-        LOAD_PENALTY_ACCG_REQ("loadPenaltyAccgReq"),
-        CAL_PENALTY_ACCG_REQ("calPenaltyAccgReq"),
-        UPDATE_PENALTY_ACCG_REQ("updatePenaltyAccgReq");
+        CreditRepayReal_Loader("creditRepayRealLoader"),
+
+        Payment_Calculator("paymentCalculator"),
+
+        // cash
+        Cash_Crawler("cashCrawler"),
+
+        Cash_Loader("cashLoader"),
+
+        WithdrawL_Loader("withDrawlLoader"),
+
+        Cash_Calculator("cashCalculator"),
+
+        // save
+        Save_Crawler("saveCrawler"),
+
+        Save_Loader("saveLoader"),
+
+        Recharge_Loader("rechargeLoader"),
+
+        Save_Calculator("saveCalculator"),
+
+        // trf
+        Trf_Crawler("trfCrawler"),
+
+        Trf_Calculator("trfCalculator");
 
         /**
          * Job name

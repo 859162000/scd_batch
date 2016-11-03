@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:multidb="http://www.scd.com/batch/common/schema/multidb"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/tx
+      http://www.springframework.org/schema/tx/spring-tx.xsd
+      http://www.springframework.org/schema/jdbc
+      http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.scd.com/batch/common/schema/multidb
+		http://www.scd.com/batch/common/schema/multidb.xsd">
+
+
+    <aop:aspectj-autoproxy/>
+
+    <multidb:annotation-driven order="0"/>
+
+    <bean id="batchDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${batch.jdbc.driver}"/>
+        <property name="url" value="${batch.jdbc.url}"/>
+        <property name="username" value="${batch.jdbc.username}"/>
+        <property name="password" value="${batch.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="bidDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${bid.jdbc.driver}"/>
+        <property name="url" value="${bid.jdbc.url}"/>
+        <property name="username" value="${bid.jdbc.username}"/>
+        <property name="password" value="${bid.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="tradeDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${trade.jdbc.driver}"/>
+        <property name="url" value="${trade.jdbc.url}"/>
+        <property name="username" value="${trade.jdbc.username}"/>
+        <property name="password" value="${trade.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="userDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${user.jdbc.driver}"/>
+        <property name="url" value="${user.jdbc.url}"/>
+        <property name="username" value="${user.jdbc.username}"/>
+        <property name="password" value="${user.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="promotionDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${promottion.jdbc.driver}"/>
+        <property name="url" value="${promottion.jdbc.url}"/>
+        <property name="username" value="${promottion.jdbc.username}"/>
+        <property name="password" value="${promottion.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="statisticsDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${promottion.jdbc.driver}"/>
+        <property name="url" value="${statistics.jdbc.url}"/>
+        <property name="username" value="${statistics.jdbc.username}"/>
+        <property name="password" value="${statistics.jdbc.password}"/>
+        <property name="initialSize" value="${jdbc.initialPoolSize}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="validationQuery" value="select count(1)"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="connectProperties">
+            <props>
+                <prop key="druid.stat.logSlowSql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 慎用 -->
+    <!--<jdbc:initialize-database data-source="mysqlDataSource" ignore-failures="DROPS">-->
+    <!--<jdbc:script location="classpath:META-INF/${spring.profiles.active}/schema.sql"/>-->
+    <!--<jdbc:script location="classpath:META-INF/${spring.profiles.active}/schema-batch.sql"/>-->
+    <!--<jdbc:script location="classpath:META-INF/${spring.profiles.active}/data.sql"/>-->
+    <!--<jdbc:script location="classpath:META-INF/${spring.profiles.active}/data-batch.sql"/>-->
+    <!--</jdbc:initialize-database>-->
+
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="mysqlDataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+    <bean id="mysqlDataSource" class="com.scd.batch.common.mybatis.multidb.ThreadLocalRountingDataSource">
+        <property name="defaultTargetDataSource" ref="batchDataSource"/>
+        <property name="targetDataSources">
+            <map key-type="com.scd.batch.common.mybatis.multidb.DataSourceType">
+                <entry key="BATCH" value-ref="batchDataSource"/>
+                <entry key="BID" value-ref="bidDataSource"/>
+                <entry key="TRADE" value-ref="tradeDataSource"/>
+                <entry key="USER" value-ref="userDataSource"/>
+                <entry key="PROMOTION" value-ref="promotionDataSource"/>
+                <entry key="STATISTICS" value-ref="statisticsDataSource"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="mysqlDataSource"/>
+        <property name="mapperLocations">
+            <list>
+                <value>classpath*:META-INF/mybatis/mapper/*.xml</value>
+                <value>classpath*:META-INF/mybatis/mapper/*/*.xml</value>
+            </list>
+        </property>
+        <property name="configurationProperties">
+            <map>
+                <entry key="__dbPrefix" value="${db.prefix}"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage"
+                  value="com.scd.batch.common.dao,
+                  com.scd.batch.common.uid.worker.dao,
+                  com.scd.batch.common.job.batch.control.dao,
+                  com.scd.batch.common.daycut.dao"/>
+        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
+        <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
+    </bean>
+
+    <!-- reconciliation -->
+    <bean id="batchSqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sessionFactory"/>
+        <constructor-arg index="1" value="BATCH"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg name="dataSource" ref="mysqlDataSource"/>
+    </bean>
+
+</beans>

@@ -12,22 +12,26 @@ import java.util.Currency;
  * Money represents a kind of currency, consists of an amount unit as cent and a currency code.<br>
  * Provide features as below:<br>
  * <li><b>Money compare</b>:compareTo, greaterThan</li>
- * <li><b>Money calculations</b>: add, subtract, negate, multiply, allocate(helpful be used in Installments scenario)</li>
+ * <li><b>Money calculations</b>: add, subtract, negate, multiply, allocate(helpful be used in Installments scenario)
+ * </li>
  * <li><b>Money format</b>: for human readable
- * 
- * @author yutianbao
- * @since 2016/03/03
  */
 public final class Money implements Serializable, Comparable<Money> {
     private static final long serialVersionUID = -5655014726174327069L;
 
-    /** Default currency: RMB */
+    /**
+     * Default currency: RMB
+     */
     public static final String RMB_CURRENCY_CODE = "CNY";
     public static final Currency RMB_CURRENCY = Currency.getInstance(RMB_CURRENCY_CODE);
 
-    /** Amount unit as cent */
+    /**
+     * Amount unit as cent
+     */
     private long cent;
-    /** Currency type */
+    /**
+     * Currency type
+     */
     private Currency currency;
 
     /**
@@ -39,6 +43,7 @@ public final class Money implements Serializable, Comparable<Money> {
 
     /**
      * Specified cent for default currency RMB
+     *
      * @param cent
      */
     public Money(long cent) {
@@ -48,7 +53,7 @@ public final class Money implements Serializable, Comparable<Money> {
 
     /**
      * Specified cent & currency
-     * 
+     *
      * @param cent
      * @param currency
      */
@@ -59,13 +64,14 @@ public final class Money implements Serializable, Comparable<Money> {
 
     /**
      * Money compare
-     * @param other 
+     *
+     * @param other
      */
     @Override
     public int compareTo(Money other) {
         Assert.notNull(other);
         assertSameCurrencyAs(other);
-        
+
         if (this.cent < other.cent) {
             return -1;
         } else if (this.cent == other.cent) {
@@ -74,9 +80,10 @@ public final class Money implements Serializable, Comparable<Money> {
             return 1;
         }
     }
-    
+
     /**
      * Whether the current money is greater than the other one
+     *
      * @param other
      * @return
      */
@@ -86,9 +93,10 @@ public final class Money implements Serializable, Comparable<Money> {
 
     /**
      * Money add: <p>
-     * If these two money are not in the same currency, <code>java.lang.IllegalArgumentException</code> would be thrown up.<br>
+     * If these two money are not in the same currency, <code>java.lang.IllegalArgumentException</code> would be
+     * thrown up.<br>
      * Otherwise, a new Money object with a sum cent will be created and return.
-     * 
+     *
      * @param other
      * @return new Money
      * @throw IllegalArgumentException
@@ -96,15 +104,16 @@ public final class Money implements Serializable, Comparable<Money> {
     public Money add(Money other) {
         Assert.notNull(other);
         assertSameCurrencyAs(other);
-        
+
         return new Money(this.cent + other.cent, this.getCurrency());
     }
 
     /**
      * Money subtract: <p>
-     * If these two money are not in the same currency, <code>java.lang.IllegalArgumentException</code> would be thrown up.<br>
+     * If these two money are not in the same currency, <code>java.lang.IllegalArgumentException</code> would be
+     * thrown up.<br>
      * Otherwise, a new Money object with a subtracted cent will be created and return.
-     * 
+     *
      * @param other
      * @return new Money
      * @throw IllegalArgumentException
@@ -112,13 +121,14 @@ public final class Money implements Serializable, Comparable<Money> {
     public Money subtract(Money other) {
         Assert.notNull(other);
         assertSameCurrencyAs(other);
-        
+
         return new Money(this.cent - other.cent, this.getCurrency());
     }
 
     /**
      * Money negate: <p>
      * Create a new Money object with a negate cent.
+     *
      * @return new Money
      */
     public Money negate() {
@@ -128,6 +138,7 @@ public final class Money implements Serializable, Comparable<Money> {
     /**
      * Money multiply: <p>
      * Create a new Money object with a multiplied cent.
+     *
      * @param val multiplier
      * @return new Money
      */
@@ -142,40 +153,42 @@ public final class Money implements Serializable, Comparable<Money> {
      * <p>
      * Sample:<br>
      * We want to allocate $5 into 3 parts, each result will be:$1.67, $1.67, $1.66
-     * 
+     *
      * @param parts the pieces u want to allocate
      * @return Money array
      */
     public Money[] allocate(int parts) {
         Money[] result = new Money[parts];
-        
+
         Money low = new Money(this.cent / parts, this.getCurrency());
         Money high = new Money(low.cent + 1, this.getCurrency());
         int remainder = (int) this.cent % parts;
-        
+
         for (int i = 0; i < remainder; i++) {
             result[i] = high;
         }
         for (int i = remainder; i < parts; i++) {
             result[i] = low;
         }
-        
+
         return result;
     }
 
     /**
      * Get human readable amount<br>
      * Default no scale. Sample: 310cent -> 3.1
+     *
      * @return
      */
     public String format() {
         return format(false);
     }
-    
+
     /**
      * Get human readable amount<br>
      * Default no scale. Sample: 310cent -> 3.1<br>
      * With scale as two. Sample:310cent -> 3.10
+     *
      * @return
      */
     public String format(boolean withScale) {
@@ -183,9 +196,9 @@ public final class Money implements Serializable, Comparable<Money> {
         if (withScale) {
             return new DecimalFormat("0.00").format(decimal);
         }
-        
+
         return decimal.toString();
-     
+
     }
 
     /**
@@ -224,18 +237,19 @@ public final class Money implements Serializable, Comparable<Money> {
     public int hashCode() {
         return new HashCodeBuilder().append(cent).toHashCode();
     }
-    
+
     @Override
     public String toString() {
         return "Money [cent=" + cent + ", currency=" + currency + "]";
     }
-    
+
     /**
      * Whether with the same currency
+     *
      * @param other
      */
     private void assertSameCurrencyAs(Money other) {
         Assert.isTrue(this.currency.equals(other.currency), "Mismatched currency");
     }
-    
+
 }

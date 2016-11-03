@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.statistics.BorrowerRepayPlanStatDao">
+
+    <sql id="borrowerRepayPlanStatColumns">
+        DUE_DATE,
+        BORROWER_ID,
+        BORROWER_NAME,
+        PROJECT_CODE,
+        PROJECT_NAME,
+        REPAY_TYPE,
+        DUE_PRINCIPAL,
+        DUE_INTEREST,
+        DUE_SUM,
+        REPAY_PRINCIPAL,
+        REPAY_INTEREST,
+        REPAY_SUM,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <resultMap id="borrowerRepayPlanStatMap" type="com.scd.batch.common.entity.statistics.BorrowerRepayPlanStatEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="DUE_DATE" property="dueDate" jdbcType="DATE"/>
+        <result column="BORROWER_ID" property="borrowerId" jdbcType="BIGINT"/>
+        <result column="BORROWER_NAME" property="borrowerName" jdbcType="VARCHAR"/>
+        <result column="PROJECT_CODE" property="projectCode" jdbcType="VARCHAR"/>
+        <result column="PROJECT_NAME" property="projectName" jdbcType="VARCHAR"/>
+        <result column="REPAY_TYPE" property="repayType" jdbcType="INTEGER"/>
+        <result column="DUE_PRINCIPAL" property="duePrincipal" jdbcType="DOUBLE"/>
+        <result column="DUE_INTEREST" property="dueInterest" jdbcType="DOUBLE"/>
+        <result column="DUE_SUM" property="dueSum" jdbcType="DOUBLE"/>
+        <result column="REPAY_PRINCIPAL" property="repayPrincipal" jdbcType="DOUBLE"/>
+        <result column="REPAY_INTEREST" property="repayInterest" jdbcType="DOUBLE"/>
+        <result column="REPAY_SUM" property="repaySum" jdbcType="DOUBLE"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getStatList" resultMap="borrowerRepayPlanStatMap">
+        select
+        ID,
+        <include refid="borrowerRepayPlanStatColumns"/>
+        from s_borrowerrepayplan
+        <![CDATA[
+		order by DUE_DATE DESC
+		limit #{num} offset #{start}
+		]]>
+    </select>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from s_borrowerrepayplan
+        where DUE_DATE = #{dueDate}
+        and BORROWER_ID = #{borrowerId}
+        and PROJECT_CODE = #{projectCode}
+    </select>
+
+    <insert id="insert">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+        insert into s_borrowerrepayplan(
+        <include refid="borrowerRepayPlanStatColumns"/>
+        )
+        values(
+        #{entity.dueDate},
+        #{entity.borrowerId},
+        #{entity.borrowerName},
+        #{entity.projectCode},
+        #{entity.projectName},
+        #{entity.repayType},
+        #{entity.duePrincipal},
+        #{entity.dueInterest},
+        #{entity.dueSum},
+        #{entity.repayPrincipal},
+        #{entity.repayInterest},
+        #{entity.repaySum},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="update2DB">
+        update s_borrowerrepayplan
+        set
+        DUE_PRINCIPAL = DUE_PRINCIPAL + #{entity.duePrincipal},
+        DUE_INTEREST = DUE_INTEREST + #{entity.dueInterest},
+        DUE_SUM = DUE_SUM + #{entity.dueSum},
+        REPAY_PRINCIPAL = REPAY_PRINCIPAL + #{entity.repayPrincipal},
+        REPAY_INTEREST = REPAY_INTEREST + #{entity.repayInterest},
+        REPAY_SUM = REPAY_SUM + #{entity.repaySum},
+        VERSION = VERSION + 1,
+        MODIFIED = CURRENT_TIMESTAMP
+        where DUE_DATE = #{entity.dueDate}
+        and BORROWER_ID = #{entity.borrowerId}
+        and PROJECT_CODE = #{entity.projectCode}
+    </update>
+
+</mapper>

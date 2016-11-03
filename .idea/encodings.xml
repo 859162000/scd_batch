@@ -2,14 +2,13 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/batch-accounting" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/batch-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/batch-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-executor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/batch-interest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/batch-reconciliation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-schedule" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/batch-statistics" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/batch-trade" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../scd_reconciliation" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

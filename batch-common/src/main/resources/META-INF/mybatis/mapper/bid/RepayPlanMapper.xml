@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.bid.RepayPlanDao">
+
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.bid.BorrowerRepayEntity">
+        <result column="repay_date" property="repayDate"/>
+        <result column="project_code" property="projectCode"/>
+        <result column="repay_term" property="repayTerm"/>
+        <result column="repay_amount" property="repayAmount"/>
+        <result column="repay_interest" property="repayInterest"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        project_code,
+        repay_term,
+        repay_date,
+        repay_amount,
+        repay_interest
+    </sql>
+
+    <resultMap id="BaseResuls_projectlimitMap" type="com.scd.batch.common.entity.statistics.bid.RepayPlanStatEntity">
+        <result column="project_code" property="projectCode"/>
+        <result column="repay_amount" property="repayAmount"/>
+        <result column="repay_interest" property="repayInterest"/>
+    </resultMap>
+
+    <sql id="Base_Column_ProjectLimit_List">
+        project_code,
+        COALESCE(sum(repay_amount), 0) as repay_amount,
+        COALESCE(sum(repay_interest), 0) as repay_interest
+    </sql>
+
+    <select id="getProjectRepayPlanListByTerm" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from bid_repay_plan
+        where data_status = 1
+        and project_code in
+        <foreach collection="batchProjectCode" item="projectCode" open="(" close=")" separator=",">
+            #{projectCode}
+        </foreach>
+    </select>
+
+    <select id="getProjectLimitList" resultMap="BaseResuls_projectlimitMap">
+        select
+        <include refid="Base_Column_ProjectLimit_List"/>
+        from bid_repay_plan
+        where data_status = 1
+        and project_code in
+        <foreach collection="batchProjectCode" item="projectCode" open="(" close=")" separator=",">
+            #{projectCode}
+        </foreach>
+        group by project_code
+    </select>
+
+</mapper>

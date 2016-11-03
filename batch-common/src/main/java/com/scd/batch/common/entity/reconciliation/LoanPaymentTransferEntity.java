@@ -1,9 +1,6 @@
 package com.scd.batch.common.entity.reconciliation;
 
-import constant.LoanPaymentTransStat;
-import constant.TransferType;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,20 +9,10 @@ import java.util.List;
 public class LoanPaymentTransferEntity extends TransferEntity {
 
     // 汇付交易状态
-    private LoanPaymentTransStat transStat;
+    private String transStat;
 
     // 分账串
     private List<DivEntity> divDetails;
-
-    public LoanPaymentTransferEntity(TransferType transferType, String ordId, Date ordDate,
-                                     String merCustId, String investCustId, String borrCustId,
-                                     double transAmt, Date pnrDate, String pnrSeqId, LoanPaymentTransStat transStat, List<DivEntity> divDetails) {
-
-        super(transferType, ordId, ordDate, merCustId, investCustId, borrCustId, transAmt, pnrDate, pnrSeqId);
-
-        this.transStat = transStat;
-        this.divDetails = divDetails;
-    }
 
     public List<DivEntity> getDivDetails() {
         return divDetails;
@@ -35,11 +22,11 @@ public class LoanPaymentTransferEntity extends TransferEntity {
         this.divDetails = divDetails;
     }
 
-    public LoanPaymentTransStat getTransStat() {
+    public String getTransStat() {
         return transStat;
     }
 
-    public void setTransStat(LoanPaymentTransStat transStat) {
+    public void setTransStat(String transStat) {
         this.transStat = transStat;
     }
 }

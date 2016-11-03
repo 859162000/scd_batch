@@ -6,8 +6,6 @@ import com.scd.batch.common.logger.LogMessageContainers;
 /**
  * Application exception that encapsulates the logic error message.
  *
- * @author chenguoqing
- *
  */
 public class ApplicationException extends Exception {
 

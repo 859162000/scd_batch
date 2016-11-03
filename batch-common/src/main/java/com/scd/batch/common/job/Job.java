@@ -15,9 +15,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-/**
- * Created by pippo on 16/4/27.
- */
 public class Job {
 
     public Job() {

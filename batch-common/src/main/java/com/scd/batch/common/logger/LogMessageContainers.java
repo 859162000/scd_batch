@@ -5,11 +5,6 @@ import java.io.StringWriter;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * {@link LogMessageContainers} contains all message containers
- *
- * @author chenguoqing01
- */
 public class LogMessageContainers {
     /**
      * Message key: log

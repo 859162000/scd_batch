@@ -1,27 +1,31 @@
 package com.scd.batch.statistics.job;
 
-import com.scd.batch.common.job.batch.DataFlowBatchJob;
-import com.scd.batch.common.job.batch.DataFlowCalculator;
-import com.scd.batch.common.job.batch.SourceDataProvider;
-import com.scd.batch.common.job.batch.TargetDataHandler;
+import com.scd.batch.common.entity.statistics.FundStatEntity;
+import com.scd.batch.common.job.batch.StatisticsCalculateJob;
+import com.scd.batch.common.job.batch.StatisticsCalculator;
+import com.scd.batch.common.job.batch.TargetStatisticsHandler;
 import com.scd.batch.common.job.constants.JobType;
 import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.ExecutorContext;
+import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
-import com.scd.batch.statistics.service.trans.iface.FundStatBatService;
+import com.scd.batch.statistics.service.FundStatService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.List;
 
-public class FundStatCalculateJob extends DataFlowBatchJob {
+/**
+ * 每日充值提现统计任务
+ */
+public class FundStatCalculateJob extends StatisticsCalculateJob {
 
     @Resource
-    private FundStatBatService fundStatBatService;
+    private FundStatService fundStatService;
 
     @Override
     protected JobType getJobType() {
-        return JobType.LOAN;
+        return JobType.FundStatCalculateJob;
     }
 
     @Override
@@ -31,50 +35,39 @@ public class FundStatCalculateJob extends DataFlowBatchJob {
 
     @Override
     protected PhaseType getNextPhase() {
-        return PhaseType.CALCULATE;
+        return null;
     }
 
     @Override
-    protected SourceDataProvider getSourceDataProvider() {
-        // Source from DB
+    protected TargetStatisticsHandler getTargetStatisticsHandler() {
+        return this::update2DB;
+    }
+
+    @Override
+    protected StatisticsCalculator getStatisticsCalculator() {
         return () -> batchQueryDB(getExecutorContext());
-    }
-
-    @Override
-    protected DataFlowCalculator getDataFlowCalculator() {
-        // No data calculate
-        return getNoOpCalculator();
-    }
-
-    @Override
-    protected TargetDataHandler getTargetDataHandler() {
-        // Target save to local file
-        return getTargetFileHandler();
     }
 
     /**
      * Closure: batch query DB
      */
-    private List<String> batchQueryDB(ExecutorContext context) {
+    public String batchQueryDB(ExecutorContext context) {
         // Get partition info from context
         TableSpec tableSpec = context.getAttach(TableSpec.class);
 
         ShortDate accountDate = context.getAttach(ShortDate.class);
 
-        // 批量获取账号 ID
-        List<Long> batchLoanId = getBatchIdList(context);
+        FundStatEntity fundStatEntity = fundStatService.calculate(accountDate, tableSpec);
 
-        fundStatBatService.calculate();
-
-        return null;
+        return JsonUtils.toJson(fundStatEntity);
     }
 
-    @Override
-    protected List<Long> getAllIdList(ExecutorContext context) {
-        TableSpec tableSpec = context.getAttach(TableSpec.class);
-        ShortDate accountDate = context.getAttach(ShortDate.class);
-
-        // TODO null
-        return null;
+    /**
+     * 统计结果增量方式，更新到数据库
+     */
+    public void update2DB(String line) {
+        FundStatEntity fundStatEntity = JsonUtils.toBean(line, FundStatEntity.class);
+        fundStatService.update2DB(fundStatEntity);
     }
+
 }

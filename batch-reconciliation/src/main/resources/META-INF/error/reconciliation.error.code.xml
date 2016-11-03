@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+
+    <message id="0" text="SUCCESS"/>
+
+    <message id="-1001" text="输入参数{0}不合法"/>
+
+</messages>

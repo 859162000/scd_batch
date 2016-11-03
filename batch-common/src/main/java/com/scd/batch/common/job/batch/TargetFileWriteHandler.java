@@ -17,14 +17,18 @@ public class TargetFileWriteHandler implements TargetDataHandler {
 
     private FileBufferWriter fileWriter;
 
-    /** Source file DIR */
+    /**
+     * Source file DIR
+     */
     private final File targetDir;
-    /** Source file name */
+    /**
+     * Source file name
+     */
     private final String targetFileName;
 
     /**
      * Constructor with fields
-     * 
+     *
      * @param targetDir
      * @param targetFileName
      */
@@ -39,6 +43,7 @@ public class TargetFileWriteHandler implements TargetDataHandler {
             return;
         }
 
+        logger.info("targetDir:" + targetDir + ", targetFileName:" + targetFileName);
         fileWriter = new FileBufferWriter(targetDir, targetFileName);
     }
 
@@ -82,7 +87,7 @@ public class TargetFileWriteHandler implements TargetDataHandler {
     public void postHandler() {
         // writer close will trigger the file flush
         close();
-        
+
         try {
             generateMD5();
         } catch (Exception e) {
