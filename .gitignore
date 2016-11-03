@@ -1,7 +1,15 @@
 /batch-api/target/
+/batch-api/log.*/
 /batch-common/target/
+/batch-common/log.*/
 /batch-executor/target/
+/batch-executor/log.*/
 /batch-interest/target/
+/batch-interest/log.*/
 /batch-reconciliation/target/
+/batch-reconciliation/log.*/
 /batch-schedule/target/
+/batch-schedule/log.*/
 /batch-statistics/target/
+/batch-statistics/log.*/
+/.idea/
