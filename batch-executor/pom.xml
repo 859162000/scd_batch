@@ -72,6 +72,11 @@
                     <descriptors>
                         <descriptor>src/main/assembly/assembly.xml</descriptor>
                     </descriptors>
+		<archive>
+            <manifest>
+              <mainClass>com.scd.batch.executor.BatchLauncher</mainClass>
+            </manifest>
+          </archive>
                 </configuration>
                 <executions>
                     <execution>
