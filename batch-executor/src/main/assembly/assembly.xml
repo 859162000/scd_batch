@@ -34,6 +34,7 @@
             <directory>../batch-schedule/src/main/resources</directory>
             <outputDirectory>\</outputDirectory>
         </fileSet>
+
         <fileSet>
             <directory>src/main/scripts</directory>
             <outputDirectory>bin</outputDirectory>
