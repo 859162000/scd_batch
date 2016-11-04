@@ -3,7 +3,7 @@
 
 <mapper namespace="com.scd.batch.common.dao.financial.UserRwDailyReportDao">
 
-    <sql id="Base_Column_UserDaily_List">
+    <sql id="UserDaily_List">
         id,
         report_date,
         recharge_amt,
@@ -19,7 +19,7 @@
         </selectKey>
         insert into user_rw_daily_report
         (
-        <include refid="Base_Column_UserDaily_List"/>
+        <include refid="UserDaily_List"/>
         )
         values(
         #{entity.id},
