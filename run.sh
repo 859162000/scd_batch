@@ -6,5 +6,3 @@ cd batch-executor/target
 unzip BatchLauncher-bin.zip
 cd BatchLauncher
 chmod +x bin/start.sh
-bin/start.sh -n switch
-bin/start.sh -n prepare

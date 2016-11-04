@@ -11,9 +11,10 @@ public class JobCommand extends AbstractCommand {
      * Sub commands
      */
     enum Job {
-
+        // 日切
         SWITCH("switch"),
 
+        // 任务控制
         PREPARE("prepare"),
 
         /**
