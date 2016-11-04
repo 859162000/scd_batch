@@ -179,11 +179,12 @@
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage"
-                  value="com.scd.batch.common.dao,
-                  com.scd.batch.common.uid.worker.dao,
-                  com.scd.batch.common.job.batch.control.dao,
-                  com.scd.batch.common.daycut.dao"/>
+        <!--<property name="basePackage"-->
+        <!--value="com.scd.batch.common.dao,-->
+        <!--com.scd.batch.common.uid.worker.dao,-->
+        <!--com.scd.batch.common.job.batch.control.dao,-->
+        <!--com.scd.batch.common.daycut.dao"/>-->
+        <property name="basePackage" value="com.scd.batch.common"/>
         <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
         <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
     </bean>

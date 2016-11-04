@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml" />
     </list>
     <list id="0f3e6939-7647-4e90-aeac-aff047f5b1be" name="Revert: ignore" comment="" />
     <ignored path="batch.iws" />
@@ -141,18 +142,38 @@
       <file leaf-file-name="BorrowerRepaymentPlanDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="319">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BorrowerRepaymentPlanMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml">
+      <file leaf-file-name="BorrowerRepaymentPlan.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlan.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1030">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="174">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-dao-common.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BorrowerRepaymentPlan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/financial/BorrowerRepaymentPlan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -162,7 +183,7 @@
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReport.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+              <caret line="3" column="74" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -178,31 +199,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AcctUserAccumulativeProfitMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AcctUserDailyProfitMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserDailyProfitMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
               <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AcctUserAccumulateProfitDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/AcctUserAccumulateProfitDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -294,9 +295,9 @@
         <option value="$PROJECT_DIR$/batch-api/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml" />
       </list>
     </option>
   </component>
@@ -767,7 +768,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;BorrowerRepaymentPlanDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.BorrowerRepaymentPlanDao&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;DayCutDao&#9;PSI&#9;JAVA://com.scd.batch.common.daycut.dao.DayCutDao&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest&#10;application-execu&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/BatchLauncher.java&#10;assembly&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;BatchLauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;asse&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;JobDAO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;commandType&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.CommandType&#10;data.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data.sql&#10;data-ba.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data-batch.sql&#10;data-batch&#9;null&#9;null&#10;batch.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;assembly.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;cashcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/CashCrawlerJob.java&#10;jobs-reconcili&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;projects&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectStatus&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectstatus&#9;PSI&#9;JAVA://com.scd.batch.common.constant.bid.ProjectStatus&#10;Project.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/ProjectMapper.xml&#10;RepayPlanMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/RepayPlanMapper.xml&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;db.proper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;userProfitCalculate&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserProfitCalculateJob.java&#10;db.pr&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;ba&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserAccumul.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml" />
+    <property name="SearchEverywhereHistoryKey" value="BorrowerRepaymentPlanDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java&#10;BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;DayCutDao&#9;PSI&#9;JAVA://com.scd.batch.common.daycut.dao.DayCutDao&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest&#10;application-execu&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/BatchLauncher.java&#10;assembly&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;BatchLauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;asse&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;JobDAO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;commandType&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.CommandType&#10;data.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data.sql&#10;data-ba.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data-batch.sql&#10;data-batch&#9;null&#9;null&#10;batch.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;assembly.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;cashcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/CashCrawlerJob.java&#10;jobs-reconcili&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;projects&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectStatus&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectstatus&#9;PSI&#9;JAVA://com.scd.batch.common.constant.bid.ProjectStatus&#10;Project.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/ProjectMapper.xml&#10;RepayPlanMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/RepayPlanMapper.xml&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;db.proper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;userProfitCalculate&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserProfitCalculateJob.java&#10;db.pr&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;ba&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserAccumul.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32150775" />
@@ -1647,14 +1648,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/promotion/CouponsUseRecordsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TransferErrorMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -1935,14 +1928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="188" column="11" selection-start-line="188" selection-start-column="11" selection-end-line="188" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -2015,14 +2000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReport.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/UserRwDailyReportDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -2041,16 +2018,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="319">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReport.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1030">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="87">
+          <caret line="3" column="74" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/financial/BorrowerRepaymentPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlan.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="186" column="44" selection-start-line="186" selection-start-column="44" selection-end-line="186" selection-end-column="44" />
           <folding />
         </state>
       </provider>
