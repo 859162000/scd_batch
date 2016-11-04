@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml" />
     </list>
     <list id="0f3e6939-7647-4e90-aeac-aff047f5b1be" name="Revert: ignore" comment="" />
     <ignored path="batch.iws" />
@@ -152,7 +151,7 @@
       <file leaf-file-name="BorrowerRepaymentPlanMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="-1030">
               <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding />
             </state>
@@ -1549,7 +1548,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1357" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1560,7 +1559,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39538628" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8907285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81125826" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27950644" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
@@ -2050,7 +2049,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="-1030">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding />
         </state>
