@@ -14,8 +14,8 @@
     <bean id="switchService" class="com.scd.batch.executor.service.daycut.SwitchServiceImpl"/>
 
     <bean class="com.scd.batch.common.logger.InitLogContainerBean">
-        <property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>
-        <property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>
+        <property name="logLocation" value="classpath:META-INF/log/*.log.xml"/>
+        <property name="errorLocation" value="classpath:META-INF/error/*.error.xml"/>
     </bean>
 
 

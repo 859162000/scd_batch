@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <messages>
-    <message id="COM_10000" text="description:访问记录,remoteAddr:{0},requestMethod:{1},elapsed:{2},params:{3}" level="INFO"/>
+    <!--<message id="COM_10000" text="description:访问记录,remoteAddr:{0},requestMethod:{1},elapsed:{2},params:{3}" level="INFO"/>-->
 
 </messages>
