@@ -24,7 +24,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>4.3.3.RELEASE</spring.version>
         <slf4j-version>1.7.7</slf4j-version>
         <bjf.version>2.1.1.0</bjf.version>
         <tianlu-core.version>2.3.0.7</tianlu-core.version>
@@ -229,27 +229,27 @@
         </dependency>
         <!-- for data validation -->
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.5.3</version>
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>dubbo</artifactId>-->
+            <!--<version>2.5.3</version>-->
 
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.logging.log4j</groupId>
-                    <artifactId>log4j-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.apache.log4j</groupId>
-                    <artifactId>log4j-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.apache.logging.log4j</groupId>-->
+                    <!--<artifactId>log4j-core</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.apache.log4j</groupId>-->
+                    <!--<artifactId>log4j-core</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>log4j</groupId>-->
+                    <!--<artifactId>log4j</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
 
-        </dependency>
+        <!--</dependency>-->
 
 
         <!-- Servlet -->
@@ -310,6 +310,7 @@
             <version>2.5.1</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <profiles>
