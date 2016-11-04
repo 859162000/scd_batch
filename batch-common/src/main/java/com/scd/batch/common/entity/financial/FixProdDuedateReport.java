@@ -3,7 +3,7 @@ package com.scd.batch.common.entity.financial;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class FixProdDuedateReport {
+public class FixProdDueDateReport {
     private Long id;
 
     private Date dueDate;

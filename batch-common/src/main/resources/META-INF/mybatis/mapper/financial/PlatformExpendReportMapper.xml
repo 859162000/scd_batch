@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scd.batch.common.dao.financial.PlatformExpendReportDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.financial.PlatformExpendReport">
+    <resultMap id="BaseResult_PlatformExpend_Map" type="com.scd.batch.common.entity.financial.PlatformExpendReport">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="expend_date" jdbcType="DATE" property="expendDate"/>
         <result column="expend_detail" jdbcType="VARCHAR" property="expendDetail"/>

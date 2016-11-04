@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scd.batch.common.dao.financial.PlatformAssetReportDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.financial.PlatformAssetReport">
+    <resultMap id="BaseResult_PlatformAsset_Map" type="com.scd.batch.common.entity.financial.PlatformAssetReport">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="report_date" jdbcType="DATE" property="report_date"/>
         <result column="current_asset_total" jdbcType="DECIMAL" property="currentAssetTotal"/>
@@ -14,7 +14,7 @@
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_PlatformAsset_List">
         id,
         report_date,
         current_asset_total,
@@ -33,7 +33,7 @@
         </selectKey>
         insert into platform_asset_report
         (
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_PlatformAsset_List"/>
         )
         values(
         #{entity.id},

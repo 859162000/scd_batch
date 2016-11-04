@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.bid.RepayRealDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.bid.BorrowerRepayEntity">
+    <resultMap id="BaseResult_RepayReal_Map" type="com.scd.batch.common.entity.statistics.bid.BorrowerRepayEntity">
         <id column="id" property="id"/>
         <result column="project_code" property="projectCode"/>
         <result column="repay_term" property="repayTerm"/>
@@ -11,7 +11,7 @@
         <result column="repay_interest" property="repayInterest"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_RepayReal_List">
         project_code,
         repay_term,
         repay_date,
@@ -31,9 +31,9 @@
         COALESCE(sum(repay_interest), 0) as repay_interest
     </sql>
 
-    <select id="getProjectRealRepayListByTerm" resultMap="BaseResultMap">
+    <select id="getProjectRealRepayListByTerm" resultMap="BaseResult_RepayReal_Map">
         select
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_RepayReal_List"/>
         from bid_repay_real
         where data_status = 1
         and status = 2

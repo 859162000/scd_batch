@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.trade.RechargeLDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.RechargeL">
+    <resultMap id="BaseResult_RechargeL_Map" type="com.scd.batch.common.entity.trade.RechargeL">
 
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
@@ -33,7 +33,7 @@
         <result column="recharge_man_reason" property="rechargeManReason" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_RechargeL_List">
         id,
         seq_no,
         uid,
@@ -83,10 +83,10 @@
         order by id
     </select>
 
-    <select id="getListByPage" resultMap="BaseResultMap">
+    <select id="getListByPage" resultMap="BaseResult_RechargeL_Map">
         select
         ID,
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_RechargeL_List"/>
         from recharge_l
         where ID in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">

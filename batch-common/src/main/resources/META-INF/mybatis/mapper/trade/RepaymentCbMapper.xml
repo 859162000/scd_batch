@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.trade.RepaymentCbDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.RepaymentCb">
+    <resultMap id="BaseResult_RepaymentCb_Map" type="com.scd.batch.common.entity.trade.RepaymentCb">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="fro_seq_no" property="froSeqNo" jdbcType="VARCHAR"/>
         <result column="prod_id" property="prodId" jdbcType="VARCHAR"/>
@@ -22,7 +22,7 @@
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_RepaymentCb_List">
         id,
         fro_seq_no,
         prod_id,
@@ -50,10 +50,10 @@
         order by id
     </select>
 
-    <select id="getListByPage" resultMap="BaseResultMap">
+    <select id="getListByPage" resultMap="BaseResult_RepaymentCb_Map">
         select
         ID,
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_RepaymentCb_List"/>
         from repayment_cb
         where ID in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">

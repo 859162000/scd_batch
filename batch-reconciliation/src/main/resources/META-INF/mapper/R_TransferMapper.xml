@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.reconciliation.dao.TransferBatchUpdateDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.reconciliation.SaveTransferEntity">
+    <resultMap id="BaseResult_TransferUpdate_Map" type="com.scd.batch.common.entity.reconciliation.SaveTransferEntity">
         <id column="ID" property="id" jdbcType="BIGINT"/>
         <result column="TRANS_DATE" property="transDate" jdbcType="DATE"/>
         <result column="DELETE_FLAG" property="deleteFlag" jdbcType="SMALLINT"/>
@@ -27,13 +27,13 @@
         <result column="MODIFIED" property="modified" jdbcType="DATE"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_TransferUpdate_List">
         ID, TRANS_DATE, DELETE_FLAG, TRANSFER_TYPE, ORD_ID, ORD_DATE, MER_CUST_ID, INVEST_CUST_ID,
         BORR_CUST_ID, TRANS_AMT, PNR_DATE, PNR_SEQ_ID, TRANS_STAT, GATE_BUSI_ID, OPEN_BANK_ID,
         OPEN_ACCT_ID, FEE_AMT, FEE_CUST_ID, FEE_ACCT_ID, VERSION, CREATED, MODIFIED
     </sql>
 
-    <select id="selectByExample" resultMap="BaseResultMap"
+    <select id="selectByExample" resultMap="BaseResult_TransferUpdate_Map"
             parameterType="com.scd.batch.statistics.mybatis.entity.RTransferExample">
         <!--
           WARNING - @mbggenerated
@@ -43,7 +43,7 @@
         <if test="distinct">
             distinct
         </if>
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_TransferUpdate_List"/>
         from r_transfer
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>

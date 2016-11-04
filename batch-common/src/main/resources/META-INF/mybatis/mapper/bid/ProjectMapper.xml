@@ -3,7 +3,7 @@
 <mapper namespace="com.scd.batch.common.dao.bid.ProjectDao">
 
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.bid.SimpleProjectEntity">
+    <resultMap id="BaseResult_SimpleProject_Map" type="com.scd.batch.common.entity.statistics.bid.SimpleProjectEntity">
         <result column="id" property="id"/>
         <result column="project_name" property="projectName"/>
         <result column="project_code" property="projectCode"/>
@@ -12,7 +12,7 @@
         <result column="bid_amount" property="bidAmount"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_SimpleProject_List">
         id, project_name, project_code, work_no,bid_type, bid_amount, year_rate, min_invest_count, unit_amount,
         min_invest_amount,
         max_invest_amount, total_interest, bid_start_time, bid_end_time, repay_time, last_repay_time,
@@ -33,7 +33,7 @@
         </foreach>
     </select>
 
-    <select id="getProjectListById" resultMap="BaseResultMap">
+    <select id="getProjectListById" resultMap="BaseResult_SimpleProject_Map">
         select id, project_name, project_code, repay_type, occupy_amount, bid_amount
         from bid_project
         where

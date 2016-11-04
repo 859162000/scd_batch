@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.trade.LoansCbDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.LoansCb">
+    <resultMap id="BaseResult_LoansCb_Map" type="com.scd.batch.common.entity.trade.LoansCb">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="loans_seq_no" property="loansSeqNo" jdbcType="VARCHAR"/>
         <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
@@ -18,7 +18,7 @@
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_LoansCb_List">
         id,
         loans_seq_no,
         seq_no,
@@ -40,10 +40,10 @@
         order by id
     </select>
 
-    <select id="getListByPage" resultMap="BaseResultMap">
+    <select id="getListByPage" resultMap="BaseResult_LoansCb_Map">
         select
         ID,
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_LoansCb_List"/>
         from loans_cb
         where ID in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">

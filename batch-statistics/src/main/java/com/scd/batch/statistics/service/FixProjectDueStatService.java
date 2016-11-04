@@ -4,7 +4,7 @@ package com.scd.batch.statistics.service;
 import com.scd.batch.common.dao.financial.FixProdDueDateReportDao;
 import com.scd.batch.common.dao.statistics.FixProjectDueStatDao;
 import com.scd.batch.common.daycut.service.DayCutService;
-import com.scd.batch.common.entity.financial.FixProdDuedateReport;
+import com.scd.batch.common.entity.financial.FixProdDueDateReport;
 import com.scd.batch.common.entity.statistics.FixDueStatEntity;
 import com.scd.batch.common.utils.TableSpec;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ public class FixProjectDueStatService {
                 statDao.insert(TableSpec.getDefault(), p);
             }
 
-            FixProdDuedateReport report = buildFinancial(p);
+            FixProdDueDateReport report = buildFinancial(p);
             if (reportDao.checkExists(report.getDueDate()) > 0) {
                 reportDao.updateIncrement(report);
             } else {
@@ -55,9 +55,9 @@ public class FixProjectDueStatService {
         return true;
     }
 
-    public FixProdDuedateReport buildFinancial(FixDueStatEntity entity) {
+    public FixProdDueDateReport buildFinancial(FixDueStatEntity entity) {
 
-        FixProdDuedateReport report = new FixProdDuedateReport();
+        FixProdDueDateReport report = new FixProdDueDateReport();
 
         report.setDueDate(entity.getDueDate());
         report.setFixPlanPrn(new BigDecimal(entity.getFixPlanPrincipal()));

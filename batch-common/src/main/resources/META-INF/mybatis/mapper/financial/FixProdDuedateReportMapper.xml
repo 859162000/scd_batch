@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scd.batch.common.dao.financial.FixProdDueDateReportDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.financial.FixProdDuedateReport">
+    <resultMap id="BaseResult_FixProdDueDate_Map" type="com.scd.batch.common.entity.financial.FixProdDueDateReport">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="due_date" jdbcType="DATE" property="dueDate"/>
         <result column="fix_plan_prn" jdbcType="DECIMAL" property="fixPlanPrn"/>

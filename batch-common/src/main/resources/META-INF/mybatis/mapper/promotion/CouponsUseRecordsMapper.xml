@@ -2,21 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.promotion.CouponsUseRecordsDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.statistics.ExpenditureStatEntity">
+    <resultMap id="BaseResult_CouponUseRecords_Map" type="com.scd.batch.common.entity.statistics.ExpenditureStatEntity">
         <result column="transDate" property="transDate" jdbcType="DATE"/>
         <result column="type" property="type" jdbcType="TINYINT"/>
         <result column="amount" property="amount" jdbcType="DOUBLE"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_CouponUserRecords_List">
         coupon.type as type,
         record.use_value as amount,
         substring(record.use_time, 1, 10) as transDate
     </sql>
 
-    <select id="selectStatList" resultMap="BaseResultMap">
+    <select id="selectStatList" resultMap="BaseResult_CouponUseRecords_Map">
         select
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_CouponUserRecords_List"/>
         from promotion_coupons_use_records record
         left join promotion_coupons coupon
         on record.coupons_id = coupon.id

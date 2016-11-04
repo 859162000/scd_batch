@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.trade.WithdrawLDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.trade.WithdrawL">
+    <resultMap id="BaseResult_WithdrawL_Map" type="com.scd.batch.common.entity.trade.WithdrawL">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="seq_no" property="seqNo" jdbcType="VARCHAR"/>
         <result column="uid" property="uid" jdbcType="VARCHAR"/>
@@ -29,7 +29,7 @@
         <result column="status" property="status" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_WithdrawL_List">
         id,
         seq_no,
         uid,
@@ -76,10 +76,10 @@
         order by id
     </select>
 
-    <select id="getListByPage" resultMap="BaseResultMap">
+    <select id="getListByPage" resultMap="BaseResult_WithdrawL_Map">
         select
         ID,
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_WithdrawL_List"/>
         from withdraw_l
         where ID in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">

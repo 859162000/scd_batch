@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.reconciliation.TransferErrorDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.reconciliation.TransferErrorEntity">
+    <resultMap id="BaseResult_TransferError_Map" type="com.scd.batch.common.entity.reconciliation.TransferErrorEntity">
         <id column="ID" property="id" jdbcType="BIGINT"/>
         <result column="TRANS_ID" property="transId" jdbcType="VARCHAR"/>
         <result column="TRANSFER_TYPE" property="transferType" jdbcType="SMALLINT"/>
@@ -17,7 +17,7 @@
         <result column="MODIFIED" property="modified" jdbcType="DATE"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_TransferError_List">
         TRANS_ID,
         TRANSFER_TYPE,
         ERROR_TYPE,
@@ -34,7 +34,7 @@
 
     <insert id="batchInsert">
         insert into r_transfer_error(
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_TransferError_List"/>
         )
         values
         <foreach collection="entityList" item="entity" index="index" separator=",">
@@ -57,7 +57,7 @@
     <insert id="insert">
         insert into r_transfer_error
         (
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_TransferError_List"/>
         )
         values
         (

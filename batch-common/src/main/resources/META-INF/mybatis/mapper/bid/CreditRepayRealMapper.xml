@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.bid.CreditRepayRealDao">
 
-    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.bid.CreditRepayReal">
+    <resultMap id="BaseResult_CreditRepayReal_Map" type="com.scd.batch.common.entity.bid.CreditRepayReal">
         <id column="id" property="id"/>
         <result column="repay_flow_no" property="repayFlowNo"/>
         <result column="product_code" property="productCode"/>
@@ -37,7 +37,7 @@
         <result column="frozen_flow_no" property="frozenFlowNo"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_CreditRepayReal_List">
         id,
         project_plan_id,
         repay_plan_id,
@@ -81,10 +81,10 @@
         order by id
     </select>
 
-    <select id="getListByPage" resultMap="BaseResultMap">
+    <select id="getListByPage" resultMap="BaseResult_CreditRepayReal_Map">
         select
         ID,
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_CreditRepayReal_List"/>
         from bid_credit_repay_real
         where ID in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
