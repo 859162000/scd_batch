@@ -168,14 +168,7 @@
         <property name="dataSource" ref="mysqlDataSource"/>
         <property name="mapperLocations">
             <list>
-                <value>classpath*:META-INF/mybatis/mapper/acct/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/bid/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/executor/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/financial/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/promotion/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/reconciliation/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/statistics/*.xml</value>
-                <value>classpath*:META-INF/mybatis/mapper/trade/*.xml</value>
+                <value>classpath*:META-INF/mybatis/mapper/**/*.xml</value>
             </list>
         </property>
         <property name="configurationProperties">
@@ -195,7 +188,7 @@
         <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
     </bean>
 
-    <!-- reconciliation -->
+    <!--&lt;!&ndash; reconciliation &ndash;&gt;-->
     <bean id="batchSqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sessionFactory"/>
         <constructor-arg index="1" value="BATCH"/>
