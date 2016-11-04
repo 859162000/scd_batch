@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-api/src/main/java/com/scd/batch/api/notice/NoticeFacade.java" afterPath="$PROJECT_DIR$/batch-api/src/main/java/com/scd/batch/api/notice/NoticeFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-schedule.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-schedule.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/batch-executor.iml" afterPath="$PROJECT_DIR$/batch-executor/batch-executor.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" afterPath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/batch-schedule.iml" afterPath="$PROJECT_DIR$/batch-schedule/batch-schedule.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/pom.xml" afterPath="$PROJECT_DIR$/batch-schedule/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java" afterPath="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/src/main/resources/META-INF/spring/spring-jobs-schedule.xml" afterPath="$PROJECT_DIR$/batch-schedule/src/main/resources/META-INF/spring/spring-jobs-schedule.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs.sh" afterPath="$PROJECT_DIR$/jobs.sh" />
     </list>
     <list id="0f3e6939-7647-4e90-aeac-aff047f5b1be" name="Revert: ignore" comment="" />
     <ignored path="batch.iws" />
@@ -130,19 +119,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="RedeemNoticeImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java">
+      <file leaf-file-name="jobs.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jobs.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-              <folding>
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BidLoanScheduleJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +203,6 @@
         <option value="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/jobs" />
-        <option value="$PROJECT_DIR$/jobs.sh" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
         <option value="$PROJECT_DIR$/batch-api/src/main/java/com/scd/batch/api/entity/RedeemNoticeReq.java" />
         <option value="$PROJECT_DIR$/batch-schedule/pom.xml" />
@@ -226,6 +217,7 @@
         <option value="$PROJECT_DIR$/batch-api/src/main/java/com/scd/batch/api/notice/NoticeFacade.java" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" />
         <option value="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java" />
+        <option value="$PROJECT_DIR$/jobs.sh" />
       </list>
     </option>
   </component>
@@ -558,7 +550,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="dubbo.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-schedule.xml&#10;red&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;redeemSchedule&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;schema.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;jobcomman&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java&#10;preparejob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;dubbo&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/resources/META-INF/spring/dubbo-producer.xml&#10;prepare&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;jobcontroll&#9;PSI&#9;JAVA://com.scd.batch.common.job.batch.control.JobControlServiceTest#buildJobControll&#10;jobs-sche&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/resources/META-INF/spring/spring-jobs-schedule.xml&#10;launc&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;switch.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml&#10;wit&#9;PSI&#9;JAVA://com.scd.batch.common.entity.trade.WithdrawL&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/db.properties&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserBalance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;userbalancedao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java&#10;UserBalance&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;jobs-in&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/resources/META-INF/spring/spring-jobs-interest.xml&#10;jobcommand&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserBalance.x&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;userbal&#9;PSI&#9;JAVA://com.scd.batch.common.dao.trade.UserBalanceDao&#10;cutda.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/DayCutDaoMapper.xml&#10;switchjob&#9;PSI&#9;JAVA://com.scd.batch.executor.job.SwitchJob&#10;DayCutDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/daycut/dao/DayCutDao.java&#10;BorrowerRepaymentPlanDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java&#10;BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest&#10;application-execu&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml" />
+    <property name="SearchEverywhereHistoryKey" value="bidloan&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java&#10;dubbo.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-schedule.xml&#10;red&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;redeemSchedule&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;schema.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;jobcomman&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java&#10;preparejob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;dubbo&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/resources/META-INF/spring/dubbo-producer.xml&#10;prepare&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;jobcontroll&#9;PSI&#9;JAVA://com.scd.batch.common.job.batch.control.JobControlServiceTest#buildJobControll&#10;jobs-sche&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/resources/META-INF/spring/spring-jobs-schedule.xml&#10;launc&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;switch.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml&#10;wit&#9;PSI&#9;JAVA://com.scd.batch.common.entity.trade.WithdrawL&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/db.properties&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserBalance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;userbalancedao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java&#10;UserBalance&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;jobs-in&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/resources/META-INF/spring/spring-jobs-interest.xml&#10;jobcommand&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;UserBalance.x&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;userbal&#9;PSI&#9;JAVA://com.scd.batch.common.dao.trade.UserBalanceDao&#10;cutda.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/DayCutDaoMapper.xml&#10;switchjob&#9;PSI&#9;JAVA://com.scd.batch.executor.job.SwitchJob&#10;DayCutDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/daycut/dao/DayCutDao.java&#10;BorrowerRepaymentPlanDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java&#10;BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32150775" />
@@ -1350,12 +1342,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39538628" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8907285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44260487" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27950644" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49889624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49889624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1725,14 +1717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -1769,14 +1753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1867,8 +1843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/notice/RedeemNoticeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="522">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#356#357#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
@@ -1877,6 +1853,22 @@
             <element signature="e#593#594#0" expanded="true" />
             <element signature="e#643#644#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

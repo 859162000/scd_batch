@@ -37,3 +37,5 @@ bin/start.sh -n saveCalculator
 bin/start.sh -n redeemSchedule
 bin/start.sh -n updateBankCardQuotaSchedule
 bin/start.sh -n updateUserRegisterCountToRedis
+bin/start.sh -n bidLoanSchedule
+bin/start.sh -n bidBuybackSchedule
