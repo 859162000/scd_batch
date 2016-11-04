@@ -14,5 +14,5 @@
 
     <import resource="classpath:META-INF/spring/spring-jobs-statistics.xml"/>
 
-    <import resource="classpath:META-INF/ApplicationContext-common.xml"/>
+    <!--<import resource="classpath:META-INF/ApplicationContext-common.xml"/>-->
 </beans>

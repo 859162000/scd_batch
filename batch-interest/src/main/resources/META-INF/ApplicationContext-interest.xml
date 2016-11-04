@@ -17,5 +17,5 @@
     <import resource="classpath:META-INF/spring/spring-service-interest.xml"/>
 
     <!-- common -->
-    <import resource="classpath:META-INF/ApplicationContext-common.xml"/>
+    <!--<import resource="classpath:META-INF/ApplicationContext-common.xml"/>-->
 </beans>
