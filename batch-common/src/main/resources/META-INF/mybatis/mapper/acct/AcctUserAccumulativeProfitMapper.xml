@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao">
 
-    <sql id="Base_Column_AcctUserAccumulateProfit_List">
+    <sql id="Base_Column_AcctUserAccumulateProfitDao_List">
         uid,
         total_profit,
         current_invest_profit,
@@ -17,7 +17,7 @@
         </selectKey>
         insert into user_accumulative_profit
         (
-        <include refid="Base_Column_AcctUserAccumulateProfit_List"/>
+        <include refid="Base_Column_AcctUserAccumulateProfitDao_List"/>
         )
         values (
         #{entity.uid},
