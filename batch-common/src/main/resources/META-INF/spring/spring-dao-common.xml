@@ -178,16 +178,16 @@
         </property>
     </bean>
 
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-        <!--&lt;!&ndash;<property name="basePackage"&ndash;&gt;-->
-        <!--&lt;!&ndash;value="com.scd.batch.common.dao,&ndash;&gt;-->
-        <!--&lt;!&ndash;com.scd.batch.common.uid.worker.dao,&ndash;&gt;-->
-        <!--&lt;!&ndash;com.scd.batch.common.job.batch.control.dao,&ndash;&gt;-->
-        <!--&lt;!&ndash;com.scd.batch.common.daycut.dao"/>&ndash;&gt;-->
-        <!--<property name="basePackage" value="com.scd.batch.common"/>-->
-        <!--<property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
-        <!--<property name="sqlSessionFactoryBeanName" value="sessionFactory"/>-->
-    <!--</bean>-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--<property name="basePackage"-->
+        <!--value="com.scd.batch.common.dao,-->
+        <!--com.scd.batch.common.uid.worker.dao,-->
+        <!--com.scd.batch.common.job.batch.control.dao,-->
+        <!--com.scd.batch.common.daycut.dao"/>-->
+        <property name="basePackage" value="com.scd.batch.common"/>
+        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
+        <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
+    </bean>
 
     <!--&lt;!&ndash; reconciliation &ndash;&gt;-->
     <bean id="batchSqlSession" class="org.mybatis.spring.SqlSessionTemplate">
