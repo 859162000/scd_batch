@@ -3,15 +3,6 @@
 
 <mapper namespace="com.scd.batch.common.dao.financial.UserRwDailyReportDao">
 
-    <resultMap id="Base_Result_UserDaily_Map" type="com.scd.batch.common.entity.financial.UserRwDailyReport">
-        <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="report_date" jdbcType="DATE" property="reportDate"/>
-        <result column="recharge_amt" jdbcType="DECIMAL" property="rechargeAmt"/>
-        <result column="withdraw_amt" jdbcType="DECIMAL" property="withdrawAmt"/>
-        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
-        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
-    </resultMap>
-
     <sql id="Base_Column_UserDaily_List">
         id,
         report_date,
