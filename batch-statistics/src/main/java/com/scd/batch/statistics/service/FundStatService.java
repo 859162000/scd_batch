@@ -10,7 +10,6 @@ import com.scd.batch.common.entity.financial.UserRwDailyReport;
 import com.scd.batch.common.entity.statistics.FundStatEntity;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
