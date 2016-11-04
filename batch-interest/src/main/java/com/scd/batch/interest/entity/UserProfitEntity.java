@@ -14,16 +14,16 @@ public class UserProfitEntity {
 
     private Date date;
 
-    // 每日总收益
+    // 昨日收益
     private BigDecimal profit;
 
-    // 每日活期收益
+    // 活期收益
     private BigDecimal currentProfit;
 
-    // 累计总收益
+    // 累计昨日收益
     private BigDecimal totalProfit;
 
-    // 活期累计收益
+    // 累计活期收益
     private BigDecimal currentInvestProfit;
 
     public UserProfitEntity() {

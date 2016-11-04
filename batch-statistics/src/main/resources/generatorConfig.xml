@@ -86,7 +86,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="r_transfer_error" schema="fcore_part_0">
+        <table tableName="s_user_assets" schema="batch_0">
 
             <!-- optional   , only for mybatis3 runtime
                  自动生成的键值（identity,或者序列值）

@@ -17,5 +17,11 @@
         <property name="name" value="updateBankCardQuotaSchedule.job"/>
     </bean>
 
+    <!-- 更新注册人数到redis -->
+    <bean id="updateUserRegisterCountToRedis.job" class="com.scd.batch.schedule.job.UpdateUserRegisterCountToRedisJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="updateUserRegisterCountToRedis.job"/>
+    </bean>
+
 
 </beans>

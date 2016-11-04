@@ -23,7 +23,7 @@
     </sql>
 
     <resultMap id="BaseResultCreditorRelationMap"
-               type="com.scd.batch.common.entity.interest.UserCreditroRelationEntity">
+               type="com.scd.batch.common.entity.bid.UserCreditroRelationEntity">
         <result column="id" property="id"/>
         <result column="buyer_uid" property="buyerUid"/>
         <result column="project_code" property="projectCode"/>

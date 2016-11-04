@@ -96,8 +96,14 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.AssetsStatProjectCalculateJob);
         jobTypes.add(JobType.AssetsStatBalanceCalculateJob);
 
-        jobTypes.add(JobType.UserProfitCalculateJob);
+        // 计息
+        jobTypes.add(JobType.UserCurrentProfitCalculateJob);
+        jobTypes.add(JobType.UserDailyProfitCalculateJob);
 
+        // 灵活调度
+        jobTypes.add(JobType.RedeemScheduleJob);
+        jobTypes.add(JobType.UpdateBankCardQuotaScheduleJob);
+        jobTypes.add(JobType.UpdateUserRegisterCountToRedisJob);
 
     }
 

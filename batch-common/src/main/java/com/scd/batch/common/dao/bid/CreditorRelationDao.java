@@ -1,6 +1,6 @@
 package com.scd.batch.common.dao.bid;
 
-import com.scd.batch.common.entity.interest.UserCreditroRelationEntity;
+import com.scd.batch.common.entity.bid.UserCreditroRelationEntity;
 import com.scd.batch.common.entity.statistics.bid.FixPlanDuePlanEntity;
 import com.scd.batch.common.entity.statistics.bid.FixProductDuePlanEntity;
 import com.scd.batch.common.entity.statistics.bid.ProductAssetsEntity;

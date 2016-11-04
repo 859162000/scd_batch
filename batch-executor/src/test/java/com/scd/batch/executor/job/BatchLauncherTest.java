@@ -303,14 +303,49 @@ public class BatchLauncherTest {
                 ".xml", "-f"});
     }
 
+
     /**
      * interest
      */
 
     @Test()
-    public void testProcessJobSuccess_userProfitCalculate() {
+    public void testProcessJobSuccess_userCurrentProfitCalculate() {
 
-        BatchLauncher.main(new String[]{"-n", "userProfitCalculate", "-p", "classpath:META-INF/ApplicationContext-executor" +
+        BatchLauncher.main(new String[]{"-n", "userCurrentProfitCalculate", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+    }
+
+
+    @Test()
+    public void testProcessJobSuccess_userDailyProfitCalculate() {
+
+        BatchLauncher.main(new String[]{"-n", "userDailyProfitCalculate", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+    }
+
+
+    /**
+     * schedule
+     */
+
+    @Test()
+    public void testProcessJobSuccess_redeemSchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "redeemSchedule", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+    }
+
+    @Test()
+    public void testProcessJobSuccess_updateBankCardQuotaSchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "updateBankCardQuotaSchedule", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+    }
+
+    @Test()
+    public void testProcessJobSuccess_updateUserRegisterCountToRedis() {
+
+        BatchLauncher.main(new String[]{"-n", "updateUserRegisterCountToRedis", "-p", "classpath:META-INF/ApplicationContext-executor" +
                 ".xml", "-f"});
     }
 

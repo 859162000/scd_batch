@@ -23,6 +23,10 @@ public enum JobType implements EnumType<JobType, Integer> {
      */
     UpdateBankCardQuotaScheduleJob(4002),
 
+    /**
+     * 更新注册人数到redis
+     */
+    UpdateUserRegisterCountToRedisJob(4003),
 
     /**
      * 对账相关
@@ -60,7 +64,8 @@ public enum JobType implements EnumType<JobType, Integer> {
      */
     CashCalculatorJob(1006),
 
-    /**k
+    /**
+     * k
      * 充值流水抓取任务
      */
     SaveCrawlerJob(1007),
@@ -132,9 +137,13 @@ public enum JobType implements EnumType<JobType, Integer> {
      */
 
     /**
-     * 每日收益统计
+     * 活期收益统计
      */
-    UserProfitCalculateJob(3001);
+    UserCurrentProfitCalculateJob(3001),
+    /**
+     * 昨日收益统计
+     */
+    UserDailyProfitCalculateJob(3002);
 
 
     public final int type;

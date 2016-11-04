@@ -2,7 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.scd.batch.common.dao.trade.UserBalanceDao">
 
-    <resultMap id="BaseResult_BalanceAssets_Map" type="com.scd.batch.common.entity.statistics.trade.BalanceAssetsEntity">
+    <resultMap id="BaseResult_BalanceAssets_Map"
+               type="com.scd.batch.common.entity.statistics.trade.BalanceAssetsEntity">
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
         <result column="usable_sa" property="usableSa" jdbcType="DECIMAL"/>
         <result column="withdraw_freeze_sa" property="withdrawFreezeSa" jdbcType="DECIMAL"/>
         <result column="invest_freeze_sa" property="investFreezeSa" jdbcType="DECIMAL"/>
@@ -17,7 +19,7 @@
         <result column="fixperiod_interest" property="fixperiodInterest" jdbcType="DECIMAL"/>
     </resultMap>
 
-    <sql id="Base_Column_BalanceAssets_List">
+    <sql id="Sum_BalanceAssets_List">
         COALESCE(sum(usable_sa), 0) as usable_sa,
         COALESCE(sum(withdraw_freeze_sa), 0) as withdraw_freeze_sa,
         COALESCE(sum(invest_freeze_sa), 0) as invest_freeze_sa,
@@ -33,9 +35,53 @@
         COALESCE(sum(fixperiod_total_interest), 0) as fixperiod_total_interest
     </sql>
 
+
+    <sql id="BalanceAssets_List">
+        b.uid,
+        b.usable_sa,
+        b.withdraw_freeze_sa,
+        b.invest_freeze_sa,
+        b.repay_freeze_sa,
+        b.capital_freeze_sa,
+        b.current_capital,
+        b.current_interest,
+        b.fixend_capital,
+        b.fixend_interest,
+        b.fixperiod_capital,
+        b.fixperiod_interest,
+        b.fixperiod_total_capital,
+        b.fixperiod_total_interest,
+        COALESCE(sum(r.amt), 0) as recharge,
+        COALESCE(sum(w.trans_amt), 0) as withdraw
+    </sql>
+
+    <select id="getAllIds" resultType="java.lang.Long">
+        select id
+        from user_balance
+        order by id
+    </select>
+
     <select id="selectBalanceAssets" resultMap="BaseResult_BalanceAssets_Map" parameterType="java.lang.Integer">
         select
-        <include refid="Base_Column_BalanceAssets_List"/>
+        <include refid="Sum_BalanceAssets_List"/>
         from user_balance
+    </select>
+
+    <select id="selectBalanceByBatchUid" resultMap="BaseResult_BalanceAssets_Map" parameterType="java.lang.Integer">
+        select
+        <include refid="BalanceAssets_List"/>
+        from user_balance b
+        left join
+        (recharge_l r left join withdraw_l w on r.uid = w.uid)
+        on b.uid = r.uid
+        where b.id in
+        <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        and r.updateTime >= #{transDate}
+        group by b.uid
+        <!--
+        select b.uid, b.usable_sa, sum(r.amt), sum(w.trans_amt) from user_balance b left join (recharge_l r  left join withdraw_l w on r.uid = w.uid) on b.uid = r.uid group by b.uid;
+        -->
     </select>
 </mapper>

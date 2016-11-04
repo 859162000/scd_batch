@@ -7,10 +7,26 @@ import com.scd.batch.common.utils.TableSpec;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+import java.util.List;
+
 @Repository
 public interface UserBalanceDao {
+
+
+    @MultiDB(ds = DataSourceType.TRADE)
+    List<Long> getAllIds(@Param("ts") TableSpec ts);
 
     // 统计余额
     @MultiDB(ds = DataSourceType.TRADE)
     BalanceAssetsEntity selectBalanceAssets(@Param("ts") TableSpec ts);
+
+
+    // 统计余额
+    @MultiDB(ds = DataSourceType.TRADE)
+    List<BalanceAssetsEntity> selectBalanceByBatchUid(@Param("ts") TableSpec ts,
+                                                      @Param("transDate") Date transDate,
+                                                      @Param("batchIds") List<Long> batchIds);
+
+
 }

@@ -17,13 +17,6 @@ public class JobCommand extends AbstractCommand {
         PREPARE("prepare"),
 
         /**
-         * 灵活调度批跑
-         */
-        RedeemScheduleJob("redeemSchedule"),
-
-        UpdateBankCardQuotaScheduleJob("updateBankCardQuotaSchedule"),
-
-        /**
          * 统计相关
          */
         PROJECT_LIMIT("projectLimit"),
@@ -43,9 +36,10 @@ public class JobCommand extends AbstractCommand {
         ASSETS_BALANCE("assetsBalance"),
 
         /**
-         * 计息
+         * 收益
          */
-        UserProfitCalculateJob("userProfitCalculate"),
+        UserCurrentProfitCalculateJob("userCurrentProfitCalculate"),
+        UserDailyProfitCalculateJob("userDailyProfitCalculate"),
 
         /**
          * 对账
@@ -89,7 +83,16 @@ public class JobCommand extends AbstractCommand {
         // trf
         Trf_Crawler("trfCrawler"),
 
-        Trf_Calculator("trfCalculator");
+        Trf_Calculator("trfCalculator"),
+
+        /**
+         * 灵活调度
+         */
+        RedeemSchedule("redeemSchedule"),
+
+        UpdateBankCardQuotaSchedule("updateBankCardQuotaSchedule"),
+
+        UpdateUserRegisterCountToRedis("updateUserRegisterCountToRedis");
 
         /**
          * Job name

@@ -1,20 +1,21 @@
 package com.scd.batch.interest.service;
 
-import com.scd.batch.common.constant.bid.ProductType;
-import com.scd.batch.common.constant.interest.InterestRateType;
 import com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.AcctUserDailyProfitDao;
 import com.scd.batch.common.dao.acct.UserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.UserDailyProfitDao;
 import com.scd.batch.common.dao.bid.CreditorRelationDao;
+import com.scd.batch.common.dao.interest.UserAssetsDao;
+import com.scd.batch.common.dao.trade.UserBalanceDao;
 import com.scd.batch.common.entity.acct.UserAccumulativeProfitEntity;
 import com.scd.batch.common.entity.acct.UserDailyProfitEntity;
-import com.scd.batch.common.entity.bid.UserCreditroRelationEntity;
+import com.scd.batch.common.entity.interest.UserAssetsEntity;
+import com.scd.batch.common.entity.statistics.trade.BalanceAssetsEntity;
 import com.scd.batch.common.utils.DateStyle;
 import com.scd.batch.common.utils.DateUtil;
+import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
-import com.scd.batch.interest.strategy.InterestCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,13 +26,11 @@ import java.util.List;
 
 
 /**
- * 活期收益
+ * 昨日收益统计
  */
 @Service
-public class UserProfitCalculateService {
+public class UserDailyProfitCalculateService {
 
-    @Autowired
-    private CreditorRelationDao relationDao;
 
     @Autowired
     private UserDailyProfitDao profitDao;
@@ -45,37 +44,58 @@ public class UserProfitCalculateService {
     @Autowired
     private AcctUserAccumulateProfitDao acctUserAccumulateProfitDao;
 
-    // 取数据库计算收益
+    @Autowired
+    private UserBalanceDao balanceDao;
+
+    @Autowired
+    private UserAssetsDao assetsDao;
+
+    // 取数据库计算昨日收益
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
 
-        List<UserCreditroRelationEntity> entityList = relationDao.getUserCreditorRelationList(tableSpec,
+        // 当前日期的前一天
+        List<BalanceAssetsEntity> entityList = balanceDao.selectBalanceByBatchUid(tableSpec,
+                ShortDate.valueOf(transDate).addDays(-1).toDate(),
                 batchIdList);
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();
 
-        for (UserCreditroRelationEntity p : entityList) {
+        for (BalanceAssetsEntity p : entityList) {
 
-            // 活期收益
-            if (p.getProductType() == ProductType.CURRENT.getCode()) {
-                // 计息规则中的日期判断
-                double intrest = InterestCalculator.dailyInterest(p.getRemainPrincipal(),
-                        p.getInterestRate(),
-                        InterestRateType.YEAR);
 
-                UserProfitEntity entity = new UserProfitEntity(
-                        0,
-                        p.getBuyerUid(),
-                        transDate,
-                        new BigDecimal(0),
-                        new BigDecimal(intrest),
-                        new BigDecimal(0),
-                        new BigDecimal(intrest)
-                );
-                profitEntityList.add(entity);
-            }
+            /** 总资产 = 可用余额 + 体现冻结金额 + 投资冻结金额 + 还款冻结金额 + 活期赎回冻结金额
+             + 活期本金  + 定期赚待收本金 + 定期计划待收本金
+             */
+            double currentTotal = p.getUsableSa() + p.getWithdrawFreezeSa() + p.getInvestFreezeSa() +
+                    p.getRepayFreezeSa() + p.getCapitalFreezeSa()
+                    + p.getCurrentCapital() + p.getFixendCapital() + p.getFixperiodCapital();
+
+            // 昨日总资产
+            Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
+            UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), lastDate);
+            double lastTotal = assets.getAssets();
+
+            // 昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
+            double profit = currentTotal - lastTotal + p.getWithdraw() - p.getRecharge();
+
+            UserProfitEntity entity = new UserProfitEntity(
+                    0,
+                    p.getUid(),
+                    transDate,
+                    new BigDecimal(profit),
+                    new BigDecimal(0),
+                    new BigDecimal(profit),
+                    new BigDecimal(0)
+            );
+
+            profitEntityList.add(entity);
+
+            // 更新总资产
+            assets.setTransDate(transDate);
+            assets.setAssets(currentTotal);
+            assetsDao.update(assets);
 
         }
-
         return profitEntityList;
     }
 
@@ -83,21 +103,21 @@ public class UserProfitCalculateService {
     public void update2DB(List<UserProfitEntity> profitEntityList) {
 
         profitEntityList.forEach(p -> {
-            // 当日总收益
+            // 昨日收益
             UserDailyProfitEntity entity = new UserDailyProfitEntity(
                     0,
                     p.getUid(),
                     DateUtil.DateToString(p.getDate(), DateStyle.YYYYMMDD),
-                    new BigDecimal(0),
-                    p.getCurrentProfit()
+                    p.getProfit(),
+                    new BigDecimal(0)
             );
 
-            // 累计收益
+            // 累计昨日收益
             UserAccumulativeProfitEntity accumulativeProfitEntity = new UserAccumulativeProfitEntity(
                     0,
                     p.getUid(),
-                    new BigDecimal(0),
-                    p.getCurrentInvestProfit()
+                    p.getTotalProfit(),
+                    new BigDecimal(0)
             );
 
             // TODO 分库分表
@@ -129,8 +149,6 @@ public class UserProfitCalculateService {
             } else {
                 acctUserAccumulateProfitDao.insert(TableSpec.getDefault(), accumulativeProfitEntity);
             }
-
-
         });
     }
 

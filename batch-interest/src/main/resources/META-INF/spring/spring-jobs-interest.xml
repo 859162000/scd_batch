@@ -5,10 +5,16 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-    <!-- 每日收益统计 -->
-    <bean id="userProfitCalculate.job" class="com.scd.batch.interest.job.UserProfitCalculateJob">
+    <!-- 活期收益统计 -->
+    <bean id="userCurrentProfitCalculate.job" class="com.scd.batch.interest.job.UserCurrentProfitCalculateJob">
         <property name="cycleRunning" value="false"/>
-        <property name="name" value="userProfitCalculate.job"/>
+        <property name="name" value="userCurrentProfitCalculate.job"/>
+    </bean>
+
+    <!-- 昨日收益统计 -->
+    <bean id="userDailyProfitCalculate.job" class="com.scd.batch.interest.job.UserDailyProfitCalculateJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="userDailyProfitCalculate.job"/>
     </bean>
 
 </beans>

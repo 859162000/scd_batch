@@ -1,4 +1,4 @@
-package com.scd.batch.common.entity.interest;
+package com.scd.batch.common.entity.bid;
 
 import java.util.Date;
 

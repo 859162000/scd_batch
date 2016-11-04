@@ -1,8 +1,8 @@
 package com.scd.batch.interest.job;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.scd.batch.common.constant.reconciliation.TransferType;
 import com.scd.batch.common.dao.bid.CreditorRelationDao;
+import com.scd.batch.common.dao.trade.UserBalanceDao;
 import com.scd.batch.common.job.batch.StatisticsCalculateJob;
 import com.scd.batch.common.job.batch.StatisticsCalculator;
 import com.scd.batch.common.job.batch.TargetStatisticsHandler;
@@ -13,25 +13,27 @@ import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
+import com.scd.batch.interest.service.UserDailyProfitCalculateService;
 import com.scd.batch.interest.service.UserProfitCalculateService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 每日收益统计
+ * 昨日收益统计
  */
-public class UserProfitCalculateJob extends StatisticsCalculateJob {
+public class UserDailyProfitCalculateJob extends StatisticsCalculateJob {
 
     @Resource
-    private UserProfitCalculateService calculateService;
+    private UserDailyProfitCalculateService calculateService;
 
-    @Resource
-    private CreditorRelationDao relationDao;
+    @Autowired
+    private UserBalanceDao balanceDao;
 
     @Override
     protected JobType getJobType() {
-        return JobType.UserProfitCalculateJob;
+        return JobType.UserDailyProfitCalculateJob;
     }
 
     @Override
@@ -88,7 +90,7 @@ public class UserProfitCalculateJob extends StatisticsCalculateJob {
     protected List<Long> getAllIdList(ExecutorContext context) {
         TableSpec tableSpec = context.getAttach(TableSpec.class);
 
-        return relationDao.getAllIdList(tableSpec);
+        return balanceDao.getAllIds(tableSpec);
     }
 
 
