@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.miaoqian.finance.gateway:finance-gateway-api:0.0.1-SNAPSHOT">
     <CLASSES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161102.091346-82.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161103.114222-84.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161102.091346-82-javadoc.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161103.114222-84-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161102.091346-82-sources.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161103.114222-84-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
