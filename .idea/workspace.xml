@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-executor/src/main/scripts/run.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" afterPath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/spring-service-executor.xml" afterPath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/spring-service-executor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/log/reconciliation.log.xml" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/log/reconciliation.log.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml" />
     </list>
     <list id="0f3e6939-7647-4e90-aeac-aff047f5b1be" name="Revert: ignore" comment="" />
     <ignored path="batch.iws" />
@@ -121,16 +120,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="spring-dao-common.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="183" column="44" selection-start-line="183" selection-start-column="44" selection-end-line="183" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="reconciliation.log.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/log/reconciliation.log.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,21 +130,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-jobs-reconciliation.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5644">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="spring-service-reconciliation.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-service-reconciliation.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
               <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/start.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/run.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -181,11 +180,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="batch.service.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="batch.service.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="14" selection-end-column="15" />
+            <state relative-caret-position="244">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DayCutDaoMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/DayCutDaoMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwitchDAO.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -196,26 +215,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
               <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwitchJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/SwitchJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwitchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/service/daycut/SwitchServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -249,8 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/CrawlerDataFlowBatchJob.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mock/db.properties" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
         <option value="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" />
@@ -300,6 +297,8 @@
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/log/reconciliation.log.xml" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/spring-service-executor.xml" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml" />
+        <option value="$PROJECT_DIR$/batch-executor/src/main/scripts/run.sh" />
       </list>
     </option>
   </component>
@@ -421,7 +420,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
+              <option name="myItemId" value="batch-executor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,7 +434,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
+              <option name="myItemId" value="batch-executor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -453,33 +452,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
+              <option name="myItemId" value="batch-executor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -491,11 +464,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,7 +478,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
+              <option name="myItemId" value="batch-executor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -518,422 +487,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-reconciliation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mybatis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mybatis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="financial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mybatis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd_batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="batch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="financial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -948,7 +501,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="switchjob&#9;PSI&#9;JAVA://com.scd.batch.executor.job.SwitchJob&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;DayCutDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/daycut/dao/DayCutDao.java&#10;BorrowerRepaymentPlanDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java&#10;BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest&#10;application-execu&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/BatchLauncher.java&#10;assembly&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;BatchLauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;asse&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;JobDAO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;commandType&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.CommandType&#10;data.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data.sql&#10;data-ba.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data-batch.sql&#10;data-batch&#9;null&#9;null&#10;batch.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;assembly.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;cashcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/CashCrawlerJob.java&#10;jobs-reconcili&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;projects&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectStatus&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectstatus&#9;PSI&#9;JAVA://com.scd.batch.common.constant.bid.ProjectStatus&#10;Project.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/ProjectMapper.xml&#10;RepayPlanMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/RepayPlanMapper.xml&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;db.proper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;userProfitCalculate&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserProfitCalculateJob.java&#10;db.pr&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;ba&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
+    <property name="SearchEverywhereHistoryKey" value="cutda.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/DayCutDaoMapper.xml&#10;switchjob&#9;PSI&#9;JAVA://com.scd.batch.executor.job.SwitchJob&#10;dao-common&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;DayCutDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/daycut/dao/DayCutDao.java&#10;BorrowerRepaymentPlanDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java&#10;BorrowerRepaymentPlan.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/BorrowerRepaymentPlanMapper.xml&#10;postProcessPropertyValues&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor#postProcessPropertyValues&#10;UserRwDailyReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;UserRwDailyReportDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;WithdrawLMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/WithdrawLMapper.xml&#10;UserRwDailyReport.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;spring-dao-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml&#10;UserDailyProfitMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;launch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;acctuseraccu.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;batchla&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserAc.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml&#10;AcctUserAccumulateProfitDao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao&#10;userdaily&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserRwDailyReportdao&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.UserRwDailyReportDao&#10;UserRwDailyReportMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/financial/UserRwDailyReportMapper.xml&#10;batch-interest&#9;RUN_CONFIGURATION&#9;batch-interest&#10;application-execu&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/BatchLauncher.java&#10;assembly&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;BatchLauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;asse&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;JobDAO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;commandType&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.CommandType&#10;data.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data.sql&#10;data-ba.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/data-batch.sql&#10;data-batch&#9;null&#9;null&#10;batch.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema-batch.sql&#10;db.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;assembly.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/assembly/assembly.xml&#10;cashcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/CashCrawlerJob.java&#10;jobs-reconcili&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;projects&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectStatus&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProjectStatus.java&#10;projectstatus&#9;PSI&#9;JAVA://com.scd.batch.common.constant.bid.ProjectStatus&#10;Project.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/ProjectMapper.xml&#10;RepayPlanMapper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/RepayPlanMapper.xml&#10;jobs-stati&#9;FILE&#9;file://F:/github/scd_batch/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml&#10;db.proper&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties&#10;userProfitCalculate&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserProfitCalculateJob.java&#10;db.pr&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mock/db.properties" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32150775" />
@@ -957,11 +510,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\scd_batch\batch-executor\src\main\scripts" />
       <recent name="F:\github\scd_batch\batch-executor\src\main\resources" />
       <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF" />
       <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\acct" />
       <recent name="F:\github\scd_batch\batch-common\src\main\java\com\scd\batch\common\dao\trade" />
-      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\reconciliation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.scd.batch.common.job.batch" />
@@ -1740,12 +1293,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39538628" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8907285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81125826" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31456953" sideWeight="0.4909836" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27950644" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49889624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49889624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1828,38 +1381,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/assembly/assembly.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/resources/META-INF/ApplicationContext-interest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/ApplicationContext-reconciliation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="84" selection-start-line="18" selection-start-column="40" selection-end-line="19" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/resources/META-INF/ApplicationContext-schedule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="0" selection-start-line="19" selection-start-column="29" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-statistics/src/main/resources/META-INF/ApplicationContext-statistics.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -2230,8 +1751,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="14" selection-end-column="15" />
+        <state relative-caret-position="244">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/DayCutDaoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/SwitchDAO.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>

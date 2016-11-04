@@ -5,7 +5,9 @@
     <update id="addWithOld">
         <![CDATA[
 		UPDATE DAY_CUT_INFO
-		SET ACCOUNT_DATE = DATE_ADD(ACCOUNT_DATE, interval ${days} DAY)
+		SET
+		ACCOUNT_DATE = DATE_ADD(ACCOUNT_DATE, interval ${days} DAY),
+        MODIFIED = CURRENT_TIMESTAMP
 		WHERE ID = 1
 		  and ACCOUNT_DATE = #{oldAccountDate}
 		  and (UNIX_TIMESTAMP(now()) - UNIX_TIMESTAMP(MODIFIED)) >= #{minChangeInterval}
