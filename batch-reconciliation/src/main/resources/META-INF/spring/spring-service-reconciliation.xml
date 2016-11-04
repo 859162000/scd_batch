@@ -12,9 +12,9 @@
 
     <bean id="dayCutService" class="com.scd.batch.common.daycut.service.impl.DayCutServiceImpl"/>
 
-    <bean class="com.scd.batch.common.logger.InitLogContainerBean">
-        <property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>
-        <property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>
-    </bean>
+    <!--<bean class="com.scd.batch.common.logger.InitLogContainerBean">-->
+    <!--<property name="logLocation" value="classpath*:META-INF/log/*.log.xml"/>-->
+    <!--<property name="errorLocation" value="classpath*:META-INF/error/*.error.xml"/>-->
+    <!--</bean>-->
 
 </beans>
