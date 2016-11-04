@@ -29,6 +29,16 @@ public enum JobType implements EnumType<JobType, Integer> {
     UpdateUserRegisterCountToRedisJob(4003),
 
     /**
+     * 批量放款
+     */
+    BidLoanScheduleJob(4004),
+
+    /**
+     * 批量回购
+     */
+    BidBuybackScheduleJob(4005),
+
+    /**
      * 对账相关
      *
      */

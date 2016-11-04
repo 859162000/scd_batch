@@ -23,5 +23,16 @@
         <property name="name" value="updateUserRegisterCountToRedis.job"/>
     </bean>
 
+    <!-- 批量放款任务 -->
+    <bean id="bidLoanSchedule.job" class="com.scd.batch.schedule.job.BidLoanScheduleJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="bidLoanSchedule.job"/>
+    </bean>
+
+    <!-- 批量回购任务 -->
+    <bean id="bidBuybackSchedule.job" class="com.scd.batch.schedule.job.BidBuybackScheduleJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="bidBuybackSchedule.job"/>
+    </bean>
 
 </beans>

@@ -7,4 +7,8 @@ import com.scd.batch.api.entity.RedeemNoticeReq;
 public interface NoticeFacade {
 
     Result redeemNotice(RedeemNoticeReq req);
+
+    Result loanNotice(RedeemNoticeReq req);
+
+    Result buybackNotice(RedeemNoticeReq req);
 }

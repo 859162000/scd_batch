@@ -11,4 +11,14 @@ public class RedeemNoticeImpl implements NoticeFacade {
     public Result redeemNotice(RedeemNoticeReq req) {
         return ResultBuilder.success(null);
     }
+
+    @Override
+    public Result loanNotice(RedeemNoticeReq req) {
+        return ResultBuilder.success(null);
+    }
+
+    @Override
+    public Result buybackNotice(RedeemNoticeReq req) {
+        return ResultBuilder.success(null);
+    }
 }

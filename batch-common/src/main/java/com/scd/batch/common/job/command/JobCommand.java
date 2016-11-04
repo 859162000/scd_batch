@@ -93,7 +93,11 @@ public class JobCommand extends AbstractCommand {
 
         UpdateBankCardQuotaSchedule("updateBankCardQuotaSchedule"),
 
-        UpdateUserRegisterCountToRedis("updateUserRegisterCountToRedis");
+        UpdateUserRegisterCountToRedis("updateUserRegisterCountToRedis"),
+
+        BidLoanSchedule("bidLoanSchedule"),
+
+        BidBuybackSchedule("bidBuybackSchedule");
 
         /**
          * Job name
