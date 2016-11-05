@@ -7,20 +7,20 @@ import com.scd.batch.common.utils.EnumType;
  */
 public enum FeeObjType implements EnumType<FeeObjType, String> {
 
-    USER("U", "向用户收取"),
-    MERCHANT("M", "向商户收取");
+    USER("U", "1"),
+    MERCHANT("M", "2");
 
     public String type;
 
-    public String name;
+    public String desc;
 
-    FeeObjType(String type, String name) {
+    FeeObjType(String type, String desc) {
         this.type = type;
-        this.name = name;
+        this.desc = desc;
     }
 
     @Override
     public String getType() {
-        return null;
+        return type;
     }
 }

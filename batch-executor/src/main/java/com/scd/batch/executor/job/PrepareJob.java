@@ -99,6 +99,7 @@ public class PrepareJob extends AbstractExecutor {
         // 计息
         jobTypes.add(JobType.UserCurrentProfitCalculateJob);
         jobTypes.add(JobType.UserDailyProfitCalculateJob);
+        jobTypes.add(JobType.LastDayAssetsCalculateJob);
 
         // 灵活调度
         jobTypes.add(JobType.RedeemScheduleJob);
@@ -124,7 +125,7 @@ public class PrepareJob extends AbstractExecutor {
 
     @Override
     public void handleException(ExecutorContext context, Throwable t) {
-        logger.error("job execute error, job name: {}, context: {}, exception: {}",
+        logger.error("job execute error, job desc: {}, context: {}, exception: {}",
                 getName(), context, ExceptionUtils.getStackTrace(t));
 
         throw new RuntimeException(t);

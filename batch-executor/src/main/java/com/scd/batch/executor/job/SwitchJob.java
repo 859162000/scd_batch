@@ -25,7 +25,7 @@ public class SwitchJob extends AbstractExecutor {
 
     @Override
     public void handleException(ExecutorContext context, Throwable t) {
-        logger.error("job execute error, job name: {}, context: {}, exception: {}",
+        logger.error("job execute error, job desc: {}, context: {}, exception: {}",
                 getName(), context, ExceptionUtils.getStackTrace(t));
 
         throw new RuntimeException(t);

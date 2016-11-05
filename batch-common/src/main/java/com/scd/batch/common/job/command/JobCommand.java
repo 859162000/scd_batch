@@ -41,6 +41,7 @@ public class JobCommand extends AbstractCommand {
          */
         UserCurrentProfitCalculateJob("userCurrentProfitCalculate"),
         UserDailyProfitCalculateJob("userDailyProfitCalculate"),
+        LastDayAssetsCalculateJob("lastDayAssetsCalculate"),
 
         /**
          * 对账
@@ -100,7 +101,7 @@ public class JobCommand extends AbstractCommand {
         BidBuybackSchedule("bidBuybackSchedule");
 
         /**
-         * Job name
+         * Job desc
          */
         public final String name;
 

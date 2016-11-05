@@ -46,6 +46,7 @@ public class BidLoanScheduleJob extends ScheduleJob {
     public String schedule(ExecutorContext context) {
 
         Result<String> result = tradeScheduleService.loan();
+        logger.info("result:" + result);
 
         if (!result.isSuccess()) {
             logger.info("loan failed!, " + result.getCode() + "," + result.getMessage());

@@ -153,7 +153,12 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 昨日收益统计
      */
-    UserDailyProfitCalculateJob(3002);
+    UserDailyProfitCalculateJob(3002),
+
+    /**
+     * 昨日总资产
+     */
+    LastDayAssetsCalculateJob(3003);
 
 
     public final int type;

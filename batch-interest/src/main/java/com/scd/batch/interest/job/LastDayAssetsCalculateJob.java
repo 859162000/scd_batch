@@ -1,6 +1,5 @@
 package com.scd.batch.interest.job;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.scd.batch.common.dao.trade.UserBalanceDao;
 import com.scd.batch.common.job.batch.StatisticsCalculateJob;
 import com.scd.batch.common.job.batch.StatisticsCalculator;
@@ -12,26 +11,26 @@ import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
-import com.scd.batch.interest.service.UserDailyProfitCalculateService;
+import com.scd.batch.interest.service.LastDayAssetsCalculateService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 昨日收益统计
+ * 昨日总资产
  */
-public class UserDailyProfitCalculateJob extends StatisticsCalculateJob {
+public class LastDayAssetsCalculateJob extends StatisticsCalculateJob {
 
     @Resource
-    private UserDailyProfitCalculateService calculateService;
+    private LastDayAssetsCalculateService calculateService;
 
     @Autowired
     private UserBalanceDao balanceDao;
 
     @Override
     protected JobType getJobType() {
-        return JobType.UserDailyProfitCalculateJob;
+        return JobType.LastDayAssetsCalculateJob;
     }
 
     @Override
@@ -73,13 +72,9 @@ public class UserDailyProfitCalculateJob extends StatisticsCalculateJob {
     }
 
     /**
-     * 统计结果增量方式，更新到数据库
+     *
      */
     public void update2DB(String line) {
-        List<UserProfitEntity> profitEntityList = JsonUtils.toBean(line, new TypeReference<List<UserProfitEntity>>() {
-        });
-
-        calculateService.update2DB(profitEntityList);
     }
 
 

@@ -4,12 +4,12 @@ import org.springframework.context.ApplicationContext;
 
 public interface Command extends Runnable {
     /**
-     * Set the command name
+     * Set the command desc
      */
     void setName(String name);
 
     /**
-     * Retrieve the command name
+     * Retrieve the command desc
      */
     String getName();
 

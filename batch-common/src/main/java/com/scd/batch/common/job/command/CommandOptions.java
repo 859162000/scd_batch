@@ -17,7 +17,7 @@ public class CommandOptions implements Serializable {
 
     /** CommanType */
     private CommandType commandType;
-    /** Job name */
+    /** Job desc */
     private String jobName;
     /** Spring config path */
     private String springConfigPath;

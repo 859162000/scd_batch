@@ -37,7 +37,7 @@ public class ExecutorContext {
     }
 
     /**
-     * Add attachment with name
+     * Add attachment with desc
      */
     public ExecutorContext addAttach(String name, Object attach) {
         this.attaches.put(name, attach);
@@ -45,7 +45,7 @@ public class ExecutorContext {
     }
 
     /**
-     * Add attachment with name
+     * Add attachment with desc
      */
     public <T> ExecutorContext addAttach(Class<T> type, T attach) {
         return addAttach(type.getName(), attach);

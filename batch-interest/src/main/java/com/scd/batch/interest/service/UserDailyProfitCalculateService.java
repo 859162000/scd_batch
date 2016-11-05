@@ -53,15 +53,15 @@ public class UserDailyProfitCalculateService {
     // 取数据库计算昨日收益
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
 
+        Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
         // 当前日期的前一天
         List<BalanceAssetsEntity> entityList = balanceDao.selectBalanceByBatchUid(tableSpec,
-                ShortDate.valueOf(transDate).addDays(-1).toDate(),
+                lastDate,
                 batchIdList);
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();
 
         for (BalanceAssetsEntity p : entityList) {
-
 
             /** 总资产 = 可用余额 + 体现冻结金额 + 投资冻结金额 + 还款冻结金额 + 活期赎回冻结金额
              + 活期本金  + 定期赚待收本金 + 定期计划待收本金
@@ -71,9 +71,11 @@ public class UserDailyProfitCalculateService {
                     + p.getCurrentCapital() + p.getFixendCapital() + p.getFixperiodCapital();
 
             // 昨日总资产
-            Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
             UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), lastDate);
-            double lastTotal = assets.getAssets();
+            double lastTotal = 0.0;
+            if (assets != null) {
+                lastTotal = assets.getAssets();
+            }
 
             // 昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
             double profit = currentTotal - lastTotal + p.getWithdraw() - p.getRecharge();
@@ -81,7 +83,7 @@ public class UserDailyProfitCalculateService {
             UserProfitEntity entity = new UserProfitEntity(
                     0,
                     p.getUid(),
-                    transDate,
+                    lastDate,
                     new BigDecimal(profit),
                     new BigDecimal(0),
                     new BigDecimal(profit),
@@ -90,10 +92,18 @@ public class UserDailyProfitCalculateService {
 
             profitEntityList.add(entity);
 
-            // 更新总资产
-            assets.setTransDate(transDate);
-            assets.setAssets(currentTotal);
-            assetsDao.update(assets);
+            if (assets == null) {
+                assets = new UserAssetsEntity();
+                assets.setUid(p.getUid());
+                assets.setTransDate(lastDate);
+                assets.setAssets(currentTotal);
+                assetsDao.insert(assets);
+            } else {
+                // 更新总资产字段
+                assets.setTransDate(lastDate);
+                assets.setAssets(currentTotal);
+                assetsDao.update(assets);
+            }
 
         }
         return profitEntityList;
@@ -102,7 +112,7 @@ public class UserDailyProfitCalculateService {
     // 更新收益信息到数据库，不存在则先写入
     public void update2DB(List<UserProfitEntity> profitEntityList) {
 
-        profitEntityList.forEach(p -> {
+        for (UserProfitEntity p : profitEntityList) {
             // 昨日收益
             UserDailyProfitEntity entity = new UserDailyProfitEntity(
                     0,
@@ -149,7 +159,7 @@ public class UserDailyProfitCalculateService {
             } else {
                 acctUserAccumulateProfitDao.insert(TableSpec.getDefault(), accumulativeProfitEntity);
             }
-        });
+        }
     }
 
 }

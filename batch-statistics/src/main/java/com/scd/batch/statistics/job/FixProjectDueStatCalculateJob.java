@@ -101,7 +101,7 @@ public class FixProjectDueStatCalculateJob extends StatisticsCalculateJob {
                     0,
                     p.getFixProjectPrincipal(),
                     p.getFixProjectInterest(),
-                    p.getSumAmt());
+                    p.getFixProjectPrincipal() + p.getFixProjectInterest());
 
             dueStatEntityList.add(dueStatEntity);
         });

@@ -34,7 +34,7 @@ public class BatchLauncherTest {
     }
 
     /**
-     * Execption case 4: Invalid job name
+     * Execption case 4: Invalid job desc
      */
     @Test(expected = IllegalArgumentException.class)
     @Ignore
@@ -51,6 +51,7 @@ public class BatchLauncherTest {
         BatchLauncher.main(new String[]{"-n", "switch", "-p", "classpath:META-INF/ApplicationContext-executor" +
                 ".xml", "-f"});
     }
+
     /**
      * Usage print case
      */
@@ -89,7 +90,7 @@ public class BatchLauncherTest {
 
         BatchLauncher.main(new String[]{"-n", "borrowerRepayPlan", "-p",
                 "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+                        ".xml", "-f"});
         Assert.assertTrue(true);
     }
 
@@ -134,6 +135,7 @@ public class BatchLauncherTest {
 
     }
 
+    @Deprecated
     @Test()
     public void testProcessJobSuccess_assetsProject() {
 
@@ -145,7 +147,6 @@ public class BatchLauncherTest {
 
     @Test()
     public void testProcessJobSuccess_assetsBalance() {
-
 
         BatchLauncher.main(new String[]{"-n", "assetsBalance", "-p", "classpath:META-INF/ApplicationContext-executor" +
                 ".xml", "-f"});
@@ -165,7 +166,6 @@ public class BatchLauncherTest {
         Assert.assertTrue(true);
     }
 
-
     @Test()
     public void testProcessJobSuccess_cashLoader() {
 
@@ -178,8 +178,7 @@ public class BatchLauncherTest {
     public void testProcessJobSuccess_withDrawlLoader() {
 
         BatchLauncher.main(new String[]{"-n", "withDrawlLoader", "-p",
-                "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+                "classpath:META-INF/ApplicationContext-executor" + ".xml", "-f"});
         Assert.assertTrue(true);
     }
 
@@ -255,8 +254,9 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_loanEntityLoader() {
 
-        BatchLauncher.main(new String[]{"-n", "loanEntityLoader", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "loanEntityLoader", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
         Assert.assertTrue(true);
     }
 
@@ -291,16 +291,18 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_creditRepayRealLoader() {
 
-        BatchLauncher.main(new String[]{"-n", "creditRepayRealLoader", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "creditRepayRealLoader", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
         Assert.assertTrue(true);
     }
 
     @Test()
     public void testProcessJobSuccess_paymentCalculator() {
 
-        BatchLauncher.main(new String[]{"-n", "paymentCalculator", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "paymentCalculator", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
     }
 
 
@@ -311,18 +313,28 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_userCurrentProfitCalculate() {
 
-        BatchLauncher.main(new String[]{"-n", "userCurrentProfitCalculate", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "userCurrentProfitCalculate", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
     }
 
 
     @Test()
     public void testProcessJobSuccess_userDailyProfitCalculate() {
 
-        BatchLauncher.main(new String[]{"-n", "userDailyProfitCalculate", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "userDailyProfitCalculate", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
     }
 
+
+    @Test()
+    public void testProcessJobSuccess_lastDayAssetsCalculate() {
+
+        BatchLauncher.main(new String[]{"-n", "lastDayAssetsCalculate", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
 
     /**
      * schedule
@@ -338,15 +350,27 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_updateBankCardQuotaSchedule() {
 
-        BatchLauncher.main(new String[]{"-n", "updateBankCardQuotaSchedule", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "updateBankCardQuotaSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
     }
 
-    @Test()
-    public void testProcessJobSuccess_updateUserRegisterCountToRedis() {
 
-        BatchLauncher.main(new String[]{"-n", "updateUserRegisterCountToRedis", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+    @Test()
+    public void testProcessJobSuccess_bidLoanSchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "bidLoanSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
+
+    @Test()
+    public void testProcessJobSuccess_bidBuybackSchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "bidBuybackSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
     }
 
 

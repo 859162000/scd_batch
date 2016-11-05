@@ -18,6 +18,7 @@ import com.scd.batch.common.utils.TableSpec;
 import org.apache.commons.collections.CollectionUtils;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -80,8 +81,9 @@ public class WithdrawLLoaderJob extends DataFlowBatchJob {
             return null;
         }
 
+        Date lastDate = accountDate.addDays(-1).toDate();
         List<WithdrawL> scdList = withdrawLDao.getListByPage(tableSpec,
-                accountDate.toDate(),
+                lastDate,
                 batchIds);
 
         if (CollectionUtils.isEmpty(scdList)) {

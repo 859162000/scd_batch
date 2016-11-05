@@ -22,7 +22,7 @@ public interface FixProjectDueStatDao {
 
     // 按照日期更新
     @MultiDB(ds = DataSourceType.BATCH)
-    int update2DB(@Param("ts") TableSpec ts, @Param("entity") FixDueStatEntity entity);
+    int updateIncrement2DB(@Param("ts") TableSpec ts, @Param("entity") FixDueStatEntity entity);
 
     @MultiDB(ds = DataSourceType.BATCH)
     List<FixDueStatEntity> getStatList(@Param("ts") TableSpec ts,

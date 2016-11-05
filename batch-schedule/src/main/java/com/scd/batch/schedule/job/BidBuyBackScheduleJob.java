@@ -44,6 +44,7 @@ public class BidBuybackScheduleJob extends ScheduleJob {
 
         Result<String> result = tradeScheduleService.buyback();
 
+        logger.info("result:" + result);
         if (!result.isSuccess()) {
             logger.info("buyback failed!, " + result.getCode() + "," + result.getMessage());
         }
