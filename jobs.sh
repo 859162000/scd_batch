@@ -39,4 +39,9 @@ bin/start.sh -n redeemSchedule
 bin/start.sh -n updateBankCardQuotaSchedule
 bin/start.sh -n updateUserRegisterCountToRedis
 bin/start.sh -n bidLoanSchedule
-bin/start.sh -n bidBuybackSchedule
+bin/start.sh -n bidBuyBackSchedule
+bin/start.sh -n preAutoBuy
+bin/start.sh -n autoBuy
+
+bin/start.sh -n postHandling
+bin/start.sh -n notice

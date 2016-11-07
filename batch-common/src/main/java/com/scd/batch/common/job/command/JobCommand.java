@@ -98,7 +98,15 @@ public class JobCommand extends AbstractCommand {
 
         BidLoanSchedule("bidLoanSchedule"),
 
-        BidBuybackSchedule("bidBuybackSchedule");
+        BidBuyBackSchedule("bidBuyBackSchedule"),
+
+        PreAutoBuySchedule("preAutoBuySchedule"),
+
+        AutoBuySchedule("autoBuySchedule"),
+
+        PostHandling("postHandling"),
+
+        Notice("notice");
 
         /**
          * Job desc

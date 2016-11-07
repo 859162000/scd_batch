@@ -106,7 +106,9 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.UpdateBankCardQuotaScheduleJob);
         jobTypes.add(JobType.UpdateUserRegisterCountToRedisJob);
         jobTypes.add(JobType.BidLoanScheduleJob);
-        jobTypes.add(JobType.BidBuybackScheduleJob);
+        jobTypes.add(JobType.BidBuyBackScheduleJob);
+        jobTypes.add(JobType.PreAutoBuyScheduleJob);
+        jobTypes.add(JobType.AutoBuyScheduleJob);
 
     }
 

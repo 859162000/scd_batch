@@ -14,9 +14,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 批量放款
+ * 批量认购预跑
  */
-public class BidLoanScheduleJob extends ScheduleJob {
+public class PreAutoBuyScheduleJob extends ScheduleJob {
 
     @Resource
     private TradeScheduleService tradeScheduleService;
@@ -44,7 +44,7 @@ public class BidLoanScheduleJob extends ScheduleJob {
 
     public String schedule(ExecutorContext context) {
 
-        Result<String> result = tradeScheduleService.loan();
+        Result<String> result = tradeScheduleService.preAutoBuy();
         logger.info("result:" + result);
 
         if (!result.isSuccess()) {
@@ -52,10 +52,10 @@ public class BidLoanScheduleJob extends ScheduleJob {
             return null;
         }
 
-        int retry = Settings.getInstance().getBidLoanRetry();
+        int retry = Settings.getInstance().getPreAutoBuyRetry();
         wait4Notice(retry,
-                Settings.getInstance().getBidLoanName(),
-                Settings.getInstance().getBidLoanTimeout());
+                Settings.getInstance().getPreAutoBuyName(),
+                Settings.getInstance().getPreAutoBuyTimeout());
 
         return null;
     }

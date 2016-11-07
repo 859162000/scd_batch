@@ -366,12 +366,44 @@ public class BatchLauncherTest {
 
 
     @Test()
-    public void testProcessJobSuccess_bidBuybackSchedule() {
+    public void testProcessJobSuccess_bidBuyBackSchedule() {
 
-        BatchLauncher.main(new String[]{"-n", "bidBuybackSchedule", "-p",
+        BatchLauncher.main(new String[]{"-n", "bidBuyBackSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
+    @Test()
+    public void testProcessJobSuccess_prepAutoBuySchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "prepAutoBuySchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
+    @Test()
+    public void testProcessJobSuccess_autoBuySchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "autoBuySchedule", "-p",
                 "classpath:META-INF/ApplicationContext-executor" +
                         ".xml", "-f"});
     }
 
 
+    @Test()
+    public void testProcessJobSuccess_postHandling() {
+
+        BatchLauncher.main(new String[]{"-n", "postHandling", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
+
+    @Test()
+    public void testProcessJobSuccess_notice() {
+
+        BatchLauncher.main(new String[]{"-n", "notice", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
 }

@@ -8,21 +8,22 @@ import com.scd.batch.common.job.batch.ScheduleJob;
 import com.scd.batch.common.job.constants.JobType;
 import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.ExecutorContext;
+import com.scd.batch.common.utils.Settings;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 批量回购操作
+ * 批量回购
  */
-public class BidBuybackScheduleJob extends ScheduleJob {
+public class BidBuyBackScheduleJob extends ScheduleJob {
 
     @Resource
     private TradeScheduleService tradeScheduleService;
 
     @Override
     protected JobType getJobType() {
-        return JobType.BidBuybackScheduleJob;
+        return JobType.BidBuyBackScheduleJob;
     }
 
     @Override
@@ -45,9 +46,16 @@ public class BidBuybackScheduleJob extends ScheduleJob {
         Result<String> result = tradeScheduleService.buyback();
 
         logger.info("result:" + result);
+
         if (!result.isSuccess()) {
-            logger.info("buyback failed!, " + result.getCode() + "," + result.getMessage());
+            logger.info("loan failed!, " + result.getCode() + "," + result.getMessage());
+            return null;
         }
+
+        int retry = Settings.getInstance().getBuyBackRetry();
+        wait4Notice(retry,
+                Settings.getInstance().getBuyBackName(),
+                Settings.getInstance().getBuyBackTimeout());
 
         return null;
     }

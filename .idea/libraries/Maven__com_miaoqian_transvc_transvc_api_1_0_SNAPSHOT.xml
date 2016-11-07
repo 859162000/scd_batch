@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.miaoqian.transvc:transvc-api:1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161103.090643-40.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161105.081222-45.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161103.090643-40-javadoc.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161105.081222-45-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161103.090643-40-sources.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161105.081222-45-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
