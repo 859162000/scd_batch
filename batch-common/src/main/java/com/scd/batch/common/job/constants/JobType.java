@@ -36,7 +36,17 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 批量回购
      */
-    BidBuybackScheduleJob(4005),
+    BidBuyBackScheduleJob(4005),
+
+    /**
+     * 批量认购预跑
+     */
+    PreAutoBuyScheduleJob(4006),
+
+    /**
+     * 批量认购
+     */
+    AutoBuyScheduleJob(4007),
 
     /**
      * 对账相关
@@ -153,7 +163,12 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 昨日收益统计
      */
-    UserDailyProfitCalculateJob(3002);
+    UserDailyProfitCalculateJob(3002),
+
+    /**
+     * 昨日总资产
+     */
+    LastDayAssetsCalculateJob(3003);
 
 
     public final int type;

@@ -7,8 +7,15 @@
     <dubbo:consumer timeout="30000"/>
     <dubbo:registry address="${dubbo.consume.zookeeper}"/>
 
-    <dubbo:reference id="business" interface="com.miaoqian.transvc.api.business.Business"/>
-    <dubbo:reference id="outUserWrite" interface="com.miaoqian.usersvc.api.outuser.OutUserWrite"/>
-    <dubbo:reference id="accountFacade" interface="com.miaoqian.api.facade.AccountFacade" timeout="5000"/>
+    <dubbo:reference id="business" interface="com.miaoqian.transvc.api.business.Business" check="false" retries="0"/>
+    <dubbo:reference id="outUserWrite" interface="com.miaoqian.usersvc.api.outuser.OutUserWrite" check="false"
+                     retries="0"/>
+    <dubbo:reference id="accountFacade" interface="com.miaoqian.api.facade.AccountFacade" timeout="5000"
+                     check="false" retries="3"/>
+    <dubbo:reference id="tradeScheduleService" interface="com.miaoqian.bid.api.trade.scheduler.TradeScheduleService"
+                     version="1.0" check="false" retries="0"/>
+
+    <dubbo:reference id="mailAPI" interface="com.miaoqian.basis.api.dubbo.MailAPI" retries="1"/>
+    <dubbo:reference id="smsAPI" interface="com.miaoqian.basis.api.dubbo.SmsAPI" retries="0"/>
 
 </beans>

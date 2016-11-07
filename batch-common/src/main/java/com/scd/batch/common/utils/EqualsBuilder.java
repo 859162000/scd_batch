@@ -22,7 +22,7 @@ public class EqualsBuilder extends org.apache.commons.lang.builder.EqualsBuilder
      * are equal in provided fields.</p>
      * @param lhs  <code>this</code> object
      * @param rhs  the other object
-     * @param includeFields  array of fields name to include from tests
+     * @param includeFields  array of fields desc to include from tests
      * @return <code>true</code> if the two Objects have tested equals.
      */
     public static boolean isEqualsInclude(final Object lhs, final Object rhs, final String[] includeFields) {

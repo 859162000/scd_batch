@@ -1,6 +1,5 @@
 package com.scd.batch.common.dao.interest;
 
-import com.scd.batch.common.entity.financial.BorrowerRepaymentPlan;
 import com.scd.batch.common.entity.interest.UserAssetsEntity;
 import com.scd.batch.common.mybatis.multidb.DataSourceType;
 import com.scd.batch.common.mybatis.multidb.MultiDB;

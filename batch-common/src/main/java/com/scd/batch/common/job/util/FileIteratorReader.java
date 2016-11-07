@@ -23,7 +23,7 @@ public class FileIteratorReader implements Closeable {
      */
     private final File dir;
     /**
-     * File name
+     * File desc
      */
     private final String fileName;
     /**

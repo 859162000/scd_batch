@@ -39,7 +39,7 @@ public class FixProjectDueStatService {
 
         statEntityList.forEach(p -> {
             if (statDao.checkExists(TableSpec.getDefault(), p.getDueDate()) == 1) {
-                statDao.update2DB(TableSpec.getDefault(), p);
+                statDao.updateIncrement2DB(TableSpec.getDefault(), p);
             } else {
                 statDao.insert(TableSpec.getDefault(), p);
             }

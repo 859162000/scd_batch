@@ -26,7 +26,7 @@ public abstract class AbstractExecutor implements Executor {
     private static final String TRACE_KEY = "_TRACE_KEY";
 
     /**
-     * Executor name
+     * Executor desc
      */
     protected String name;
 

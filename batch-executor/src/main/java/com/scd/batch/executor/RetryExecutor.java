@@ -49,7 +49,7 @@ public abstract class RetryExecutor extends AbstractExecutor {
 
     @Override
     public void handleException(ExecutorContext context, Throwable e) {
-        logger.error("job execute error, job name: {}, context: {}, error: {}",
+        logger.error("job execute error, job desc: {}, context: {}, error: {}",
                 getName(), context, ExceptionUtils.getStackTrace(e));
     }
 

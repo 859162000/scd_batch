@@ -1,5 +1,6 @@
 package com.scd.batch.common.job.batch;
 
+import com.alibaba.dubbo.common.utils.StringUtils;
 import com.scd.batch.common.job.batch.control.JobControl;
 import com.scd.batch.common.job.batch.control.JobControlService;
 import com.scd.batch.common.job.constants.JobType;
@@ -8,9 +9,13 @@ import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.AbstractExecutor;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.Pagination;
+import com.scd.batch.common.utils.Settings;
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 
 public abstract class ScheduleJob extends AbstractExecutor {
@@ -24,7 +29,7 @@ public abstract class ScheduleJob extends AbstractExecutor {
 
     /**
      * Spring properties of data flow<br>
-     * file root path, source name, target name, batch size
+     * file root path, source desc, target desc, batch size
      */
     private int batchSize = Pagination.DEFAULT_PAGE_SIZE;
 
@@ -35,6 +40,9 @@ public abstract class ScheduleJob extends AbstractExecutor {
 
     @Resource
     protected JobControlService jobControlService;
+
+    @Autowired
+    private RedisTemplate<String, String> template;
 
     @Override
     public boolean beforeExecute(ExecutorContext context) {
@@ -86,7 +94,7 @@ public abstract class ScheduleJob extends AbstractExecutor {
 
     @Override
     public void handleException(ExecutorContext context, Throwable e) {
-        logger.error("job execute error, job name: {}, context: {}, error: {}",
+        logger.error("job execute error, job desc: {}, context: {}, error: {}",
                 getName(), context, ExceptionUtils.getStackTrace(e));
 
         JobControl control = context.getAttach(JobControl.class);
@@ -159,5 +167,21 @@ public abstract class ScheduleJob extends AbstractExecutor {
 
     public void setBatchSize(int batchSize) {
         this.batchSize = batchSize;
+    }
+
+    protected boolean wait4Notice(int retry, String name, int timeout) {
+
+        while (retry > 0) {
+            String noticeMsg = template.opsForList().leftPop(name, timeout, TimeUnit.SECONDS);
+
+            logger.info("bidLoadMsg:" + noticeMsg);
+            if (StringUtils.isNotEmpty(noticeMsg)) {
+                return true;
+            }
+            // TODO process msg
+            retry--;
+        }
+
+        return false;
     }
 }

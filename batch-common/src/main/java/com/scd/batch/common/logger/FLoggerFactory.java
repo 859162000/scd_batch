@@ -10,7 +10,7 @@ import java.util.WeakHashMap;
 
 public class FLoggerFactory {
 
-    // key: name (String), value: a Log4jLoggerAdapter;
+    // key: desc (String), value: a Log4jLoggerAdapter;
     private static final Map<String, Object> loggerMap = new WeakHashMap<String, Object>();
     static {
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();

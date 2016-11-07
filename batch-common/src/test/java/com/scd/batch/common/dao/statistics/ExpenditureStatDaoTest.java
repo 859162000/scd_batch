@@ -47,7 +47,7 @@ public class ExpenditureStatDaoTest extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void testUpdate2DB() {
-        int result = statDao.update2DB(TestUtil.getTableSpec(), TestUtil.buildExpenditureEntity());
+        int result = statDao.updateIncrement2DB(TestUtil.getTableSpec(), TestUtil.buildExpenditureEntity());
 
         Assert.assertEquals(result, 1);
     }

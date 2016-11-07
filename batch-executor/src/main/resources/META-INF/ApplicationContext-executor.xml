@@ -10,6 +10,7 @@
 
     <!-- dubbo -->
     <import resource="classpath:META-INF/spring/dubbo-consumer.xml"/>
+    <!--<import resource="classpath:META-INF/spring/dubbo-producer.xml"/>-->
 
     <import resource="classpath:META-INF/spring/spring-jobs-executor.xml"/>
     <import resource="classpath:META-INF/spring/spring-service-executor.xml"/>
@@ -28,5 +29,4 @@
 
     <!-- interest -->
     <import resource="classpath:META-INF/ApplicationContext-interest.xml"/>
-
 </beans>

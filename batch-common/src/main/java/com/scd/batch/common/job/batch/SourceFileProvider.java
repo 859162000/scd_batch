@@ -19,7 +19,7 @@ public class SourceFileProvider implements SourceDataProvider {
     
     /** Source file DIR */
     private final File sourceDir;
-    /** Source file name */
+    /** Source file desc */
     private final String sourceFileName;
     /** Read file lines */
     private final int batchSize;    

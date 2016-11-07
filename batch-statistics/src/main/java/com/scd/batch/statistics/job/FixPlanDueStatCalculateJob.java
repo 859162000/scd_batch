@@ -68,7 +68,7 @@ public class FixPlanDueStatCalculateJob extends StatisticsCalculateJob {
         ShortDate accountDate = context.getAttach(ShortDate.class);
 
         List<FixPlanDuePlanEntity> fixPlanDuePlanEntityList = relationDao.selectFixPlanDueStatList(tableSpec);
-        if(fixPlanDuePlanEntityList == null || fixPlanDuePlanEntityList.isEmpty()) {
+        if (fixPlanDuePlanEntityList == null || fixPlanDuePlanEntityList.isEmpty()) {
             logger.info("fixPlanDuePlanEntityList isEmpty");
             return null;
         }
@@ -100,8 +100,7 @@ public class FixPlanDueStatCalculateJob extends StatisticsCalculateJob {
                     p.getFixPlanInterest(),
                     0,
                     0,
-                    // 注意这里的sum是从数据库算出来的，不需要程序累加
-                    p.getSumAmt());
+                    p.getFixPlanPrincipal() + p.getFixPlanInterest());
 
             dueStatEntityList.add(dueStatEntity);
         });

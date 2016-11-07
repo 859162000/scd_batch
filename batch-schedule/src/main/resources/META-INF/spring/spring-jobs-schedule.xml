@@ -30,9 +30,21 @@
     </bean>
 
     <!-- 批量回购任务 -->
-    <bean id="bidBuybackSchedule.job" class="com.scd.batch.schedule.job.BidBuybackScheduleJob">
+    <bean id="bidBuyBackSchedule.job" class="com.scd.batch.schedule.job.BidBuyBackScheduleJob">
         <property name="cycleRunning" value="false"/>
-        <property name="name" value="bidBuybackSchedule.job"/>
+        <property name="name" value="bidBuyBackSchedule.job"/>
+    </bean>
+
+    <!-- 批量认购预跑 -->
+    <bean id="preAutoBuySchedule.job" class="com.scd.batch.schedule.job.PreAutoBuyScheduleJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="preAutoBuySchedule.job"/>
+    </bean>
+
+    <!-- 批量认购任务 -->
+    <bean id="autoBuySchedule.job" class="com.scd.batch.schedule.job.AutoBuyScheduleJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="autoBuySchedule.job"/>
     </bean>
 
 </beans>

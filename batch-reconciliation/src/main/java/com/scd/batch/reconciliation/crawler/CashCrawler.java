@@ -53,9 +53,10 @@ public class CashCrawler implements Crawler {
 
         reqDto.setBizId("004");
 
+        Date lastDay = transDate.addDays(-1).toDate();
         // YYYYMMDD，只取账务日期当天的对账数据
-        reqDto.setBeginDate(DateUtil.DateToString(transDate.addDays(-1).toDate(), DateStyle.YYYYMMDD));
-        reqDto.setEndDate(DateUtil.DateToString(transDate.toDate(), DateStyle.YYYYMMDD));
+        reqDto.setBeginDate(DateUtil.DateToString(lastDay, DateStyle.YYYYMMDD));
+        reqDto.setEndDate(DateUtil.DateToString(lastDay, DateStyle.YYYYMMDD));
 
         // 分页数据
         reqDto.setPageSize(String.valueOf(pagination.getPageSize()));
@@ -70,10 +71,15 @@ public class CashCrawler implements Crawler {
                     result.getCode() + "," + result.getMessage());
         }
 
+        logger.info("result:" + result);
+
         List<CashReconciliationDto> cashReconciliationDtoList = result.getData().getCashReconciliationDtoList();
 
-        // 写入数据库
-        List<CashTransferEntity> transferEntityList = TransferUtil.buildCashTransfer(cashReconciliationDtoList);
+        String feeObj = result.getData().getFeeObj();
+        // 构建实体
+        List<CashTransferEntity> transferEntityList = TransferUtil.buildCashTransfer(transDate.toDate(),
+                cashReconciliationDtoList,
+                feeObj);
 
         // 设置业务日期
         transferEntityList.forEach(p -> p.setTransDate(transDate.toDate()));

@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 
 public abstract class AbstractCommand implements Command {
     /**
-     * Command name
+     * Command desc
      */
     private String name;
     /**

@@ -23,7 +23,7 @@ public class TargetReconciliationWriteHandler implements TargetReconcliationHand
      */
     private final File targetDir;
     /**
-     * Source file name
+     * Source file desc
      */
     private final String targetFileName;
 

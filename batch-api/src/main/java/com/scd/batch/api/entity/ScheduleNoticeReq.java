@@ -1,15 +1,24 @@
 package com.scd.batch.api.entity;
 
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.List;
 
-public class RedeemNoticeReq implements Serializable {
+@Validated
+public class ScheduleNoticeReq implements Serializable {
 
     // 是否完全执行成功
+    @NotNull
     private boolean success;
 
     // 返回码
+    @NotNull
     private String errorCode;
+
+    @NotNull
+    private String errorMsg;
 
     // 成功处理记录数
     private int successCnt;
@@ -58,5 +67,13 @@ public class RedeemNoticeReq implements Serializable {
 
     public void setErrMsgList(List<String> errMsgList) {
         this.errMsgList = errMsgList;
+    }
+
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
     }
 }

@@ -17,7 +17,7 @@ public interface ExpenditureStatDao {
     int insert(@Param("ts") TableSpec ts, @Param("entity") ExpenditureStatEntity entity);
 
     @MultiDB(ds = DataSourceType.BATCH)
-    int update2DB(@Param("ts") TableSpec ts, @Param("entity") ExpenditureStatEntity entity);
+    int updateIncrement2DB(@Param("ts") TableSpec ts, @Param("entity") ExpenditureStatEntity entity);
 
     @MultiDB(ds = DataSourceType.BATCH)
     int checkExists(@Param("ts") TableSpec ts,

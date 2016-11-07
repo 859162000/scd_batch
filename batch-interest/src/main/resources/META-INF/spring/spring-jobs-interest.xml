@@ -17,4 +17,11 @@
         <property name="name" value="userDailyProfitCalculate.job"/>
     </bean>
 
+    <!-- 昨日总资产统计 -->
+    <bean id="lastDayAssetsCalculate.job" class="com.scd.batch.interest.job.LastDayAssetsCalculateJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="lastDayAssetsCalculate.job"/>
+    </bean>
+
+
 </beans>

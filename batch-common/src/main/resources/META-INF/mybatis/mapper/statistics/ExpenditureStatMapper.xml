@@ -55,11 +55,11 @@
         )
     </insert>
 
-    <update id="update2DB">
+    <update id="updateIncrement2DB">
         update s_expenditurestat
         set
         TYPE = #{entity.type},
-        AMOUNT = #{entity.amount},
+        AMOUNT = AMOUNT + #{entity.amount},
         VERSION = VERSION + 1,
         MODIFIED = CURRENT_TIMESTAMP
         where DATE = #{entity.transDate}

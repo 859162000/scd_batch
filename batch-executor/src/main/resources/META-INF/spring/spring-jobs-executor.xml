@@ -21,7 +21,16 @@
         <property name="name" value="prepare.job"/>
     </bean>
 
-    <!-- TODO 异常重试任务 -->
+    <!-- TODO 事后处理任务，异常重试任务 -->
+    <bean id="postHandling.job" class="com.scd.batch.executor.job.PostHandlingJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="postHandling.job"/>
+    </bean>
 
-    <!-- TODO 报警任务 -->
+    <!-- 通知任务 -->
+    <bean id="notice.job" class="com.scd.batch.executor.job.NoticeJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="notice.job"/>
+    </bean>
+
 </beans>

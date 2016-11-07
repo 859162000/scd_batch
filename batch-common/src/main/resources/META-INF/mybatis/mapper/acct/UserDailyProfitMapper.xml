@@ -45,6 +45,8 @@
         current_profit = current_profit + #{entity.currentProfit},
         version = version + 1,
         update_time = CURRENT_TIMESTAMP
+        where uid = #{entity.uid}
+        and date = #{entity.date}
     </update>
 
 </mapper>

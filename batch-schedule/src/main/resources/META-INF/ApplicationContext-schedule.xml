@@ -19,6 +19,7 @@
 
     <import resource="classpath:META-INF/spring/spring-jobs-schedule.xml"/>
     <import resource="classpath:META-INF/spring/spring-service-schedule.xml"/>
+    <import resource="classpath:META-INF/spring/spring-redis.xml"/>
 
     <!-- common -->
     <!--<import resource="classpath:META-INF/ApplicationContext-common.xml"/>-->

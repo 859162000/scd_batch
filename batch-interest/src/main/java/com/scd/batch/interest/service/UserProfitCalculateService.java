@@ -12,6 +12,7 @@ import com.scd.batch.common.entity.acct.UserDailyProfitEntity;
 import com.scd.batch.common.entity.bid.UserCreditroRelationEntity;
 import com.scd.batch.common.utils.DateStyle;
 import com.scd.batch.common.utils.DateUtil;
+import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
 import com.scd.batch.interest.strategy.InterestCalculator;
@@ -48,6 +49,7 @@ public class UserProfitCalculateService {
     // 取数据库计算收益
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
 
+        Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
         List<UserCreditroRelationEntity> entityList = relationDao.getUserCreditorRelationList(tableSpec,
                 batchIdList);
 
@@ -65,7 +67,7 @@ public class UserProfitCalculateService {
                 UserProfitEntity entity = new UserProfitEntity(
                         0,
                         p.getBuyerUid(),
-                        transDate,
+                        lastDate,
                         new BigDecimal(0),
                         new BigDecimal(intrest),
                         new BigDecimal(0),

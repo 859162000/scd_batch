@@ -14,7 +14,7 @@ public class NamingThreadFactory implements ThreadFactory {
     private static final Logger LOGGER = LoggerFactory.getLogger(NamingThreadFactory.class);
 
     /**
-     * Thread name pre
+     * Thread desc pre
      */
     private String name;
     /**
@@ -26,7 +26,7 @@ public class NamingThreadFactory implements ThreadFactory {
      */
     private UncaughtExceptionHandler uncaughtExceptionHandler;
     /**
-     * Sequences for multi thread name prefix
+     * Sequences for multi thread desc prefix
      */
     private final ConcurrentHashMap<String, AtomicLong> sequences;
 
@@ -57,7 +57,7 @@ public class NamingThreadFactory implements ThreadFactory {
         Thread thread = new Thread(r);
         thread.setDaemon(this.daemon);
 
-        // If there is no specified name for thread, it will auto detect using the invoker classname instead.
+        // If there is no specified desc for thread, it will auto detect using the invoker classname instead.
         // Notice that auto detect may cause some performance overhead
         String prefix = this.name;
         if (StringUtils.isBlank(prefix)) {
@@ -80,7 +80,7 @@ public class NamingThreadFactory implements ThreadFactory {
     }
 
     /**
-     * Get the method invoker's class name
+     * Get the method invoker's class desc
      * 
      * @param depth
      * @return

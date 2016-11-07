@@ -1,14 +1,21 @@
 package com.scd.batch.api.notice;
 
 import com.miaoqian.framework.domain.Result;
-import com.scd.batch.api.entity.RedeemNoticeReq;
+import com.scd.batch.api.entity.ScheduleNoticeReq;
 
 
 public interface NoticeFacade {
 
-    Result redeemNotice(RedeemNoticeReq req);
+    // 批量赎回通知
+    Result redeemNotice(ScheduleNoticeReq req);
 
-    Result loanNotice(RedeemNoticeReq req);
+    // 批量放款通知
+    Result loanNotice(ScheduleNoticeReq req);
 
-    Result buybackNotice(RedeemNoticeReq req);
+    // 批量回购通知
+    Result buybackNotice(ScheduleNoticeReq req);
+
+    // 批量认购预跑
+    Result preAutoBuy(ScheduleNoticeReq req);
+
 }

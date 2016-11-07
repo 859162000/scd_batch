@@ -7,7 +7,7 @@ public enum DataSourceType implements EnumType<DataSourceType, Integer> {
     BATCH(1, "BATCH"),
     BID(2, "BID"),
     TRADE(3, "TRADE"),
-    USER(4, "USER"),
+    USER(4, "NOT"),
     PROMOTION(5, "PROMOTION"),
     STATISTICS(6, "STATISTICS");
 

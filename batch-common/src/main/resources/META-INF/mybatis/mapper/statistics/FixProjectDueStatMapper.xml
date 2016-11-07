@@ -64,14 +64,14 @@
         )
     </insert>
 
-    <update id="update2DB">
+    <update id="updateIncrement2DB">
         update s_fixproductduestat
         set
-        FIX_PLAN_PRINCIPAL = #{entity.fixPlanPrincipal},
-        FIX_PLAN_INTEREST = #{entity.fixPlanInterest},
-        FIX_PROJECT_PRINCIPAL = #{entity.fixProjectPrincipal},
-        FIX_PROJECT_INTEREST = #{entity.fixProjectInterest},
-        SUM_AMT = #{entity.sumAmt},
+        FIX_PLAN_PRINCIPAL = FIX_PLAN_PRINCIPAL + #{entity.fixPlanPrincipal},
+        FIX_PLAN_INTEREST = FIX_PLAN_INTEREST + #{entity.fixPlanInterest},
+        FIX_PROJECT_PRINCIPAL = FIX_PROJECT_PRINCIPAL + #{entity.fixProjectPrincipal},
+        FIX_PROJECT_INTEREST = FIX_PROJECT_INTEREST + #{entity.fixProjectInterest},
+        SUM_AMT = SUM_AMT + #{entity.sumAmt},
         VERSION = VERSION + 1,
         MODIFIED = CURRENT_TIMESTAMP
         where DUE_DATE = #{entity.dueDate}

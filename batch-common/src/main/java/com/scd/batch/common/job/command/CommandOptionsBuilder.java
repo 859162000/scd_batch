@@ -42,7 +42,7 @@ public class CommandOptionsBuilder {
             throw new RuntimeException(e);
         }
 
-        // -n (Job name)
+        // -n (Job desc)
         String jobName = cmd.getOptionValue('n');
         JobCommand.Job job = JobCommand.Job.nameOf(jobName);
 
@@ -59,17 +59,17 @@ public class CommandOptionsBuilder {
         commandOptions.setCommandType(commandType);
         commandOptions.setForceExit(cmd.hasOption('f'));
 
-        // if -h is not specified, check -n (Job name) -t (Command type) is valid
+        // if -h is not specified, check -n (Job desc) -t (Command type) is valid
         if (!commandOptions.hasHelpOption()) {
             Preconditions.checkArgument(commandType != null, "Missing command type!");
-            Preconditions.checkArgument(job != null, "Missing job name!");
+            Preconditions.checkArgument(job != null, "Missing job desc!");
         }
 
         return commandOptions;
     }
 
     /**
-     * get job name description
+     * get job desc description
      */
     private static String getJobNameDesc() {
         List<String> jobs = new ArrayList<>();

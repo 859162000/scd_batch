@@ -78,7 +78,7 @@
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
             #{id}
         </foreach>
-        and r.updateTime >= #{transDate}
+        and r.update_time >= #{transDate}
         group by b.uid
         <!--
         select b.uid, b.usable_sa, sum(r.amt), sum(w.trans_amt) from user_balance b left join (recharge_l r  left join withdraw_l w on r.uid = w.uid) on b.uid = r.uid group by b.uid;

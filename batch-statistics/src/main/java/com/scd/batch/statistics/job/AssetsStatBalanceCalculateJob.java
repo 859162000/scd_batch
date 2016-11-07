@@ -79,13 +79,19 @@ public class AssetsStatBalanceCalculateJob extends StatisticsCalculateJob {
      * 统计结果增量方式，更新到数据库
      */
     public void update2DB(String line) {
-        BalanceAssetsEntity balanceAssetsEntity = JsonUtils.toBean(line, BalanceAssetsEntity.class);
+        BalanceAssetsEntity balance = JsonUtils.toBean(line, BalanceAssetsEntity.class);
 
-        AssetsStatEntity assetsStatEntity = new AssetsStatEntity(balanceAssetsEntity.getTransDate()
-                , 0, 0, 0,
-                balanceAssetsEntity.getAmount(),
-                balanceAssetsEntity.getFrozon(),
-                balanceAssetsEntity.getSum());
+        AssetsStatEntity assetsStatEntity = new AssetsStatEntity(
+                balance.getTransDate(),
+                balance.getCurrentCapital(),
+                balance.getFixperiodCapital(), // 定期计划
+                balance.getFixendCapital(),
+                balance.getUsableSa(),
+                balance.getWithdrawFreezeSa() + balance.getCapitalFreezeSa() +
+                        balance.getInvestFreezeSa() + balance.getRepayFreezeSa(),
+                balance.getCurrentCapital() + balance.getFixperiodCapital() + balance.getFixendCapital() +
+                        balance.getUsableSa() + balance.getWithdrawFreezeSa() + balance.getCapitalFreezeSa() +
+                        balance.getInvestFreezeSa() + balance.getRepayFreezeSa());
 
         // 增量更新数据库，不存在则先写入
         statService.updateIncreament2DB(assetsStatEntity);

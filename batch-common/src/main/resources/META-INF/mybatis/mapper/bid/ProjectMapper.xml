@@ -17,7 +17,7 @@
         min_invest_amount,
         max_invest_amount, total_interest, bid_start_time, bid_end_time, repay_time, last_repay_time,
         loan_period, loan_period_unit, repay_type, guarantee_type, bid_product_type, is_pad_funded,
-        risk_ctrl_type, borrower_id, thd_audit_status, thd_audit_desc, create_time, update_time, invested_amount,
+        risk_ctrl_type, borrower_id, thd_audit_status, thd_audit_name, create_time, update_time, invested_amount,
         frozen_amount, occupy_amount, data_status, status,loan_use,repay_amount
     </sql>
 

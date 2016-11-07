@@ -30,7 +30,7 @@ public abstract class CrawlerDataFlowBatchJob extends AbstractExecutor {
 
     /**
      * Spring properties of data flow<br>
-     * file root path, source name, target name, batch size
+     * file root path, source desc, target desc, batch size
      */
     private String rootPath;
     private String sourceNamePrefix;
@@ -117,7 +117,7 @@ public abstract class CrawlerDataFlowBatchJob extends AbstractExecutor {
 
     @Override
     public void handleException(ExecutorContext context, Throwable e) {
-        logger.error("job execute error, job name: {}, context: {}, error: {}",
+        logger.error("job execute error, job desc: {}, context: {}, error: {}",
                 getName(), context, ExceptionUtils.getStackTrace(e));
 
         // close data flow

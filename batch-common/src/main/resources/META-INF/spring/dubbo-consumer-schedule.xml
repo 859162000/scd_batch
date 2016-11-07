@@ -10,6 +10,6 @@
     <dubbo:reference id="business" interface="com.miaoqian.transvc.api.business.Business"/>
     <dubbo:reference id="outUserWrite" interface="com.miaoqian.usersvc.api.outuser.OutUserWrite"/>
     <dubbo:reference id="tradeScheduleService" interface="com.miaoqian.bid.api.trade.scheduler.TradeScheduleService"
-                     version="1.0"/>
+                     version="2.0"/>
 
 </beans>

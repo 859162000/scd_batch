@@ -105,7 +105,7 @@ public class BorrowerRepayPlanStatCalculateJob extends StatisticsCalculateJob {
         // 按照项目期序统计项目还款金额
         List<BorrowerRepayEntity> repayPlanList = repayPlanDao.getProjectRepayPlanListByTerm(tableSpec,
                 projectCodeList);
-        if(repayPlanList == null || repayPlanList.isEmpty()){
+        if (repayPlanList == null || repayPlanList.isEmpty()) {
             logger.info("repayPlanList isEmpty!");
             return null;
         }
@@ -113,17 +113,17 @@ public class BorrowerRepayPlanStatCalculateJob extends StatisticsCalculateJob {
         // 按照项目期序统计项目实际还款金额
         List<BorrowerRepayEntity> repayRealList = repayRealDao.getProjectRealRepayListByTerm(tableSpec,
                 projectCodeList);
-        if(repayRealList == null || repayRealList.isEmpty()){
+        if (repayRealList == null) {
             logger.info("repayRealList isEmpty!");
-            return null;
+            repayRealList = new ArrayList<>();
         }
 
         // 借款人项目关系列表
         List<ProjectBorrowerEntity> borrowerEntityList = borrowerRelationDao.getRelationByProjectIdList(tableSpec,
                 projectCodeList);
-        if(borrowerEntityList == null || borrowerEntityList.isEmpty()){
+        if (borrowerEntityList == null) {
             logger.info("borrowerEntityList isEmpty!");
-            return null;
+            borrowerEntityList = new ArrayList<>();
         }
 
         // 借款人还款计划统计
@@ -179,17 +179,21 @@ public class BorrowerRepayPlanStatCalculateJob extends StatisticsCalculateJob {
 
         List<BorrowerRepayPlanStatEntity> planStatEntityList = new ArrayList<>();
 
-        repayPlanList.forEach(p -> {
+        for (BorrowerRepayEntity p : repayPlanList) {
+
+            ProjectBorrowerEntity projectBorrowerEntity = borrowerMap.get(p.getProjectCode());
+            SimpleProjectEntity projectEntity = projectMap.get(p.getProjectCode());
+            BorrowerRepayEntity repayReal = repayRealMap.get(p.getProjectCode() + "," + p.getRepayTerm());
             BorrowerRepayPlanStatEntity planStatEntity = new BorrowerRepayPlanStatEntity(
                     // 到期日
                     p.getRepayDate(),
                     // 融资方ID
-                    borrowerMap.get(p.getProjectCode()).getBorrowerId(),
+                    projectBorrowerEntity == null ? 0 : projectBorrowerEntity.getBorrowerId(),
                     // 融资方名称
-                    borrowerMap.get(p.getProjectCode()).getBorrowerName(),
+                    projectBorrowerEntity == null ? "" : projectBorrowerEntity.getBorrowerName(),
                     p.getProjectCode(),
-                    projectMap.get(p.getProjectCode()).getProjectName(),
-                    projectMap.get(p.getProjectCode()).getRepayType(),
+                    projectEntity == null ? "" : projectEntity.getProjectName(),
+                    projectEntity == null ? 0 : projectEntity.getRepayType(),
                     // 到期本金
                     p.getRepayAmount(),
                     // 到期利息
@@ -197,15 +201,14 @@ public class BorrowerRepayPlanStatCalculateJob extends StatisticsCalculateJob {
                     // 到期本息合计
                     p.getRepayAmount() + p.getRepayInterest(),
                     // 实际还款本金
-                    repayRealMap.get(p.getProjectCode() + "," + p.getRepayTerm()).getRepayAmount(),
+                    repayReal == null ? 0.0 : repayReal.getRepayAmount(),
                     // 实际还款利息
-                    repayRealMap.get(p.getProjectCode() + "," + p.getRepayTerm()).getRepayInterest(),
+                    repayReal == null ? 0.0 : repayReal.getRepayInterest(),
                     // 实际还款汇总
-                    repayRealMap.get(p.getProjectCode() + "," + p.getRepayTerm()).getRepayAmount() + repayRealMap.get
-                            (p.getProjectCode() + "," + p.getRepayTerm()).getRepayInterest());
+                    repayReal == null ? 0.0 : repayReal.getRepayAmount() + repayReal.getRepayInterest());
 
             planStatEntityList.add(planStatEntity);
-        });
+        }
 
         return planStatEntityList;
     }

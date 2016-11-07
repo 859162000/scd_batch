@@ -39,7 +39,7 @@ public class ExpenditureStatService {
     public void batchUpdate2DB(List<ExpenditureStatEntity> entityList) {
         entityList.forEach(p -> {
             if (expenditureStatDao.checkExists(TableSpec.getDefault(), ShortDate.today().toDate(), 1) == 1) {
-                expenditureStatDao.update2DB(TableSpec.getDefault(), p);
+                expenditureStatDao.updateIncrement2DB(TableSpec.getDefault(), p);
             } else {
                 expenditureStatDao.insert(TableSpec.getDefault(), p);
             }
