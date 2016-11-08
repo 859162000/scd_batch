@@ -90,7 +90,7 @@ public class TransferUtil {
                     0 : Integer.valueOf(EnumUtils.getEnum(FeeObjType.class, feeObj).desc));
             transfer.setFeeAmt(StringUtils.isEmpty(dto.getFeeAmt()) ? 0.0 : Double.valueOf(dto.getFeeAmt()));
             transfer.setServFee(StringUtils.isEmpty(dto.getServFee()) ? 0.0 : Double.valueOf(dto.getServFee()));
-            transfer.setServFeeAcctId(StringUtils.isEmpty(dto.getFeeAcctId()) ? "" : dto.getFeeAcctId());
+            transfer.setServFeeAcctId(StringUtils.isEmpty(dto.getServFeeAcctId()) ? "" : dto.getServFeeAcctId());
 
             entityList.add(transfer);
         }
