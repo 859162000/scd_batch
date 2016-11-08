@@ -15,7 +15,7 @@
     <dubbo:reference id="tradeScheduleService" interface="com.miaoqian.bid.api.trade.scheduler.TradeScheduleService"
                      version="1.0" check="false" retries="0"/>
 
-    <dubbo:reference id="mailAPI" interface="com.miaoqian.basis.api.dubbo.MailAPI" retries="1"/>
-    <dubbo:reference id="smsAPI" interface="com.miaoqian.basis.api.dubbo.SmsAPI" retries="0"/>
+    <dubbo:reference id="mailAPI" interface="com.miaoqian.basis.api.dubbo.MailAPI" timeout="5000" retries="1"/>
+    <dubbo:reference id="smsAPI" interface="com.miaoqian.basis.api.dubbo.SmsAPI" timeout="5000" retries="0"/>
 
 </beans>
