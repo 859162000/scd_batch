@@ -6,7 +6,7 @@
         <id column="ID" property="id" jdbcType="BIGINT"/>
         <result column="UID" property="uid" jdbcType="VARCHAR"/>
         <result column="TRANS_DATE" property="transDate" jdbcType="DATE"/>
-        <result column="ASSET" property="asset" jdbcType="DOUBLE"/>
+        <result column="ASSET" property="assets" jdbcType="DOUBLE"/>
         <result column="VERSION" property="version" jdbcType="INTEGER"/>
         <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
         <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
