@@ -45,12 +45,11 @@
     <update id="update">
         update s_user_assets
         set
-        UID = #{entity.uid},
-        TRANS_DATE = #{entity.transDate},
         ASSET = #{entity.assets},
         VERSION = VERSION + 1,
         MODIFIED = CURRENT_TIMESTAMP
         where UID = #{entity.uid}
+        and TRANS_DATE = #{entity.transDate}
     </update>
 
 </mapper>

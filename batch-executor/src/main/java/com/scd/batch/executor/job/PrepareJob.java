@@ -1,10 +1,6 @@
 package com.scd.batch.executor.job;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.annotation.Resource;
 
@@ -110,6 +106,7 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.PreAutoBuyScheduleJob);
         jobTypes.add(JobType.AutoBuyScheduleJob);
 
+
     }
 
     @Override
@@ -117,7 +114,11 @@ public class PrepareJob extends AbstractExecutor {
         ShortDate accountDate = switchService.currentAccountDate();
         logger.info("prepare job, accountDate: {}", accountDate);
 
-        for (JobType jobType : jobTypes) {
+        LinkedList<JobType> setSort = new LinkedList<JobType>(jobTypes);
+        //Collections.sort(setSort);
+        Collections.sort(setSort);
+
+        for (JobType jobType : setSort) {
 //            int databaseNum = (jobType == JobType.ACCOUNTING ? this.statisticsDatabaseNum : this.databaseNum);
 //            int tableNum = (jobType == JobType.ACCOUNTING ? this.statisticsTableNum : this.tableNum);
 

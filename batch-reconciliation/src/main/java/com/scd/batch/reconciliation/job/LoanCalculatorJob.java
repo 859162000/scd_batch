@@ -25,7 +25,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * 放还款对账任务
+ * 放款对账任务
  */
 public class LoanCalculatorJob extends ReconciliationBatchJob {
 

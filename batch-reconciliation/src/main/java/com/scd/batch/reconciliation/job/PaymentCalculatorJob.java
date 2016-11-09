@@ -6,6 +6,7 @@ import com.scd.batch.common.constant.reconciliation.TransferErrorStatus;
 import com.scd.batch.common.constant.reconciliation.TransferErrorType;
 import com.scd.batch.common.constant.reconciliation.TransferType;
 import com.scd.batch.common.dao.reconciliation.TransferErrorDao;
+import com.scd.batch.common.entity.bid.CreditRepayReal;
 import com.scd.batch.common.entity.reconciliation.*;
 import com.scd.batch.common.entity.bid.LoanEntity;
 import com.scd.batch.common.exception.ErrorCodeException;
@@ -28,7 +29,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * 放还款对账任务
+ * 还款对账任务
  */
 public class PaymentCalculatorJob extends ReconciliationBatchJob {
 
@@ -89,24 +90,25 @@ public class PaymentCalculatorJob extends ReconciliationBatchJob {
 
                 // TODO 先使用HASH，考虑使用redis，不存在，则写入hash
                 transferRepo.computeIfAbsent(transfer.getOrdId(),
-                        new Function<String, LoanErrorBase>() {
-                            public LoanErrorBase apply(String t) {
-                                return new LoanErrorBase(t, null, transfer, TransferErrorType.HUIFU);
+                        new Function<String, PaymentErrorBase>() {
+                            public PaymentErrorBase apply(String t) {
+                                return new PaymentErrorBase(t, null, transfer, TransferErrorType.HUIFU);
                             }
                         });
 
                 // 存在，则对账
                 transferRepo.computeIfPresent(transfer.getOrdId(),
-                        new BiFunction<String, TransferErrorBase, LoanErrorBase>() {
+                        new BiFunction<String, TransferErrorBase, PaymentErrorBase>() {
 
-                            public LoanErrorBase apply(String t, TransferErrorBase u) {
+                            public PaymentErrorBase apply(String t, TransferErrorBase u) {
 
-                                LoanErrorBase paymentErrorEntity = (LoanErrorBase) u;
+                                PaymentErrorBase paymentErrorEntity = (PaymentErrorBase) u;
 
                                 if (paymentErrorEntity.getTransferErrorType().getType() == TransferErrorType.SCD
                                         .getType()) {
                                     // 能对上，则删除原来的数据
-                                    if (transfer.getValue().equals(paymentErrorEntity.getLoanEntity().getValue())) {
+                                    if (transfer.getValue().equals(paymentErrorEntity.getCreditRepayReal().getValue()
+                                    )) {
                                         return null;
                                     } else {
                                         // 对不上，双方数据不匹配，设置汇付流水
@@ -122,35 +124,36 @@ public class PaymentCalculatorJob extends ReconciliationBatchJob {
             }
         } else if (sourceType.getType() == SourceType.SCD.getType()) {
 
-            List<LoanEntity> loanList = CommonUtil.transform2Bean(sourceLines,
-                    LoanEntity.class);
+            List<CreditRepayReal> repayRealList = CommonUtil.transform2Bean(sourceLines,
+                    CreditRepayReal.class);
 
-            for (LoanEntity loan : loanList) {
+            for (CreditRepayReal repayReal : repayRealList) {
 
                 // TODO 先使用HASH，考虑使用redis，不存在，则写入hash
-                transferRepo.computeIfAbsent(loan.getSeqId(),
-                        new Function<String, LoanErrorBase>() {
-                            public LoanErrorBase apply(String t) {
-                                return new LoanErrorBase(t, loan, null, TransferErrorType.SCD);
+                transferRepo.computeIfAbsent(repayReal.getOrderSeqNo(),
+                        new Function<String, PaymentErrorBase>() {
+                            public PaymentErrorBase apply(String t) {
+                                return new PaymentErrorBase(t, repayReal, null, TransferErrorType.SCD);
                             }
                         });
 
                 // 存在，则对账
-                transferRepo.computeIfPresent(loan.getSeqId(),
-                        new BiFunction<String, TransferErrorBase, LoanErrorBase>() {
+                transferRepo.computeIfPresent(repayReal.getOrderSeqNo(),
+                        new BiFunction<String, TransferErrorBase, PaymentErrorBase>() {
 
-                            public LoanErrorBase apply(String t, TransferErrorBase u) {
+                            public PaymentErrorBase apply(String t, TransferErrorBase u) {
 
-                                LoanErrorBase paymentErrorEntity = (LoanErrorBase) u;
+                                PaymentErrorBase paymentErrorEntity = (PaymentErrorBase) u;
 
                                 if (paymentErrorEntity.getTransferErrorType().getType() == TransferErrorType.HUIFU
                                         .getType()) {
                                     // 能对上，则删除原来的数据
-                                    if (loan.getValue().equals(paymentErrorEntity.getTransferEntity().getValue())) {
+                                    if (repayReal.getValue().equals(paymentErrorEntity.getTransferEntity().getValue()
+                                    )) {
                                         return null;
                                     } else {
                                         // 对不上，双方数据不匹配，设置SCD流水
-                                        paymentErrorEntity.setLoanEntity(loan);
+                                        paymentErrorEntity.setCreditRepayReal(repayReal);
                                         paymentErrorEntity.setTransferErrorType(TransferErrorType.BOTH);
                                     }
                                 }
