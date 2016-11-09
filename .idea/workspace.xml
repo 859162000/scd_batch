@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" afterPath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/LoanCalculatorJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/LoanCalculatorJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml" />
     </list>
     <ignored path="batch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,18 +128,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrepareJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
-              <folding>
-                <element signature="e#3560#3569#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JobType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -163,11 +148,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentCalculatorJob.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PaymentCalculatorJob.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-197">
-              <caret line="155" column="78" selection-start-line="155" selection-start-column="78" selection-end-line="155" selection-end-column="78" />
+            <state relative-caret-position="151">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -251,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch-statistics/src/main/resources/META-INF/spring/spring-jobs-statistics.xml" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-dao-common.xml" />
         <option value="$PROJECT_DIR$/batch-statistics/src/main/resources/META-INF/config-statistics.properties" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring-exception-transform.xsd" />
@@ -302,6 +296,7 @@
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/LoanCalculatorJob.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java" />
+        <option value="$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml" />
       </list>
     </option>
   </component>
@@ -1221,7 +1216,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39426228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.80269814" sideWeight="0.49262294" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72681284" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47554806" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47554806" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43442622" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
@@ -1308,13 +1303,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/financial/FixProdDueDateReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1699,8 +1687,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="155" column="78" selection-start-line="155" selection-start-column="78" selection-end-line="155" selection-end-column="78" />
+        <state relative-caret-position="151">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
