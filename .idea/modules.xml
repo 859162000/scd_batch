@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/batch.iml" filepath="$PROJECT_DIR$/batch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/batch-schedule/batch-accounting.iml" filepath="$PROJECT_DIR$/batch-schedule/batch-accounting.iml" />
       <module fileurl="file://$PROJECT_DIR$/batch-api/batch-api.iml" filepath="$PROJECT_DIR$/batch-api/batch-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/batch-common/batch-common.iml" filepath="$PROJECT_DIR$/batch-common/batch-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/batch-executor/batch-executor.iml" filepath="$PROJECT_DIR$/batch-executor/batch-executor.iml" />
