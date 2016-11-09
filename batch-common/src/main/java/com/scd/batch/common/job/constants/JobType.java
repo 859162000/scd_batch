@@ -56,6 +56,9 @@ public enum JobType implements EnumType<JobType, Integer> {
      */
     SaveCalculatorJob(1008),
 
+    // 余额抓取任务
+    HuiFuUserBalanceCrawlerJob(1009),
+
     /**
      * 商户扣款流水抓取任务
      */

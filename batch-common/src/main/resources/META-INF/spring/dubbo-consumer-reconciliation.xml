@@ -9,4 +9,6 @@
 
     <dubbo:reference id="accountFacade" interface="com.miaoqian.api.facade.AccountFacade" timeout="5000"/>
 
+    <dubbo:reference id="userFacade" interface="com.miaoqian.api.facade.UserFacade" timeout="5000"
+                     check="false" retries="3"/>
 </beans>

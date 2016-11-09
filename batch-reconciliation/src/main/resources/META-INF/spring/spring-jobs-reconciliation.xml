@@ -214,6 +214,18 @@
     </bean>
     -->
 
-    <!-- TODO 余额对账任务 -->
+    <!-- 余额对账 start -->
+
+    <!-- 余额对账任务 -->
+    <bean id="huiFuUserBalanceCrawler.job" class="com.scd.batch.reconciliation.job.HuiFuUserBalanceCrawlerJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="huiFuUserBalanceCrawler.job"/>
+        <property name="rootPath" value="${file.reconciliation.huiFuUserBalance.path}"/>
+        <property name="sourceNamePrefix" value="huiFuUserBalanceCrawler"/>
+        <property name="targetNamePrefix" value="huiFuUserBalanceCrawler"/>
+    </bean>
+
+    <!-- 余额对账 end -->
+
 
 </beans>

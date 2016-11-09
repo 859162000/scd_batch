@@ -86,7 +86,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="s_user_assets" schema="batch_0">
+        <table tableName="r_balance" schema="batch_0">
 
             <!-- optional   , only for mybatis3 runtime
                  自动生成的键值（identity,或者序列值）
@@ -142,19 +142,19 @@
         </table>
 
         <!--<table tableName="s_expenditurestat" schema="scd_batch">-->
-            <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
+        <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
         <!--</table>-->
         <!--<table tableName="s_fixproductduestat" schema="scd_batch">-->
-            <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
+        <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
         <!--</table>-->
         <!--<table tableName="s_assetsstat" schema="scd_batch">-->
-            <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
+        <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
         <!--</table>-->
         <!--<table tableName="s_borrowerrepayplan" schema="scd_batch">-->
-            <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
+        <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
         <!--</table>-->
         <!--<table tableName="s_projectlimit" schema="scd_batch">-->
-            <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
+        <!--<generatedKey column="ID" sqlStatement="VALUES IDENTITY_VAL_LOCAL()" identity="true" type="post"/>-->
         <!--</table>-->
     </context>
 </generatorConfiguration>

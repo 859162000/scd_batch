@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.miaoqian.framework:log:1.0.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161101.092728-101.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161109.061717-103.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161101.092728-101-javadoc.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161109.061717-103-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161101.092728-101-sources.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/log/1.0.0-SNAPSHOT/log-1.0.0-20161109.061717-103-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

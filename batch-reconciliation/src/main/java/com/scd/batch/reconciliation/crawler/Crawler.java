@@ -14,4 +14,5 @@ public interface Crawler {
 
     <T extends TransferEntity> List<T> crawler(ShortDate transDate, TransferType transferType, Pagination pagination);
 
+    List crawler(ShortDate transDate, List<String> list);
 }

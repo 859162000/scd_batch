@@ -2,31 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfTransferEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TrfTransfer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/HuiFuUserBalanceDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/HuiFuUserBalanceEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/ScdUserBalanceEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/dubbo.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/BalanceMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/dubbo.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/UserBalanceCrawler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_framework_1_0_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_framework_1_0_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_log_1_0_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_log_1_0_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_rest_1_0_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_framework_rest_1_0_0_SNAPSHOT.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_usersvc_usersvc_api_1_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_miaoqian_usersvc_usersvc_api_1_0_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserRegisterDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserRegisterDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/CashTransferDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/CashTransferDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/LoanPaymentTransferDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/LoanPaymentTransferDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/SaveTransferDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/SaveTransferDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TransferErrorDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TransferErrorDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfErrorBase.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfErrorBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserRegisterMapper.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserRegisterMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-reconciliation.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-reconciliation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/logs/gateway-error.log" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway-error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/logs/gateway_info.log" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway_info.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" afterPath="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" afterPath="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" afterPath="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/CashCrawler.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/CashCrawler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/Crawler.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/Crawler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/LoanPaymentCrawler.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/LoanPaymentCrawler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/SaveCrawler.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/SaveCrawler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/dao/TransferBatchUpdateDao.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/dao/TransferBatchUpdateDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/SaveCrawlerJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/SaveCrawlerJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/ScdTrfLoaderJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/ScdTrfLoaderJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfLoaderJob.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfLoaderJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/service/TransferBatchUpdateService.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/service/TransferBatchUpdateService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/reconciliation.properties" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/reconciliation.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml" afterPath="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/crawler/TrfCrawlerTest.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/crawler/TrfCrawlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/util/TransferUtilTest.java" afterPath="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/util/TransferUtilTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-statistics/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/batch-statistics/src/main/resources/generatorConfig.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dubbo.properties" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/dubbo.properties" />
     </list>
     <ignored path="batch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,110 +163,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="BatchLauncherTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BatchLauncherTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="321" column="11" selection-start-line="321" selection-start-column="11" selection-end-line="321" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrepareJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
-              <folding>
-                <element signature="e#3564#3573#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrfCrawler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+              <caret line="335" column="16" selection-start-line="335" selection-start-column="16" selection-end-line="335" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java">
+      <file leaf-file-name="HuiFuUserBalanceCrawlerJob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/db.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-37">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="116">
-              <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransferType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java">
+      <file leaf-file-name="redis.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/redis.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="261">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrfTransferDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java">
+      <file leaf-file-name="ApplicationContext-common.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="233">
+              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrfErrorBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfErrorBase.java">
+      <file leaf-file-name="dubbo.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/dubbo.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding>
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrfTransferEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfTransferEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrfTransfer.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TrfTransfer.xml">
+      <file leaf-file-name="dubbo.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/dubbo.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+            <state relative-caret-position="145">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema-batch.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="387" column="0" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -278,57 +291,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/resources/META-INF/spring/spring-jobs-schedule.xml" />
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidBuyBackScheduleJob.java" />
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidLoanScheduleJob.java" />
-        <option value="$PROJECT_DIR$/batch-common/pom.xml" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dubbo.properties" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/spring-jobs-executor.xml" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml" />
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/resources/META-INF/spring/dubbo-producer.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeService.java" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/NoticeJob.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/financial/FixProdDueDateReport.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml" />
-        <option value="$PROJECT_DIR$/jobs.sh" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java" />
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/PreAutoBuyScheduleJob.java" />
-        <option value="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/AutoBuyScheduleJob.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/T_JOB.xml" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/control/JobControlService.java" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/LoanCalculatorJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java" />
-        <option value="$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/LoanPaymentCrawler.java" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/SaveCrawlerJob.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfTransferEntity.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TrfTransfer.xml" />
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfErrorBase.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/service/TransferBatchUpdateService.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/dao/TransferBatchUpdateDao.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/crawler/TrfCrawlerTest.java" />
         <option value="$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/util/TransferUtilTest.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfLoaderJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/ScdTrfLoaderJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/dubbo-consumer-reconciliation.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/Crawler.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/BalanceCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/UserBalanceCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-statistics/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/mapper/BalanceMapper.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/UserBalanceDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserRegisterDao.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/BalanceCrawlerJob.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/SaveCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/LoanPaymentCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/CashCrawler.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" />
-        <option value="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java" />
-        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java" />
+        <option value="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfLoaderJob.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/ScdTrfLoaderJob.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/reconciliation.properties" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserRegisterMapper.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/trade/ScdUserBalance.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/trade/ScdUserBalanceEntity.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/ScdUserBalanceEntity.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/HuiFuUserBalanceDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/LoanPaymentTransferDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/SaveTransferDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/CashTransferDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TransferErrorDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/HuiFuUserBalanceEntity.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java" />
+        <option value="$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" />
       </list>
     </option>
   </component>
@@ -432,18 +445,281 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smoke" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dubbo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scd_batch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batch-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transvc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../finance-gateway" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;jobs-recon&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;trfcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;jobs.sh&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/scripts/jobs.sh&#10;trfCrawler&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java&#10;batchlaunch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;transferEntit&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TransferEntity.java&#10;saveTransferEN&#9;PSI&#9;JAVA://com.scd.batch.common.entity.reconciliation.SaveTransferEntity&#10;tr.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/SaveTransfer.xml&#10;trfCalcu&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java&#10;trfJob&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.TrfCrawlerJob&#10;PaymentCrawler&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.PaymentCrawlerJob&#10;savetransfer.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/SaveTransfer.xml&#10;transferError.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TransferErrorMapper.xml&#10;batch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;run.sh&#9;FILE&#9;file://F:/github/scd_batch/run.sh&#10;PaymentCalculatorJob&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.PaymentCalculatorJob&#10;batchlauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;preparejob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;fixprodduedatereport&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.FixProdDueDateReportDao&#10;JobDaO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;JobType&#9;PSI&#9;JAVA://com.scd.batch.common.job.constants.JobType&#10;redeemScheduleJob&#9;PSI&#9;JAVA://com.scd.batch.schedule.job.RedeemScheduleJob&#10;notice&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;NoticeServiceImpl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;postHandlingJob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java&#10;postHandlingjob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java&#10;JobDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;bidBuyBackScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidBuyBackScheduleJob.java&#10;PreAutoBuyScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/PreAutoBuyScheduleJob.java&#10;jobType&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;autoBuyScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/AutoBuyScheduleJob.java&#10;prepare&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;autoBuySchedulejob&#9;PSI&#9;JAVA://com.scd.batch.schedule.job.AutoBuyScheduleJob&#10;SaveCalculatorJob&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.SaveCalculatorJob&#10;UserAssets&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml&#10;UserAssetsEntity&#9;PSI&#9;JAVA://com.scd.batch.common.entity.interest.UserAssetsEntity&#10;dubbo-consu&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml&#10;TransferUtil&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.util.TransferUtil&#10;jobdao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDaO.java&#10;FixProdDuedateReport&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/financial/FixProdDueDateReport.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;noticeJob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/NoticeJob.java&#10;BidBuyBackScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidBuyBackScheduleJob.java&#10;JobDAO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;dubbo-pro&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/resources/META-INF/spring/dubbo-producer.xml&#10;laun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;applica&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/resources/META-INF/ApplicationContext-executor.xml" />
+    <property name="SearchEverywhereHistoryKey" value="schema.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema.sql&#10;HuiFuUserBalanceEntity&#9;PSI&#9;JAVA://com.scd.batch.common.entity.reconciliation.HuiFuUserBalanceEntity&#10;userbala&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java&#10;balance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/mapper/BalanceMapper.xml&#10;UserBalance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;HuiFuUserBalanceDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/HuiFuUserBalanceDao.java&#10;userBalance.java&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/trade/UserBalance.java&#10;huifuba&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java&#10;balance&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java&#10;UserRegister&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserRegisterMapper.xml&#10;recon.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/reconciliation.properties&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;prepa&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;jobComman&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java&#10;jobTyp&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;jobs-recon&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;userRe&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/acct/UserRegister.java&#10;UserRegister.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserRegisterMapper.xml&#10;userbalanceEn&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/HuiFuUserBalanceEntity.java&#10;transferentit&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/CashTransferEntity.java&#10;jobcomman&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;trfcr&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java&#10;batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;jobs.sh&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/scripts/jobs.sh&#10;trfCrawler&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java&#10;batchlaunch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;transferEntit&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TransferEntity.java&#10;saveTransferEN&#9;PSI&#9;JAVA://com.scd.batch.common.entity.reconciliation.SaveTransferEntity&#10;tr.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/SaveTransfer.xml&#10;trfCalcu&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java&#10;trfJob&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.TrfCrawlerJob&#10;PaymentCrawler&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.PaymentCrawlerJob&#10;savetransfer.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/SaveTransfer.xml&#10;transferError.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TransferErrorMapper.xml&#10;batch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;run.sh&#9;FILE&#9;file://F:/github/scd_batch/run.sh&#10;PaymentCalculatorJob&#9;PSI&#9;JAVA://com.scd.batch.reconciliation.job.PaymentCalculatorJob&#10;batchlauncher&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;preparejob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java&#10;fixprodduedatereport&#9;PSI&#9;JAVA://com.scd.batch.common.dao.financial.FixProdDueDateReportDao&#10;JobDaO&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;JobType&#9;PSI&#9;JAVA://com.scd.batch.common.job.constants.JobType&#10;redeemScheduleJob&#9;PSI&#9;JAVA://com.scd.batch.schedule.job.RedeemScheduleJob&#10;notice&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;NoticeServiceImpl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;postHandlingJob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java&#10;postHandlingjob&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java&#10;JobDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java&#10;bidBuyBackScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/BidBuyBackScheduleJob.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32150775" />
@@ -452,54 +728,28 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\scd_batch\batch-common\src\main\java\com\scd\batch\common\entity\reconciliation" />
       <recent name="F:\github\scd_batch\batch-executor\src\main\scripts" />
       <recent name="F:\github\scd_batch\batch-common\src\main\java\com\scd\batch\common\entity\bid" />
       <recent name="F:\github\scd_batch" />
       <recent name="F:\github\scd_batch\batch-interest\src\main" />
-      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\bid" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.scd.batch.common.entity.trade" />
       <recent name="com.scd.batch.common.entity.reconciliation" />
-      <recent name="com.scd.batch.executor.service" />
-      <recent name="com.scd.batch.executor.job" />
-      <recent name="com.scd.batch.schedule.job" />
-      <recent name="com.scd.batch.common.constant.reconciliation" />
+      <recent name="com.scd.batch.common.dao.reconciliation" />
+      <recent name="com.scd.batch.reconciliation.crawler" />
+      <recent name="com.scd.batch.reconciliation.job" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\dev" />
+      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\smoke" />
       <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\reconciliation" />
+      <recent name="F:\github\scd_batch\batch-reconciliation\src\main\resources\META-INF\mapper" />
       <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF" />
-      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\spring" />
-      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\acct" />
-      <recent name="F:\github\scd_batch\batch-common\src\main\resources\META-INF\mybatis\mapper\interest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BatchLauncherTest.testProcessJobSuccess_trfCrawler">
-    <configuration default="false" name="BatchLauncherTest.testProcessJobSuccess_postHandling" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.scd.batch.executor.job.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="batch-executor" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
-      <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
-      <option name="METHOD_NAME" value="testProcessJobSuccess_postHandling" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler">
     <configuration default="false" name="BatchLauncherTest.testProcessJobSuccess_notice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -513,32 +763,6 @@
       <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
       <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
       <option name="METHOD_NAME" value="testProcessJobSuccess_notice" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BatchLauncherTest.testProcessJobSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.scd.batch.executor.job.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="batch-executor" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
-      <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
-      <option name="METHOD_NAME" value="testProcessJobSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -591,6 +815,58 @@
       <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
       <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
       <option name="METHOD_NAME" value="testProcessJobSuccess_trfLoader" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.scd.batch.executor.job.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="batch-executor" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
+      <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
+      <option name="METHOD_NAME" value="testProcessJobSuccess_huiFuUserBalanceCrawler" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BatchLauncherTest.testProcessJobSuccess_paymentCrawler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.scd.batch.executor.job.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="batch-executor" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.scd.batch.executor.job" />
+      <option name="MAIN_CLASS_NAME" value="com.scd.batch.executor.job.BatchLauncherTest" />
+      <option name="METHOD_NAME" value="testProcessJobSuccess_paymentCrawler" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1148,19 +1424,19 @@
       <item index="6" class="java.lang.String" itemvalue="Maven.batch-trade" />
       <item index="7" class="java.lang.String" itemvalue="Maven.batch-executor" />
       <item index="8" class="java.lang.String" itemvalue="Maven.batch" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_postHandling" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_notice" />
-      <item index="11" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess" />
-      <item index="12" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfCrawler" />
-      <item index="13" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfLoader" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_notice" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfCrawler" />
+      <item index="11" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfLoader" />
+      <item index="12" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" />
+      <item index="13" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_paymentCrawler" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfCrawler" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_notice" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfLoader" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_postHandling" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_paymentCrawler" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfCrawler" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_notice" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BatchLauncherTest.testProcessJobSuccess_trfLoader" />
       </list>
     </recent_temporary>
   </component>
@@ -1192,35 +1468,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess - 2016.11.09 at 11h 27m 48s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 17h 51m 13s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_notice - 2016.11.09 at 12h 04m 58s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_notice" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 17h 53m 29s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 17h 47m 02s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 11m 18s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 17h 50m 31s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 11m 57s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 17h 53m 04s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 13m 24s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 17h 55m 17s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 16m 17s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 17h 56m 26s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 21m 12s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 18h 05m 48s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 24m 54s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_postHandling - 2016.11.08 at 18h 17m 49s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_postHandling" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 27m 03s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BatchLauncherTest_testProcessJobSuccess_redeemSchedule - 2016.11.08 at 18h 14m 24s.xml">
-      <configuration name="BatchLauncherTest.testProcessJobSuccess_redeemSchedule" configurationId="JUnit" />
+    <history-entry file="BatchLauncherTest_testProcessJobSuccess_huiFuUserBalanceCrawler - 2016.11.09 at 18h 27m 50s.xml">
+      <configuration name="BatchLauncherTest.testProcessJobSuccess_huiFuUserBalanceCrawler" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -1247,13 +1523,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34401348" sideWeight="0.507377" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39426228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.80269814" sideWeight="0.49262294" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72681284" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1450253" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47554806" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43442622" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49915683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49915683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1287,18 +1563,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4940978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22596964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22596964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.80269814" sideWeight="0.49262294" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72681284" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7959528" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47554806" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43442622" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49915683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49915683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438841" sideWeight="0.50884956" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -1335,420 +1611,411 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PostHandlingJob.java">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TransferErrorDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/2016-11-07/OK">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/FixProdDueDateReportDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/test/java/com/scd/batch/common/job/batch/control/dao/JobDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/control/dao/JobDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/interest/UserAssetsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/LastDayAssetsCalculateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/interest/UserAssetsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCalculatorJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/LoanCalculatorJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1176">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/PaymentErrorBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/LoanPaymentTransferEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161107.014815-87-sources.jar!/com/miaoqian/api/dto/ReconciliationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/CashCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/LoanPaymentCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="60" column="15" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/PaymentCrawlerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="69" column="76" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="272" column="22" selection-start-line="272" selection-start-column="22" selection-end-line="272" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TransferErrorMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/.m2/repository/com/miaoqian/finance/gateway/finance-gateway-api/0.0.1-SNAPSHOT/finance-gateway-api-0.0.1-20161107.014815-87-sources.jar!/com/miaoqian/api/dto/TrfReconciliationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/SaveTransferDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/SaveCrawlerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/SaveTransfer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/SaveTransferEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TransferEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/util/TransferUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="34" column="98" selection-start-line="34" selection-start-column="98" selection-end-line="34" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/test/java/com/scd/batch/reconciliation/crawler/TrfCrawlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/service/TransferBatchUpdateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/dao/TransferBatchUpdateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCrawlerJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfLoaderJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/TrfCalculatorJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/ScdTrfLoaderJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="192" column="11" selection-start-line="192" selection-start-column="11" selection-end-line="192" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/reconciliation/TransferType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="319">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="406">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfErrorBase.java">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/AssetsStatDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/TrfTransferEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="-116">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/reconciliation/TrfTransfer.xml">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/BorrowerRepayPlanStatDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        <state relative-caret-position="-203">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/ExpenditureStatDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/FixProjectDueStatDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/FundStatDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/statistics/ProjectLimitDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/LoansCbDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/RechargeLDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/RedeemTDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/RepaymentCbDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/SubscribeTDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/trade/WithdrawLDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/daycut/dao/DayCutDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/promotion/CouponsUseRecordsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/interest/UserAssetsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/BorrowerRepaymentPlanDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/FixProdDueDateReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/PlatformAssetReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/PlatformExpendReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/ProjectQuotaReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/financial/UserRwDailyReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/BorrowerRelationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/CreditorRelationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/CreditRepayRealDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/LoanDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/ProjectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/RepayPlanDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/RepayRealDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/AcctUserAccumulateProfitDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/AcctUserDailyProfitDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserAccumulateProfitDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserDailyProfitDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/acct/UserRegisterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/HuiFuUserBalanceEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/util/TransferUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/job/HuiFuUserBalanceCrawlerJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema-batch.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="387" column="0" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/global.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/batch.config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dubbo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/dev/dubbo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/dubbo.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="321" column="11" selection-start-line="321" selection-start-column="11" selection-end-line="321" selection-end-column="11" />
+        <state relative-caret-position="203">
+          <caret line="335" column="16" selection-start-line="335" selection-start-column="16" selection-end-line="335" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/java/com/scd/batch/executor/job/PrepareJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
-          <folding>
-            <element signature="e#3564#3573#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-reconciliation/src/main/java/com/scd/batch/reconciliation/crawler/TrfCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

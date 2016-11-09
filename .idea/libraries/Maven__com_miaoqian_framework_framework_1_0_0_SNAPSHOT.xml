@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.miaoqian.framework:framework:1.0.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161101.092744-93.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161109.061733-95.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161101.092744-93-javadoc.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161109.061733-95-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161101.092744-93-sources.jar!/" />
+      <root url="jar://F:/.m2/repository/com/miaoqian/framework/framework/1.0.0-SNAPSHOT/framework-1.0.0-20161109.061733-95-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

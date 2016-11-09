@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scd.batch.common.dao.reconciliation.HuiFuUserBalanceDao">
+
+    <resultMap id="BaseResultMap" type="com.scd.batch.common.entity.reconciliation.HuiFuUserBalanceEntity">
+        <id column="ID" property="id" jdbcType="BIGINT"/>
+        <result column="USER_CUST_ID" property="usrCustId" jdbcType="VARCHAR"/>
+        <result column="AVL_BAL" property="avlBal" jdbcType="DOUBLE"/>
+        <result column="ACCT_BAL" property="acctBal" jdbcType="DOUBLE"/>
+        <result column="FRZ_BAL" property="frzBal" jdbcType="DOUBLE"/>
+        <result column="VERSION" property="version" jdbcType="INTEGER"/>
+        <result column="CREATED" property="created" jdbcType="TIMESTAMP"/>
+        <result column="MODIFIED" property="modified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        USER_CUST_ID,
+        AVL_BAL,
+        ACCT_BAL,
+        FRZ_BAL,
+        VERSION,
+        CREATED,
+        MODIFIED
+    </sql>
+
+    <select id="checkExists" resultType="java.lang.Integer">
+        select count(1)
+        from r_balance
+        where USER_CUST_ID = #{custId}
+    </select>
+
+    <select id="getAllIds" resultType="java.lang.Integer">
+        select ID
+        from r_balance
+    </select>
+
+    <insert id="insert">
+        insert into r_balance
+        (
+        <include refid="Base_Column_List"/>
+        )
+        values(
+        USER_CUST_ID = #{entity.userCustId},
+        AVL_BAL = #{entity.avlBal},
+        ACCT_BAL = #{entity.acctBal},
+        FRZ_BAL = #{entity.frzBal},
+        0,
+        CURRENT_TIMESTAMP,
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <update id="update">
+        update r_balance
+        set
+        AVL_BAL = #{entity.avlBal},
+        ACCT_BAL = #{entity.acctBal},
+        FRZ_BAL = #{entity.frzBal},
+        VERSION = VERSION + 1,
+        MODIFIED = CURRENT_TIMESTAMP
+        where USER_CUST_ID = #{entity.userCustId}
+    </update>
+
+</mapper>

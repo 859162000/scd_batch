@@ -86,6 +86,7 @@ public class JobCommand extends AbstractCommand {
         //Trf_Crawler("trfCrawler"),
 
         //Trf_Calculator("trfCalculator"),
+        HuiFu_UserBalance_Crawler("huiFuUserBalanceCrawler"),
 
         /**
          * 灵活调度

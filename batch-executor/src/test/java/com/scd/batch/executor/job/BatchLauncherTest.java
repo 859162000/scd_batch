@@ -329,6 +329,19 @@ public class BatchLauncherTest {
     }
 
     /**
+     * 余额
+     */
+
+    @Test()
+    public void testProcessJobSuccess_huiFuUserBalanceCrawler() {
+
+        BatchLauncher.main(new String[]{"-n", "huiFuUserBalanceCrawler", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+        Assert.assertTrue(true);
+    }
+
+
+    /**
      * interest
      */
 

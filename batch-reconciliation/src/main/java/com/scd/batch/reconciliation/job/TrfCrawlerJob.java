@@ -33,7 +33,9 @@ public class TrfCrawlerJob extends CrawlerDataFlowBatchJob {
 
     @Override
     protected JobType getJobType() {
-        return JobType.TrfCalculatorJob;
+//        return JobType.TrfCalculatorJob;
+        // TODO
+        return null;
     }
 
     @Override

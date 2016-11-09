@@ -30,7 +30,9 @@ public class TrfLoaderJob extends DataFlowBatchJob {
 
     @Override
     protected JobType getJobType() {
-        return JobType.TrfCalculatorJob;
+        // TODO
+//        return JobType.TrfCalculatorJob;
+        return null;
     }
 
     @Override

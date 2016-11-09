@@ -76,11 +76,13 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.CashCrawlerJob);
         jobTypes.add(JobType.CashCalculatorJob);
 
+        jobTypes.add(JobType.SaveCrawlerJob);
+        jobTypes.add(JobType.SaveCalculatorJob);
+
         //jobTypes.add(JobType.TrfCrawlerJob);
         //jobTypes.add(JobType.TrfCalculatorJob);
 
-        jobTypes.add(JobType.SaveCrawlerJob);
-        jobTypes.add(JobType.SaveCalculatorJob);
+        jobTypes.add(JobType.HuiFuUserBalanceCrawlerJob);
 
         // 统计相关
         jobTypes.add(JobType.ProjectLimitCalculateJob);

@@ -35,7 +35,9 @@ public class TrfCalculatorJob extends ReconciliationBatchJob {
 
     @Override
     protected JobType getJobType() {
-        return JobType.TrfCalculatorJob;
+        // TODO
+//        return JobType.TrfCalculatorJob;
+        return null;
     }
 
     @Override

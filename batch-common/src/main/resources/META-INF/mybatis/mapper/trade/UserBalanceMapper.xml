@@ -19,6 +19,14 @@
         <result column="fixperiod_interest" property="fixperiodInterest" jdbcType="DECIMAL"/>
     </resultMap>
 
+
+    <resultMap id="BaseResult_UserBalance_Map"
+               type="com.scd.batch.common.entity.reconciliation.ScdUserBalanceEntity">
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
+        <result column="usable_sa" property="usableSa" jdbcType="DECIMAL"/>
+        <result column="freezeSa" property="freezeSa" jdbcType="DECIMAL"/>
+    </resultMap>
+
     <sql id="Sum_BalanceAssets_List">
         COALESCE(sum(usable_sa), 0) as usable_sa,
         COALESCE(sum(withdraw_freeze_sa), 0) as withdraw_freeze_sa,
@@ -35,6 +43,11 @@
         COALESCE(sum(fixperiod_total_interest), 0) as fixperiod_total_interest
     </sql>
 
+    <sql id="Sum_UserBalance_List">
+        uid,
+        COALESCE(sum(usable_sa), 0) as usable_sa,
+        COALESCE(sum(withdraw_freeze_sa + invest_freeze_sa + repay_freeze_sa + capital_freeze_sa), 0) as freezeSa
+    </sql>
 
     <sql id="BalanceAssets_List">
         b.uid,
@@ -59,6 +72,13 @@
         select id
         from user_balance
         order by id
+    </select>
+
+    <select id="getActiveUIDs" resultMap="BaseResult_UserBalance_Map">
+        select
+        <include refid="Sum_UserBalance_List"/>
+        from user_balance
+        where update_time >= #{transDate}
     </select>
 
     <select id="selectBalanceAssets" resultMap="BaseResult_BalanceAssets_Map" parameterType="java.lang.Integer">

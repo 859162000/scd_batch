@@ -7,4 +7,13 @@
         from user_register
     </select>
 
+    <select id="getAcctListByUIdList" resultType="java.lang.String">
+        select user_cust_id
+        from user_register
+        where uid in
+        <foreach collection="uidList" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
 </mapper>

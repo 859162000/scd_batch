@@ -1,10 +1,7 @@
 package com.scd.batch.reconciliation.util;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
-import com.miaoqian.api.dto.CashReconciliationDto;
-import com.miaoqian.api.dto.ReconciliationDto;
-import com.miaoqian.api.dto.SaveReconciliationDto;
-import com.miaoqian.api.dto.TrfReconciliationDto;
+import com.miaoqian.api.dto.*;
 import com.scd.batch.common.constant.reconciliation.DeleteFlagType;
 import com.scd.batch.common.constant.reconciliation.FeeObjType;
 import com.scd.batch.common.constant.reconciliation.LoanPaymentTransStat;
@@ -148,6 +145,21 @@ public class TransferUtil {
 
 
         return entityList;
+    }
+
+    /**
+     * 用户余额
+     */
+    public static HuiFuUserBalanceEntity buildUserBalance(QueryBalanceBgResDto dto) {
+
+        HuiFuUserBalanceEntity entity = new HuiFuUserBalanceEntity();
+        entity.setUserCustId(dto.getUsrCustId());
+        entity.setAcctBal(StringUtils.isNotEmpty(dto.getAcctBal()) ? Double.valueOf(dto.getAcctBal().replaceAll(",", "")
+        ) : 0.0);
+        entity.setAvlBal(StringUtils.isNotEmpty(dto.getAvlBal()) ? Double.valueOf(dto.getAvlBal().replaceAll(",", "")) : 0.0);
+        entity.setFrzBal(StringUtils.isNotEmpty(dto.getFrzBal()) ? Double.valueOf(dto.getFrzBal().replaceAll(",", "")) : 0.0);
+
+        return entity;
     }
 
 }

@@ -87,4 +87,9 @@ public class CashCrawler implements Crawler {
         return transferEntityList;
 
     }
+
+    @Override
+    public List crawler(ShortDate transDate, List<String> list) {
+        return null;
+    }
 }
