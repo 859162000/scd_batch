@@ -11,8 +11,10 @@ import com.scd.batch.common.utils.JsonUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.google.common.base.Preconditions;
 import com.google.common.io.Files;
+import com.scd.batch.executor.service.NoticeServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.io.File;
@@ -22,17 +24,22 @@ import java.util.concurrent.TimeUnit;
 public class PostHandlingJob extends AbstractExecutor {
     private static final String OK = "OK";
 
-    @Resource
+    @Autowired
     private JobControlService jobControlService;
-    @Resource
+
+    @Autowired
     private DayCutService dayCutService;
+
+    @Autowired
+    private NoticeServiceImpl noticeService;
 
     @Override
     public void execute(ExecutorContext context) {
         ShortDate accountDate = ShortDate.valueOf(dayCutService.load());
-        List<JobControl> jobs = jobControlService.getAllJobs(accountDate, jobType);
+        List<JobControl> jobs = jobControlService.getAllJobs(accountDate);
         jobs.forEach(job -> {
             if (job.getPhaseStatus() != PhaseStatus.DONE.type) {
+                noticeService.batchFailed();
                 logger.error("some jobs execute failed: {}", JsonUtils.toJson(job));
                 throw new RuntimeException("some jobs execute failed");
             }

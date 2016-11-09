@@ -2,12 +2,11 @@ package com.scd.batch.executor.service;
 
 import com.miaoqian.basis.api.dubbo.MailAPI;
 import com.miaoqian.basis.api.dubbo.SmsAPI;
-import com.miaoqian.basis.api.dubbo.request.EnumContentType;
-import com.miaoqian.basis.api.dubbo.request.MailInfo;
-import com.miaoqian.basis.api.dubbo.request.MailSendRequest;
-import com.miaoqian.basis.api.dubbo.request.SmsInfo;
+import com.miaoqian.basis.api.dubbo.request.*;
+import com.miaoqian.framework.domain.Platform;
 import com.miaoqian.framework.domain.Request;
 import com.miaoqian.framework.domain.Result;
+import com.miaoqian.framework.util.UUIDUtils;
 import com.scd.batch.common.utils.DateStyle;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.executor.service.daycut.SwitchService;
@@ -42,10 +41,14 @@ public class NoticeServiceImpl implements NoticeService {
         ShortDate transDate = switchService.currentAccountDate();
 
         Request<SmsInfo> request = new Request<>();
+        // TODO 批跑
+        request.setPlatform(Platform.TRADE);
         SmsInfo smsInfo = new SmsInfo();
 
         smsInfo.setMobileNumbers(mobiles.toArray(new String[]{}));
         smsInfo.setMessageContent(message);
+        smsInfo.setRequestNumber(UUIDUtils.fullUUID());
+        smsInfo.setSmsBizType(SmsBizType.NOTICE);
 
         request.setParam(smsInfo);
 
@@ -112,8 +115,9 @@ public class NoticeServiceImpl implements NoticeService {
                 DateStyle.YYYY_MM_DD_HH_MM_SS.getValue()) + "]";
 
         Result result = smsAPI.sendMessage(buildSmsNotice(mobiles, msg));
+        LOGGER.info("发送短信成功！");
         if (!result.isSuccess()) {
-            LOGGER.info("发送短信失败！");
+            LOGGER.info("发送短信失败！msg:" + result.getMessage());
         }
 
         // EMAIL
@@ -125,8 +129,9 @@ public class NoticeServiceImpl implements NoticeService {
                 DateStyle.YYYY_MM_DD_HH_MM_SS.getValue()) + "]";
         result = mailAPI.send(buildEmailNotice(emails, subject, content));
 
+        LOGGER.info("发送邮件成功！");
         if (!result.isSuccess()) {
-            LOGGER.info("发送邮件失败！");
+            LOGGER.info("发送邮件失败！msg:" + result.getMessage());
         }
         return true;
     }

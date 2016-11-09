@@ -137,7 +137,6 @@
         <include refid="columns"/>
         from T_JOB
         WHERE ACCOUNT_DATE = #{accountDate}
-        and JOB_TYPE = #{jobType}
     </select>
 
 </mapper>

@@ -374,9 +374,9 @@ public class BatchLauncherTest {
     }
 
     @Test()
-    public void testProcessJobSuccess_prepAutoBuySchedule() {
+    public void testProcessJobSuccess_preAutoBuySchedule() {
 
-        BatchLauncher.main(new String[]{"-n", "prepAutoBuySchedule", "-p",
+        BatchLauncher.main(new String[]{"-n", "preAutoBuySchedule", "-p",
                 "classpath:META-INF/ApplicationContext-executor" +
                         ".xml", "-f"});
     }

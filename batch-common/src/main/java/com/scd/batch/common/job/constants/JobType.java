@@ -10,45 +10,6 @@ public enum JobType implements EnumType<JobType, Integer> {
 
 
     /**
-     * 灵活调度批跑
-     */
-
-    /**
-     * 批量赎回任务
-     */
-    RedeemScheduleJob(4001),
-
-    /**
-     * 更新银行卡限额任务
-     */
-    UpdateBankCardQuotaScheduleJob(4002),
-
-    /**
-     * 更新注册人数到redis
-     */
-    UpdateUserRegisterCountToRedisJob(4003),
-
-    /**
-     * 批量放款
-     */
-    BidLoanScheduleJob(4004),
-
-    /**
-     * 批量回购
-     */
-    BidBuyBackScheduleJob(4005),
-
-    /**
-     * 批量认购预跑
-     */
-    PreAutoBuyScheduleJob(4006),
-
-    /**
-     * 批量认购
-     */
-    AutoBuyScheduleJob(4007),
-
-    /**
      * 对账相关
      *
      */
@@ -168,7 +129,47 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 昨日总资产
      */
-    LastDayAssetsCalculateJob(3003);
+    LastDayAssetsCalculateJob(3003),
+
+
+    /**
+     * 灵活调度批跑
+     */
+
+    /**
+     * 批量赎回任务
+     */
+    RedeemScheduleJob(4001),
+
+    /**
+     * 更新银行卡限额任务
+     */
+    UpdateBankCardQuotaScheduleJob(4002),
+
+    /**
+     * 更新注册人数到redis
+     */
+    UpdateUserRegisterCountToRedisJob(4003),
+
+    /**
+     * 批量放款
+     */
+    BidLoanScheduleJob(4004),
+
+    /**
+     * 批量回购
+     */
+    BidBuyBackScheduleJob(4005),
+
+    /**
+     * 批量认购预跑
+     */
+    PreAutoBuyScheduleJob(4006),
+
+    /**
+     * 批量认购
+     */
+    AutoBuyScheduleJob(4007);
 
 
     public final int type;

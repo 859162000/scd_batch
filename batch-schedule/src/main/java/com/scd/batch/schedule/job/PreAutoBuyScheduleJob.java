@@ -23,7 +23,7 @@ public class PreAutoBuyScheduleJob extends ScheduleJob {
 
     @Override
     protected JobType getJobType() {
-        return JobType.BidLoanScheduleJob;
+        return JobType.PreAutoBuyScheduleJob;
     }
 
     @Override

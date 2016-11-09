@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class Settings {
 
-    private static Settings instance;
+    private static Settings instance = new Settings();
 
     public static Settings getInstance() {
         return instance;

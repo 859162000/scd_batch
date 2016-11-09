@@ -34,5 +34,5 @@ public interface JobDao {
     JobControl getByUUID(@Param("uuid") String uuid);
 
     @MultiDB(ds = DataSourceType.BATCH)
-    List<JobControl> selectJobs(@Param("accountDate") Date accountDate, @Param("jobType") int jobType);
+    List<JobControl> selectJobs(@Param("accountDate") Date accountDate);
 }

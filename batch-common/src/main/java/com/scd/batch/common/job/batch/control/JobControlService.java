@@ -10,6 +10,7 @@ import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.fasterxml.uuid.Generators;
 import org.apache.commons.collections.CollectionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,13 +22,15 @@ public class JobControlService {
 
     private final int maxRetry = 3;
 
-    @Resource
+    @Autowired
     private JobDao jobDao;
+
     @Resource
     private DayCutService dayCutService;
 
     /**
      * PrepareJob 初始化 Job 控制表数据使用
+     *
      * @param jobControl obj
      * @return insert counts successfully
      */
@@ -44,8 +47,8 @@ public class JobControlService {
      * 开启事务的原因是: 此函数先更新立即查询, 避免主从不一致
      *
      * @param accountDate 账务日期
-     * @param jobType job 类型, see {@link JobType}
-     * @param phaseType see {@link PhaseType}
+     * @param jobType     job 类型, see {@link JobType}
+     * @param phaseType   see {@link PhaseType}
      * @return 一条控制表中符合条件的记录
      */
     @Transactional
@@ -71,7 +74,8 @@ public class JobControlService {
 
     /**
      * 一个阶段处理结束后更新状态
-     * @param uuid 更新的 job 的 UUID
+     *
+     * @param uuid        更新的 job 的 UUID
      * @param phaseStatus 要更新的状态
      * @return update counts
      */
@@ -105,8 +109,8 @@ public class JobControlService {
     }
 
     @Transactional
-    public List<JobControl> getAllJobs(ShortDate accountDate, JobType jobType) {
-        return jobDao.selectJobs(accountDate.toDate(), jobType.type);
+    public List<JobControl> getAllJobs(ShortDate accountDate) {
+        return jobDao.selectJobs(accountDate.toDate());
     }
 
 }
