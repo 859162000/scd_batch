@@ -11,6 +11,7 @@
 
     <context:property-placeholder location="classpath:META-INF/smoke/db.properties,
     classpath:META-INF/smoke/dubbo.properties,
+    classpath:META-INF/smoke/redis.properties,
     classpath:META-INF/global.properties,
     classpath:META-INF/batch.config.properties"
                                   ignore-unresolvable="true"/>
