@@ -34,6 +34,7 @@ bin/start.sh -n saveCrawler
 bin/start.sh -n saveLoader
 bin/start.sh -n rechargeLoader
 bin/start.sh -n saveCalculator
+bin/start.sh -n huiFuUserBalanceCrawler
 
 bin/start.sh -n redeemSchedule
 bin/start.sh -n updateBankCardQuotaSchedule
