@@ -7,11 +7,9 @@ import com.miaoqian.api.dto.SaveReconciliationDto;
 import com.miaoqian.api.dto.TrfReconciliationDto;
 import com.scd.batch.common.constant.reconciliation.DeleteFlagType;
 import com.scd.batch.common.constant.reconciliation.FeeObjType;
+import com.scd.batch.common.constant.reconciliation.LoanPaymentTransStat;
 import com.scd.batch.common.constant.reconciliation.TransferType;
-import com.scd.batch.common.entity.reconciliation.CashTransferEntity;
-import com.scd.batch.common.entity.reconciliation.LoanPaymentTransferEntity;
-import com.scd.batch.common.entity.reconciliation.SaveTransferEntity;
-import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.*;
 import com.scd.batch.common.utils.DateStyle;
 import com.scd.batch.common.utils.DateUtil;
 import com.scd.batch.common.utils.EnumUtils;
@@ -32,25 +30,29 @@ public class TransferUtil {
      * @param reconciliationDtoList
      * @return
      */
-    public static List<LoanPaymentTransferEntity> buildLoanRepaymentTransfer(List<ReconciliationDto>
-                                                                                     reconciliationDtoList) {
+    public static List<LoanPaymentTransferEntity> buildLoanPaymentTransfer(Date transDate,
+                                                                           TransferType transferType,
+                                                                           List<ReconciliationDto>
+                                                                                   reconciliationDtoList) {
         List<LoanPaymentTransferEntity> entityList = new ArrayList<>();
 
 
         for (ReconciliationDto dto : reconciliationDtoList) {
-
             LoanPaymentTransferEntity transfer = new LoanPaymentTransferEntity();
-            transfer.setMerCustId(dto.getMerCustId());
-            transfer.setBorrCustId(dto.getBorrCustId());
-//            transfer.setOrdDate(ShortDate.valueOf(dto.getOrdDate()).toDate());
-            transfer.setTransStat(dto.getTransStat());
-            transfer.setDeleteFlag(0);
-            transfer.setInvestCustId(dto.getInvestCustId());
-//            transfer.setPnrDate(ShortDate.valueOf(dto.getPnrDate()).toDate());
+            transfer.setTransDate(transDate);
+            transfer.setDeleteFlag(DeleteFlagType.NOT.getType());
+            transfer.setTransferType(transferType.getType());
             transfer.setOrdId(dto.getOrdId());
+            transfer.setOrdDate(DateUtil.StringToDate(dto.getPnrDate(), DateStyle.YYYYMMDD));
+            transfer.setMerCustId(dto.getMerCustId());
+            transfer.setInvestCustId(dto.getInvestCustId());
+            transfer.setBorrCustId(dto.getBorrCustId());
+            transfer.setTransAmt(StringUtils.isEmpty(dto.getTransAmt()) ? 0.0 : Double.valueOf(dto.getTransAmt()));
+            transfer.setPnrDate(StringUtils.isEmpty(dto.getPnrDate()) ?
+                    null : DateUtil.StringToDate(dto.getPnrDate(), DateStyle.YYYYMMDD));
             transfer.setPnrSeqId(dto.getPnrSeqId());
-//            transfer.setTransAmt(Double.valueOf(dto.getTransAmt()));
-            transfer.setTransferType(TransferType.LOANS.getType());
+
+            transfer.setTransStat(dto.getTransStat());
             entityList.add(transfer);
         }
 
@@ -102,15 +104,31 @@ public class TransferUtil {
     /**
      * 商户扣款流水
      */
-    public static List<TransferEntity> buildTrfTransfer(List<TrfReconciliationDto> reconciliationDtoList) {
-        List<TransferEntity> entityList = new ArrayList<>();
+    public static List<TrfTransferEntity> buildTrfTransfer(Date transDate, List<TrfReconciliationDto>
+            reconciliationDtoList) {
+        List<TrfTransferEntity> entityList = new ArrayList<>();
 
-        reconciliationDtoList.forEach(p -> {
-            TransferEntity transfer = new TransferEntity();
-            BeanUtils.copyProperties(p, transfer);
+        for (TrfReconciliationDto dto : reconciliationDtoList) {
+
+            TrfTransferEntity transfer = new TrfTransferEntity();
+
+            transfer.setTransDate(transDate);
+            transfer.setDeleteFlag(DeleteFlagType.NOT.getType());
+            transfer.setTransferType(TransferType.TRF.getType());
+            transfer.setOrdId(dto.getOrdId());
+            transfer.setOrdDate(DateUtil.StringToDate(dto.getPnrDate(), DateStyle.YYYYMMDD));
+            transfer.setMerCustId(dto.getMerCustId());
+            transfer.setInvestCustId(dto.getUsrCustId());
+            transfer.setBorrCustId("");
+            transfer.setTransAmt(StringUtils.isEmpty(dto.getTransAmt()) ? 0.0 : Double.valueOf(dto.getTransAmt()));
+            transfer.setPnrDate(StringUtils.isEmpty(dto.getPnrDate()) ?
+                    null : DateUtil.StringToDate(dto.getPnrDate(), DateStyle.YYYYMMDD));
+            transfer.setPnrSeqId(dto.getPnrSeqId());
+
+            transfer.setTransStat(dto.getTransStat());
+
             entityList.add(transfer);
-        });
-
+        }
 
         return entityList;
     }

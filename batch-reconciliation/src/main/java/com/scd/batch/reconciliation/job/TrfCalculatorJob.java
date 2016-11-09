@@ -27,6 +27,7 @@ import java.util.function.Function;
 /**
  * 商户扣款对账任务
  */
+@Deprecated
 public class TrfCalculatorJob extends ReconciliationBatchJob {
 
     @Autowired
@@ -79,10 +80,10 @@ public class TrfCalculatorJob extends ReconciliationBatchJob {
 
         if (sourceType.getType() == SourceType.HUIFU.getType()) {
 
-            List<TransferEntity> transferEntityList = CommonUtil.transform2Bean(sourceLines,
-                    TransferEntity.class);
+            List<TrfTransferEntity> transferEntityList = CommonUtil.transform2Bean(sourceLines,
+                    TrfTransferEntity.class);
 
-            for (TransferEntity transfer : transferEntityList) {
+            for (TrfTransferEntity transfer : transferEntityList) {
 
                 // TODO 先使用HASH，考虑使用redis，不存在，则写入hash
                 transferRepo.computeIfAbsent(transfer.getOrdId(),
@@ -98,19 +99,19 @@ public class TrfCalculatorJob extends ReconciliationBatchJob {
 
                             public TransferErrorBase apply(String t, TransferErrorBase u) {
 
-                                TrfErrorBase cashErrorEntity = (TrfErrorBase) u;
-                                if (cashErrorEntity.getTransferErrorType().getType() == TransferErrorType.SCD.getType
+                                TrfErrorBase trfErrorBase = (TrfErrorBase) u;
+                                if (trfErrorBase.getTransferErrorType().getType() == TransferErrorType.SCD.getType
                                         ()) {
                                     // 能对上，则删除原来的数据
-                                    if (transfer.getValue().equals(cashErrorEntity.getWithdrawL().getValue())) {
+                                    if (transfer.getValue().equals(trfErrorBase.getScdTransfer().getValue())) {
                                         return null;
                                     } else {
                                         // 对不上，双方数据不匹配，设置汇付流水
-                                        cashErrorEntity.setTransferEntity(transfer);
-                                        cashErrorEntity.setTransferErrorType(TransferErrorType.BOTH);
+                                        trfErrorBase.setHuifuTransfer(transfer);
+                                        trfErrorBase.setTransferErrorType(TransferErrorType.BOTH);
                                     }
                                 }
-                                return cashErrorEntity;
+                                return trfErrorBase;
                             }
                         }
                 );
@@ -118,39 +119,39 @@ public class TrfCalculatorJob extends ReconciliationBatchJob {
             }
         } else if (sourceType.getType() == SourceType.SCD.getType()) {
 
-            List<WithdrawL> withdrawLList = CommonUtil.transform2Bean(sourceLines,
-                    WithdrawL.class);
+            List<TrfTransferEntity> transferEntityList = CommonUtil.transform2Bean(sourceLines,
+                    TrfTransferEntity.class);
 
-            for (WithdrawL withdrawL : withdrawLList) {
+            for (TrfTransferEntity transfer : transferEntityList) {
 
                 // TODO 先使用HASH，考虑使用redis，不存在，则写入hash
-                transferRepo.computeIfAbsent(withdrawL.getOrderId(),
+                transferRepo.computeIfAbsent(transfer.getOrdId(),
                         new Function<String, TrfErrorBase>() {
                             public TrfErrorBase apply(String t) {
-                                return new TrfErrorBase(t, withdrawL, null, TransferErrorType.SCD);
+                                return new TrfErrorBase(t, transfer, null, TransferErrorType.SCD);
                             }
                         });
 
                 // 存在，则对账
-                transferRepo.computeIfPresent(withdrawL.getOrderId(),
+                transferRepo.computeIfPresent(transfer.getOrdId(),
                         new BiFunction<String, TransferErrorBase, TransferErrorBase>() {
 
                             public TransferErrorBase apply(String t, TransferErrorBase u) {
 
-                                TrfErrorBase cashErrorEntity = (TrfErrorBase) u;
-                                if (cashErrorEntity.getTransferErrorType().getType() == TransferErrorType.HUIFU
+                                TrfErrorBase errorBase = (TrfErrorBase) u;
+                                if (errorBase.getTransferErrorType().getType() == TransferErrorType.HUIFU
                                         .getType()) {
                                     // 能对上，则删除原来的数据
-                                    if (withdrawL.getValue().equals(cashErrorEntity.getTransferEntity().getValue())) {
+                                    if (transfer.getValue().equals(errorBase.getHuifuTransfer().getValue())) {
                                         return null;
                                     } else {
                                         // 对不上，双方数据不匹配，设置SCD流水
-                                        cashErrorEntity.setWithdrawL(withdrawL);
-                                        cashErrorEntity.setTransferErrorType(TransferErrorType.BOTH);
+                                        errorBase.setScdTransfer(transfer);
+                                        errorBase.setTransferErrorType(TransferErrorType.BOTH);
                                     }
                                 }
 
-                                return cashErrorEntity;
+                                return errorBase;
                             }
                         }
                 );
@@ -187,22 +188,20 @@ public class TrfCalculatorJob extends ReconciliationBatchJob {
                     trfErrorBase.getTransferErrorType().getType(),
                     TransferErrorStatus.INIT.getType());
 
-            if (trfErrorBase.getWithdrawL() != null) {
-                entity.setaValue(trfErrorBase.getWithdrawL().getValue());
-                entity.setaJson(JsonUtils.toJson(trfErrorBase.getWithdrawL()));
+            if (trfErrorBase.getScdTransfer() != null) {
+                entity.setaValue(trfErrorBase.getScdTransfer().getValue());
+                entity.setaJson(JsonUtils.toJson(trfErrorBase.getScdTransfer()));
             }
 
-            if (trfErrorBase.getTransferEntity() != null) {
-                entity.setbValue(trfErrorBase.getTransferEntity().getValue());
-                entity.setbJson(JsonUtils.toJson(trfErrorBase.getTransferEntity()));
+            if (trfErrorBase.getHuifuTransfer() != null) {
+                entity.setbValue(trfErrorBase.getHuifuTransfer().getValue());
+                entity.setbJson(JsonUtils.toJson(trfErrorBase.getHuifuTransfer()));
             }
 
             errorEntityList.add(entity);
         });
 
         transferErrorDao.batchInsert(TableSpec.getDefault(), errorEntityList);
-
-
     }
 
 

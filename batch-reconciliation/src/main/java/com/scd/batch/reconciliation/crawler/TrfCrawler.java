@@ -8,7 +8,7 @@ import com.miaoqian.framework.domain.Result;
 import com.scd.batch.common.constant.CommonErrorCode;
 import com.scd.batch.common.constant.reconciliation.TransferType;
 import com.scd.batch.common.daycut.service.DayCutService;
-import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.TrfTransferEntity;
 import com.scd.batch.common.exception.ErrorCodeException;
 import com.scd.batch.common.utils.DateStyle;
 import com.scd.batch.common.utils.DateUtil;
@@ -21,12 +21,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 /**
  * 商户扣款对账
  */
+@Deprecated
 @Component
 public class TrfCrawler implements Crawler {
 
@@ -42,7 +42,7 @@ public class TrfCrawler implements Crawler {
     private TransferBatchUpdateService batchUpdate;
 
     @Override
-    public List<TransferEntity> crawler(ShortDate transDate, TransferType transferType, Pagination pagination) {
+    public List<TrfTransferEntity> crawler(ShortDate transDate, TransferType transferType, Pagination pagination) {
 
         TrfReconciliationReqDto reqDto = new TrfReconciliationReqDto();
 
@@ -67,7 +67,8 @@ public class TrfCrawler implements Crawler {
         List<TrfReconciliationDto> cashReconciliationDtoList = result.getData().getTrfReconciliationDtoList();
 
         // 写入数据库
-        List<TransferEntity> transferEntityList = TransferUtil.buildTrfTransfer(cashReconciliationDtoList);
+        List<TrfTransferEntity> transferEntityList = TransferUtil.buildTrfTransfer(transDate.toDate(),
+                cashReconciliationDtoList);
 
         // 设置业务日期
         transferEntityList.forEach(p -> p.setTransDate(transDate.toDate()));

@@ -81,8 +81,7 @@ public class SaveCrawlerJob extends CrawlerDataFlowBatchJob {
 
         if (isDeleteFlag()) {
             // 清理当天的旧数据
-        // 清理当天的旧数据
-        transferDao.deleteSaveTransfer(TableSpec.getDefault(), transDate.toDate());
+            transferDao.deleteSaveTransfer(TableSpec.getDefault(), transDate.toDate());
             setDeleteFlag(false);
         }
 

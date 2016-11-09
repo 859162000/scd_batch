@@ -3,6 +3,7 @@ package com.scd.batch.reconciliation.crawler;
 
 import com.scd.batch.common.constant.reconciliation.TransferType;
 import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.TrfTransferEntity;
 import com.scd.batch.common.utils.Pagination;
 import com.scd.batch.common.utils.ShortDate;
 import junit.framework.Assert;
@@ -27,7 +28,7 @@ public class TrfCrawlerTest {
         Pagination pagination = new Pagination();
         pagination.setPageSize(1000);
         pagination.setCurPage(1);
-        List<TransferEntity> list = crawlerJob.crawler(transDate, TransferType.LOANS, pagination);
+        List<TrfTransferEntity> list = crawlerJob.crawler(transDate, TransferType.LOANS, pagination);
         Assert.assertEquals(10, list.size());
     }
 

@@ -8,31 +8,32 @@ import com.scd.batch.common.entity.trade.WithdrawL;
  */
 public class TrfErrorBase extends TransferErrorBase {
 
-    // TODO
-    private WithdrawL withdrawL;
+    private TrfTransferEntity scdTransfer;
 
-    private TransferEntity transferEntity;
+    private TransferEntity huifuTransfer;
 
-    public TrfErrorBase(String key, WithdrawL withdrawL, TransferEntity transferEntity, TransferErrorType
-            transferErrorType) {
+    public TrfErrorBase(String key,
+                        TrfTransferEntity scdTransfer,
+                        TransferEntity huifuTransfer,
+                        TransferErrorType transferErrorType) {
         super(key, transferErrorType);
-        this.withdrawL = withdrawL;
-        this.transferEntity = transferEntity;
+        this.scdTransfer = scdTransfer;
+        this.huifuTransfer = huifuTransfer;
     }
 
-    public WithdrawL getWithdrawL() {
-        return withdrawL;
+    public TrfTransferEntity getScdTransfer() {
+        return scdTransfer;
     }
 
-    public void setWithdrawL(WithdrawL withdrawL) {
-        this.withdrawL = withdrawL;
+    public void setScdTransfer(TrfTransferEntity scdTransfer) {
+        this.scdTransfer = scdTransfer;
     }
 
-    public TransferEntity getTransferEntity() {
-        return transferEntity;
+    public TransferEntity getHuifuTransfer() {
+        return huifuTransfer;
     }
 
-    public void setTransferEntity(TransferEntity transferEntity) {
-        this.transferEntity = transferEntity;
+    public void setHuifuTransfer(TransferEntity huifuTransfer) {
+        this.huifuTransfer = huifuTransfer;
     }
 }

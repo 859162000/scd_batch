@@ -7,7 +7,7 @@ import com.scd.batch.common.dao.reconciliation.TrfTransferDao;
 import com.scd.batch.common.entity.reconciliation.CashTransferEntity;
 import com.scd.batch.common.entity.reconciliation.LoanPaymentTransferEntity;
 import com.scd.batch.common.entity.reconciliation.SaveTransferEntity;
-import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.TrfTransferEntity;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.reconciliation.dao.TransferBatchUpdateBase;
 import com.scd.batch.reconciliation.dao.TransferBatchUpdateDao;
@@ -73,7 +73,7 @@ public class TransferBatchUpdateService extends TransferBatchUpdateBase implemen
 
 
     @Override
-    public int batchInsertTrfTransfer(@Param("entityList") List<TransferEntity> entityList) {
+    public int batchInsertTrfTransfer(@Param("entityList") List<TrfTransferEntity> entityList) {
         if (isEmpty(entityList)) {
             return 0;
         }

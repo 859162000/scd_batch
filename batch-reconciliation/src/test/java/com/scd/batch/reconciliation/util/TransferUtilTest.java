@@ -2,6 +2,7 @@ package com.scd.batch.reconciliation.util;
 
 
 import com.miaoqian.api.dto.ReconciliationDto;
+import com.scd.batch.common.constant.reconciliation.TransferType;
 import com.scd.batch.common.entity.reconciliation.LoanPaymentTransferEntity;
 import junit.framework.Assert;
 import org.junit.Test;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TransferUtilTest {
@@ -20,7 +22,9 @@ public class TransferUtilTest {
 
     @Test
     public void testBuildLoanRepaymentTransfer() {
-        List<LoanPaymentTransferEntity> list = util.buildLoanRepaymentTransfer(buildReconciliationDtoList());
+        List<LoanPaymentTransferEntity> list = util.buildLoanPaymentTransfer(new Date(),
+                TransferType.LOANS,
+                buildReconciliationDtoList());
         Assert.assertEquals(list.size(), 4);
 
         LoanPaymentTransferEntity transfer = list.get(0);

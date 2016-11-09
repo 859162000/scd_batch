@@ -21,7 +21,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -99,8 +98,8 @@ public class LoanPaymentCrawler implements Crawler {
 
         logger.info("size:" + reconciliationDtoList.size());
 
-        List<LoanPaymentTransferEntity> transferEntityList = TransferUtil.buildLoanRepaymentTransfer
-                (reconciliationDtoList);
+        List<LoanPaymentTransferEntity> transferEntityList = TransferUtil.buildLoanPaymentTransfer
+                (transDate.toDate(), transferType, reconciliationDtoList);
 
         // 设置业务日期
         transferEntityList.forEach(p -> p.setTransDate(transDate.toDate()));

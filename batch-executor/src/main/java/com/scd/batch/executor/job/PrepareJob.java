@@ -76,8 +76,8 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.CashCrawlerJob);
         jobTypes.add(JobType.CashCalculatorJob);
 
-        jobTypes.add(JobType.TrfCrawlerJob);
-        jobTypes.add(JobType.TrfCalculatorJob);
+        //jobTypes.add(JobType.TrfCrawlerJob);
+        //jobTypes.add(JobType.TrfCalculatorJob);
 
         jobTypes.add(JobType.SaveCrawlerJob);
         jobTypes.add(JobType.SaveCalculatorJob);

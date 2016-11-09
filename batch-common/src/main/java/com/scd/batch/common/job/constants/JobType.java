@@ -59,12 +59,12 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 商户扣款流水抓取任务
      */
-    TrfCrawlerJob(1009),
+    //TrfCrawlerJob(1009),
 
     /**
      * 商户扣款流水对账任务
      */
-    TrfCalculatorJob(1010),
+    //TrfCalculatorJob(1010),
 
 
     /**

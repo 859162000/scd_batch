@@ -83,9 +83,9 @@ public class JobCommand extends AbstractCommand {
         Save_Calculator("saveCalculator"),
 
         // trf
-        Trf_Crawler("trfCrawler"),
+        //Trf_Crawler("trfCrawler"),
 
-        Trf_Calculator("trfCalculator"),
+        //Trf_Calculator("trfCalculator"),
 
         /**
          * 灵活调度

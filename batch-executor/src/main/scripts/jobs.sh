@@ -11,9 +11,9 @@ bin/start.sh -n expentidure
 bin/start.sh -n assetsProject
 bin/start.sh -n assetsBalance
 
+bin/start.sh -n lastDayAssetsCalculate
 bin/start.sh -n userCurrentProfitCalculate
 bin/start.sh -n userDailyProfitCalculate
-bin/start.sh -n lastDayAssetsCalculate
 
 bin/start.sh -n loanCrawler
 bin/start.sh -n loanLoader

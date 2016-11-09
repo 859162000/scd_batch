@@ -307,6 +307,28 @@ public class BatchLauncherTest {
 
 
     /**
+     * trf
+     */
+
+    @Ignore
+    @Test()
+    public void testProcessJobSuccess_trfCrawler() {
+
+        BatchLauncher.main(new String[]{"-n", "trfCrawler", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+        Assert.assertTrue(true);
+    }
+
+    @Ignore
+    @Test()
+    public void testProcessJobSuccess_trfLoader() {
+
+        BatchLauncher.main(new String[]{"-n", "trfLoader", "-p", "classpath:META-INF/ApplicationContext-executor" +
+                ".xml", "-f"});
+        Assert.assertTrue(true);
+    }
+
+    /**
      * interest
      */
 

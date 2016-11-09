@@ -176,14 +176,14 @@
 
     <!-- 充值  end  -->
 
-
-    <!-- 商户扣款流水抓取任务 -->
+    <!-- 商户扣款流水抓取任务
     <bean id="trfCrawler.job" class="com.scd.batch.reconciliation.job.TrfCrawlerJob">
         <property name="cycleRunning" value="false"/>
         <property name="name" value="trfCrawler.job"/>
     </bean>
+    -->
 
-    <!-- 商户扣款流水加载任务 -->
+    <!-- 商户扣款流水加载任务
     <bean id="trfLoader.job" class="com.scd.batch.reconciliation.job.TrfLoaderJob">
         <property name="cycleRunning" value="false"/>
         <property name="name" value="trfLoader.job"/>
@@ -191,9 +191,9 @@
         <property name="sourceNamePrefix" value="trfLoader"/>
         <property name="targetNamePrefix" value="trfLoader"/>
     </bean>
+    -->
 
-
-    <!-- 商户扣款流水加载任务 -->
+    <!-- 商户扣款流水加载任务
     <bean id="scdTrfLoader.job" class="com.scd.batch.reconciliation.job.ScdTrfLoaderJob">
         <property name="cycleRunning" value="false"/>
         <property name="name" value="scdTrfLoader.job"/>
@@ -201,8 +201,9 @@
         <property name="sourceNamePrefix" value="scdTrfLoader"/>
         <property name="targetNamePrefix" value="scdTrfLoader"/>
     </bean>
+    -->
 
-    <!-- 商户扣款流水对账任务 -->
+    <!-- 商户扣款流水对账任务
     <bean id="trfCalculator.job" class="com.scd.batch.reconciliation.job.TrfCalculatorJob">
         <property name="cycleRunning" value="false"/>
         <property name="name" value="trfCalculator.job"/>
@@ -211,6 +212,7 @@
         <property name="sourceHuiFuNamePrefix" value="trfLoader"/>
         <property name="targetNamePrefix" value="trf_RESULT"/>
     </bean>
+    -->
 
     <!-- TODO 余额对账任务 -->
 

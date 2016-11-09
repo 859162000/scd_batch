@@ -298,8 +298,8 @@ CREATE TABLE `r_save_transfer` (
   `FEE_CUST_ID` varchar(128) DEFAULT NULL,
   `FEE_ACCT_ID` varchar(128) DEFAULT NULL,
   `VERSION` smallint(6) DEFAULT NULL,
-  `CREATED`timestamp,
-  `MODIFIED`timestamp,
+  `CREATED` timestamp,
+  `MODIFIED` timestamp,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -18,7 +18,10 @@ public enum TransferType implements EnumType<TransferType, Integer> {
 
     RECHARGE(4, "RECHARGE"),
 
-    WITHDRAW(5, "WITHDRAW");
+    WITHDRAW(5, "WITHDRAW"),
+
+    // 商户扣款流水
+    TRF(6, "TRF");
 
     public int type;
 

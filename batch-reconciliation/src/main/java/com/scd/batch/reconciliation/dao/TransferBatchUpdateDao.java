@@ -3,7 +3,7 @@ package com.scd.batch.reconciliation.dao;
 import com.scd.batch.common.entity.reconciliation.CashTransferEntity;
 import com.scd.batch.common.entity.reconciliation.LoanPaymentTransferEntity;
 import com.scd.batch.common.entity.reconciliation.SaveTransferEntity;
-import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.TrfTransferEntity;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
@@ -20,7 +20,7 @@ public interface TransferBatchUpdateDao {
 
     int[] deleteCashTransfer(@Param("transDate") Date transDate);
 
-    int batchInsertTrfTransfer(@Param("entityList") List<TransferEntity> entityList);
+    int batchInsertTrfTransfer(@Param("entityList") List<TrfTransferEntity> entityList);
 
     int[] deleteTrfTransfer(@Param("transDate") Date transDate);
 

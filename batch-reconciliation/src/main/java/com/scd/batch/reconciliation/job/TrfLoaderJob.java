@@ -3,6 +3,7 @@ package com.scd.batch.reconciliation.job;
 import com.google.common.collect.Lists;
 import com.scd.batch.common.dao.reconciliation.TrfTransferDao;
 import com.scd.batch.common.entity.reconciliation.TransferEntity;
+import com.scd.batch.common.entity.reconciliation.TrfTransferEntity;
 import com.scd.batch.common.job.batch.DataFlowBatchJob;
 import com.scd.batch.common.job.batch.DataFlowCalculator;
 import com.scd.batch.common.job.batch.SourceDataProvider;
@@ -21,6 +22,7 @@ import java.util.List;
 /**
  * 商户扣款加载任务
  */
+@Deprecated
 public class TrfLoaderJob extends DataFlowBatchJob {
 
     @Resource
@@ -77,7 +79,7 @@ public class TrfLoaderJob extends DataFlowBatchJob {
             return null;
         }
 
-        List<TransferEntity> huifuList = transferDao.getListByPage(tableSpec,
+        List<TrfTransferEntity> huifuList = transferDao.getListByPage(tableSpec,
                 accountDate.toDate(),
                 batchIds);
 
