@@ -30,7 +30,10 @@ public class RechargeLDaoTest extends AbstractJUnit4SpringContextTests {
     public void testSelectRechargeSumByDate() {
 
         Double sum = rechargeLDao.selectRechargeSumByDate(TestUtil.buildTableSpec(),
-                TestUtil.buildStatusList(), TestUtil.getStartDate(), TestUtil.getEndDate());
+                TestUtil.buildStatusList(),
+                TestUtil.getStartDate(),
+                TestUtil.getEndDate(),
+                null);
         Assert.assertEquals(sum, 1000.0);
     }
 

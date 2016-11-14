@@ -52,28 +52,6 @@ public class BalanceAssetsEntity {
     // 定期计划待收利息
     private double fixperiodInterest;
 
-    // 充值金额
-    private double recharge;
-
-    // 提现金额
-    private double withdraw;
-
-    public double getRecharge() {
-        return recharge;
-    }
-
-    public void setRecharge(double recharge) {
-        this.recharge = recharge;
-    }
-
-    public double getWithdraw() {
-        return withdraw;
-    }
-
-    public void setWithdraw(double withdraw) {
-        this.withdraw = withdraw;
-    }
-
     public String getUid() {
         return uid;
     }

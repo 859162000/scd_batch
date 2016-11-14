@@ -26,7 +26,8 @@ public class WithDrawLDaoTest extends AbstractJUnit4SpringContextTests {
 
         Double sum = withdrawLDao.selectWithdrawSumByDate(TestUtil.buildTableSpec(),
                 TestUtil.buildStatusList(), TestUtil.getStartDate(),
-                TestUtil.getEndDate());
+                TestUtil.getEndDate(),
+                null);
 
         Assert.assertEquals(sum, 4000.0);
     }

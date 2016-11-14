@@ -346,6 +346,14 @@ public class BatchLauncherTest {
      */
 
     @Test()
+    public void testProcessJobSuccess_lastDayAssetsCalculate() {
+
+        BatchLauncher.main(new String[]{"-n", "lastDayAssetsCalculate", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
+    @Test()
     public void testProcessJobSuccess_userCurrentProfitCalculate() {
 
         BatchLauncher.main(new String[]{"-n", "userCurrentProfitCalculate", "-p",
@@ -363,13 +371,6 @@ public class BatchLauncherTest {
     }
 
 
-    @Test()
-    public void testProcessJobSuccess_lastDayAssetsCalculate() {
-
-        BatchLauncher.main(new String[]{"-n", "lastDayAssetsCalculate", "-p",
-                "classpath:META-INF/ApplicationContext-executor" +
-                        ".xml", "-f"});
-    }
 
     /**
      * schedule

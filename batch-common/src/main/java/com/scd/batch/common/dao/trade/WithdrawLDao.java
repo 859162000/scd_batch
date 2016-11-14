@@ -26,6 +26,7 @@ public interface WithdrawLDao {
     Double selectWithdrawSumByDate(@Param("ts") TableSpec ts,
                                    @Param("statusList") List<String> statusList,
                                    @Param("startDate") Date startDate,
-                                   @Param("endDate") Date endDate);
+                                   @Param("endDate") Date endDate,
+                                   @Param("uid") String uid);
 
 }

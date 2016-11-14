@@ -1,6 +1,7 @@
 package com.scd.batch.statistics.service;
 
-import com.google.common.collect.Lists;
+import com.scd.batch.common.constant.trans.RechargeLStatus;
+import com.scd.batch.common.constant.trans.WithDrawLStatus;
 import com.scd.batch.common.dao.financial.UserRwDailyReportDao;
 import com.scd.batch.common.dao.statistics.FundStatDao;
 import com.scd.batch.common.dao.trade.RechargeLDao;
@@ -44,15 +45,18 @@ public class FundStatService {
         // 读取前一天的汇总数据
         ShortDate lastDate = accountingDate.addDays(-1);
 
-        // TODO 状态枚举
-        List<String> successStatsList = Lists.newArrayList("1", "2", "3", "4", "5");
-
         // 数据库读取提现汇总金额
-        double rechargeSum = rechargeLDao.selectRechargeSumByDate(tableSpec, successStatsList, lastDate.toDate(),
-                accountingDate.toDate());
+        double rechargeSum = rechargeLDao.selectRechargeSumByDate(tableSpec,
+                RechargeLStatus.getSuccessStatusList(),
+                lastDate.toDate(),
+                accountingDate.toDate(),
+                null);
 
         double withdrawSum = withdrawLDao.selectWithdrawSumByDate(tableSpec,
-                successStatsList, lastDate.toDate(), accountingDate.toDate());
+                WithDrawLStatus.getSuccessStatusList(),
+                lastDate.toDate(),
+                accountingDate.toDate(),
+                null);
 
         // 写入到数据库
         FundStatEntity fundStatEntity = new FundStatEntity(accountingDate.toDate(), rechargeSum, withdrawSum);
@@ -74,8 +78,7 @@ public class FundStatService {
         UserRwDailyReport report = buildFinancial(fundStatEntity);
         if (reportDao.checkExists(fundStatEntity.getTransDate()) > 0) {
             reportDao.updateIncrement(report);
-        }
-        else {
+        } else {
             reportDao.insert(report);
         }
     }

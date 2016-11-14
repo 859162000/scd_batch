@@ -49,23 +49,21 @@
         COALESCE(sum(withdraw_freeze_sa + invest_freeze_sa + repay_freeze_sa + capital_freeze_sa), 0) as freezeSa
     </sql>
 
-    <sql id="BalanceAssets_List">
+    <sql id="BalanceAssets">
         b.uid,
-        b.usable_sa,
-        b.withdraw_freeze_sa,
-        b.invest_freeze_sa,
-        b.repay_freeze_sa,
-        b.capital_freeze_sa,
-        b.current_capital,
-        b.current_interest,
-        b.fixend_capital,
-        b.fixend_interest,
-        b.fixperiod_capital,
-        b.fixperiod_interest,
-        b.fixperiod_total_capital,
-        b.fixperiod_total_interest,
-        COALESCE(sum(r.amt), 0) as recharge,
-        COALESCE(sum(w.trans_amt), 0) as withdraw
+        COALESCE(sum(b.usable_sa), 0) AS usable_sa,
+        COALESCE(sum(b.withdraw_freeze_sa), 0) AS withdraw_freeze_sa,
+        COALESCE(sum(b.invest_freeze_sa), 0) AS invest_freeze_sa,
+        COALESCE(sum(b.repay_freeze_sa), 0) AS repay_freeze_sa,
+        COALESCE(sum(b.capital_freeze_sa), 0) AS capital_freeze_sa,
+        COALESCE(sum(b.current_capital), 0) AS current_capital,
+        COALESCE(sum(b.current_interest), 0) AS current_interest,
+        COALESCE(sum(b.fixend_capital), 0) AS fixend_capital,
+        COALESCE(sum(b.fixend_interest), 0) AS fixend_interest,
+        COALESCE(sum(b.fixperiod_capital), 0) AS fixperiod_capital,
+        COALESCE(sum(b.fixperiod_interest), 0) AS fixperiod_interest,
+        COALESCE(sum(b.fixperiod_total_capital), 0) AS fixperiod_total_capital,
+        COALESCE(sum(b.fixperiod_total_interest), 0) AS fixperiod_total_interest
     </sql>
 
     <select id="getAllIds" resultType="java.lang.Long">
@@ -89,16 +87,12 @@
 
     <select id="selectBalanceByBatchUid" resultMap="BaseResult_BalanceAssets_Map" parameterType="java.lang.Integer">
         select
-        <include refid="BalanceAssets_List"/>
+        <include refid="BalanceAssets"/>
         from user_balance b
-        left join
-        (recharge_l r left join withdraw_l w on r.uid = w.uid)
-        on b.uid = r.uid
         where b.id in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
             #{id}
         </foreach>
-        and r.update_time >= #{transDate}
         group by b.uid
         <!--
         select b.uid, b.usable_sa, sum(r.amt), sum(w.trans_amt) from user_balance b left join (recharge_l r  left join withdraw_l w on r.uid = w.uid) on b.uid = r.uid group by b.uid;

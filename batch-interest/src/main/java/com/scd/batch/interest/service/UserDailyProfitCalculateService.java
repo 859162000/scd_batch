@@ -1,12 +1,15 @@
 package com.scd.batch.interest.service;
 
+import com.scd.batch.common.constant.trans.WithDrawLStatus;
 import com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.AcctUserDailyProfitDao;
 import com.scd.batch.common.dao.acct.UserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.UserDailyProfitDao;
 import com.scd.batch.common.dao.bid.CreditorRelationDao;
 import com.scd.batch.common.dao.interest.UserAssetsDao;
+import com.scd.batch.common.dao.trade.RechargeLDao;
 import com.scd.batch.common.dao.trade.UserBalanceDao;
+import com.scd.batch.common.dao.trade.WithdrawLDao;
 import com.scd.batch.common.entity.acct.UserAccumulativeProfitEntity;
 import com.scd.batch.common.entity.acct.UserDailyProfitEntity;
 import com.scd.batch.common.entity.interest.UserAssetsEntity;
@@ -16,6 +19,8 @@ import com.scd.batch.common.utils.DateUtil;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +36,7 @@ import java.util.List;
 @Service
 public class UserDailyProfitCalculateService {
 
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private UserDailyProfitDao profitDao;
@@ -49,6 +55,12 @@ public class UserDailyProfitCalculateService {
 
     @Autowired
     private UserAssetsDao assetsDao;
+
+    @Autowired
+    private WithdrawLDao withdrawLDao;
+
+    @Autowired
+    private RechargeLDao rechargeLDao;
 
     // 取数据库计算昨日收益
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
@@ -75,10 +87,30 @@ public class UserDailyProfitCalculateService {
             double lastTotal = 0.0;
             if (assets != null) {
                 lastTotal = assets.getAssets();
+                logger.debug("昨日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastDate:" + lastDate);
             }
 
+            // 按天统计提现金额
+            double withdrawSumByDate = withdrawLDao.selectWithdrawSumByDate(tableSpec,
+                    WithDrawLStatus.getSuccessStatusList(),
+                    lastDate,
+                    transDate,
+                    p.getUid());
+
+            // 按天计算充值金额
+            double rechargeSumByDate = rechargeLDao.selectRechargeSumByDate(tableSpec,
+                    WithDrawLStatus.getSuccessStatusList(),
+                    lastDate,
+                    transDate,
+                    p.getUid());
+
             // 昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
-            double profit = currentTotal - lastTotal + p.getWithdraw() - p.getRecharge();
+            double profit = currentTotal - lastTotal + withdrawSumByDate - rechargeSumByDate;
+
+            logger.debug("昨日收益：" + profit + ", currentTotal:" +
+                    currentTotal + ", lastTotal:" + lastTotal +
+                    ", withdrawSumByDate:" + withdrawSumByDate +
+                    ", rechargeSumByDate:" + rechargeSumByDate);
 
             UserProfitEntity entity = new UserProfitEntity(
                     0,

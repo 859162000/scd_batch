@@ -68,6 +68,9 @@
             AND create_time >= #{startDate, jdbcType=TIMESTAMP}
             AND create_time <= #{endDate, jdbcType=TIMESTAMP}
 		]]>
+        <if test="uid != null">
+            AND uid = #{uid}
+        </if>
     </select>
 
     <select id="getAllTransferIds" resultType="java.lang.Integer">
