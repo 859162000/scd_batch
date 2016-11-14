@@ -30,10 +30,10 @@ public class NoticeServiceImpl implements NoticeService {
     @Resource
     private SwitchService switchService;
 
-    @Autowired
+//    @Autowired
     private SmsAPI smsAPI;
 
-    @Autowired
+//    @Autowired
     private MailAPI mailAPI;
 
     @Override
