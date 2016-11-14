@@ -1,7 +1,6 @@
 package com.scd.batch.schedule.job;
 
 
-import com.miaoqian.bid.api.trade.scheduler.TradeScheduleService;
 import com.miaoqian.framework.domain.Result;
 import com.miaoqian.transvc.api.business.Business;
 import com.scd.batch.common.job.batch.ScheduleCalculator;
@@ -18,9 +17,6 @@ import java.util.List;
  * 批量赎回
  */
 public class RedeemScheduleJob extends ScheduleJob {
-
-    @Resource
-    private TradeScheduleService tradeScheduleService;
 
     @Resource
     private Business business;

@@ -1,7 +1,5 @@
 
 
---batch
-
 DROP TABLE IF EXISTS DAY_CUT_INFO;
 CREATE TABLE DAY_CUT_INFO (
   ID INT primary key NOT NULL AUTO_INCREMENT,
@@ -32,7 +30,6 @@ CREATE TABLE T_BATCH_RESULT (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
---
 DROP TABLE IF EXISTS T_JOB;
 CREATE TABLE T_JOB (
   MODIFIED TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录修改时间',
@@ -100,9 +97,6 @@ CREATE TABLE `T_FAIL_RECORD` (
 
 
 
-
---statistics
-
 DROP TABLE IF EXISTS `s_assetsstat`;
 CREATE TABLE `s_assetsstat` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -154,7 +148,6 @@ CREATE TABLE `s_expenditurestat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
---
 DROP TABLE IF EXISTS `s_fixproductduestat`;
 CREATE TABLE `s_fixproductduestat` (
   `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -172,7 +165,6 @@ CREATE TABLE `s_fixproductduestat` (
 
 
 
---
 DROP TABLE IF EXISTS `s_fundstat`;
 CREATE TABLE `s_fundstat` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -204,10 +196,6 @@ CREATE TABLE `s_projectlimit` (
   `MODIFIED` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-
 
 
 DROP TABLE IF EXISTS `r_transfer_error`;
@@ -302,8 +290,6 @@ CREATE TABLE `r_save_transfer` (
   `MODIFIED` timestamp,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
 
 
 

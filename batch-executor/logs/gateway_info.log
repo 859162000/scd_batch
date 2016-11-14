@@ -5800,3 +5800,48 @@ Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter 
 2016-11-09 18:56:24 [main-SendThread(172.20.1.106:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 172.20.1.106/172.20.1.106:2181. Will not attempt to authenticate using SASL (unknown error)
 2016-11-09 18:56:24 [main-SendThread(172.20.1.106:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established to 172.20.1.106/172.20.1.106:2181, initiating session
 2016-11-09 18:56:24 [main-SendThread(172.20.1.106:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server 172.20.1.106/172.20.1.106:2181, sessionid = 0x157d227b36513c0, negotiated timeout = 30000
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - setDocumentLocator(com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser$LocatorProxy@884e8)
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - startDocument()
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - startElement(,,messages)
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   Pushing body text ''
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   New match='messages'
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   No rules found matching 'messages'.
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - characters(
+    )
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - characters(
+
+)
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - endElement(,,messages)
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   match='messages'
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   bodyText='
+    
+
+'
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   No rules found matching 'messages'.
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester -   Popping body text ''
+2016-11-09 18:56:25 [main] DEBUG org.apache.commons.digester.Digester.sax - endDocument()
+2016-11-09 18:56:26 [main] INFO  com.scd.batch.reconciliation.job.HuiFuUserBalanceCrawlerJob - start job: huiFuUserBalanceCrawler.job
+2016-11-09 18:56:27 [main] INFO  com.scd.batch.common.mybatis.multidb.MultiDBInterceptor - change datasource to:BATCH
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [com.mysql.jdbc.JDBC4Connection@f32020] will be managed by Spring
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.daycut.dao.DayCutDao.loadDate - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@f32020]
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.daycut.dao.DayCutDao.loadDate - ==>  Preparing: SELECT ID, ACCOUNT_DATE, CREATED, MODIFIED FROM DAY_CUT_INFO WHERE ID = 1 
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.daycut.dao.DayCutDao.loadDate - ==> Parameters: 
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.daycut.dao.DayCutDao.loadDate - <==      Total: 1
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] INFO  com.scd.batch.common.mybatis.multidb.MultiDBInterceptor - change datasource to:BATCH
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e] from current transaction
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.job.batch.control.dao.JobDao.selectOneAvailableJob - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@f32020]
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.job.batch.control.dao.JobDao.selectOneAvailableJob - ==>  Preparing: SELECT ID, PHASE, PHASE_STATUS, JOB_TYPE, RETRY_TIME, DATABASE_ID, TABLE_ID, UUID, ACCOUNT_DATE, CHECK_POINT, START_TIME, END_TIME, CREATED, MODIFIED FROM T_JOB WHERE ACCOUNT_DATE = ? AND PHASE_STATUS IN (1, 3) AND JOB_TYPE = ? AND PHASE = ? AND RETRY_TIME < ? LIMIT 1 
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.job.batch.control.dao.JobDao.selectOneAvailableJob - ==> Parameters: 2016-11-09 00:00:00.0(Timestamp), 1009(Integer), 1(Integer), 3(Integer)
+2016-11-09 18:56:27 [main] DEBUG com.scd.batch.common.job.batch.control.dao.JobDao.selectOneAvailableJob - <==      Total: 0
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@beeb0e]
+2016-11-09 18:56:27 [main] INFO  com.scd.batch.reconciliation.job.HuiFuUserBalanceCrawlerJob - cancel process executor:[HuiFuUserBalanceCrawlerJob[name=huiFuUserBalanceCrawler.job,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-11-09}]], because of before execute is false
+2016-11-09 18:56:27 [main] INFO  com.scd.batch.reconciliation.job.HuiFuUserBalanceCrawlerJob - job: huiFuUserBalanceCrawler.job finished, takes: 826
+2016-11-09 18:56:27 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher success for args: -n, huiFuUserBalanceCrawler, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+2016-11-09 18:56:27 [DubboShutdownHook] INFO  org.apache.zookeeper.ZooKeeper - Session: 0x157d227b36513c0 closed
+2016-11-09 18:56:27 [main-EventThread] INFO  org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x157d227b36513c0
