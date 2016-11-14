@@ -11,7 +11,7 @@
 
     <context:property-placeholder location="classpath:META-INF/test/db.properties,
     classpath:META-INF/test/dubbo.properties,
-    classpath:META-INF/tset/redis.properties,
+    classpath:META-INF/test/redis.properties,
     classpath:META-INF/global.properties,
     classpath:META-INF/batch.config.properties"
                                   ignore-unresolvable="true"/>
