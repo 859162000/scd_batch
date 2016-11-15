@@ -7,7 +7,7 @@ import com.scd.batch.common.constant.interest.InterestRateType;
  */
 public class InterestCalculator {
 
-    public static int YEAR_DAYS = 360;
+    public static int YEAR_DAYS = 365;
     public static int MONTH_DAYS = 30;
 
     // 根据利率计算利息策略

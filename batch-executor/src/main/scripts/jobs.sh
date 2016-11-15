@@ -2,18 +2,13 @@
 bin/start.sh -n switch
 bin/start.sh -n prepare
 
-bin/start.sh -n projectLimit
-bin/start.sh -n borrowerRepayPlan
-bin/start.sh -n fundStat
-bin/start.sh -n fixPlanDue
-bin/start.sh -n fixProjectDue
-bin/start.sh -n expentidure
-bin/start.sh -n assetsProject
-bin/start.sh -n assetsBalance
-
-bin/start.sh -n lastDayAssetsCalculate
-bin/start.sh -n userCurrentProfitCalculate
-bin/start.sh -n userDailyProfitCalculate
+bin/start.sh -n updateBankCardQuotaSchedule
+bin/start.sh -n updateUserRegisterCountToRedis
+bin/start.sh -n bidLoanSchedule
+bin/start.sh -n redeemSchedule
+bin/start.sh -n bidBuyBackSchedule
+bin/start.sh -n preAutoBuySchedule
+bin/start.sh -n autoBuySchedule
 
 bin/start.sh -n loanCrawler
 bin/start.sh -n loanLoader
@@ -36,13 +31,18 @@ bin/start.sh -n rechargeLoader
 bin/start.sh -n saveCalculator
 bin/start.sh -n huiFuUserBalanceCrawler
 
-bin/start.sh -n redeemSchedule
-bin/start.sh -n updateBankCardQuotaSchedule
-bin/start.sh -n updateUserRegisterCountToRedis
-bin/start.sh -n bidLoanSchedule
-bin/start.sh -n bidBuyBackSchedule
-bin/start.sh -n preAutoBuySchedule
-bin/start.sh -n autoBuySchedule
+bin/start.sh -n projectLimit
+bin/start.sh -n borrowerRepayPlan
+bin/start.sh -n fundStat
+bin/start.sh -n fixPlanDue
+bin/start.sh -n fixProjectDue
+bin/start.sh -n expentidure
+bin/start.sh -n assetsProject
+bin/start.sh -n assetsBalance
+
+bin/start.sh -n lastDayAssetsCalculate
+bin/start.sh -n userCurrentProfitCalculate
+bin/start.sh -n userDailyProfitCalculate
 
 bin/start.sh -n postHandling
 bin/start.sh -n notice

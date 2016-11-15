@@ -52,10 +52,12 @@ public class RedeemScheduleJob extends ScheduleJob {
         }
 
         int retry = Settings.getInstance().getRedeemRetry();
+        logger.info("name:" + Settings.getInstance().getBidLoanName() +
+                ", retry:" + retry +
+                ", timeout:" + Settings.getInstance().getRedeemTimeout());
         wait4Notice(retry,
                 Settings.getInstance().getRedeemName(),
                 Settings.getInstance().getRedeemTimeout());
-
 
         return null;
     }

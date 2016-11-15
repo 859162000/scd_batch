@@ -18,30 +18,22 @@ public class JobCommand extends AbstractCommand {
         PREPARE("prepare"),
 
         /**
-         * 统计相关
+         * 灵活调度
          */
-        PROJECT_LIMIT("projectLimit"),
+        BidLoanSchedule("bidLoanSchedule"),
 
-        BORROWER_REPAY_PLAN("borrowerRepayPlan"),
+        RedeemSchedule("redeemSchedule"),
 
-        FUND_STAT("fundStat"),
+        BidBuyBackSchedule("bidBuyBackSchedule"),
 
-        FIX_PLAN_DUE("fixPlanDue"),
+        PreAutoBuySchedule("preAutoBuySchedule"),
 
-        FIX_PROJECT_DUE("fixProjectDue"),
+        AutoBuySchedule("autoBuySchedule"),
 
-        EXPENTIDURE("expentidure"),
+        UpdateBankCardQuotaSchedule("updateBankCardQuotaSchedule"),
 
-        ASSETS_PROJECT("assetsProject"),
+        UpdateUserRegisterCountToRedis("updateUserRegisterCountToRedis"),
 
-        ASSETS_BALANCE("assetsBalance"),
-
-        /**
-         * 收益
-         */
-        UserCurrentProfitCalculateJob("userCurrentProfitCalculate"),
-        UserDailyProfitCalculateJob("userDailyProfitCalculate"),
-        LastDayAssetsCalculateJob("lastDayAssetsCalculate"),
 
         /**
          * 对账
@@ -88,22 +80,37 @@ public class JobCommand extends AbstractCommand {
         //Trf_Calculator("trfCalculator"),
         HuiFu_UserBalance_Crawler("huiFuUserBalanceCrawler"),
 
+
         /**
-         * 灵活调度
+         * 统计相关
          */
-        RedeemSchedule("redeemSchedule"),
+        PROJECT_LIMIT("projectLimit"),
 
-        UpdateBankCardQuotaSchedule("updateBankCardQuotaSchedule"),
+        BORROWER_REPAY_PLAN("borrowerRepayPlan"),
 
-        UpdateUserRegisterCountToRedis("updateUserRegisterCountToRedis"),
+        FUND_STAT("fundStat"),
 
-        BidLoanSchedule("bidLoanSchedule"),
+        FIX_PLAN_DUE("fixPlanDue"),
 
-        BidBuyBackSchedule("bidBuyBackSchedule"),
+        FIX_PROJECT_DUE("fixProjectDue"),
 
-        PreAutoBuySchedule("preAutoBuySchedule"),
+        EXPENTIDURE("expentidure"),
 
-        AutoBuySchedule("autoBuySchedule"),
+        ASSETS_PROJECT("assetsProject"),
+
+        ASSETS_BALANCE("assetsBalance"),
+
+        /**
+         * 收益
+         */
+        UserCurrentProfitCalculateJob("userCurrentProfitCalculate"),
+        UserDailyProfitCalculateJob("userDailyProfitCalculate"),
+        LastDayAssetsCalculateJob("lastDayAssetsCalculate"),
+
+
+        /**
+         * 事后处理
+         */
 
         PostHandling("postHandling"),
 

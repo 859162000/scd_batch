@@ -3,8 +3,12 @@ package com.scd.batch.executor.job;
 import junit.framework.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BatchLauncherTest {
+
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
 
     /**
      * Execption case 1: Args is null
@@ -335,8 +339,9 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_huiFuUserBalanceCrawler() {
 
-        BatchLauncher.main(new String[]{"-n", "huiFuUserBalanceCrawler", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "huiFuUserBalanceCrawler", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
         Assert.assertTrue(true);
     }
 
@@ -371,7 +376,6 @@ public class BatchLauncherTest {
     }
 
 
-
     /**
      * schedule
      */
@@ -379,8 +383,10 @@ public class BatchLauncherTest {
     @Test()
     public void testProcessJobSuccess_redeemSchedule() {
 
-        BatchLauncher.main(new String[]{"-n", "redeemSchedule", "-p", "classpath:META-INF/ApplicationContext-executor" +
-                ".xml", "-f"});
+        BatchLauncher.main(new String[]{"-n", "redeemSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+
     }
 
     @Test()

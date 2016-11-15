@@ -10,6 +10,46 @@ public enum JobType implements EnumType<JobType, Integer> {
 
 
     /**
+     * 灵活调度批跑
+     */
+
+    /**
+     * 批量放款
+     */
+    BidLoanScheduleJob(1001),
+
+    /**
+     * 批量赎回任务
+     */
+    RedeemScheduleJob(1002),
+
+    /**
+     * 批量回购
+     */
+    BidBuyBackScheduleJob(1003),
+
+    /**
+     * 批量认购预跑
+     */
+    PreAutoBuyScheduleJob(1004),
+
+    /**
+     * 批量认购
+     */
+    AutoBuyScheduleJob(1005),
+
+    /**
+     * 更新银行卡限额任务
+     */
+    UpdateBankCardQuotaScheduleJob(1006),
+
+    /**
+     * 更新注册人数到redis
+     */
+    UpdateUserRegisterCountToRedisJob(1007),
+
+
+    /**
      * 对账相关
      *
      */
@@ -17,47 +57,46 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 放款流水抓取任务
      */
-    LoanCrawlerJob(1001),
+    LoanCrawlerJob(2001),
 
     /**
      * 放款对账
      */
-    LoanCalculatorJob(1002),
+    LoanCalculatorJob(2002),
 
     /**
      * 还款流水抓取任务
      */
-    PaymentCrawlerJob(1003),
+    PaymentCrawlerJob(2003),
 
     /**
      * 还款对账
      */
-    PaymentCalculatorJob(1004),
+    PaymentCalculatorJob(2004),
 
 
     /**
      * 提现流水抓取任务
      */
-    CashCrawlerJob(1005),
+    CashCrawlerJob(2005),
 
     /**
      * 提现流水对账任务
      */
-    CashCalculatorJob(1006),
+    CashCalculatorJob(2006),
 
     /**
-     *
      * 充值流水抓取任务
      */
-    SaveCrawlerJob(1007),
+    SaveCrawlerJob(2007),
 
     /**
      * 充值流水对账任务
      */
-    SaveCalculatorJob(1008),
+    SaveCalculatorJob(2008),
 
     // 余额抓取任务
-    HuiFuUserBalanceCrawlerJob(1009),
+    HuiFuUserBalanceCrawlerJob(2009),
 
     /**
      * 商户扣款流水抓取任务
@@ -78,42 +117,42 @@ public enum JobType implements EnumType<JobType, Integer> {
     /**
      * 项目额度
      */
-    ProjectLimitCalculateJob(2001),
+    ProjectLimitCalculateJob(3001),
 
     /**
      * 借款人还款计划
      */
-    BorrowerRepayPlanStatCalculateJob(2002),
+    BorrowerRepayPlanStatCalculateJob(3002),
 
     /**
      * 充值提现统计
      */
-    FundStatCalculateJob(2003),
+    FundStatCalculateJob(3003),
 
     /**
      * 定期计划
      */
-    FixPlanDueStatCalculateJob(2004),
+    FixPlanDueStatCalculateJob(3004),
 
     /**
      * 定期项目
      */
-    FixProjectDueStatCalculateJob(2005),
+    FixProjectDueStatCalculateJob(3005),
 
     /**
      * 平台支出
      */
-    ExpenditureCalculateJob(2006),
+    ExpenditureCalculateJob(3006),
 
     /**
      * 项目资产统计
      */
-    AssetsStatProjectCalculateJob(2007),
+    AssetsStatProjectCalculateJob(3007),
 
     /**
      * 余额资产统计
      */
-    AssetsStatBalanceCalculateJob(2008),
+    AssetsStatBalanceCalculateJob(3008),
 
 
     /**
@@ -121,58 +160,17 @@ public enum JobType implements EnumType<JobType, Integer> {
      */
 
     /**
+     * 昨日总资产
+     */
+    LastDayAssetsCalculateJob(4001),
+    /**
      * 活期收益统计
      */
-    UserCurrentProfitCalculateJob(3001),
+    UserCurrentProfitCalculateJob(4002),
     /**
      * 昨日收益统计
      */
-    UserDailyProfitCalculateJob(3002),
-
-    /**
-     * 昨日总资产
-     */
-    LastDayAssetsCalculateJob(3003),
-
-
-    /**
-     * 灵活调度批跑
-     */
-
-    /**
-     * 批量赎回任务
-     */
-    RedeemScheduleJob(4001),
-
-    /**
-     * 更新银行卡限额任务
-     */
-    UpdateBankCardQuotaScheduleJob(4002),
-
-    /**
-     * 更新注册人数到redis
-     */
-    UpdateUserRegisterCountToRedisJob(4003),
-
-    /**
-     * 批量放款
-     */
-    BidLoanScheduleJob(4004),
-
-    /**
-     * 批量回购
-     */
-    BidBuyBackScheduleJob(4005),
-
-    /**
-     * 批量认购预跑
-     */
-    PreAutoBuyScheduleJob(4006),
-
-    /**
-     * 批量认购
-     */
-    AutoBuyScheduleJob(4007);
+    UserDailyProfitCalculateJob(4003);
 
 
     public final int type;

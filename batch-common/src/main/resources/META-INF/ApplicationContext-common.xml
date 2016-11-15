@@ -16,6 +16,15 @@
     classpath:META-INF/batch.config.properties"
                                   ignore-unresolvable="true"/>
 
+
+    <!--<bean id="configHolder" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath:META-INF/smoke/*.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
     <!--<import resource="classpath:META-INF/spring/service-consumer.xml"/>-->
     <!--<import resource="classpath:META-INF/spring/applicationContext-provider.xml"/>-->
 

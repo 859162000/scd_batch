@@ -1,7 +1,9 @@
 package com.scd.batch.common.utils;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Settings {
 
     private static Settings instance = new Settings();
@@ -17,16 +19,16 @@ public class Settings {
     /**
      * bidloan
      */
-    @Value("#{configProperties['redis.bidloan.name']}")
-    private String bidLoanName;
+    @Value("${redis.bidloan.name}")
+    private String bidLoanName = "bidLoanName";
 
-    @Value("#{configProperties['redis.bidloan.msg']}")
-    private String bidLoanMsg;
+    @Value("${redis.bidloan.msg}")
+    private String bidLoanMsg = "bidLoanMsg";
 
-    @Value("#{configProperties['redis.bidloan.timeout']}")
+    @Value("${redis.bidloan.timeout}")
     private int bidLoanTimeout;
 
-    @Value("#{configProperties['redis.bidloan.retry']}")
+    @Value("${redis.bidloan.retry}")
     private int bidLoanRetry;
 
     public String getBidLoanName() {
@@ -65,16 +67,16 @@ public class Settings {
     /**
      * redeem
      */
-    @Value("#{configProperties['redis.redeem.name']}")
+    @Value("${redis.redeem.name}")
     private String redeemName;
 
-    @Value("#{configProperties['redis.redeem.msg']}")
+    @Value("${redis.redeem.msg}")
     private String redeemMsg;
 
-    @Value("#{configProperties['redis.redeem.timeout']}")
+    @Value("${redis.redeem.timeout}")
     private int redeemTimeout;
 
-    @Value("#{configProperties['redis.redeem.retry']}")
+    @Value("${redis.redeem.retry}")
     private int redeemRetry;
 
     public String getRedeemName() {
@@ -113,16 +115,16 @@ public class Settings {
      * bid buyback
      */
 
-    @Value("#{configProperties['redis.buyBack.name']}")
+    @Value("${redis.buyBack.name}")
     private String buyBackName;
 
-    @Value("#{configProperties['redis.buyBack.msg']}")
+    @Value("${redis.buyBack.msg}")
     private String buyBackMsg;
 
-    @Value("#{configProperties['redis.buyBack.timeout']}")
+    @Value("${redis.buyBack.timeout}")
     private int buyBackTimeout;
 
-    @Value("#{configProperties['redis.buyBack.retry']}")
+    @Value("${redis.buyBack.retry}")
     private int buyBackRetry;
 
     public String getBuyBackName() {
@@ -162,16 +164,16 @@ public class Settings {
      * bid preAutoBuy
      */
 
-    @Value("#{configProperties['redis.preAutoBuy.name']}")
+    @Value("${redis.preAutoBuy.name}")
     private String preAutoBuyName;
 
-    @Value("#{configProperties['redis.preAutoBuy.msg']}")
+    @Value("${redis.preAutoBuy.msg}")
     private String preAutoBuyMsg;
 
-    @Value("#{configProperties['redis.preAutoBuy.timeout']}")
+    @Value("${redis.preAutoBuy.timeout}")
     private int preAutoBuyTimeout;
 
-    @Value("#{configProperties['redis.preAutoBuy.retry']}")
+    @Value("${redis.preAutoBuy.retry}")
     private int preAutoBuyRetry;
 
     public String getPreAutoBuyName() {
@@ -211,16 +213,16 @@ public class Settings {
      * autoBuy
      */
 
-    @Value("#{configProperties['redis.autoBuy.name']}")
+    @Value("${redis.autoBuy.name}")
     private String autoBuyName;
 
-    @Value("#{configProperties['redis.autoBuy.msg']}")
+    @Value("${redis.autoBuy.msg}")
     private String autoBuyMsg;
 
-    @Value("#{configProperties['redis.autoBuy.timeout']}")
+    @Value("${redis.autoBuy.timeout}")
     private int autoBuyTimeout;
 
-    @Value("#{configProperties['redis.autoBuy.retry']}")
+    @Value("${redis.autoBuy.retry}")
     private int autoBuyRetry;
 
     public String getAutoBuyName() {
