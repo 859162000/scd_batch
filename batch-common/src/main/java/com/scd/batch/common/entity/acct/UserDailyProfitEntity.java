@@ -11,7 +11,7 @@ public class UserDailyProfitEntity {
 
     private String date;
 
-    // 每日总收益
+    // 每日收益
     private BigDecimal profit;
 
     // 每日活期收益
@@ -20,7 +20,11 @@ public class UserDailyProfitEntity {
     public UserDailyProfitEntity() {
     }
 
-    public UserDailyProfitEntity(Integer id, String uid, String date, BigDecimal profit, BigDecimal currentProfit) {
+    public UserDailyProfitEntity(Integer id,
+                                 String uid,
+                                 String date,
+                                 BigDecimal profit,
+                                 BigDecimal currentProfit) {
         this.id = id;
         this.uid = uid;
         this.date = date;

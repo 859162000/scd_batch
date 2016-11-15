@@ -39,7 +39,7 @@
         update user_accumulative_profit
         set
         total_profit = total_profit + #{entity.totalProfit},
-        current_invest_profit = total_profit + #{entity.currentInvestProfit},
+        current_invest_profit = current_invest_profit + #{entity.currentInvestProfit},
         version = version + 1,
         update_time = CURRENT_TIMESTAMP
         where uid = #{entity.uid}

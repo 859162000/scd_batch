@@ -17,26 +17,29 @@ public class UserProfitEntity {
     // 昨日收益
     private BigDecimal profit;
 
-    // 活期收益
-    private BigDecimal currentProfit;
-
     // 累计昨日收益
     private BigDecimal totalProfit;
 
-    // 累计活期收益
+    // 活期昨日收益
+    private BigDecimal currentProfit;
+
+    // 活期累计收益
     private BigDecimal currentInvestProfit;
 
     public UserProfitEntity() {
     }
 
-    public UserProfitEntity(Integer id, String uid, Date date, BigDecimal profit, BigDecimal currentProfit,
-                            BigDecimal totalProfit, BigDecimal currentInvestProfit) {
+    public UserProfitEntity(Integer id, String uid, Date date,
+                            BigDecimal profit,
+                            BigDecimal currentProfit,
+                            BigDecimal totalProfit,
+                            BigDecimal currentInvestProfit) {
         this.id = id;
         this.uid = uid;
         this.date = date;
         this.profit = profit;
-        this.currentProfit = currentProfit;
         this.totalProfit = totalProfit;
+        this.currentProfit = currentProfit;
         this.currentInvestProfit = currentInvestProfit;
     }
 

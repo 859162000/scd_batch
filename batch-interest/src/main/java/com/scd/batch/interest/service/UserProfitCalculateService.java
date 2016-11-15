@@ -6,6 +6,7 @@ import com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.AcctUserDailyProfitDao;
 import com.scd.batch.common.dao.acct.UserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.UserDailyProfitDao;
+import com.scd.batch.common.dao.bid.CreditRepayRealDao;
 import com.scd.batch.common.dao.bid.CreditorRelationDao;
 import com.scd.batch.common.entity.acct.UserAccumulativeProfitEntity;
 import com.scd.batch.common.entity.acct.UserDailyProfitEntity;
@@ -26,7 +27,7 @@ import java.util.List;
 
 
 /**
- * 活期收益
+ * 秒钱宝，计算收益
  */
 @Service
 public class UserProfitCalculateService {
@@ -46,6 +47,10 @@ public class UserProfitCalculateService {
     @Autowired
     private AcctUserAccumulateProfitDao acctUserAccumulateProfitDao;
 
+    @Autowired
+    private CreditRepayRealDao creditRepayRealDao;
+
+
     // 取数据库计算收益
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
 
@@ -57,13 +62,24 @@ public class UserProfitCalculateService {
 
         for (UserCreditroRelationEntity p : entityList) {
 
-            // 活期收益
+            // 每日活期计算收益
             if (p.getProductType() == ProductType.CURRENT.getCode()) {
+
                 // 计息规则中的日期判断
                 double intrest = InterestCalculator.dailyInterest(p.getRemainPrincipal(),
                         p.getInterestRate(),
                         InterestRateType.YEAR);
 
+                // TODO 回购是否会付息，当日付息金额
+                double repayInterest = 0.0;
+                try {
+                    repayInterest = creditRepayRealDao.repayInterestAmountByDay(tableSpec,
+                            lastDate, p.getBuyerUid());
+                } catch (Exception e) {
+
+                }
+
+                // 活期总收益 = 累计活期收益 + 当日活期收益 - 当日付息金额
                 UserProfitEntity entity = new UserProfitEntity(
                         0,
                         p.getBuyerUid(),
@@ -71,7 +87,7 @@ public class UserProfitCalculateService {
                         new BigDecimal(0),
                         new BigDecimal(intrest),
                         new BigDecimal(0),
-                        new BigDecimal(intrest)
+                        new BigDecimal(intrest - repayInterest)
                 );
                 profitEntityList.add(entity);
             }
@@ -85,7 +101,7 @@ public class UserProfitCalculateService {
     public void update2DB(List<UserProfitEntity> profitEntityList) {
 
         profitEntityList.forEach(p -> {
-            // 当日总收益
+
             UserDailyProfitEntity entity = new UserDailyProfitEntity(
                     0,
                     p.getUid(),
@@ -117,8 +133,6 @@ public class UserProfitCalculateService {
             }
 
             // 更新acct
-
-
             if (acctUserDailyProfitDao.checkExists(TableSpec.getDefault(), entity.getUid(), entity.getDate()) > 0) {
                 acctUserDailyProfitDao.updateIncrement2DB(TableSpec.getDefault(), entity);
             } else {

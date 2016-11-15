@@ -5,7 +5,7 @@ import com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.AcctUserDailyProfitDao;
 import com.scd.batch.common.dao.acct.UserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.UserDailyProfitDao;
-import com.scd.batch.common.dao.bid.CreditorRelationDao;
+import com.scd.batch.common.dao.bid.CreditRepayRealDao;
 import com.scd.batch.common.dao.interest.UserAssetsDao;
 import com.scd.batch.common.dao.trade.RechargeLDao;
 import com.scd.batch.common.dao.trade.UserBalanceDao;
@@ -73,6 +73,8 @@ public class UserDailyProfitCalculateService {
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();
 
+        // 昨日收益 = 每日收益，0
+
         for (BalanceAssetsEntity p : entityList) {
 
             /** 总资产 = 可用余额 + 体现冻结金额 + 投资冻结金额 + 还款冻结金额 + 活期赎回冻结金额
@@ -104,7 +106,7 @@ public class UserDailyProfitCalculateService {
                     transDate,
                     p.getUid());
 
-            // 昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
+            // 总的昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
             double profit = currentTotal - lastTotal + withdrawSumByDate - rechargeSumByDate;
 
             logger.debug("昨日收益：" + profit + ", currentTotal:" +
@@ -112,6 +114,7 @@ public class UserDailyProfitCalculateService {
                     ", withdrawSumByDate:" + withdrawSumByDate +
                     ", rechargeSumByDate:" + rechargeSumByDate);
 
+            // 累加到总收益里面去
             UserProfitEntity entity = new UserProfitEntity(
                     0,
                     p.getUid(),
@@ -177,8 +180,6 @@ public class UserDailyProfitCalculateService {
             }
 
             // 更新acct
-
-
             if (acctUserDailyProfitDao.checkExists(TableSpec.getDefault(), entity.getUid(), entity.getDate()) > 0) {
                 acctUserDailyProfitDao.updateIncrement2DB(TableSpec.getDefault(), entity);
             } else {

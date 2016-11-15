@@ -93,5 +93,13 @@
         order by ID
     </select>
 
+    <select id="repayInterestAmountByDay" resultType="java.lang.Double">
+        select COALESCE(sum(repay_interest), 0) as amt
+        from bid_credit_repay_real
+        where invest_uid = #{uid}
+        and repay_date = #{repayDate}
+        group by invest_uid
+    </select>
+
 
 </mapper>

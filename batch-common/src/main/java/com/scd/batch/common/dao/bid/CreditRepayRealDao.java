@@ -23,5 +23,9 @@ public interface CreditRepayRealDao {
                                         @Param("transDate") Date transDate,
                                         @Param("batchIds") List<Long> batchIds);
 
+    @MultiDB(ds = DataSourceType.BID)
+    double repayInterestAmountByDay(@Param("ts") TableSpec ts,
+                                    @Param("repayDate") Date batchrepayDateIds,
+                                    @Param("uid") String uid);
 
 }

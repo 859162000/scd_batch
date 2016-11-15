@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 昨日收益统计
+ * 总资产，昨日收益统计
  */
 public class UserDailyProfitCalculateJob extends StatisticsCalculateJob {
 

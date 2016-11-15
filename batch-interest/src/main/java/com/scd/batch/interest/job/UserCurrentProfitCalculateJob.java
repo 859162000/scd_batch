@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 活期收益统计
+ * 秒钱宝，收益统计
  */
 public class UserCurrentProfitCalculateJob extends StatisticsCalculateJob {
 
