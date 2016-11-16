@@ -73,12 +73,12 @@
         </foreach>
         <![CDATA[
               AND finish_time >= #{startDate}
-              <!--AND finish_time <= #{endDate}-->
-        ]]>
+           ]]>
         <if test="uid != null">
             AND uid = #{uid}
         </if>
     </select>
+    <!--AND finish_time <= #{endDate}-->
 
     <select id="getAllTransferIds" resultType="java.lang.Integer">
         select id
