@@ -1,0 +1,3 @@
+0 10,17 * * * /root/git/batch/BatchLauncher/bin/dayrun.sh >>/var/batch.log
+40 18 * * * /root/git/batch/BatchLauncher/bin/dayrun.sh >>/var/batch.log
+1 0 * * * /root/git/batch/BatchLauncher/bin/jobs.sh >>/var/batch.log
