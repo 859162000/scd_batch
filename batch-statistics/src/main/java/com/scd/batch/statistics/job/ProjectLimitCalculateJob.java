@@ -22,6 +22,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
@@ -92,14 +93,12 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
         List<RepayPlanStatEntity> repayPlanList = repayPlanDao.getProjectLimitList(tableSpec, projectCodeList);
         if (repayPlanList == null || repayPlanList.isEmpty()) {
             logger.info("repayPlanList isEmpty");
-            return null;
         }
 
         // 项目实际还款汇总
         List<RepayPlanStatEntity> repayRealList = repayRealDao.getProjectLimitList(tableSpec, projectCodeList);
         if (repayRealList == null || repayRealList.isEmpty()) {
             logger.info("repayRealList isEmpty");
-            return null;
         }
 
         List<ProjectLimitEntity> projectLimitEntityList = buildProjectLimit(projectList, repayPlanList, repayRealList);
@@ -142,10 +141,14 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
                                                        List<RepayPlanStatEntity> repayRealList) {
 
         ConcurrentHashMap<String, RepayPlanStatEntity> repayPlanMap = new ConcurrentHashMap<>();
-        repayPlanList.forEach(p -> repayPlanMap.put(p.getProjectCode(), p));
+        if (repayPlanList != null) {
+            repayPlanList.forEach(p -> repayPlanMap.put(p.getProjectCode(), p));
+        }
 
         ConcurrentHashMap<String, RepayPlanStatEntity> repayRealMap = new ConcurrentHashMap<>();
-        repayRealList.forEach(p -> repayRealMap.put(p.getProjectCode(), p));
+        if (repayRealList != null) {
+            repayRealList.forEach(p -> repayRealMap.put(p.getProjectCode(), p));
+        }
 
         List<ProjectLimitEntity> projectLimitEntityList = new ArrayList<>();
 
