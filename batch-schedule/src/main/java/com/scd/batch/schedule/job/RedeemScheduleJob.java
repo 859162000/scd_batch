@@ -24,7 +24,9 @@ public class RedeemScheduleJob extends ScheduleJob {
 
     @Override
     protected JobType getJobType() {
-        return JobType.RedeemScheduleJob;
+
+//        return JobType.RedeemScheduleJob;
+        return null;
     }
 
     @Override

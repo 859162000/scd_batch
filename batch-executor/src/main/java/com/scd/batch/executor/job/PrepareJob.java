@@ -63,6 +63,12 @@ public class PrepareJob extends AbstractExecutor {
      */
     public void init() {
 
+        // 灵活调度
+//        jobTypes.add(JobType.RedeemScheduleJob);
+        jobTypes.add(JobType.BidLoanScheduleJob);
+        jobTypes.add(JobType.BidBuyBackScheduleJob);
+        jobTypes.add(JobType.PreAutoBuyScheduleJob);
+        jobTypes.add(JobType.AutoBuyScheduleJob);
 
         // 对账相关
         jobTypes.add(JobType.LoanCrawlerJob);
@@ -97,14 +103,9 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.UserDailyProfitCalculateJob);
         jobTypes.add(JobType.LastDayAssetsCalculateJob);
 
-        // 灵活调度
-        jobTypes.add(JobType.RedeemScheduleJob);
+        // 其他调度
         jobTypes.add(JobType.UpdateBankCardQuotaScheduleJob);
         jobTypes.add(JobType.UpdateUserRegisterCountToRedisJob);
-        jobTypes.add(JobType.BidLoanScheduleJob);
-        jobTypes.add(JobType.BidBuyBackScheduleJob);
-        jobTypes.add(JobType.PreAutoBuyScheduleJob);
-        jobTypes.add(JobType.AutoBuyScheduleJob);
 
     }
 
