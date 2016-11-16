@@ -72,8 +72,8 @@
             #{status}
         </foreach>
         <![CDATA[
-              AND start_time >= #{startDate}
-              AND start_time <= #{endDate}
+              AND finish_time >= #{startDate}
+              <!--AND finish_time <= #{endDate}-->
         ]]>
         <if test="uid != null">
             AND uid = #{uid}

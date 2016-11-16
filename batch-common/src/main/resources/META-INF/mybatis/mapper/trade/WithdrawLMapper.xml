@@ -65,8 +65,8 @@
             #{status}
         </foreach>
         <![CDATA[
-            AND create_time >= #{startDate, jdbcType=TIMESTAMP}
-            AND create_time <= #{endDate, jdbcType=TIMESTAMP}
+            AND finish_time >= #{startDate, jdbcType=TIMESTAMP}
+            <!--AND finish_time <= #{endDate, jdbcType=TIMESTAMP}-->
 		]]>
         <if test="uid != null">
             AND uid = #{uid}
