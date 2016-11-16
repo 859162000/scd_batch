@@ -92,7 +92,7 @@
         left join bid_product product
         on relation.product_code = product.product_code
         where relation.data_status = 1
-        and product.product_type = 3
+        and product.product_type = 1
     </select>
 
     <!-- ProductAssets -->

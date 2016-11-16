@@ -66,6 +66,7 @@ public class UserDailyProfitCalculateService {
     public List<UserProfitEntity> calculateProfit(TableSpec tableSpec, Date transDate, List<Long> batchIdList) {
 
         Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
+        Date preYestodayDate = ShortDate.valueOf(transDate).addDays(-2).toDate();
         // 当前日期的前一天
         List<BalanceAssetsEntity> entityList = balanceDao.selectBalanceByBatchUid(tableSpec,
                 lastDate,
@@ -84,12 +85,12 @@ public class UserDailyProfitCalculateService {
                     p.getRepayFreezeSa() + p.getCapitalFreezeSa()
                     + p.getCurrentCapital() + p.getFixendCapital() + p.getFixperiodCapital();
 
-            // 昨日总资产
-            UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), lastDate);
+            // 前日总资产
+            UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), preYestodayDate);
             double lastTotal = 0.0;
             if (assets != null) {
                 lastTotal = assets.getAssets();
-                logger.debug("昨日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastDate:" + lastDate);
+                logger.debug("前日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastDate:" + lastDate);
             }
 
             // 按天统计提现金额

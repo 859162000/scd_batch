@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3b29c10-b389-4fb2-a548-cd29fca7c71a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/logs/gateway-error.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/logs/gateway_info.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/log4j2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-common/src/test/java/com/scd/batch/common/util/SettingTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway-error-2016-11-14-1.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway_info-2016-11-14-1.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/ScheduleJob.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/ScheduleJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java" afterPath="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/redis.properties" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/redis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-redis.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/test/redis.properties" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/test/redis.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/logs/gateway-error.log" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway-error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/logs/gateway_info.log" afterPath="$PROJECT_DIR$/batch-executor/logs/gateway_info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" afterPath="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" afterPath="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" afterPath="$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/strategy/InterestCalculator.java" afterPath="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/strategy/InterestCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java" afterPath="$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-schedule/src/test/java/com/scd/batch/schedule/RedeemScheduleJobTest.java" afterPath="$PROJECT_DIR$/batch-schedule/src/test/java/com/scd/batch/schedule/RedeemScheduleJobTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditorRelationMapper.xml" afterPath="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditorRelationMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java" afterPath="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java" />
     </list>
     <ignored path="batch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,76 +118,12 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RedeemScheduleJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="57" column="19" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2060#2061#0" expanded="true" />
-                <element signature="e#2096#2097#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redis.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/redis.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redis.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/test/redis.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationContext-common.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobs.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="BatchLauncherTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="958">
-              <caret line="404" column="25" selection-start-line="404" selection-start-column="25" selection-end-line="404" selection-end-column="25" />
+            <state relative-caret-position="127">
+              <caret line="391" column="11" selection-start-line="391" selection-start-column="11" selection-end-line="391" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,28 +134,88 @@
       <file leaf-file-name="JobType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="139" column="33" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/bid/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProductType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditorRelationDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/CreditorRelationDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="40" column="61" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditorRelationMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditorRelationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+              <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java">
+      <file leaf-file-name="gateway_info-2016-11-14-1.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-executor/logs/gateway_info-2016-11-14-1.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1656">
-              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state relative-caret-position="335">
+              <caret line="11420" column="425" selection-start-line="11420" selection-start-column="425" selection-end-line="11420" selection-end-column="425" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/ScheduleJob.java">
+      <file leaf-file-name="UserDailyProfitCalculateService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="188" column="36" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="36" />
+            <state relative-caret-position="261">
+              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LastDayAssetsCalculateService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/LastDayAssetsCalculateService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAssetsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/interest/UserAssetsDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -275,7 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/CashTransferDao.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TransferErrorDao.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/TrfTransferDao.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/reconciliation/HuiFuUserBalanceEntity.java" />
@@ -307,7 +280,6 @@
         <option value="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/job/UserCurrentProfitCalculateJob.java" />
         <option value="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserProfitCalculateService.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/acct/UserDailyProfitEntity.java" />
-        <option value="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserAccumulativeProfitMapper.xml" />
         <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/spring/spring-redis.xml" />
         <option value="$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml" />
@@ -326,6 +298,8 @@
         <option value="$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java" />
         <option value="$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java" />
+        <option value="$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java" />
+        <option value="$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditorRelationMapper.xml" />
       </list>
     </option>
   </component>
@@ -426,13 +400,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +414,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="jobcommand&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;jobs.sh&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/scripts/jobs.sh&#10;redeem&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;rate&#9;PSI&#9;JAVA://com.scd.batch.common.constant.interest.InterestRateType&#10;redis.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/redis.properties&#10;BatchLaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;setting&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;ApplicationContext-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml&#10;settingTest&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/test/java/com/scd/batch/common/util/SettingTest.java&#10;redeemsche&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;BatchLaunch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;setting.java&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java&#10;redis.p&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/redis.properties&#10;redis.prop&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/test/redis.properties&#10;BatchL&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;RedeemScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;Batch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserDailyProfit.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserDailyProfitMapper.xml&#10;UserDailyProfitCalculateJob.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;Job.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/T_JOB.xml&#10;jobtyp&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;userDailyProfitCalculateJo&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;phase&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/PhaseStatus.java&#10;CreditRepayReal.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditRepayRealMapper.xml&#10;UserDailyProfitCalculateJob&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;applicationcontext-&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/resources/META-INF/ApplicationContext-interest.xml&#10;userDailyProfitCalculate.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;batchlan&#9;RUN_CONFIGURATION&#9;BatchLauncherTest.testProcessJobSuccess_notice&#10;WithdrawL&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/trade/WithdrawL.java&#10;userda&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java&#10;wid&#9;PSI&#9;JAVA://com.scd.batch.common.dao.trade.WithdrawLDao&#10;UserDailyProfit.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserCurrentProfitCalculateJob.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserCurrentProfitCalculateJob.java&#10;noticeServiceImpl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;Batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;/smoke/dubbo.properties&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/dubbo.properties&#10;phasestat&#9;PSI&#9;JAVA://com.scd.batch.common.job.constants.PhaseStatus&#10;schema.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema.sql&#10;Business&#9;FILE&#9;jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161107.063616-46.jar!/com/miaoqian/transvc/api/business/Business.class&#10;dubbo-consu&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml&#10;spring-redis.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-redis.xml&#10;jobs-recon&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;HuiFuUserBalanceEntity&#9;PSI&#9;JAVA://com.scd.batch.common.entity.reconciliation.HuiFuUserBalanceEntity&#10;userbala&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java&#10;balance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/mapper/BalanceMapper.xml&#10;UserBalance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/trade/UserBalanceMapper.xml&#10;HuiFuUserBalanceDao&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/reconciliation/HuiFuUserBalanceDao.java" />
+    <property name="SearchEverywhereHistoryKey" value="product&#9;PSI&#9;JAVA://com.scd.batch.common.constant.bid.ProductType&#10;jobtype&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;jobs.&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/scripts/jobs.sh&#10;jobcommand&#9;PSI&#9;JAVA://com.scd.batch.common.job.command.JobCommand&#10;jobs.sh&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/scripts/jobs.sh&#10;redeem&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;rate&#9;PSI&#9;JAVA://com.scd.batch.common.constant.interest.InterestRateType&#10;redis.pro&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/redis.properties&#10;BatchLaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;setting&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java&#10;pom.xml&#9;FILE&#9;file://F:/github/scd_batch/pom.xml&#10;ApplicationContext-common.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/ApplicationContext-common.xml&#10;settingTest&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/test/java/com/scd/batch/common/util/SettingTest.java&#10;redeemsche&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;BatchLaunch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;setting.java&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java&#10;redis.p&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/redis.properties&#10;redis.prop&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/test/redis.properties&#10;BatchL&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;RedeemScheduleJob&#9;FILE&#9;file://F:/github/scd_batch/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java&#10;Batch&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;AcctUserDailyProfit.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/AcctUserDailyProfitMapper.xml&#10;UserDailyProfitCalculateJob.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;Job.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/executor/T_JOB.xml&#10;jobtyp&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java&#10;userDailyProfitCalculateJo&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;phase&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/job/constants/PhaseStatus.java&#10;CreditRepayReal.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditRepayRealMapper.xml&#10;UserDailyProfitCalculateJob&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;batchl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;applicationcontext-&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/resources/META-INF/ApplicationContext-interest.xml&#10;userDailyProfitCalculate.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java&#10;batchlan&#9;RUN_CONFIGURATION&#9;BatchLauncherTest.testProcessJobSuccess_notice&#10;WithdrawL&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/entity/trade/WithdrawL.java&#10;userda&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java&#10;wid&#9;PSI&#9;JAVA://com.scd.batch.common.dao.trade.WithdrawLDao&#10;UserDailyProfit.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/mybatis/mapper/acct/UserDailyProfitMapper.xml&#10;UserCurrentProfitCalculateJob.java&#9;FILE&#9;file://F:/github/scd_batch/batch-interest/src/main/java/com/scd/batch/interest/job/UserCurrentProfitCalculateJob.java&#10;noticeServiceImpl&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/main/java/com/scd/batch/executor/service/NoticeServiceImpl.java&#10;Batchlaun&#9;FILE&#9;file://F:/github/scd_batch/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java&#10;/smoke/dubbo.properties&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/smoke/dubbo.properties&#10;phasestat&#9;PSI&#9;JAVA://com.scd.batch.common.job.constants.PhaseStatus&#10;schema.sql&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/dev/schema.sql&#10;Business&#9;FILE&#9;jar://F:/.m2/repository/com/miaoqian/transvc/transvc-api/1.0-SNAPSHOT/transvc-api-1.0-20161107.063616-46.jar!/com/miaoqian/transvc/api/business/Business.class&#10;dubbo-consu&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/dubbo-consumer.xml&#10;spring-redis.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/resources/META-INF/spring/spring-redis.xml&#10;jobs-recon&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/spring/spring-jobs-reconciliation.xml&#10;HuiFuUserBalanceEntity&#9;PSI&#9;JAVA://com.scd.batch.common.entity.reconciliation.HuiFuUserBalanceEntity&#10;userbala&#9;FILE&#9;file://F:/github/scd_batch/batch-common/src/main/java/com/scd/batch/common/dao/trade/UserBalanceDao.java&#10;balance.xml&#9;FILE&#9;file://F:/github/scd_batch/batch-reconciliation/src/main/resources/META-INF/mapper/BalanceMapper.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32150775" />
@@ -1204,31 +1178,31 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32703322" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22565866" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34401348" sideWeight="0.507377" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8024055" sideWeight="0.49262294" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38087055" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69072163" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3544922" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35409835" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="ConsoleMavenPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4135166" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4054983" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438841" sideWeight="0.50884956" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49369988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39426228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49369988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22565866" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38087055" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1257,11 +1231,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8024055" sideWeight="0.49262294" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38087055" sideWeight="0.49316406" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.69072163" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3544922" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69072163" sideWeight="0.4885246" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35409835" sideWeight="0.49115044" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4135166" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4057239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438841" sideWeight="0.50884956" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -1298,75 +1272,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/job/UserDailyProfitCalculateJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/test/java/com/scd/batch/common/uid/worker/dao/WorkerNodeDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="15" column="21" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/test/java/com/scd/batch/common/util/IdGenUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-statistics/src/test/java/com/scd/batch/statistics/job/BorrowerRepayPlanStatCalculateJobTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-statistics/src/main/resources/META-INF/spring/spring-service-statistics.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/spring-service-executor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch-executor/src/main/resources/META-INF/spring/batch.service.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="957">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,23 +1299,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/SettingsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/SettingsTest.java" />
     <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/schedule/SwitchJobTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="209" column="12" selection-start-line="209" selection-start-column="12" selection-end-line="209" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,7 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
           <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,10 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1465,11 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1477,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1485,9 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
           <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1511,7 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +1401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,7 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1543,9 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding>
-            <element signature="e#7922#7923#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1553,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1561,7 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
           <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1601,7 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="1629" column="0" selection-start-line="1629" selection-start-column="0" selection-end-line="1629" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1617,7 +1491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1633,60 +1506,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="404" column="25" selection-start-line="404" selection-start-column="25" selection-end-line="404" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-            <element signature="e#2096#2097#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/batch/ScheduleJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="4843">
           <caret line="188" column="36" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="3045">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2597#2598#0" expanded="false" />
+            <element signature="e#2929#2930#0" expanded="false" />
+            <element signature="e#2975#2976#0" expanded="false" />
+            <element signature="e#3026#3027#0" expanded="false" />
+            <element signature="e#3118#3119#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/test/redis.properties">
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1699,26 +1549,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-executor/src/main/scripts/jobs.sh">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/test/redis.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        <state relative-caret-position="174">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/smoke/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/utils/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-schedule/src/main/java/com/scd/batch/schedule/job/RedeemScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/src/test/java/com/scd/batch/executor/job/BatchLauncherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="391" column="11" selection-start-line="391" selection-start-column="11" selection-end-line="391" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/interest/UserAssetsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/LastDayAssetsCalculateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-interest/src/main/java/com/scd/batch/interest/service/UserDailyProfitCalculateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/constants/JobType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
+        <state relative-caret-position="175">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/job/command/JobCommand.java">
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/entity/bid/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+        <state relative-caret-position="467">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/constant/bid/ProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/java/com/scd/batch/common/dao/bid/CreditorRelationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-executor/logs/gateway_info-2016-11-14-1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="11420" column="425" selection-start-line="11420" selection-start-column="425" selection-end-line="11420" selection-end-column="425" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch-common/src/main/resources/META-INF/mybatis/mapper/bid/CreditorRelationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
           <folding />
         </state>
       </provider>
