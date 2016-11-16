@@ -17,6 +17,9 @@ public class JobCommand extends AbstractCommand {
         // 任务控制
         PREPARE("prepare"),
 
+        // 日间认购调度
+        DayRedeemSchedule("dayRedeemSchedule"),
+
         /**
          * 灵活调度
          */
@@ -104,7 +107,9 @@ public class JobCommand extends AbstractCommand {
          * 收益
          */
         UserCurrentProfitCalculateJob("userCurrentProfitCalculate"),
+
         UserDailyProfitCalculateJob("userDailyProfitCalculate"),
+
         LastDayAssetsCalculateJob("lastDayAssetsCalculate"),
 
 

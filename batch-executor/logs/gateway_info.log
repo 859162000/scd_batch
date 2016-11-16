@@ -213,3 +213,509 @@
 2016-11-16 14:38:22 [main] INFO  com.scd.batch.interest.job.LastDayAssetsCalculateJob - cancel process executor:[LastDayAssetsCalculateJob[name=lastDayAssetsCalculate.job,cycleRunning=false]] with context:[ExecutorContext[status=<null>,attaches={com.scd.batch.common.utils.ShortDate=2016-11-12}]], because of before execute is false
 2016-11-16 14:38:22 [main] INFO  com.scd.batch.interest.job.LastDayAssetsCalculateJob - job: lastDayAssetsCalculate.job finished, takes: 3212
 2016-11-16 14:38:22 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher success for args: -n, lastDayAssetsCalculate, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+2016-11-16 17:30:07 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher args: -n, dayRedeemSchedule, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+2016-11-16 17:32:35 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher args: -n, dayRedeemSchedule, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+2016-11-16 17:32:35 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher command options: com.scd.batch.common.job.command.CommandOptions@1d37183[JOB,dayRedeemSchedule,classpath:META-INF/ApplicationContext-executor.xml,true]
+2016-11-16 17:32:36 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-executor.xml]
+2016-11-16 17:32:37 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-consumer.xml]
+2016-11-16 17:32:37 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-executor.xml]
+2016-11-16 17:32:37 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-executor.xml]
+2016-11-16 17:32:38 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-common.xml]
+2016-11-16 17:32:38 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-dao-common.xml]
+2016-11-16 17:32:38 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-common.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-statistics.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-statistics.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-statistics.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-reconciliation.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-reconciliation.xml]
+2016-11-16 17:32:43 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-reconciliation.xml]
+2016-11-16 17:32:44 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-schedule.xml]
+2016-11-16 17:32:44 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-schedule.xml]
+2016-11-16 17:32:44 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-schedule.xml]
+2016-11-16 17:32:44 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-redis.xml]
+2016-11-16 17:32:45 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-interest.xml]
+2016-11-16 17:32:45 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-interest.xml]
+2016-11-16 17:32:45 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-interest.xml]
+2016-11-16 17:32:45 [main] INFO  org.springframework.context.support.GenericXmlApplicationContext - Refreshing org.springframework.context.support.GenericXmlApplicationContext@1fe63b9: startup date [Wed Nov 16 17:32:45 CST 2016]; root of context hierarchy
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\AcctUserAccumulateProfitDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\AcctUserDailyProfitDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserAccumulateProfitDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserDailyProfitDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserRegisterDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\BorrowerRelationDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\CreditorRelationDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\CreditRepayRealDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\LoanDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\ProjectDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\RepayPlanDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\RepayRealDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\BorrowerRepaymentPlanDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\FixProdDueDateReportDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\PlatformAssetReportDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\PlatformExpendReportDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\ProjectQuotaReportDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\UserRwDailyReportDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\interest\UserAssetsDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\promotion\CouponsUseRecordsDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\CashTransferDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\HuiFuUserBalanceDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\LoanPaymentTransferDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\SaveTransferDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\TransferErrorDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\TrfTransferDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\AssetsStatDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\BorrowerRepayPlanStatDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\ExpenditureStatDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\FixProjectDueStatDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\FundStatDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\ProjectLimitDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\LoansCbDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RechargeLDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RedeemTDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RepaymentCbDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\SubscribeTDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\UserBalanceDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\WithdrawLDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\daycut\dao\DayCutDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\FailRecordDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\JobDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\SwitchDao.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\uid\worker\dao\WorkerNodeDAO.class]
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'acctUserAccumulateProfitDao' and 'com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'acctUserDailyProfitDao' and 'com.scd.batch.common.dao.acct.AcctUserDailyProfitDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccumulateProfitDao' and 'com.scd.batch.common.dao.acct.UserAccumulateProfitDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDailyProfitDao' and 'com.scd.batch.common.dao.acct.UserDailyProfitDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userRegisterDao' and 'com.scd.batch.common.dao.acct.UserRegisterDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRelationDao' and 'com.scd.batch.common.dao.bid.BorrowerRelationDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'creditorRelationDao' and 'com.scd.batch.common.dao.bid.CreditorRelationDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'creditRepayRealDao' and 'com.scd.batch.common.dao.bid.CreditRepayRealDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loanDao' and 'com.scd.batch.common.dao.bid.LoanDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectDao' and 'com.scd.batch.common.dao.bid.ProjectDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repayPlanDao' and 'com.scd.batch.common.dao.bid.RepayPlanDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repayRealDao' and 'com.scd.batch.common.dao.bid.RepayRealDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRepaymentPlanDao' and 'com.scd.batch.common.dao.financial.BorrowerRepaymentPlanDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fixProdDueDateReportDao' and 'com.scd.batch.common.dao.financial.FixProdDueDateReportDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'platformAssetReportDao' and 'com.scd.batch.common.dao.financial.PlatformAssetReportDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'platformExpendReportDao' and 'com.scd.batch.common.dao.financial.PlatformExpendReportDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectQuotaReportDao' and 'com.scd.batch.common.dao.financial.ProjectQuotaReportDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userRwDailyReportDao' and 'com.scd.batch.common.dao.financial.UserRwDailyReportDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAssetsDao' and 'com.scd.batch.common.dao.interest.UserAssetsDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'couponsUseRecords' and 'com.scd.batch.common.dao.promotion.CouponsUseRecordsDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'cashTransferDao' and 'com.scd.batch.common.dao.reconciliation.CashTransferDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'huiFuUserBalanceDao' and 'com.scd.batch.common.dao.reconciliation.HuiFuUserBalanceDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loanPaymentTransferDao' and 'com.scd.batch.common.dao.reconciliation.LoanPaymentTransferDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'saveTransferDao' and 'com.scd.batch.common.dao.reconciliation.SaveTransferDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'transferErrorDao' and 'com.scd.batch.common.dao.reconciliation.TransferErrorDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'trfTransferDao' and 'com.scd.batch.common.dao.reconciliation.TrfTransferDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'assetsStatDao' and 'com.scd.batch.common.dao.statistics.AssetsStatDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRepayPlanStatDao' and 'com.scd.batch.common.dao.statistics.BorrowerRepayPlanStatDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'expenditureStatDao' and 'com.scd.batch.common.dao.statistics.ExpenditureStatDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fixProjectDueStatDao' and 'com.scd.batch.common.dao.statistics.FixProjectDueStatDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fundStatDao' and 'com.scd.batch.common.dao.statistics.FundStatDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectLimitDao' and 'com.scd.batch.common.dao.statistics.ProjectLimitDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loansCbDao' and 'com.scd.batch.common.dao.trade.LoansCbDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'rechargeLDao' and 'com.scd.batch.common.dao.trade.RechargeLDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'redeemTDao' and 'com.scd.batch.common.dao.trade.RedeemTDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repaymentCbDao' and 'com.scd.batch.common.dao.trade.RepaymentCbDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'subscribeTDao' and 'com.scd.batch.common.dao.trade.SubscribeTDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userBalanceDao' and 'com.scd.batch.common.dao.trade.UserBalanceDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'withdrawLDao' and 'com.scd.batch.common.dao.trade.WithdrawLDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dayCutDao' and 'com.scd.batch.common.daycut.dao.DayCutDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'failRecordDao' and 'com.scd.batch.common.job.batch.control.dao.FailRecordDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'jobDao' and 'com.scd.batch.common.job.batch.control.dao.JobDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'switchDao' and 'com.scd.batch.common.job.batch.control.dao.SwitchDao' mapperInterface
+2016-11-16 17:32:46 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'workerNodeDAO' and 'com.scd.batch.common.uid.worker.dao.WorkerNodeDAO' mapperInterface
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-executor\target\classes\META-INF\kangaroo-msg.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-common\target\classes\META-INF\batch.config.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-common\target\classes\META-INF\global.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/org/apache/logging/log4j/log4j-core/2.6.2/log4j-core-2.6.2.jar!/META-INF/log4j-provider.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/com/alibaba/druid/1.0.19/druid-1.0.19.jar!/META-INF/druid-driver.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/com/alibaba/druid/1.0.19/druid-1.0.19.jar!/META-INF/druid-filter.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-statistics\target\classes\META-INF\config-statistics.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-statistics\target\classes\META-INF\generator.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-reconciliation\target\classes\META-INF\reconciliation.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/test/db.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/test/dubbo.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/test/redis.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/global.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/batch.config.properties]
+2016-11-16 17:32:47 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/reconciliation.properties]
+2016-11-16 17:32:49 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2016-11-16 17:32:49 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\AcctUserAccumulativeProfitMapper.xml]'
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\AcctUserDailyProfitMapper.xml]'
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserAccumulativeProfitMapper.xml]'
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserDailyProfitMapper.xml]'
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserRegisterMapper.xml]'
+2016-11-16 17:32:50 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\BorrowerRelationMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\CreditorRelationMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\CreditRepayRealMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\LoanMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\ProjectMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\RepayPlanMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\RepayRealMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\DayCutDaoMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\M_WORKER_NODE.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\SwitchDAO.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\T_FAIL_RECORD.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\T_JOB.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\BorrowerRepaymentPlan.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\FixProdDuedateReportMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\PlatformAssetReportMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\PlatformExpendReportMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\ProjectQuotaReportMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\UserRwDailyReport.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\interest\UserAssetsMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\promotion\CouponsUseRecordsMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\BalanceMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\CashTransfer.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\LoanPaymentTransfer.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\SaveTransfer.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\TransferErrorMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\TrfTransfer.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\AssetsStatMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\BorrowerRepayPlanStatMapper.xml]'
+2016-11-16 17:32:51 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\ExpenditureStatMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\FixProjectDueStatMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\FundStatMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\ProjectLimitMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\LoansCbMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RechargeLMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RedeemTMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RepaymentCbMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\SubscribeTMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\UserBalanceMapper.xml]'
+2016-11-16 17:32:52 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\WithdrawLMapper.xml]'
+2016-11-16 17:32:54 [main] WARN  org.springframework.context.support.GenericXmlApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dayRedeemSchedule.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'business': FactoryBean threw exception on object creation; nested exception is org.I0Itec.zkclient.exception.ZkException: Unable to connect to zk1.stage.miaoqian.com:2181,zk2.stage.miaoqian.com:2181,zk3.stage.miaoqian.com:2181
+2016-11-16 17:32:54 [main] ERROR com.scd.batch.executor.job.BatchLauncher - BatchLauncher failed for args: -n, dayRedeemSchedule, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dayRedeemSchedule.job': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'business': FactoryBean threw exception on object creation; nested exception is org.I0Itec.zkclient.exception.ZkException: Unable to connect to zk1.stage.miaoqian.com:2181,zk2.stage.miaoqian.com:2181,zk3.stage.miaoqian.com:2181
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:751) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.support.GenericXmlApplicationContext.<init>(GenericXmlApplicationContext.java:60) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at com.scd.batch.executor.job.BatchLauncher.buildApplicationContext(BatchLauncher.java:77) ~[classes/:?]
+	at com.scd.batch.executor.job.BatchLauncher.process(BatchLauncher.java:59) ~[classes/:?]
+	at com.scd.batch.executor.job.BatchLauncher.main(BatchLauncher.java:35) [classes/:?]
+	at com.scd.batch.executor.job.BatchLauncherTest.testProcessJobSuccess_dayRedeemSchedule(BatchLauncherTest.java:437) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_73]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45) [junit-4.10.jar:?]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15) [junit-4.10.jar:?]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42) [junit-4.10.jar:?]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263) [junit-4.10.jar:?]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68) [junit-4.10.jar:?]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222) [junit-4.10.jar:?]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300) [junit-4.10.jar:?]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157) [junit-4.10.jar:?]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:119) [junit-rt.jar:?]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:42) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74) [junit-rt.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_73]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_73]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_73]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_73]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:?]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'business': FactoryBean threw exception on object creation; nested exception is org.I0Itec.zkclient.exception.ZkException: Unable to connect to zk1.stage.miaoqian.com:2181,zk2.stage.miaoqian.com:2181,zk3.stage.miaoqian.com:2181
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1600) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	... 42 more
+Caused by: org.I0Itec.zkclient.exception.ZkException: Unable to connect to zk1.stage.miaoqian.com:2181,zk2.stage.miaoqian.com:2181,zk3.stage.miaoqian.com:2181
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:66) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:876) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:92) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:76) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:72) ~[zkclient-0.3.jar:0.3]
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.<init>(ZkclientZookeeperClient.java:25) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperTransporter.connect(ZkclientZookeeperTransporter.java:10) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter$Adpative.connect(ZookeeperTransporter$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.<init>(ZookeeperRegistry.java:71) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory.createRegistry(ZookeeperRegistryFactory.java:37) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.getRegistry(AbstractRegistryFactory.java:94) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.RegistryFactory$Adpative.getRegistry(RegistryFactory$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:240) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:60) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.refer(Protocol$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:392) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65) ~[dubbo-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1600) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	... 42 more
+Caused by: java.net.UnknownHostException: zk1.stage.miaoqian.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280) ~[?:1.8.0_73]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192) ~[?:1.8.0_73]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126) ~[?:1.8.0_73]
+	at org.apache.zookeeper.ClientCnxn.<init>(ClientCnxn.java:383) ~[zookeeper-3.3.1.jar:3.3.1-942149]
+	at org.apache.zookeeper.ClientCnxn.<init>(ClientCnxn.java:328) ~[zookeeper-3.3.1.jar:3.3.1-942149]
+	at org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:377) ~[zookeeper-3.3.1.jar:3.3.1-942149]
+	at org.I0Itec.zkclient.ZkConnection.connect(ZkConnection.java:64) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:876) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:92) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:76) ~[zkclient-0.3.jar:0.3]
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:72) ~[zkclient-0.3.jar:0.3]
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperClient.<init>(ZkclientZookeeperClient.java:25) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.remoting.zookeeper.zkclient.ZkclientZookeeperTransporter.connect(ZkclientZookeeperTransporter.java:10) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.remoting.zookeeper.ZookeeperTransporter$Adpative.connect(ZookeeperTransporter$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry.<init>(ZookeeperRegistry.java:71) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory.createRegistry(ZookeeperRegistryFactory.java:37) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.support.AbstractRegistryFactory.getRegistry(AbstractRegistryFactory.java:94) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.registry.RegistryFactory$Adpative.getRegistry(RegistryFactory$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.refer(RegistryProtocol.java:240) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:60) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:63) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.refer(Protocol$Adpative.java) ~[?:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:392) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:300) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:138) ~[dubbo-2.5.3.jar:2.5.3]
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:65) ~[dubbo-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1600) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:254) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-4.3.3.RELEASE.jar:4.3.3.RELEASE]
+	... 42 more
+2016-11-16 17:34:41 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher args: -n, dayRedeemSchedule, -p, classpath:META-INF/ApplicationContext-executor.xml, -f
+2016-11-16 17:34:41 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher command options: com.scd.batch.common.job.command.CommandOptions@1d37183[JOB,dayRedeemSchedule,classpath:META-INF/ApplicationContext-executor.xml,true]
+2016-11-16 17:34:41 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-executor.xml]
+2016-11-16 17:34:41 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/dubbo-consumer.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-executor.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-executor.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-common.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-dao-common.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-common.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-statistics.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-statistics.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-statistics.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-reconciliation.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-reconciliation.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-reconciliation.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-schedule.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-schedule.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-schedule.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-redis.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ApplicationContext-interest.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-jobs-interest.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service-interest.xml]
+2016-11-16 17:34:42 [main] INFO  org.springframework.context.support.GenericXmlApplicationContext - Refreshing org.springframework.context.support.GenericXmlApplicationContext@1fe63b9: startup date [Wed Nov 16 17:34:42 CST 2016]; root of context hierarchy
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\AcctUserAccumulateProfitDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\AcctUserDailyProfitDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserAccumulateProfitDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserDailyProfitDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\acct\UserRegisterDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\BorrowerRelationDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\CreditorRelationDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\CreditRepayRealDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\LoanDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\ProjectDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\RepayPlanDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\bid\RepayRealDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\BorrowerRepaymentPlanDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\FixProdDueDateReportDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\PlatformAssetReportDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\PlatformExpendReportDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\ProjectQuotaReportDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\financial\UserRwDailyReportDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\interest\UserAssetsDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\promotion\CouponsUseRecordsDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\CashTransferDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\HuiFuUserBalanceDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\LoanPaymentTransferDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\SaveTransferDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\TransferErrorDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\reconciliation\TrfTransferDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\AssetsStatDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\BorrowerRepayPlanStatDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\ExpenditureStatDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\FixProjectDueStatDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\FundStatDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\statistics\ProjectLimitDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\LoansCbDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RechargeLDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RedeemTDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\RepaymentCbDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\SubscribeTDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\UserBalanceDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\dao\trade\WithdrawLDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\daycut\dao\DayCutDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\FailRecordDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\JobDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\job\batch\control\dao\SwitchDao.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\github\scd_batch\batch-common\target\classes\com\scd\batch\common\uid\worker\dao\WorkerNodeDAO.class]
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'acctUserAccumulateProfitDao' and 'com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'acctUserDailyProfitDao' and 'com.scd.batch.common.dao.acct.AcctUserDailyProfitDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAccumulateProfitDao' and 'com.scd.batch.common.dao.acct.UserAccumulateProfitDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userDailyProfitDao' and 'com.scd.batch.common.dao.acct.UserDailyProfitDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userRegisterDao' and 'com.scd.batch.common.dao.acct.UserRegisterDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRelationDao' and 'com.scd.batch.common.dao.bid.BorrowerRelationDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'creditorRelationDao' and 'com.scd.batch.common.dao.bid.CreditorRelationDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'creditRepayRealDao' and 'com.scd.batch.common.dao.bid.CreditRepayRealDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loanDao' and 'com.scd.batch.common.dao.bid.LoanDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectDao' and 'com.scd.batch.common.dao.bid.ProjectDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repayPlanDao' and 'com.scd.batch.common.dao.bid.RepayPlanDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repayRealDao' and 'com.scd.batch.common.dao.bid.RepayRealDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRepaymentPlanDao' and 'com.scd.batch.common.dao.financial.BorrowerRepaymentPlanDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fixProdDueDateReportDao' and 'com.scd.batch.common.dao.financial.FixProdDueDateReportDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'platformAssetReportDao' and 'com.scd.batch.common.dao.financial.PlatformAssetReportDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'platformExpendReportDao' and 'com.scd.batch.common.dao.financial.PlatformExpendReportDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectQuotaReportDao' and 'com.scd.batch.common.dao.financial.ProjectQuotaReportDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userRwDailyReportDao' and 'com.scd.batch.common.dao.financial.UserRwDailyReportDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userAssetsDao' and 'com.scd.batch.common.dao.interest.UserAssetsDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'couponsUseRecords' and 'com.scd.batch.common.dao.promotion.CouponsUseRecordsDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'cashTransferDao' and 'com.scd.batch.common.dao.reconciliation.CashTransferDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'huiFuUserBalanceDao' and 'com.scd.batch.common.dao.reconciliation.HuiFuUserBalanceDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loanPaymentTransferDao' and 'com.scd.batch.common.dao.reconciliation.LoanPaymentTransferDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'saveTransferDao' and 'com.scd.batch.common.dao.reconciliation.SaveTransferDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'transferErrorDao' and 'com.scd.batch.common.dao.reconciliation.TransferErrorDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'trfTransferDao' and 'com.scd.batch.common.dao.reconciliation.TrfTransferDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'assetsStatDao' and 'com.scd.batch.common.dao.statistics.AssetsStatDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'borrowerRepayPlanStatDao' and 'com.scd.batch.common.dao.statistics.BorrowerRepayPlanStatDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'expenditureStatDao' and 'com.scd.batch.common.dao.statistics.ExpenditureStatDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fixProjectDueStatDao' and 'com.scd.batch.common.dao.statistics.FixProjectDueStatDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'fundStatDao' and 'com.scd.batch.common.dao.statistics.FundStatDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectLimitDao' and 'com.scd.batch.common.dao.statistics.ProjectLimitDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'loansCbDao' and 'com.scd.batch.common.dao.trade.LoansCbDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'rechargeLDao' and 'com.scd.batch.common.dao.trade.RechargeLDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'redeemTDao' and 'com.scd.batch.common.dao.trade.RedeemTDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'repaymentCbDao' and 'com.scd.batch.common.dao.trade.RepaymentCbDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'subscribeTDao' and 'com.scd.batch.common.dao.trade.SubscribeTDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userBalanceDao' and 'com.scd.batch.common.dao.trade.UserBalanceDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'withdrawLDao' and 'com.scd.batch.common.dao.trade.WithdrawLDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'dayCutDao' and 'com.scd.batch.common.daycut.dao.DayCutDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'failRecordDao' and 'com.scd.batch.common.job.batch.control.dao.FailRecordDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'jobDao' and 'com.scd.batch.common.job.batch.control.dao.JobDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'switchDao' and 'com.scd.batch.common.job.batch.control.dao.SwitchDao' mapperInterface
+2016-11-16 17:34:43 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'workerNodeDAO' and 'com.scd.batch.common.uid.worker.dao.WorkerNodeDAO' mapperInterface
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-executor\target\classes\META-INF\kangaroo-msg.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-common\target\classes\META-INF\batch.config.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-common\target\classes\META-INF\global.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/org/apache/logging/log4j/log4j-core/2.6.2/log4j-core-2.6.2.jar!/META-INF/log4j-provider.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/com/alibaba/druid/1.0.19/druid-1.0.19.jar!/META-INF/druid-driver.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [jar:file:/F:/.m2/repository/com/alibaba/druid/1.0.19/druid-1.0.19.jar!/META-INF/druid-filter.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-statistics\target\classes\META-INF\config-statistics.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-statistics\target\classes\META-INF\generator.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from file [F:\github\scd_batch\batch-reconciliation\target\classes\META-INF\reconciliation.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/smoke/db.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/smoke/dubbo.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/smoke/redis.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/global.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/batch.config.properties]
+2016-11-16 17:34:43 [main] INFO  org.springframework.context.support.PropertySourcesPlaceholderConfigurer - Loading properties file from class path resource [META-INF/reconciliation.properties]
+2016-11-16 17:34:44 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\AcctUserAccumulativeProfitMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\AcctUserDailyProfitMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserAccumulativeProfitMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserDailyProfitMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\acct\UserRegisterMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\BorrowerRelationMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\CreditorRelationMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\CreditRepayRealMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\LoanMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\ProjectMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\RepayPlanMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\bid\RepayRealMapper.xml]'
+2016-11-16 17:34:44 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\DayCutDaoMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\M_WORKER_NODE.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\SwitchDAO.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\T_FAIL_RECORD.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\executor\T_JOB.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\BorrowerRepaymentPlan.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\FixProdDuedateReportMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\PlatformAssetReportMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\PlatformExpendReportMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\ProjectQuotaReportMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\financial\UserRwDailyReport.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\interest\UserAssetsMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\promotion\CouponsUseRecordsMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\BalanceMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\CashTransfer.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\LoanPaymentTransfer.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\SaveTransfer.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\TransferErrorMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\reconciliation\TrfTransfer.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\AssetsStatMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\BorrowerRepayPlanStatMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\ExpenditureStatMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\FixProjectDueStatMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\FundStatMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\statistics\ProjectLimitMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\LoansCbMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RechargeLMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RedeemTMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\RepaymentCbMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\SubscribeTMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\UserBalanceMapper.xml]'
+2016-11-16 17:34:45 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [F:\github\scd_batch\batch-common\target\classes\META-INF\mybatis\mapper\trade\WithdrawLMapper.xml]'
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - setDocumentLocator(com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser$LocatorProxy@3790cf)
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - startDocument()
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - startElement(,,messages)
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   Pushing body text ''
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   New match='messages'
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   No rules found matching 'messages'.
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - characters(
+    )
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - characters(
+
+)
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - endElement(,,messages)
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   match='messages'
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   bodyText='
+    
+
+'
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   No rules found matching 'messages'.
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester -   Popping body text ''
+2016-11-16 17:34:58 [main] DEBUG org.apache.commons.digester.Digester.sax - endDocument()
+2016-11-16 17:35:05 [main] INFO  com.scd.batch.schedule.job.DayRedeemScheduleJob - start job: dayRedeemSchedule.job
+2016-11-16 17:35:05 [main] INFO  com.scd.batch.schedule.job.DayRedeemScheduleJob - result:Result{code=200, success=true, message='处理成功', data=null, elapsedTime=0}
+2016-11-16 17:35:05 [main] INFO  com.scd.batch.schedule.job.DayRedeemScheduleJob - name:bidloan, retry:3, timeout:30000
+2016-11-16 17:35:05 [main] INFO  com.scd.batch.schedule.notice.NoticeUtil - wait4Notice:null
+2016-11-16 17:35:35 [main] INFO  com.scd.batch.schedule.notice.NoticeUtil - wait4Notice:null
+2016-11-16 17:36:05 [main] INFO  com.scd.batch.schedule.notice.NoticeUtil - wait4Notice:null
+2016-11-16 17:36:35 [main] INFO  com.scd.batch.schedule.job.DayRedeemScheduleJob - job: dayRedeemSchedule.job finished, takes: 90298
+2016-11-16 17:36:35 [main] INFO  com.scd.batch.executor.job.BatchLauncher - BatchLauncher success for args: -n, dayRedeemSchedule, -p, classpath:META-INF/ApplicationContext-executor.xml, -f

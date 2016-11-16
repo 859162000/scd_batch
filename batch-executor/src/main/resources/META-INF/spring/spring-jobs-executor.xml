@@ -21,6 +21,12 @@
         <property name="name" value="prepare.job"/>
     </bean>
 
+    <!-- 日渐批量赎回任务 -->
+    <bean id="dayRedeemSchedule.job" class="com.scd.batch.schedule.job.DayRedeemScheduleJob">
+        <property name="cycleRunning" value="false"/>
+        <property name="name" value="dayRedeemSchedule.job"/>
+    </bean>
+
     <!-- TODO 事后处理任务，异常重试任务 -->
     <bean id="postHandling.job" class="com.scd.batch.executor.job.PostHandlingJob">
         <property name="cycleRunning" value="false"/>

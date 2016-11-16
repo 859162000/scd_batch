@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
  * {@link AbstractExecutor} represents a abstract implementation
  */
 public abstract class AbstractExecutor implements Executor {
+
     protected final Logger logger = LoggerFactory.getLogger(getClass());
 
     protected static final String ATTACH_KEY_TEMP_PARAM = "TEMP_PARAM";

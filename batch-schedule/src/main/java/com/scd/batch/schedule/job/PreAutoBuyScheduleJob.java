@@ -9,6 +9,7 @@ import com.scd.batch.common.job.constants.JobType;
 import com.scd.batch.common.job.constants.PhaseType;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.Settings;
+import com.scd.batch.schedule.notice.NoticeUtil;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -53,7 +54,9 @@ public class PreAutoBuyScheduleJob extends ScheduleJob {
         }
 
         int retry = Settings.getInstance().getPreAutoBuyRetry();
-        wait4Notice(retry,
+
+        NoticeUtil noticeUtil = new NoticeUtil();
+        noticeUtil.wait4Notice(retry,
                 Settings.getInstance().getPreAutoBuyName(),
                 Settings.getInstance().getPreAutoBuyTimeout());
 

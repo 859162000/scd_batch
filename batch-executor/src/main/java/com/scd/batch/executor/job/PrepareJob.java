@@ -63,8 +63,12 @@ public class PrepareJob extends AbstractExecutor {
      */
     public void init() {
 
-        // 灵活调度批跑
-
+        // 灵活调度
+//        jobTypes.add(JobType.RedeemScheduleJob);
+        jobTypes.add(JobType.BidLoanScheduleJob);
+        jobTypes.add(JobType.BidBuyBackScheduleJob);
+        jobTypes.add(JobType.PreAutoBuyScheduleJob);
+        jobTypes.add(JobType.AutoBuyScheduleJob);
 
         // 对账相关
         jobTypes.add(JobType.LoanCrawlerJob);
@@ -99,15 +103,9 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.UserDailyProfitCalculateJob);
         jobTypes.add(JobType.LastDayAssetsCalculateJob);
 
-        // 灵活调度
-        jobTypes.add(JobType.RedeemScheduleJob);
+        // 其他调度
         jobTypes.add(JobType.UpdateBankCardQuotaScheduleJob);
         jobTypes.add(JobType.UpdateUserRegisterCountToRedisJob);
-        jobTypes.add(JobType.BidLoanScheduleJob);
-        jobTypes.add(JobType.BidBuyBackScheduleJob);
-        jobTypes.add(JobType.PreAutoBuyScheduleJob);
-        jobTypes.add(JobType.AutoBuyScheduleJob);
-
 
     }
 
@@ -123,8 +121,10 @@ public class PrepareJob extends AbstractExecutor {
         for (JobType jobType : setSort) {
 //            int databaseNum = (jobType == JobType.ACCOUNTING ? this.statisticsDatabaseNum : this.databaseNum);
 //            int tableNum = (jobType == JobType.ACCOUNTING ? this.statisticsTableNum : this.tableNum);
+            Date jobDate = accountDate.toDate();
 
-            createJobControl(jobType, accountDate.toDate(), databaseNum, tableNum);
+            // 赎回生成下一天的数据
+            createJobControl(jobType, jobDate, databaseNum, tableNum);
         }
     }
 

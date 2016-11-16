@@ -431,6 +431,14 @@ public class BatchLauncherTest {
                         ".xml", "-f"});
     }
 
+    @Test()
+    public void testProcessJobSuccess_dayRedeemSchedule() {
+
+        BatchLauncher.main(new String[]{"-n", "dayRedeemSchedule", "-p",
+                "classpath:META-INF/ApplicationContext-executor" +
+                        ".xml", "-f"});
+    }
+
 
     @Test()
     public void testProcessJobSuccess_postHandling() {
