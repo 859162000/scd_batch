@@ -123,8 +123,14 @@ public class PrepareJob extends AbstractExecutor {
         for (JobType jobType : setSort) {
 //            int databaseNum = (jobType == JobType.ACCOUNTING ? this.statisticsDatabaseNum : this.databaseNum);
 //            int tableNum = (jobType == JobType.ACCOUNTING ? this.statisticsTableNum : this.tableNum);
+            Date jobDate = accountDate.toDate();
 
-            createJobControl(jobType, accountDate.toDate(), databaseNum, tableNum);
+            // 赎回生成下一天的数据
+            // TODO 数据迁移的时候，前一天的回购需要特殊跑
+            if (jobType == JobType.RedeemScheduleJob) {
+                jobDate = accountDate.addDays(1).toDate();
+            }
+            createJobControl(jobType, jobDate, databaseNum, tableNum);
         }
     }
 
