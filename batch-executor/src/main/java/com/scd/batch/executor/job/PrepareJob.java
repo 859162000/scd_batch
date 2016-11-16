@@ -63,8 +63,6 @@ public class PrepareJob extends AbstractExecutor {
      */
     public void init() {
 
-        // 灵活调度批跑
-
 
         // 对账相关
         jobTypes.add(JobType.LoanCrawlerJob);
@@ -108,7 +106,6 @@ public class PrepareJob extends AbstractExecutor {
         jobTypes.add(JobType.PreAutoBuyScheduleJob);
         jobTypes.add(JobType.AutoBuyScheduleJob);
 
-
     }
 
     @Override
@@ -126,10 +123,6 @@ public class PrepareJob extends AbstractExecutor {
             Date jobDate = accountDate.toDate();
 
             // 赎回生成下一天的数据
-            // TODO 数据迁移的时候，前一天的回购需要特殊跑
-            if (jobType == JobType.RedeemScheduleJob) {
-                jobDate = accountDate.addDays(1).toDate();
-            }
             createJobControl(jobType, jobDate, databaseNum, tableNum);
         }
     }

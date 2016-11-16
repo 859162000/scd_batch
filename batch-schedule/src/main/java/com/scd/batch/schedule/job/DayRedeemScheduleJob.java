@@ -7,6 +7,7 @@ import com.scd.batch.common.job.batch.ScheduleCalculator;
 import com.scd.batch.common.job.batch.ScheduleJob;
 import com.scd.batch.common.job.constants.JobType;
 import com.scd.batch.common.job.constants.PhaseType;
+import com.scd.batch.common.job.executor.AbstractExecutor;
 import com.scd.batch.common.job.executor.ExecutorContext;
 import com.scd.batch.common.utils.Settings;
 import com.scd.batch.schedule.notice.NoticeUtil;
@@ -17,39 +18,24 @@ import java.util.List;
 /**
  * 批量赎回
  */
-public class RedeemScheduleJob extends ScheduleJob {
+public class DayRedeemScheduleJob  extends AbstractExecutor {
 
     @Resource
     private Business business;
 
     @Override
-    protected JobType getJobType() {
-        return JobType.RedeemScheduleJob;
-    }
-
-    @Override
-    protected PhaseType getCurrentPhase() {
-        return PhaseType.LOAD;
-    }
-
-    @Override
-    protected PhaseType getNextPhase() {
+    public List<Long> getAllIdList(ExecutorContext context) {
         return null;
     }
 
     @Override
-    protected ScheduleCalculator getScheduleCalculator(ExecutorContext context) {
-        return (p) -> schedule(context);
-    }
-
-    public String schedule(ExecutorContext context) {
+    public void execute(ExecutorContext context) {
 
         Result<String> result = business.redeemBatch();
         logger.info("result:" + result);
 
         if (!result.isSuccess()) {
             logger.info("loan failed!, " + result.getCode() + "," + result.getMessage());
-            return null;
         }
 
         int retry = Settings.getInstance().getRedeemRetry();
@@ -62,12 +48,5 @@ public class RedeemScheduleJob extends ScheduleJob {
                 Settings.getInstance().getRedeemName(),
                 Settings.getInstance().getRedeemTimeout());
 
-        return null;
     }
-
-    @Override
-    public List<Long> getAllIdList(ExecutorContext context) {
-        return null;
-    }
-
 }

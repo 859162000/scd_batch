@@ -41,9 +41,6 @@ public abstract class ScheduleJob extends AbstractExecutor {
     @Resource
     protected JobControlService jobControlService;
 
-    @Autowired
-    private RedisTemplate<String, String> template;
-
     @Override
     public boolean beforeExecute(ExecutorContext context) {
         // super.beforeExecute(context) always return true
@@ -169,32 +166,4 @@ public abstract class ScheduleJob extends AbstractExecutor {
         this.batchSize = batchSize;
     }
 
-    protected boolean wait4Notice(int retry, String name, int timeout) {
-
-        while (retry > 0) {
-
-            String noticeMsg = null;
-            try {
-                noticeMsg = template.opsForList().leftPop(name, timeout, TimeUnit.SECONDS);
-            } catch (Exception e) {
-
-            }
-
-            logger.info("wait4Notice:" + noticeMsg);
-            if (StringUtils.isNotEmpty(noticeMsg)) {
-                return true;
-            }
-
-            try {
-                Thread.sleep(timeout);
-            } catch (InterruptedException e) {
-                logger.info("thread.sleep timeout!");
-            }
-
-            // TODO process msg
-            retry--;
-        }
-
-        return false;
-    }
 }
