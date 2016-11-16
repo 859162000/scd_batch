@@ -11,16 +11,16 @@ import java.util.List;
 public enum RechargeLStatus implements EnumType<RechargeLStatus, String> {
 
     // 初始
-    INIT("1", "INIT"),
+    INIT("init", "INIT"),
 
     // 处理中
-    PROCESS("2", "PROCESS"),
+    PROCESS("process", "PROCESS"),
 
     // 处理成功
-    SUCCESS("3", "SUCCESS"),
+    SUCCESS("success", "SUCCESS"),
 
     // 处理失败
-    FAIL("4", "FAIL");
+    FAIL("fail", "FAIL");
 
     public String type;
 
