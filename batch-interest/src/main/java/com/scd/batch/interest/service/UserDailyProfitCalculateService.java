@@ -87,24 +87,27 @@ public class UserDailyProfitCalculateService {
 
             // 前日总资产
             UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), preYestodayDate);
+            Date lastUpdateTime = lastDate;
             double lastTotal = 0.0;
             if (assets != null) {
                 lastTotal = assets.getAssets();
-                logger.debug("前日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastDate:" + lastDate);
+                logger.debug("前日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastUpdateTime:" + lastUpdateTime);
+                lastUpdateTime = assets.getModified();
             }
 
-            // 按天统计提现金额
+            Date untilTime = transDate;
+            // 按天统计提现金额，开始时间为上次更新余额的时间
             double withdrawSumByDate = withdrawLDao.selectWithdrawSumByDate(tableSpec,
                     WithDrawLStatus.getSuccessStatusList(),
-                    lastDate,
-                    transDate,
+                    lastUpdateTime,
+                    untilTime,
                     p.getUid());
 
             // 按天计算充值金额
             double rechargeSumByDate = rechargeLDao.selectRechargeSumByDate(tableSpec,
                     WithDrawLStatus.getSuccessStatusList(),
-                    lastDate,
-                    transDate,
+                    lastUpdateTime,
+                    untilTime,
                     p.getUid());
 
             // 总的昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
@@ -127,19 +130,6 @@ public class UserDailyProfitCalculateService {
             );
 
             profitEntityList.add(entity);
-
-            if (assets == null) {
-                assets = new UserAssetsEntity();
-                assets.setUid(p.getUid());
-                assets.setTransDate(lastDate);
-                assets.setAssets(currentTotal);
-                assetsDao.insert(assets);
-            } else {
-                // 更新总资产字段
-                assets.setTransDate(lastDate);
-                assets.setAssets(currentTotal);
-                assetsDao.update(assets);
-            }
 
         }
         return profitEntityList;

@@ -59,7 +59,7 @@ public class FundStatService {
                 null);
 
         // 写入到数据库
-        FundStatEntity fundStatEntity = new FundStatEntity(accountingDate.toDate(), rechargeSum, withdrawSum);
+        FundStatEntity fundStatEntity = new FundStatEntity(lastDate.toDate(), rechargeSum, withdrawSum);
 
         return fundStatEntity;
     }
@@ -69,7 +69,7 @@ public class FundStatService {
      */
     public void update2DB(FundStatEntity fundStatEntity) {
 
-        if (fundStatDao.checkExists(TableSpec.getDefault(), fundStatEntity.getTransDate()) == 1) {
+        if (fundStatDao.checkExists(TableSpec.getDefault(), fundStatEntity.getTransDate()) > 0) {
             fundStatDao.updateIncrement(TableSpec.getDefault(), fundStatEntity);
         } else {
             fundStatDao.insert(TableSpec.getDefault(), fundStatEntity);

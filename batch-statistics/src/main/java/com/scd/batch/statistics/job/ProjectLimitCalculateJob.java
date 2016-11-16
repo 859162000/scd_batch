@@ -75,7 +75,6 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
 
         // Get partition info from context
         TableSpec tableSpec = context.getAttach(TableSpec.class);
-        ShortDate accountDate = context.getAttach(ShortDate.class);
 
         // 项目列表
         List<SimpleProjectEntity> projectList = projectDao.getProjectListById(tableSpec,

@@ -45,7 +45,8 @@ public class LastDayAssetsCalculateService {
              */
             double currentTotal = p.getUsableSa() + p.getWithdrawFreezeSa() + p.getInvestFreezeSa() +
                     p.getRepayFreezeSa() + p.getCapitalFreezeSa()
-                    + p.getCurrentCapital() + p.getFixendCapital() + p.getFixperiodCapital();
+                    + p.getCurrentCapital() + p.getFixendCapital()
+                    + p.getFixperiodCapital();
 
             // 昨日总资产
             UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), lastDate);
