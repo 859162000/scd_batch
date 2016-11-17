@@ -101,8 +101,8 @@ public class UserDailyProfitCalculateService {
                 continue;
             } else {
                 preYestodayTotal = preYestodayassets.getAssets();
-                logger.debug("前日总资产：" + preYestodayTotal + ", UID:" + p.getUid());
                 lastUpdateTime = preYestodayassets.getModified();
+                logger.debug("前日总资产：" + preYestodayTotal + ", UID:" + p.getUid());
             }
 
             Date untilTime = transDate;
