@@ -10,6 +10,7 @@ import com.scd.batch.common.utils.TableSpec;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,6 +30,7 @@ public interface CreditorRelationDao {
     // 获取债权关系列表
     @MultiDB(ds = DataSourceType.BID)
     List<UserCreditroRelationEntity> getUserCreditorRelationList(@Param("ts") TableSpec ts,
+                                                                 @Param("transDate") Date transDate,
                                                                  @Param("batchId") List<Long> batchId);
 
 

@@ -32,6 +32,7 @@ public interface UserBalanceDao {
     @MultiDB(ds = DataSourceType.TRADE)
     List<BalanceAssetsEntity> selectBalanceByBatchUid(@Param("ts") TableSpec ts,
                                                       @Param("transDate") Date transDate,
+                                                      @Param("userType") String userType,
                                                       @Param("batchIds") List<Long> batchIds);
 
 

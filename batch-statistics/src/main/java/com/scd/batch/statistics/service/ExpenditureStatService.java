@@ -1,10 +1,12 @@
 package com.scd.batch.statistics.service;
 
+import com.scd.batch.common.constant.promotion.CouponsType;
 import com.scd.batch.common.dao.financial.PlatformExpendReportDao;
 import com.scd.batch.common.dao.statistics.ExpenditureStatDao;
 import com.scd.batch.common.daycut.service.DayCutService;
 import com.scd.batch.common.entity.financial.PlatformExpendReport;
 import com.scd.batch.common.entity.statistics.ExpenditureStatEntity;
+import com.scd.batch.common.utils.EnumUtils;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,8 +49,7 @@ public class ExpenditureStatService {
             PlatformExpendReport report = buildFinancial(p);
             if (reportDao.checkExists(report.getExpendDate(), report.getExpendDetail()) > 0) {
                 reportDao.updateIncrement(report);
-            }
-            else {
+            } else {
                 reportDao.insert(report);
             }
         });
@@ -58,8 +59,8 @@ public class ExpenditureStatService {
         PlatformExpendReport report = new PlatformExpendReport();
 
         report.setExpendDate(entity.getTransDate());
-        // TODO 枚举
-        report.setExpendDetail(String.valueOf(entity.getType()));
+        // 数字类型转换为字符串
+        report.setExpendDetail(EnumUtils.getEnum(CouponsType.class, String.valueOf(entity.getType())).getName());
         report.setExpendPrn(new BigDecimal(entity.getAmount()));
 
         return report;

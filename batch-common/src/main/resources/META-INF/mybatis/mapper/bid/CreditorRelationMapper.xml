@@ -125,6 +125,7 @@
         product.product_code
         where relation.data_status = 1
         and relation.remain_amount > 0
+        and interest_date >= #{transDate}
         and relation.id in
         <foreach collection="batchId" item="id" open="(" close=")" separator=",">
             #{id}

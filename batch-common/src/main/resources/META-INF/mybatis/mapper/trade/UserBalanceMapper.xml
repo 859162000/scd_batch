@@ -89,7 +89,8 @@
         select
         <include refid="BalanceAssets"/>
         from user_balance b
-        where b.id in
+        where operate_type = #{userType}
+        and b.id in
         <foreach collection="batchIds" item="id" open="(" close=")" separator=",">
             #{id}
         </foreach>

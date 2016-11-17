@@ -1,5 +1,6 @@
 package com.scd.batch.interest.service;
 
+import com.scd.batch.common.constant.trans.UserType;
 import com.scd.batch.common.dao.interest.UserAssetsDao;
 import com.scd.batch.common.dao.trade.UserBalanceDao;
 import com.scd.batch.common.entity.interest.UserAssetsEntity;
@@ -34,6 +35,7 @@ public class LastDayAssetsCalculateService {
         // 当前日期的前一天
         List<BalanceAssetsEntity> entityList = balanceDao.selectBalanceByBatchUid(tableSpec,
                 lastDate,
+                UserType.INVEST.getType(),
                 batchIdList);
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();

@@ -1,5 +1,6 @@
 package com.scd.batch.interest.service;
 
+import com.scd.batch.common.constant.trans.UserType;
 import com.scd.batch.common.constant.trans.WithDrawLStatus;
 import com.scd.batch.common.dao.acct.AcctUserAccumulateProfitDao;
 import com.scd.batch.common.dao.acct.AcctUserDailyProfitDao;
@@ -31,7 +32,7 @@ import java.util.List;
 
 
 /**
- * 昨日收益统计
+ * 昨日收益统计，先决条件：需要先跑跑昨日收益任务
  */
 @Service
 public class UserDailyProfitCalculateService {
@@ -67,9 +68,11 @@ public class UserDailyProfitCalculateService {
 
         Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
         Date preYestodayDate = ShortDate.valueOf(transDate).addDays(-2).toDate();
-        // 当前日期的前一天
+
+        // 有余额的用户列表
         List<BalanceAssetsEntity> entityList = balanceDao.selectBalanceByBatchUid(tableSpec,
                 lastDate,
+                UserType.INVEST.getType(),
                 batchIdList);
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();
@@ -78,21 +81,28 @@ public class UserDailyProfitCalculateService {
 
         for (BalanceAssetsEntity p : entityList) {
 
-            /** 总资产 = 可用余额 + 体现冻结金额 + 投资冻结金额 + 还款冻结金额 + 活期赎回冻结金额
-             + 活期本金  + 定期赚待收本金 + 定期计划待收本金
-             */
-            double currentTotal = p.getUsableSa() + p.getWithdrawFreezeSa() + p.getInvestFreezeSa() +
-                    p.getRepayFreezeSa() + p.getCapitalFreezeSa()
-                    + p.getCurrentCapital() + p.getFixendCapital() + p.getFixperiodCapital();
-
-            // 前日总资产
-            UserAssetsEntity assets = assetsDao.selectAssets(p.getUid(), preYestodayDate);
+            UserAssetsEntity lastAssets = assetsDao.selectAssets(p.getUid(), lastDate);
             Date lastUpdateTime = lastDate;
             double lastTotal = 0.0;
-            if (assets != null) {
-                lastTotal = assets.getAssets();
-                logger.debug("前日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastUpdateTime:" + lastUpdateTime);
-                lastUpdateTime = assets.getModified();
+            if (lastAssets == null) {
+                // 昨日总资产不存在，则跳过这条余额不处理
+                continue;
+            } else {
+                lastTotal = lastAssets.getAssets();
+                lastUpdateTime = lastAssets.getModified();
+                logger.debug("昨日总资产：" + lastTotal + ", UID:" + p.getUid() + ", lastUpdateTime:" + lastUpdateTime);
+            }
+
+            // 昨日的前一天的总资产
+            UserAssetsEntity preYestodayassets = assetsDao.selectAssets(p.getUid(), preYestodayDate);
+            double preYestodayTotal = 0.0;
+            if (preYestodayassets != null) {
+                // 前日总资产不存在，则跳过不处理
+                continue;
+            } else {
+                preYestodayTotal = preYestodayassets.getAssets();
+                logger.debug("前日总资产：" + preYestodayTotal + ", UID:" + p.getUid());
+                lastUpdateTime = preYestodayassets.getModified();
             }
 
             Date untilTime = transDate;
@@ -111,10 +121,10 @@ public class UserDailyProfitCalculateService {
                     p.getUid());
 
             // 总的昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
-            double profit = currentTotal - lastTotal + withdrawSumByDate - rechargeSumByDate;
+            double profit = lastTotal - preYestodayTotal + withdrawSumByDate - rechargeSumByDate;
 
-            logger.debug("昨日收益：" + profit + ", currentTotal:" +
-                    currentTotal + ", lastTotal:" + lastTotal +
+            logger.debug("昨日收益：" + profit + ", lastTotal:" +
+                    lastTotal + ", preYestodayTotal:" + preYestodayTotal +
                     ", withdrawSumByDate:" + withdrawSumByDate +
                     ", rechargeSumByDate:" + rechargeSumByDate);
 

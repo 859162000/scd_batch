@@ -1,10 +1,14 @@
 package com.scd.batch.statistics.job;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.scd.batch.common.constant.bid.DataStatus;
+import com.scd.batch.common.constant.bid.LoanStatus;
 import com.scd.batch.common.constant.bid.ProjectStatus;
+import com.scd.batch.common.dao.bid.LoanDao;
 import com.scd.batch.common.dao.bid.ProjectDao;
 import com.scd.batch.common.dao.bid.RepayPlanDao;
 import com.scd.batch.common.dao.bid.RepayRealDao;
+import com.scd.batch.common.entity.bid.ProjectLoanEntity;
 import com.scd.batch.common.entity.statistics.ProjectLimitEntity;
 import com.scd.batch.common.entity.statistics.bid.RepayPlanStatEntity;
 import com.scd.batch.common.entity.statistics.bid.SimpleProjectEntity;
@@ -40,6 +44,9 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
 
     @Resource
     private RepayRealDao repayRealDao;
+
+    @Resource
+    private LoanDao loanDao;
 
     @Override
     protected JobType getJobType() {
@@ -90,18 +97,27 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
 
 
         // 项目还款计划汇总
-        List<RepayPlanStatEntity> repayPlanList = repayPlanDao.getProjectLimitList(tableSpec, projectCodeList);
+        List<RepayPlanStatEntity> repayPlanList = repayPlanDao.getProjectLimitList(tableSpec,
+                projectCodeList);
         if (repayPlanList == null || repayPlanList.isEmpty()) {
             logger.info("repayPlanList isEmpty");
         }
 
         // 项目实际还款汇总
-        List<RepayPlanStatEntity> repayRealList = repayRealDao.getProjectLimitList(tableSpec, projectCodeList);
+        List<RepayPlanStatEntity> repayRealList = repayRealDao.getProjectLimitList(tableSpec,
+                projectCodeList);
         if (repayRealList == null || repayRealList.isEmpty()) {
             logger.info("repayRealList isEmpty");
         }
 
-        List<ProjectLimitEntity> projectLimitEntityList = buildProjectLimit(projectList, repayPlanList, repayRealList);
+        List<ProjectLoanEntity> loanList = loanDao.getLoanSumByProjectCodes(tableSpec,
+                LoanStatus.LOAN_SUCCESS.getValue(),
+                DataStatus.VALID.getCode());
+
+        List<ProjectLimitEntity> projectLimitEntityList = buildProjectLimit(projectList,
+                repayPlanList,
+                repayRealList,
+                loanList);
 
         return JsonUtils.toJson(projectLimitEntityList);
     }
@@ -138,7 +154,8 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
      */
     private List<ProjectLimitEntity> buildProjectLimit(List<SimpleProjectEntity> projectList, List<RepayPlanStatEntity>
             repayPlanList,
-                                                       List<RepayPlanStatEntity> repayRealList) {
+                                                       List<RepayPlanStatEntity> repayRealList,
+                                                       List<ProjectLoanEntity> loanList) {
 
         ConcurrentHashMap<String, RepayPlanStatEntity> repayPlanMap = new ConcurrentHashMap<>();
         if (repayPlanList != null) {
@@ -148,6 +165,11 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
         ConcurrentHashMap<String, RepayPlanStatEntity> repayRealMap = new ConcurrentHashMap<>();
         if (repayRealList != null) {
             repayRealList.forEach(p -> repayRealMap.put(p.getProjectCode(), p));
+        }
+
+        ConcurrentHashMap<String, ProjectLoanEntity> loanMap = new ConcurrentHashMap<>();
+        if (loanList != null) {
+            loanList.forEach(p -> loanMap.put(p.getProjectCode(), p));
         }
 
         List<ProjectLimitEntity> projectLimitEntityList = new ArrayList<>();
@@ -167,6 +189,9 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
                     (repayRealMap.get(p.getProjectCode()) == null ? 0.0 : repayRealMap.get(p.getProjectCode())
                             .getRepayInterest());
 
+            double loanAmount = loanMap.get(p.getProjectCode()) == null ? 0.0 : loanMap.get(p
+                    .getProjectCode()).getTradeAmount();
+
             ProjectLimitEntity projectLimitEntity = new ProjectLimitEntity(
                     p.getProjectCode(),
                     p.getProjectName(),
@@ -176,9 +201,8 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
                     p.getOccupyAmount(),
                     // 可用发标额度
                     p.getBidAmount() - p.getOccupyAmount(),
-
-                    // TODO 已提现金额，目前取不到
-                    0,
+                    // 已放款金额
+                    loanAmount,
                     // 已还本金
                     paidPrincipal,
                     // 未还本金
@@ -187,6 +211,7 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
                     paidInterest,
                     // 未还利息
                     unpaidInterest);
+
             projectLimitEntityList.add(projectLimitEntity);
         });
 

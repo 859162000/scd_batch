@@ -34,6 +34,16 @@
         third_result_code, third_result_msg
     </sql>
 
+    <sql id="Loan_Sum_By_Project">
+        project_code,
+        COALESCE(sum(trade_amount), 0) as trade_amount
+    </sql>
+
+    <resultMap id="BaseResult_Loan_Sum_Map" type="com.scd.batch.common.entity.bid.ProjectLoanEntity">
+        <result column="project_code" property="projectCode"/>
+        <result column="trade_amount" property="tradeAmount"/>
+    </resultMap>
+
     <select id="getAllTransferIds" resultType="java.lang.Integer">
         select id
         from bid_loan
@@ -50,6 +60,20 @@
             #{id}
         </foreach>
         order by ID
+    </select>
+
+    <select id="getLoanSumByProjectCodes" resultMap="BaseResult_Loan_Sum_Map">
+        select
+        <include refid="Loan_Sum_By_Project"/>
+        from bid_loan
+        where
+        status = #{status}
+        and data_status = #{dataStatus}
+        and project_code in
+        <foreach collection="projectCodes" item="code" open="(" close=")" separator=",">
+            #{code}
+        </foreach>
+        group by project_code
     </select>
 
 </mapper>

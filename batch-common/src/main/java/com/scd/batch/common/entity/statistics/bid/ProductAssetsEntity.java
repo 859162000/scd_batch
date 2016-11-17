@@ -1,7 +1,5 @@
 package com.scd.batch.common.entity.statistics.bid;
 
-import com.scd.batch.common.constant.bid.ProductType;
-
 /**
  * 按照产品计算的资产规模统计项
  */

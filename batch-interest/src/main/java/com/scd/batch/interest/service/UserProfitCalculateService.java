@@ -56,6 +56,7 @@ public class UserProfitCalculateService {
 
         Date lastDate = ShortDate.valueOf(transDate).addDays(-1).toDate();
         List<UserCreditroRelationEntity> entityList = relationDao.getUserCreditorRelationList(tableSpec,
+                lastDate,
                 batchIdList);
 
         List<UserProfitEntity> profitEntityList = new ArrayList<>();
@@ -70,7 +71,7 @@ public class UserProfitCalculateService {
                         p.getInterestRate(),
                         InterestRateType.YEAR);
 
-                // TODO 回购是否会付息，当日付息金额
+                // 回购会付息，当日付息金额
                 double repayInterest = 0.0;
                 try {
                     repayInterest = creditRepayRealDao.repayInterestAmountByDay(tableSpec,

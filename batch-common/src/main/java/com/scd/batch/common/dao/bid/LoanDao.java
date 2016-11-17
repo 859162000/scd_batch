@@ -1,6 +1,7 @@
 package com.scd.batch.common.dao.bid;
 
 import com.scd.batch.common.entity.bid.LoanEntity;
+import com.scd.batch.common.entity.bid.ProjectLoanEntity;
 import com.scd.batch.common.mybatis.multidb.DataSourceType;
 import com.scd.batch.common.mybatis.multidb.MultiDB;
 import com.scd.batch.common.utils.TableSpec;
@@ -22,5 +23,9 @@ public interface LoanDao {
                                    @Param("transDate") Date transDate,
                                    @Param("batchIds") List<Long> batchIds);
 
+    @MultiDB(ds = DataSourceType.BID)
+    List<ProjectLoanEntity> getLoanSumByProjectCodes(@Param("ts") TableSpec ts,
+                                                     @Param("status") int status,
+                                                     @Param("dataStatus") int dataStatus);
 
 }

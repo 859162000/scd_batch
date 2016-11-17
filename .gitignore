@@ -4,6 +4,7 @@
 /batch-common/log.*/
 /batch-executor/target/
 /batch-executor/log.*/
+/batch-executor/logs/
 /batch-interest/target/
 /batch-interest/log.*/
 /batch-reconciliation/target/
