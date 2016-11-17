@@ -38,7 +38,7 @@ public class FixProjectDueStatService {
     public boolean batchUpdate2DB(List<FixDueStatEntity> statEntityList) {
 
         statEntityList.forEach(p -> {
-            if (statDao.checkExists(TableSpec.getDefault(), p.getDueDate()) == 1) {
+            if (statDao.checkExists(TableSpec.getDefault(), p.getDueDate()) > 0) {
                 statDao.updateIncrement2DB(TableSpec.getDefault(), p);
             } else {
                 statDao.insert(TableSpec.getDefault(), p);

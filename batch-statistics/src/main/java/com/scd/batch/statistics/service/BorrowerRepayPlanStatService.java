@@ -40,7 +40,7 @@ public class BorrowerRepayPlanStatService {
         entityList.forEach(p -> {
             if (statDao.checkExists(TableSpec.getDefault(), p.getDueDate(),
                     p.getBorrowerId(),
-                    p.getProjectCode()) == 1) {
+                    p.getProjectCode()) > 0) {
                 statDao.update2DB(TableSpec.getDefault(), p);
             } else {
                 statDao.insert(TableSpec.getDefault(), p);

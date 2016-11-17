@@ -33,7 +33,7 @@ public class AssetsStatService {
     }
 
     public void updateIncreament2DB(AssetsStatEntity entity) {
-        if (statDao.checkExists(TableSpec.getDefault(), entity.getTransDate()) == 1) {
+        if (statDao.checkExists(TableSpec.getDefault(), entity.getTransDate()) > 0) {
             statDao.update2DB(TableSpec.getDefault(), entity);
         } else {
             statDao.insert(TableSpec.getDefault(), entity);
