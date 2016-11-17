@@ -11,7 +11,7 @@ public class UserAssetsEntity extends Entity {
 
     private Date transDate;
 
-    private Double assets;
+    private double assets;
 
     public String getUid() {
         return uid;
@@ -29,11 +29,11 @@ public class UserAssetsEntity extends Entity {
         this.transDate = transDate;
     }
 
-    public Double getAssets() {
+    public double getAssets() {
         return assets;
     }
 
-    public void setAssets(Double assets) {
+    public void setAssets(double assets) {
         this.assets = assets;
     }
 }

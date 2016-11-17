@@ -23,6 +23,14 @@
         WHERE UID = #{uid}
         and TRANS_DATE = #{transDate}
     </select>
+
+    <select id="selectAssets" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM s_user_assets
+        WHERE UID = #{uid}
+        and TRANS_DATE = #{transDate}
+    </select>
     
     <insert id="insert">
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
