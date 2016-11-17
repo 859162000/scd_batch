@@ -96,7 +96,7 @@ public class UserDailyProfitCalculateService {
             // 昨日的前一天的总资产
             UserAssetsEntity preYestodayassets = assetsDao.selectAssets(p.getUid(), preYestodayDate);
             double preYestodayTotal = 0.0;
-            if (preYestodayassets != null) {
+            if (preYestodayassets == null) {
                 // 前日总资产不存在，则跳过不处理
                 continue;
             } else {
