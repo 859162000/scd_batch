@@ -16,6 +16,10 @@ public interface UserAssetsDao {
                                   @Param("transDate") Date transDate);
 
     @MultiDB(ds = DataSourceType.BATCH)
+    int checkExists(@Param("uid") String uid,
+                    @Param("transDate") Date transDate);
+
+    @MultiDB(ds = DataSourceType.BATCH)
     int insert(@Param("entity") UserAssetsEntity entity);
 
     @MultiDB(ds = DataSourceType.BATCH)

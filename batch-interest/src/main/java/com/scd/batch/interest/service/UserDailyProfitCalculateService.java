@@ -20,6 +20,7 @@ import com.scd.batch.common.utils.DateUtil;
 import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import com.scd.batch.interest.entity.UserProfitEntity;
+import com.sun.tools.javac.util.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,6 +101,7 @@ public class UserDailyProfitCalculateService {
                 // 前日总资产不存在，则跳过不处理
                 continue;
             } else {
+                Assert.checkNonNull(preYestodayassets);
                 preYestodayTotal = preYestodayassets.getAssets();
                 lastUpdateTime = preYestodayassets.getModified();
                 logger.debug("前日总资产：" + preYestodayTotal + ", UID:" + p.getUid());
