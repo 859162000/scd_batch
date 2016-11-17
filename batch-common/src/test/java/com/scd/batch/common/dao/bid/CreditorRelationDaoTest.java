@@ -6,6 +6,7 @@ import com.scd.batch.common.entity.bid.UserCreditroRelationEntity;
 import com.scd.batch.common.entity.statistics.bid.FixPlanDuePlanEntity;
 import com.scd.batch.common.entity.statistics.bid.FixProductDuePlanEntity;
 import com.scd.batch.common.entity.statistics.bid.ProductAssetsEntity;
+import com.scd.batch.common.utils.ShortDate;
 import com.scd.batch.common.utils.TableSpec;
 import junit.framework.Assert;
 import org.junit.Test;
@@ -62,7 +63,9 @@ public class CreditorRelationDaoTest extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void testGetUserCreditorRelationList() {
-        List<UserCreditroRelationEntity> list = relationDao.getUserCreditorRelationList(TestUtil.getTableSpec(),
+        List<UserCreditroRelationEntity> list = relationDao.getUserCreditorRelationList(
+                TestUtil.getTableSpec(),
+                ShortDate.today().toDate(),
                 TestUtil.buildIds());
 
         Assert.assertEquals(list.size(), 2);
