@@ -26,6 +26,7 @@ public interface LoanDao {
     @MultiDB(ds = DataSourceType.BID)
     List<ProjectLoanEntity> getLoanSumByProjectCodes(@Param("ts") TableSpec ts,
                                                      @Param("status") int status,
-                                                     @Param("dataStatus") int dataStatus);
+                                                     @Param("dataStatus") int dataStatus,
+                                                     @Param("projectCodes") List<String> projectCodes);
 
 }

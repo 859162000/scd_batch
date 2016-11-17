@@ -112,7 +112,8 @@ public class ProjectLimitCalculateJob extends StatisticsCalculateJob {
 
         List<ProjectLoanEntity> loanList = loanDao.getLoanSumByProjectCodes(tableSpec,
                 LoanStatus.LOAN_SUCCESS.getValue(),
-                DataStatus.VALID.getCode());
+                DataStatus.VALID.getCode(),
+                projectCodeList);
 
         List<ProjectLimitEntity> projectLimitEntityList = buildProjectLimit(projectList,
                 repayPlanList,
