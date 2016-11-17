@@ -111,14 +111,16 @@ public class UserDailyProfitCalculateService {
                     WithDrawLStatus.getSuccessStatusList(),
                     lastUpdateTime,
                     untilTime,
-                    p.getUid());
+                    p.getUid(),
+                    UserType.INVEST.getType());
 
             // 按天计算充值金额
             double rechargeSumByDate = rechargeLDao.selectRechargeSumByDate(tableSpec,
                     WithDrawLStatus.getSuccessStatusList(),
                     lastUpdateTime,
                     untilTime,
-                    p.getUid());
+                    p.getUid(),
+                    UserType.INVEST.getType());
 
             // 总的昨日收益 = 当日总资产 - 昨日总资产 + 提现金额 - 充值金额
             double profit = lastTotal - preYestodayTotal + withdrawSumByDate - rechargeSumByDate;

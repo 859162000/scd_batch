@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 取现加载任务
+ * 取现加载任务，包括借款人和投资人
  */
 public class WithdrawLLoaderJob extends DataFlowBatchJob {
 

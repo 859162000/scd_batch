@@ -70,6 +70,7 @@
         <if test="uid != null">
             AND uid = #{uid}
         </if>
+        and withdraw_type = #{userType}
     </select>
     <!--AND update_time <= #{endDate, jdbcType=TIMESTAMP}-->
 

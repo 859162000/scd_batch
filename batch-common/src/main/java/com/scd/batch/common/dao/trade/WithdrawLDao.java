@@ -27,6 +27,7 @@ public interface WithdrawLDao {
                                    @Param("statusList") List<String> statusList,
                                    @Param("startDate") Date startDate,
                                    @Param("endDate") Date endDate,
-                                   @Param("uid") String uid);
+                                   @Param("uid") String uid,
+                                   @Param("userType") String userType);
 
 }

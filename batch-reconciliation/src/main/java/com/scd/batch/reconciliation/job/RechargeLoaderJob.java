@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 充值加载任务
+ * 充值加载任务，包括借款人和投资人
  */
 public class RechargeLoaderJob extends DataFlowBatchJob {
 

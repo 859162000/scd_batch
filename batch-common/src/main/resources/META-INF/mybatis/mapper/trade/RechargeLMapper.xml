@@ -77,6 +77,7 @@
         <if test="uid != null">
             AND uid = #{uid}
         </if>
+        and recharge_type = #{userType}
     </select>
     <!--AND finish_time <= #{endDate}-->
 
